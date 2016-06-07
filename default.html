@@ -65,106 +65,44 @@
       <input name="close" type="button" value="Close" onclick="document.getElementById('PopUp').style.display = 'none';" />
     </div>
 
-<?
-foreach(array("split", "grid", "fullwidth") as $category)
-{
-  $path = $POSTS_DIR.$posts_subdir."/posts/".$category;
-  //echo $path." ";
-  $category_count = 0;
-  if ($dh = @opendir($path)) //will return false if permission denied.
-  {
-    if($category === "grid")
-    {
-?>
+<!-- grid posts header: //-->
       <section class="features">
         <div class="inner">
           <div class="feature-grid">
             <div class="table-row">
-<?
-    }
-    $files = array();
-    while (($file = readdir($dh)) !== false)
-    {
-      $files[] = $file;
-    }
-    sort($files, SORT_STRING);
-    foreach($files as $file)
-    {
-      if(substr($file, 0, 1) === "." || substr($file, -3) !== ".md") //will hide ".", "..", and hidden files. And non md files.
-        continue;
-      $category_count++;
-      $fp = fopen($path."/".$file, "r");
-      $content = fread($fp, 100000);
-      fclose($fp);
-      if($category === "split")
-      {
-?>
+<!-- for every grid post: //-->
       <section class="research-topic">
         <div class="inner">
 
-<?
-      $pos = strpos($content, "<!--");
-      if($pos !== False)
-      {
-        $start = $pos + 4; // strlen("<!--!)
-        $end = strpos($content, "//-->");
-        if($end === False)
-          $end = strlen($content);
-?>
           <div class="block block-graphic" style="padding-top: 40px;">
-            <?= $Parsedown->text(substr($content, $start, $end-$start)); ?>
+            <!-- //--> grid block graphic.
           </div>
-<?
-      }
-?>
           <div class="block block-copy half">
-<?= $Parsedown->text($content); ?>
+            grid content
           </div>
 
         </div>
       </section>
-<?
-      }
-      else if($category === "fullwidth")
-      {
-?>
+<!-- full-width posts header: //-->
       <section>
         <div class="inner">
           <div class="block block-copy">
-<?= $Parsedown->text($content); ?>
+            full-width content.
           </div>
         </div>
       </section>
-<?
-      }
-      else if($category === "grid")
-      {
-        if($category_count%3 == 1 && $category_count > 1)
-        {
-?>
+<!-- ? //-->
             </div>
             <div class="table-row">
-<?
-        }
-?>
+<!-- ? //-->
               <div class="feature">
-<?= $Parsedown->text($content); ?>
+                content
               </div>
-<?
-      }
-    }
-    if($category === "grid")
-    {
-?>
+<!-- ? //-->
             </div>
           </div>
         </div>
       </section>
-<?
-    }
-  }
-}
-?>
 
 
       <section class="foot">
@@ -178,31 +116,3 @@ foreach(array("split", "grid", "fullwidth") as $category)
 
   </body>
 </html>
-<?
-function get_path_without_filename($path)
-{
-  $pos = strrpos($path, "/");
-  if($pos !== false)
-    return substr($path, 0, $pos);
-  return $path;
-}
-function get_filename($path)
-{
-  $exploded_path = explode("/", $path);
-  return $exploded_path[count($exploded_path)-1];
-}
-function get_filename_without_suffix($filename)
-{
-  $pos = strrpos($filename, ".");
-  if($pos !== FALSE)
-    return substr($filename, 0, $pos);
-  return $filename;
-}
-function get_suffix($filename)
-{
-  $pos = strrpos($filename, ".");
-  if($pos !== FALSE)
-    return substr($filename, $pos+1);
-  return $filename;
-}
-?>
