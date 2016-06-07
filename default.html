@@ -1,96 +1,11 @@
-<?
-include 'parsedown.php';
-$Parsedown = new Parsedown();
-
-$POSTS_DIR = "/var/www/mogren.one/content";
-$FILES_DIR = "/var/www/mogren.one/files";
-
-//$POSTS_DIR = get_path_without_filename($_SERVER['SCRIPT_FILENAME'])."/";
-
-$posts_subdir = get_path_without_filename($_SERVER['PHP_SELF']);
-
-$beta_prefix = "";
-if(strpos($_SERVER['PHP_SELF'], "beta") !== False)
-{
-  $beta_prefix = "/beta";
-  $posts_subdir = substr($posts_subdir, strlen($beta_prefix));
-}
-
-if (isset($_GET["p"]))
-{
-  $posts_subdir = "/".$_GET["p"];
-  $filename = $FILES_DIR."/".$_GET["p"];
-  if(file_exists($filename) && is_file($filename))
-  {
-    #echo $FILES_DIR."/".$_GET["p"]." - does exist<br />";
-    $dot_pos = strrpos($_GET["p"], ".");
-    $path_suffix = substr($_GET["p"], $dot_pos);
-
-    header('Content-Description: File Transfer');
-
-    $mime = shell_exec("file -bi " .escapeshellarg($filename));
-    $mimes = explode(";", $mime);
-    $mime = $mimes[0];
-    if($mime != "" && strpos($mime, "octet-stream") === false)
-      header( "Content-type: ".$mime );
-    else if($path_suffix == ".mobi")
-      header( "Content-type: application/x-mobipocket-ebook" );
-    else if($path_suffix == ".pdf")
-      header( "Content-type: application/pdf" );
-    else
-      header( "Content-type: application/octet-stream" );
-    header('Content-Disposition: inline; filename="'.basename($filename).'"');
-    #header('Content-Disposition: attachment; filename="'.basename($filename).'"');
-    #header('Content-Disposition: attachment; filename="'.$filename.'"');
-    header('Expires: 0');
-    header('Cache-Control: must-revalidate');
-    header('Pragma: public');
-    #if (filesize($filename) === FALSE)
-    #  echo "FALSE!";
-    header('Content-Length: ' . filesize($filename));
-    #readfile($file);
-    #echo file_get_contents($file);
-
-    if ($file = fopen($filename, "rb"))
-    {
-      while(!feof($file) and (connection_status()==0))
-      {
-        print(fread($file, 1024*8));
-       flush();
-      }
-      fclose($file);
-    }
-    exit;
-  }
-  #else
-  #  echo $FILES_DIR."/".$_GET["p"]." - does not exist<br />";
-}
-$path_found = TRUE;
-if(!file_exists($POSTS_DIR.$posts_subdir) || strpos($posts_subdir, "posts") !== FALSE)
-{
-  $path_found = FALSE;
-  header($_SERVER["SERVER_PROTOCOL"]." 404 Not Found"); 
-}
-else if(isset($_GET["p"]) && strlen($_GET["p"]) > 0 && substr($_GET["p"],-1,1) != "/")
-{
-  # Redirect (to normalize)!
-  #echo('Location: '.$_SERVER['REQUEST_URI'].'/');
-  header('Location: '.$_SERVER['REQUEST_URI'].'/');
-  die();
-}
-
-?>
 <!doctype html>
 <html class="no-js">
   <head>
       <meta charset="utf-8">
-      <title>Olof Mogren</title>
+      <title>{{ page.title }}</title>
       <meta name="description" content="">
       <meta name="viewport" content="width=device-width">
-      <!--<link rel="shortcut icon" href="/images/favicon.ico">
-      <link rel="icon" type="image/png" href="/images/favicon.png">
-      <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-180x180.png">//-->
-      <link rel="stylesheet" href="/style2.css">
+      <link rel="stylesheet" href="/style.css">
       <script type="text/javascript" src="/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       <script>
         function showBibtex(event, text) {
@@ -124,12 +39,12 @@ else if(isset($_GET["p"]) && strlen($_GET["p"]) > 0 && substr($_GET["p"],-1,1) !
         <a href="http://mogren.one/" class="nametag"><h1 class="nametag">Olof Mogren</h1></a>
         <div id="groups" style="margin-right: 80px;">
           <div id="group1" style="z-index: 5;">
-            <a href="<?= $beta_prefix ?>/summarization" style="color: #999;"><!-- class="button button-transparent">//-->Summarization</a>
-            <a href="<?= $beta_prefix ?>/presentations" style="color: #999;"><!-- class="button button-transparent">//-->Presentations</a>
+            <a href="/summarization" style="color: #999;"><!-- class="button button-transparent">//-->Summarization</a>
+            <a href="/presentations" style="color: #999;"><!-- class="button button-transparent">//-->Presentations</a>
           </div>
           <div id="group2" style="z-index: 5;">
-            <a href="<?= $beta_prefix ?>/publications" style="color: #999;"><!-- class="button button-transparent">//-->Publications</a>
-            <a href="<?= $beta_prefix ?>/about" style="color: #999;"><!-- class="button button-transparent">//-->About</a>
+            <a href="/publications" style="color: #999;"><!-- class="button button-transparent">//-->Publications</a>
+            <a href="/about" style="color: #999;"><!-- class="button button-transparent">//-->About</a>
           </div>
         </div>
       </nav>
@@ -150,34 +65,6 @@ else if(isset($_GET["p"]) && strlen($_GET["p"]) > 0 && substr($_GET["p"],-1,1) !
       <input name="close" type="button" value="Close" onclick="document.getElementById('PopUp').style.display = 'none';" />
     </div>
 
-<?
-if(!$path_found)
-{
-?>
-    <div><!-- main content //-->
-      <section class="features">
-        <div class="inner">
-          <div class="feature-grid">
-            <div class="table-row">
-              <h1>404 File Not Found</h1>
-
-              <p>Let me know if you followed a link here.</p>
-<?
-/*
-?>
-              p: "<?= $_GET["p"] ?>"<br />
-              POSTS_DIR: "<?= $POSTS_DIR ?>"
-              posts_subdir: "<?= $posts_subdir ?>"
-<?
-*/
-?>
-            </div>
-          </div>
-        </div>
-      </div>
-<?
-}
-?>
 <?
 foreach(array("split", "grid", "fullwidth") as $category)
 {
