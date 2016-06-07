@@ -1,0 +1,5 @@
+name: Olof Mogren through Jekyll
+markdown: redcarpet
+pygments: true
+baseurl: /
+
