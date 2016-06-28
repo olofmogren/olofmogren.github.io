@@ -10,8 +10,7 @@ layout: default
 <p>This is a selection of my publications. Please also see my <a href="https://scholar.google.se/citations?user=m_n28oAAAAAJ&amp;hl=en">page on Google Scholar</a></p>          </div>
         </div>
       </section>
-{% for p in site.categories.pubs %}
-{{ p.url }}
+{% for p in site.categories.publications %}
       <section>
         <div class="inner">
           <div class="block block-copy">
@@ -22,7 +21,7 @@ layout: default
 <br />
 <em>{{ p.venue }}</em><br />
 <em>Jacob Hagstedt P Suorra, Olof Mogren</em><br /></p>
-<a href="2016/assisting">More info</a>, <a href="2016/assisting/hagstedt2016assisting.pdf">PDF Fulltext</a>, <a href="javascript:void(null);" onclick="showBibtex(event, {{ p.bibtex }})">bibtex</a>.
+<a href="{{ p.url }}">More info</a>, <a href="2016/assisting/hagstedt2016assisting.pdf">PDF Fulltext</a>, <a href="javascript:void(null);" onclick="showBibtex(event, {{ p.bibtex }})">bibtex</a>.
 </div>
         </div>
       </section>
