@@ -3,13 +3,18 @@ title: Publications - Olof Mogren
 layout: default
 ---
 
-      <section>
-        <div class="inner">
-          <div class="block block-copy">
-<h1>Publications</h1>
-<p>This is a selection of my publications. Please also see my <a href="https://scholar.google.se/citations?user=m_n28oAAAAAJ&amp;hl=en">page on Google Scholar</a></p>          </div>
+<section>
+<div class="inner">
+<div class="block block-copy">
+
+# Publications
+
+This is a selection of my publications. Please also see my [page on Google Scholar](https://scholar.google.se/citations?user=m_n28oAAAAAJ&amp;hl=en).
+
+</div>
 </div>
 </section>
+
 {% for p in site.categories.publications %}
 <section>
 <div class="inner">
@@ -17,7 +22,7 @@ layout: default
 
 ## {{ p.title }}
 
-<img src="{{ p.img_src }}" alt="{{p.img_alt }}" style="float: right;" />
+<img src="{{ p.img_src }}" alt="{{ p.img_alt }}" style="float: right;" />
 
 {{ p.abstract }}
 <br />
