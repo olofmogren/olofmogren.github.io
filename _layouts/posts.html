@@ -5,7 +5,22 @@ layout: default
 <section>
 <div class="inner">
 <div class="block block-copy">
-{{ content }}
+
+
+# {{ page.title }}
+
+{% if page.imgsrc %}
+<img src="{{ page.imgsrc }}" alt="{{ page.imgalt }}" style="float: right;" />
+{% endif %}
+
+<p>
+{{ page.abstract }}
+</p>
+<p><em>{{ page.venue }}</em></p>
+<p><em>{{ page.authors }}</em></p>
+<a href="{{ page.pdf }}">PDF Fulltext</a>,
+<a href="javascript:void(null);" onclick="showBibtex(event, '{{ page.bibtex }}')">bibtex</a>.
+
 </div>
 </div>
 </section>

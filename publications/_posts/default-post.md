@@ -1,14 +1,16 @@
 ---
 title: 
 layout: posts
+tags:
+ - default
 imgsrc: 
 imgalt: 
 abstract: 
 
-venue: RANLP 2015, Hissar, Bulgaria, September 6th-11th
+venue: 
 authors: 
 bibtex: 
-permalink: /publications/2015/extractive/
+permalink:
 pdf: 
 ---
 
