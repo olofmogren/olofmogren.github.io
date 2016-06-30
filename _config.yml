@@ -1,4 +1,4 @@
 name: Olof Mogren
 baseurl: /
-permalink: /:categories/:year/:slug/
+# permalink: /:categories/:year/:slug/
 
