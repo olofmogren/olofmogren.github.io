@@ -1,5 +1,5 @@
 ---
-title: Assisting Discussion Forum Users using Deep Recurrent Neural Networks
+title: Ass-isting Discussion Forum Users using Deep Recurrent Neural Networks
 layout: default
 imgsrc: 2016/assisting/rnn-recommendation.png
 imgalt: LSTM recommendation model
