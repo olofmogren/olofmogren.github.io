@@ -1,5 +1,5 @@
 ---
-title: Ass-isting Discussion Forum Users using Deep Recurrent Neural Networks
+title: Assisting Discussion Forum Users using Deep Recurrent Neural Networks
 layout: default
 imgsrc: /publications/2016/assisting/rnn-recommendation.png
 imgalt: LSTM recommendation model
@@ -12,7 +12,10 @@ permalink: /publications/2016/assisting-new/
 
 # {{ page.title }}
 
+
+<img src="{{ page.imgsrc }}" alt="{{ page.imgalt }}" style="float: right;" />
 {{ page.abstract }}
-
-{{ page.venue }}
-
+<br />
+<em>{{ page.venue }}</em><br />
+<em>{{ page.authors }}</em><br />
+<a href="2016/assisting/hagstedt2016assisting.pdf">PDF Fulltext</a>, <a href="javascript:void(null);" onclick="showBibtex(event, '{{ page.bibtex }}')">bibtex</a>.
