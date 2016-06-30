@@ -8,14 +8,17 @@ venue: To appear in RepL4NLP at ACL 2016 in Berlin, August 11.
 authors: Jacob Hagstedt P Suorra, Olof Mogren
 bibtex: '@article{hagstedt2016assisting,\n  title={Assisting Discussion Forum Users using Deep Recurrent Neural Networks},\n  author={Hagstedt P Suorra, Jacob and Mogren, Olof},\n  journal={Representation Learning for NLP RepL4NLP at ACL 2016},\n  year={2016},\n  publisher={null}\n}\n'
 permalink: /publications/2016/assisting-new/
+pdf: 2016/assisting/hagstedt2016assisting.pdf
 ---
 
 # {{ page.title }}
 
 
 <img src="{{ page.imgsrc }}" alt="{{ page.imgalt }}" style="float: right;" />
+<p>
 {{ page.abstract }}
-<br />
-<em>{{ page.venue }}</em><br />
-<em>{{ page.authors }}</em><br />
-<a href="2016/assisting/hagstedt2016assisting.pdf">PDF Fulltext</a>, <a href="javascript:void(null);" onclick="showBibtex(event, '{{ page.bibtex }}')">bibtex</a>.
+</p>
+<p><em>{{ page.venue }}</em></p>
+<p><em>{{ page.authors }}</em></p>
+<a href="{{ page.pdf }}">PDF Fulltext</a>,
+<a href="javascript:void(null);" onclick="showBibtex(event, '{{ page.bibtex }}')">bibtex</a>.
