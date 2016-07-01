@@ -11,9 +11,6 @@ layout: default
 
 This is a selection of my publications. Please also see my <a href="https://scholar.google.se/citations?user=m_n28oAAAAAJ&amp;hl=en">page on Google Scholar</a>.
 
-</div>
-</div>
-</section>
 
 {% for prio in (0..1) %}
 {% for p in site.categories.publications %}
@@ -26,9 +23,6 @@ This is a selection of my publications. Please also see my <a href="https://scho
 {% continue %}
 {% endif %}
 {% endif %}
-<section>
-<div class="inner">
-<div class="block block-copy">
 
 <h2> {{ p.title }} </h2>
 
@@ -45,10 +39,10 @@ This is a selection of my publications. Please also see my <a href="https://scho
 <a href="{{ p.pdf }}">PDF Fulltext</a>,
 <a href="javascript:void(null);" onclick="showBibtex(event, '{{ p.bibtex }}')">bibtex</a>.
 </p>
-</div>
-</div>
-</section>
 {% endfor %}
 {% endfor %}
 
+</div>
+</div>
+</section>
 
