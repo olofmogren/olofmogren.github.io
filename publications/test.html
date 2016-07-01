@@ -16,7 +16,7 @@ This is a selection of my publications. Please also see my <a href="https://scho
 </section>
 
 {% for p in site.categories.publications %}
-{% if "prio" in p.tags %}
+{% if p.tags contains "prio" %}
 <section>
 <div class="inner">
 <div class="block block-copy">
@@ -42,7 +42,7 @@ This is a selection of my publications. Please also see my <a href="https://scho
 
 
 {% for p in site.categories.publications %}
-{% if not "prio" in p.tags %}
+{% if not p.tags contains "prio" %}
 <section>
 <div class="inner">
 <div class="block block-copy">
