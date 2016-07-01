@@ -37,6 +37,7 @@ Live demo: <a href="http://mogren.one:9291/">mogren.one:9191</a>.
 <li>To compare with other systems, Hong et.al. has published a repository of pre-computed summaries for DUC&nbsp;2004. It can be downloaded from <a href="https://cis.upenn.edu/~hongkai1/"><a href="https://cis.upenn.edu/~hongkai1/">https://cis.upenn.edu/~hongkai1/</a></a>.</li></li>
 </ul>
 <h2>Relevant Publications</h2>
+<!--
 <p><strong>Extractive Summarization by Aggregating Multiple Similarities</strong><br />
 &nbsp;&nbsp;<em>Fulltext</em>: <a href="mogren2015extractive.pdf">PDF</a>, <a href="mogren2015extractive.epub">EPUB</a>.<br />
 &nbsp;&nbsp;<em>Bibtex</em>: <a href="javascript:void(null);" onclick="showBibtex(event, '@article{mogrenextractive,\n  title={Extractive Summarization by Aggregating Multiple Similarities},\n  author={Mogren, Olof and Kågebäck, Mikael and Dubhashi, Devdatt},\n  journal={RECENT ADVANCES IN NATURAL LANGUAGE PROCESSING 2015},\n  pages={451}\n}')">click here</a><br />
@@ -45,9 +46,45 @@ Live demo: <a href="http://mogren.one:9291/">mogren.one:9191</a>.
 <p><strong>Extractive Summarization using Continuous Vector Space Models</strong><br />
 &nbsp;&nbsp;<em>Comments:</em> A workshop paper showing preliminary results on multi-document summarization with continuous vector space models for sentence representation. The experiments were performed on opinionated online user reviews.<br />
 &nbsp;&nbsp;<em>Fulltext:</em> <a href="kageback2014extractive.pdf">PDF</a>.</span><br />
-&nbsp;&nbsp;<em>Bibtex</em>: <a href="javascript:void(null);" onclick="showBibtex(event, '@inproceedings{kaageback2014extractive,\n  title={Extractive summarization using continuous vector space models},\n  author={Kågebäck, Mikael and Mogren, Olof and Tahmasebi, Nina and Dubhashi, Devdatt},\n  booktitle={Proceedings of the 2nd Workshop on Continuous Vector Space Models and their Compositionality (CVSC)@ EACL},\n  pages={31--39},\n  year={2014}\n}')">click here</a><br />
+&nbsp;&nbsp;<em>Bibtex</em>: <a href="javascript:void(null);" onclick="showBibtex(event, '@inproceedings{kaageback2014extractive,\n  title={Extractive summarization using continuous vector space models},\n  author={Kågebäck, Mikael and Mogren, Olof and Tahmasebi, Nina and Dubhashi, Devdatt},\n  booktitle={Proceedings of the 2nd Workshop on Continuous Vector Space Models and their Compositionality (CVSC)@ EACL},\n  pages={31 - -39},\n  year={2014}\n}')">click here</a><br />
 &nbsp;&nbsp;<em>Venue:</em> <em>2nd Workshop on Continuous Vector Space Models and their Compositionality CVSC 2014, Gothenburg Sweden</em><br />
 &nbsp;&nbsp;<em>Authors:</em> Mikael K&aring;geb&auml;ck, Olof Mogren, Nina Tahmasebi, Devdatt Dubhashi</p>
+//-->
+
+
+{% for prio in (0..1) %}
+{% for p in site.categories.publications %}
+{% if p.tags contains page.category %}
+{% else %}
+{% continue %}
+{% endif %}
+{% if p.tags contains "prio" %}
+{% if prio == 1 %}
+{% continue %}
+{% endif %}
+{% else %}
+{% if prio == 0 %}                                                                        {% continue %}                                                                            {% endif %}
+{% endif %}
+<section>
+<div class="inner">
+<div class="block block-copy">                                                            
+<h2> {{ p.title }} </h2>
+
+<img src="{{ p.imgsrc }}" alt="{{ p.imgalt }}" style="float: right;" />
+
+{{ p.shortversion }}
+</p>                                                                                      
+</p>
+<em>{{ p.venue }}</em><br />
+<em>{{ p.authors }}</em><br />
+<a href="{% if p.overwriteurl %}{{ p.overwriteurl }}{% else %}{{ p.url }}{% endif %}">More
+ info</a>,
+ <a href="{{ p.pdf }}">PDF Fulltext</a>,
+ <a href="javascript:void(null);" onclick="showBibtex(event, '{{ p.bibtex }}')">bibtex</a>.</div>
+ </div>
+ </section>
+ {% endfor %}
+ {% endfor %}
 </div>
 </div>
 </section>
