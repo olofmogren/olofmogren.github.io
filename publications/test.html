@@ -25,10 +25,11 @@ This is a selection of my publications. Please also see my <a href="https://scho
 <img src="{{ p.imgsrc }}" alt="{{ p.imgalt }}" style="float: right;" />
 
 {{ p.abstract }}
-<br />
+</p>
+
+</p>
 <em>{{ p.venue }}</em><br />
 <em>{{ p.authors }}</em><br />
-
 <a href="{% if p.overwriteurl %}{{ p.overwriteurl }}{% else %}{{ p.url }}{% endif %}">More info</a>,
 <a href="{{ p.pdf }}">PDF Fulltext</a>,
 <a href="javascript:void(null);" onclick="showBibtex(event, '{{ p.bibtex }}')">bibtex</a>.
