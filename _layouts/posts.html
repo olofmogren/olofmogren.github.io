@@ -14,13 +14,14 @@ layout: default
 {% endif %}
 
 <p>
-{{ page.abstract }}
+{{ page.shortversion }}
 </p>
-<p><em>{{ page.venue }}</em></p>
-<p><em>{{ page.authors }}</em></p>
+<p>
+<em>{{ page.venue }}</em><br />
+<em>{{ page.authors }}</em><br />
 <a href="{{ page.pdf }}">PDF Fulltext</a>,
 <a href="javascript:void(null);" onclick="showBibtex(event, '{{ page.bibtex }}')">bibtex</a>.
-
+</p>
 </div>
 </div>
 </section>

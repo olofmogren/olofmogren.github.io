@@ -5,7 +5,8 @@ tags:
  - default
 imgsrc: 
 imgalt: 
-abstract: 
+longversion:
+shortversion: 
 
 venue: 
 authors: 

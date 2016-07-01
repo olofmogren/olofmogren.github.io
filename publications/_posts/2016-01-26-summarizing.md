@@ -5,7 +5,8 @@ tags:
  - lic
 imgsrc: 
 imgalt: 
-abstract: This paper presents an approach to summarize online user-reviews based on finding bicliques in the bipartite word-document graph.
+longversion:
+shortversion: This paper presents an approach to summarize online user-reviews based on finding bicliques in the bipartite word-document graph.
 
 venue: Proceedings of SOFSEM 2016, LNCS 9587, pp 569-579.
 authors: Azam Sheikh Muhammad, Peter Damaschke, Olof Mogren

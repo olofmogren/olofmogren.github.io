@@ -6,7 +6,8 @@ tags:
  - lic
 imgsrc: 
 imgalt: 
-abstract: A workshop paper showing preliminary results on multi-document summarization with continuous vector space models for sentence representation. The experiments were performed on opinionated online user reviews.
+longversion:
+shortversion: A workshop paper showing preliminary results on multi-document summarization with continuous vector space models for sentence representation. The experiments were performed on opinionated online user reviews.
 
 venue: <a href="https://sites.google.com/site/cvscworkshop2014/">2nd Workshop on Continuous Vector Space Models and their Compositionality CVSC 2014</a>, Gothenburg Sweden
 authors: Mikael Kågebäck, Olof Mogren, Nina Tahmasebi, Devdatt Dubhashi
