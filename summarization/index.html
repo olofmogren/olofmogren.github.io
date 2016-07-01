@@ -54,7 +54,7 @@ Live demo: <a href="http://mogren.one:9291/">mogren.one:9191</a>.
 
 {% for prio in (0..1) %}
 {% for p in site.categories.publications %}
-{% if p.tags contains page.category %}
+{% if p.tags contains "summarization" %}
 {% else %}
 {% continue %}
 {% endif %}
