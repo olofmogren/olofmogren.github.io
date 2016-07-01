@@ -42,7 +42,8 @@ This is a selection of my publications. Please also see my <a href="https://scho
 
 
 {% for p in site.categories.publications %}
-{% if not p.tags contains "prio" %}
+{% if p.tags contains "prio" %}
+{% else %}
 <section>
 <div class="inner">
 <div class="block block-copy">
