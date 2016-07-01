@@ -1,6 +1,8 @@
 ---
 title: Assisting Discussion Forum Users using Deep Recurrent Neural Networks
 layout: posts
+tags:
+ - prio
 imgsrc: /publications/2016/assisting/rnn-recommendation.png
 imgalt: LSTM recommendation model
 longversion:

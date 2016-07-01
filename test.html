@@ -1,0 +1,68 @@
+---
+title: Publications Test - Olof Mogren
+layout: default
+---
+
+<section>
+<div class="inner">
+<div class="block block-copy">
+
+<h1> Publications</h1>
+
+This is a selection of my publications. Please also see my <a href="https://scholar.google.se/citations?user=m_n28oAAAAAJ&amp;hl=en">page on Google Scholar</a>.
+
+</div>
+</div>
+</section>
+
+{% for p in site.categories.publications %}
+{% if "prio" in p.tags %}
+<section>
+<div class="inner">
+<div class="block block-copy">
+
+<h2> {{ p.title }} </h2>
+
+<img src="{{ p.imgsrc }}" alt="{{ p.imgalt }}" style="float: right;" />
+
+{{ p.shortversion }}
+</p>
+
+</p>
+<em>{{ p.venue }}</em><br />
+<em>{{ p.authors }}</em><br />
+<a href="{% if p.overwriteurl %}{{ p.overwriteurl }}{% else %}{{ p.url }}{% endif %}">More info</a>,
+<a href="{{ p.pdf }}">PDF Fulltext</a>,
+<a href="javascript:void(null);" onclick="showBibtex(event, '{{ p.bibtex }}')">bibtex</a>.
+</div>
+</div>
+</section>
+{% endif %}
+{% endfor %}
+
+
+{% for p in site.categories.publications %}
+{% if not "prio" in p.tags %}
+<section>
+<div class="inner">
+<div class="block block-copy">
+
+<h2> {{ p.title }} </h2>
+
+<img src="{{ p.imgsrc }}" alt="{{ p.imgalt }}" style="float: right;" />
+
+{{ p.shortversion }}
+</p>
+
+</p>
+<em>{{ p.venue }}</em><br />
+<em>{{ p.authors }}</em><br />
+<a href="{% if p.overwriteurl %}{{ p.overwriteurl }}{% else %}{{ p.url }}{% endif %}">More info</a>,
+<a href="{{ p.pdf }}">PDF Fulltext</a>,
+<a href="javascript:void(null);" onclick="showBibtex(event, '{{ p.bibtex }}')">bibtex</a>.
+</div>
+</div>
+</section>
+{% endif %}
+{% endfor %}
+

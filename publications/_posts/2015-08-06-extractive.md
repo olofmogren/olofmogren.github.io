@@ -4,6 +4,7 @@ layout: posts
 tags:
  - summarization
  - lic
+ - prio
 imgsrc: /graphics/mogren_summarization.png
 imgalt: Extractive Multi-Document Summarization
 longversion:
