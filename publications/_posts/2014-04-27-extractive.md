@@ -3,6 +3,7 @@ title: Extractive Summarization using Continuous Vector Space Models
 layout: posts
 tags:
  - summarization
+ - lic
 imgsrc: 
 imgalt: 
 abstract: A workshop paper showing preliminary results on multi-document summarization with continuous vector space models for sentence representation. The experiments were performed on opinionated online user reviews.
