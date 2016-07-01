@@ -73,15 +73,9 @@ Live demo: <a href="http://mogren.one:9291/">mogren.one:9191</a>.
 {% endif %}
 <p><strong> {{ p.title }} </strong></p>
 
-<!--<img src="{{ p.imgsrc }}" alt="{{ p.imgalt }}" style="float: right;" />//-->
-<!--<p>
-{{ p.shortversion }}
-</p>//-->                                                                                      
 <p>
 <em>{{ p.venue }}</em><br />
 <em>{{ p.authors }}</em><br />
-<!--<a href="{% if p.overwriteurl %}{{ p.overwriteurl }}{% else %}{{ p.url }}{% endif %}">More
- info</a>,//-->
 <a href="{{ p.pdf }}">PDF Fulltext</a>,
 <a href="javascript:void(null);" onclick="showBibtex(event, '{{ p.bibtex }}')">bibtex</a>.
 </p>                                                                                      
