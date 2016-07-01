@@ -53,6 +53,9 @@ Live demo: <a href="http://mogren.one:9291/">mogren.one:9191</a>.
 </div>
 </div>
 </section>
+<section>
+<div class="inner">
+<div class="block block-copy">                                                            
 <h2>Relevant Publications</h2>
 
 {% for prio in (0..1) %}
@@ -68,9 +71,6 @@ Live demo: <a href="http://mogren.one:9291/">mogren.one:9191</a>.
 {% else %}
 {% if prio == 0 %}                                                                        {% continue %}                                                                            {% endif %}
 {% endif %}
-<section>
-<div class="inner">
-<div class="block block-copy">                                                            
 <p><strong> {{ p.title }} </strong></p>
 
 <!--<img src="{{ p.imgsrc }}" alt="{{ p.imgalt }}" style="float: right;" />//-->
@@ -85,9 +85,9 @@ Live demo: <a href="http://mogren.one:9291/">mogren.one:9191</a>.
 <a href="{{ p.pdf }}">PDF Fulltext</a>,
 <a href="javascript:void(null);" onclick="showBibtex(event, '{{ p.bibtex }}')">bibtex</a>.
 </p>                                                                                      
+{% endfor %}
+{% endfor %}
 </div>
 </div>
 </section>
-{% endfor %}
-{% endfor %}
 
