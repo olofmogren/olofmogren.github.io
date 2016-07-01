@@ -7,7 +7,7 @@ layout: default
 <div class="inner">
 <div class="block block-copy">
 
-<h1> Publications</h1>
+<h1>Publications</h1>
 
 This is a selection of my publications. Please also see my <a href="https://scholar.google.se/citations?user=m_n28oAAAAAJ&amp;hl=en">page on Google Scholar</a>.
 
@@ -15,7 +15,17 @@ This is a selection of my publications. Please also see my <a href="https://scho
 </div>
 </section>
 
+{% for prio in (0..1) %}
 {% for p in site.categories.publications %}
+{% if p.tags contains "prio" %}
+{% if prio == 1 %}
+{% continue %}
+{% endif %}
+{% else %}
+{% if prio == 0 %}
+{% continue %}
+{% endif %}
+{% endif %}
 <section>
 <div class="inner">
 <div class="block block-copy">
@@ -37,4 +47,6 @@ This is a selection of my publications. Please also see my <a href="https://scho
 </div>
 </section>
 {% endfor %}
+{% endfor %}
+
 
