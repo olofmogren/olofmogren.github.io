@@ -71,11 +71,8 @@ where people may discuss related topics.
 {% for post in site.categories.students %}
 {% assign currentdate = post.date | date: "%Y" %}
 {% if currentdate != date %}
-not eq
 {% if forloop.first %}
-first.
 {% else %}
-not first.
 {% break %}
 {% endif %}
 {% assign date = currentdate %}
