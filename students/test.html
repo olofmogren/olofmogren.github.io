@@ -16,9 +16,16 @@ layout: default
 <h3 id="y{{currentdate}}">{{ currentdate }}</h3>
 {% assign date = currentdate %}
 {% endif %}
-<p>{{ post.authors }}: <em>{{ post.title }}</em>
+<p>{{ post.authors }}:<br />
+<em>{{ post.title }}</em>
+{% if post.shortversion %}
+{{ post.shortversion }}
+{% endif %}
 {% if post.externallink %}
-<a href="{{ post.externallink }}">(<em>details</em>)</a>
+<br /><a href="{{ post.externallink }}">(<em>details</em>)</a>
+{% endif %}
+{% if post.longversion %}
+<br /><a href="{{ post.url }}">(<em>read more </em>)</a>
 {% endif %}
 </p>
 {% endfor %}
