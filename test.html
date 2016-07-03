@@ -71,7 +71,9 @@ where people may discuss related topics.
 {% for post in site.categories.students %}
 {% assign currentdate = post.date | date: "%Y" %}
 {% if currentdate != date %}
+not eq
 {% if !forloop.first %}
+not first.
 {% break %}
 {% endif %}
 {% assign date = currentdate %}
@@ -83,7 +85,6 @@ where people may discuss related topics.
 {% endif %}
 </p>
 {% endfor %}
-
 
 <p><a href="students">Read more.</a></p>
               </div>
