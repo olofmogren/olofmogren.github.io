@@ -10,7 +10,7 @@ layout: default
 <h2>Students</h2>
 <p>The following students have written their master's theses under my supervision.</p>
 
-{% for post in site.categories.students.posts %}
+{% for post in site.categories.students %}
 {% assign currentdate = post.date | date: "%Y" %}
 {% if currentdate != date %}
 <h3 id="y{{currentdate}}">{{ currentdate }}</h3>
