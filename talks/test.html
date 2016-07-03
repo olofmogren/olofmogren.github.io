@@ -1,0 +1,110 @@
+---
+title: Talks - Olof Mogren
+layout: default
+---
+
+<section>
+<div class="inner">
+<div class="block block-copy">
+<h1>Talks</h1>
+<div style="float: right;"><iframe src="https://calendar.google.com/calendar/embed?height=400&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=l6sjo71d4l4mts81870rpm56ek%40group.calendar.google.com&amp;color=%235229A3&amp;ctz=Europe%2FStockholm&mode=AGENDA&title=Upcoming%20Seminars" style="overflow-x:hidden;overflow-y:hidden; border-width:0" width="300" height="300" frameborder="0" scrolling="no"></iframe></div>
+<ul>
+
+
+
+{% for post in site.categories.talks %}
+{% assign currentdate = post.date | date: "%Y" %}
+{% if currentdate != date %}
+</ul><ul>
+<h2 id="y{{currentdate}}">{{ currentdate }}</h2>
+{% assign date = currentdate %}
+{% endif %}
+<li>
+<p>{{ post.date }}:
+<strong>{{ post.title }}</strong><br />
+(<em>{{ post.venue }}</em>)
+{% if post.externallink %}
+<a href="{{ post.externallink }}">(<em>details</em>)</a>
+{% endif %}
+<br />{{ post.shortversion }}
+</p>
+{% if post.longversion %}
+<p>
+<a href="{{ post.url }}">(<em>Read more</em>)</a>
+</p>
+{% endif %}
+{% if post.pdf %}
+<p><a href="{{ post.pdf }}">(<em>Slides</em>)</a></p>
+{% endif %}
+</li>
+{% endfor %}
+
+
+
+<li>
+<p>2016-06-07: <strong>Modelling the World with Deep Learning</strong><br />
+(<em>Invited Talk, Sigma Smart Developers Society</em>) 
+<a href="http://sigmaitc.se/events/sigma-smart-developers-society/">(<em>details</em>)</a>
+<br />
+An introduction to Deep Artificial Neural Networks and their applications within image recognition, natural language processing, and reinforcement learning.
+</p>
+<p><a href="slides/mogren-2016-06-07-deeplearning-sigma.pdf">Slides</a></p>
+</li>
+<li>
+<p>2016-02-25: <strong>Recognizing Entities and Assisting Discussion Forum Users using Neural Networks</strong><br />
+(<em>Invited Talk, Machine Learning and Data Science GBG Meetup</em>) <a href="http://www.meetup.com/machine-learning-gbg/events/228914275/">(<em>details</em>)</a><br />
+Recurrent Neural Networks can model sequences of arbitrary lengths, and have been successfully applied to tasks such as language modelling, machine translation, sequence labelling, and sentiment analysis. In this this talk, I gave an overview of some ongoing research taking place in our group related to the technology. Firstly, a master thesis project in collaboration with the meetup host Findwise, concerning entity recognition in the medical domain in Swedish. Secondly, the effort to build a system to give useful feedback to users in a discussion forum.</p>
+</li>
+<li>
+<p><a name="2016-02-18"></a>2016-02-18: <strong>Neural Attention Models</strong><br />
+(<em>Talk, Chalmers Machine Learning Seminars</em>) <a href="http://www.cse.chalmers.se/research/lab/seminars/">(<em>details</em>)</a><br />
+In artificial neural networks, attention models allow the system to focus on certain parts of the input. This has shown to improve model accuracy in a number of applications. In image caption generation, attention models help to guide the model towards the parts of the image currently of interest. In neural machine translation, the attention mechanism gives the model an alignment of the words between the source sequence and the target sequence.
+In this talk, we'll go through the basic ideas and workings of attention models, both for recurrent networks and for convolutional networks. In conclusion, we will see some recent papers that applies attention mechanisms to solve different tasks in natural language processing and computer vision.<br /></p>
+<p><a href="slides/mogren-2016-02-18-ml-seminar-attention.pdf">Slides</a></p>
+<p><em>Mentioned papers</em></p>
+<ul>
+<li><a href="http://arxiv.org/abs/1409.0473" title="Bahdanau et.al.">Bahdanau et.al., Neural Machine Translation by Jointly Learning to Align and Translate</a></li>
+<li><a href="http://arxiv.org/abs/1502.03044" title="Xu et.al.">Xu et.al., Show, Attend and Tell: Neural Image Caption Generation with Visual Attention</a></li>
+<li><a href="http://arxiv.org/abs/1602.03001" title="Allamanis et.al.">Allamanis et.al., A Convolutional Attention Network for Extreme Summarization of Source Code</a></li>
+</ul>
+<p><em>Other related papers</em></p>
+<ul>
+<li><a href="http://arxiv.org/abs/1502.04623" title="Gregor et.al.">Gregor et.al., DRAW: A Recurrent Neural Network For Image Generation</a></li>
+<li><a href="http://arxiv.org/abs/1506.03340" title="Hermann et.al.">Hermann et.al., Teaching Machines to Read and Comprehend</a></li>
+<li><a href="http://arxiv.org/abs/1406.1078" title="Cho">Cho, et.al., Learning Phrase Representations using RNN Encoder-Decoder for Statistical Machine Translation</a></li>
+</ul>
+<p><em>Links</em></p>
+<ul>
+<li><a href="https://re-work.co/blog/deep-learning-ilya-sutskever-google-openai" title="Ilya Sutskever Interview">Interview with Ilya Sutskever</a></li>
+</ul>
+</li>
+<li>
+<p>2016-01-13: <strong>Recurrent Networks and Sequence Labelling</strong><br />
+(<em>Talk, Chalmers Deep Learning Seminar</em>)</p>
+</li>
+<li>
+<p>2015-11-12: <strong>Machine Learning on GPUs using Torch7</strong><br />
+(<em>Talk, Chalmers GPU Computing Workshop</em>) <a href="https://www.chalmers.se/en/departments/rss/calendar/Pages/GPU-Computing-Workshop.aspx">(<em>details</em>)</a><br />
+An introduction to GPU computing from the machine learning perspective. I presented a survey of three different libraries: Theano, Torch, and Tensorflow. The first two libraries have backends both for CPUs and GPUs. TensorFlow has a more flexible backend, and also allows distributed computing on clusters. The talk also included a discussion about throughput and arithmetic intensity, inspired by Adam Coates lecture at the Deep Learning Summer School 2015.</p></p>
+</li>
+<li>
+<p>2015-11-05: <strong>Deep Learning and Algorithms</strong><br />
+(<em>Presentation for first-year students, in Swedish</em>) <a href="http://www.cse.chalmers.se/edu/course/CSE-seminarier/">(<em>details</em>)</a><br />
+A high-level overview of the field of algorithms, machine learning, and artificial intelligence. I talked about some recent advances in deep learning and gave an overview of the courses that the students can take at Chalmers.</p>
+</li>
+<li>
+<p>2015-09-07: <strong>Extractive Summarization by Aggregating Multiple Similarities</strong><br />
+(<em>Poster Presentation, RANLP 2015, Hissar, Bulgaria</em>)
+<a href="/summarization">(<em>details</em>)</a><br /></p>
+</li>
+<li>
+<p>2014-11-04: <strong>Automatic Multi-Document Summarization</strong><br />
+(<em>Invited talk, Astra Zeneca, Mölndal</em>)</p>
+</li>
+<li>2014-05-08: <strong>Automatic Multi-Document Summarization</strong><br />
+(<em>Presentation and demo, Vetenskapsfestivalen, Göteborg</em>)</li>
+</ul>
+</div>
+<div>
+</section>
+
