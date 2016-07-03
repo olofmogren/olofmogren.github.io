@@ -67,26 +67,12 @@ where people may discuss related topics.
               <div class="feature">
 <h3>Students</h3>
 <p>The following students are currently writing their master's theses under my supervision.</p>
-
-{% for post in site.categories.students %}
-{% assign currentdate = post.date | date: "%Y" %}
-{% if currentdate != date %}
-{% if forloop.first %}
-{% else %}
-{% break %}
-{% endif %}
-{% assign date = currentdate %}
-{% endif %}
-<p><strong>{{ post.authors }}</strong>:<br />
-<em>{{ post.title }}</em>
-{% if post.shortversion %}
-<br />{{ post.shortversion }}
-{% endif %}
-</p>
-{% endfor %}
-
-<p><a href="students">Read more.</a></p>
-              </div>
+<p><strong>Jacob Hagstedt</strong>:<br /> <em>Automatic Discussion Forum Assistant using Recurrent Neural Networks</em>
+<br />
+<a href="publications/2016/assisting/">Appearing in RepL4NLP</a>.</p>
+<p><strong>Sean Pavlov and Simon Almgren</strong>:<br /> <em>Entity Recognition in Swedish Medical Documents</em></p>
+<p><strong>Johan Ekdahl and William Axhav Bratt</strong>:<br /> <em>Proactive Intelligent Personal Assistant for a Car Environment</em></p>
+<p><a href="students">Read more.</a></p>              </div>
             </div>
           </div>
         </div>
