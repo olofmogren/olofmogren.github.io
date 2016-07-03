@@ -20,7 +20,7 @@ layout: default
 {% assign date = currentdate %}
 {% endif %}
 <li>
-<p>{{ post.date }}:
+<p>{{ post.date | date: "%Y-%m-%d" }}:
 <strong>{{ post.title }}</strong><br />
 (<em>{{ post.venue }}</em>)
 {% if post.externallink %}
@@ -34,7 +34,7 @@ layout: default
 </p>
 {% endif %}
 {% if post.pdf %}
-<p><a href="{{ post.pdf }}">(<em>Slides</em>)</a></p>
+<p><a href="{{ post.pdf }}"><em>Slides</em></a></p>
 {% endif %}
 </li>
 {% endfor %}
