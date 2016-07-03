@@ -72,7 +72,9 @@ where people may discuss related topics.
 {% assign currentdate = post.date | date: "%Y" %}
 {% if currentdate != date %}
 not eq
-{% if !forloop.first %}
+{% if forloop.first %}
+first.
+{% else %}
 not first.
 {% break %}
 {% endif %}
