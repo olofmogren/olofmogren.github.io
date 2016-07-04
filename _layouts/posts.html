@@ -14,7 +14,11 @@ layout: default
 {% endif %}
 
 <p>
+{% if page.longversion %}
+{{ page.longversion }}
+{% elsif %}
 {{ page.shortversion }}
+{% endif %}
 </p>
 <p>
 <em>{{ page.venue }}</em><br />
