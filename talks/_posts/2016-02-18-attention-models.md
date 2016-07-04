@@ -5,9 +5,7 @@ tags:
 imgsrc: 
 imgalt: 
 longversion: |
-'In artificial neural networks, attention models allow the system to focus on certain parts of the input. This has shown to improve model accuracy in a number of applications. In image caption generation, attention models help to guide the model towards the parts of the image currently of interest. In neural machine translation, the attention mechanism gives the model an alignment of the words between the source sequence and the target sequence.  In this talk, we'll go through the basic ideas and workings of attention models, both for recurrent networks and for convolutional networks. In conclusion, we will see some recent papers that applies attention mechanisms to solve different tasks in natural language processing and computer vision.
-
-  
+In artificial neural networks, attention models allow the system to focus on certain parts of the input. This has shown to improve model accuracy in a number of applications. In image caption generation, attention models help to guide the model towards the parts of the image currently of interest. In neural machine translation, the attention mechanism gives the model an alignment of the words between the source sequence and the target sequence.  In this talk, we'll go through the basic ideas and workings of attention models, both for recurrent networks and for convolutional networks. In conclusion, we will see some recent papers that applies attention mechanisms to solve different tasks in natural language processing and computer vision.
 <p><em>Mentioned papers</em></p>
 <ul>
 <li><a href="http://arxiv.org/abs/1409.0473" title="Bahdanau et.al.">Bahdanau et.al., Neural Machine Translation by Jointly Learning to Align and Translate</a></li>
@@ -23,7 +21,7 @@ longversion: |
 <p><em>Links</em></p>
 <ul>
 <li><a href="https://re-work.co/blog/deep-learning-ilya-sutskever-google-openai" title="Ilya Sutskever Interview">Interview with Ilya Sutskever</a></li>
-</ul>'
+</ul>
 
 shortversion: In artificial neural networks, attention models allow the system to focus on certain parts of the input. This has shown to improve model accuracy in a number of applications. In image caption generation, attention models help to guide the model towards the parts of the image currently of interest. In neural machine translation, the attention mechanism gives the model an alignment of the words between the source sequence and the target sequence.  In this talk, we'll go through the basic ideas and workings of attention models, both for recurrent networks and for convolutional networks. In conclusion, we will see some recent papers that applies attention mechanisms to solve different tasks in natural language processing and computer vision.
 
