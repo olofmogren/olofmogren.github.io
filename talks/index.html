@@ -14,8 +14,9 @@ layout: default
 {% for post in site.categories.talks %}
 {% assign currentdate = post.date | date: "%Y" %}
 {% if currentdate != date %}
-</ul><ul>
+</ul>
 <h2 id="y{{currentdate}}">{{ currentdate }}</h2>
+<ul>
 {% assign date = currentdate %}
 {% endif %}
 <li>
