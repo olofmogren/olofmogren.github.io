@@ -4,13 +4,7 @@ title: Olof Mogren - PhD Student
 ---
 
 
-{% assign even = 0 %}
 {% for p in site.categories.publications %}
-{% if even == 1 %}
-{% assign even = 0 %}
-{% else %}
-{% assign even = 1 %}
-{% endif %}
 {% if p.tags contains "frontpage" %}
 {% else %}
 {% continue %}
@@ -19,11 +13,9 @@ title: Olof Mogren - PhD Student
       <section class="research-topic">
         <div class="inner">
 
-{% if even == 1 %}
-          <div class="block block-graphic" style="padding-top: 40px;">
+          <div class="block block-graphic" style="padding-top: 40px;{% cycle ' display: block;', 'display: none' %}">
             <p><img src="{{ p.imgsrc }}" alt="{{ p.imgalt }}" style="margin-top: 30px;" /></p>
           </div>
-{% endif %}
           <div class="block block-copy half">
 <h2> {{ p.title }} </h2>
 
@@ -38,11 +30,9 @@ title: Olof Mogren - PhD Student
 <a href="{% if p.overwriteurl %}{{ p.overwriteurl }}{% else %}{{ p.url }}{% endif %}">Read more.</a>
 </p>
           </div>
-{% if even == 0 %}
-          <div class="block block-graphic" style="padding-top: 40px;">
+          <div class="block block-graphic" style="padding-top: 40px;{% cycle ' display: none;', 'display: block' %}">
             <p><img src="{{ p.imgsrc }}" alt="{{ p.imgalt }}" style="margin-top: 30px;" /></p>
           </div>
-{% endif %}
         </div>
       </section>
 {% endfor %}
