@@ -114,18 +114,6 @@ title: Olof Mogren - PhD Student
 {% endif %}
 <br />{{ post.shortversion }}
 </p>
-{% if post.pdf %}
-<p><a href="{{ post.pdf }}"><em>Slides</em></a></p>
-{% endif %}
-{% if post.overwriteurl %}
-<p>
-<a href="{{ post.overwriteurl }}">(<em>Read more</em>)</a>
-</p>
-{% elsif post.longversion %}
-<p>
-<a href="{{ post.url }}">(<em>Read more</em>)</a>
-</p>
-{% endif %}
 </li>
 {% endfor %}
 </ul>
