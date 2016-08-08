@@ -12,9 +12,10 @@ title: Olof Mogren - PhD Student
 
       <section class="research-topic">
         <div class="inner">
+          <div class="block block-copy half">
 
         <img src="{{ p.imgsrc }}" alt="{{ p.imgalt }}" style="margin-top: 30px; {% cycle 'float: left', 'float: right' %}" /></p>
-        <h2> {{ p.title }} </h2>
+<h2> {{ p.title }} </h2>
 
 <p>
 {{ p.shortversion }}
@@ -25,6 +26,7 @@ title: Olof Mogren - PhD Student
 <em>{{ p.authors }}</em><br />
 <a href="{% if p.overwriteurl %}{{ p.overwriteurl }}{% else %}{{ p.url }}{% endif %}">Read more.</a>
 </p>
+          </div>
         </div>
       </section>
 {% endfor %}
