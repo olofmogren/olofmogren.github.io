@@ -75,9 +75,7 @@ as it generates the output text.
 sentence and target sentence. Illustration from
 Neural Machine Translation by Jointly Learning to Translate and Align
 by Dzmitry Bahdanau, KyungHuyn Cho, and Yoshua Bengio. ICLR 2015.
-
-[(PDF, arXiv)](https://arxiv.org/abs/1409.0473)
-
+<a href="https://arxiv.org/abs/1409.0473">(PDF, arXiv)</a>.
 </em>
 </div>
 
