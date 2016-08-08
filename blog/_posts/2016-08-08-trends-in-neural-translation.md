@@ -110,11 +110,10 @@ The model is however simple and elegant, and gets good BLEU scores
 translating between German and English, as well as Russian and
 English.
 
-<div style="float: left">
+<figure style="float: left">
 <img src="/graphics/illustrations/2016-08-08/luong-hybrid-nmt.png" />
-<br />
-<em>Hybrid word-character model for NMT. From Minh-Thang Luong's slides.</em>
-</div>
+<figcaption>Hybrid word-character model for NMT. From Minh-Thang Luong's slides.</figcaption>
+</figure>
 
 A second paper, by Junyoung Chung, Kyunghyun Cho, and Yoshua Bengio from
 New York University and Universit&eacute; de Montr&eacute;al,
@@ -146,4 +145,5 @@ The system shows large improvements in BLEU scores,
 especially when used with a small word vocabulary,
 on the task of translating between Czech and English.
 
-The presentations of these papers are some of 
+These are some of the more interesting presentations that I look
+forward to during this year's ACL.
