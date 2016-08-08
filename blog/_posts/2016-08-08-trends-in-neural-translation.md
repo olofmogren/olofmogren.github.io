@@ -63,7 +63,7 @@ for tasks such as image captioning where the attention mechanism
 allows the decoder to focus on different parts of the input image
 as it generates the output text.
 
-<figure style="float: left">
+<figure style="float: right">
 <img src="/graphics/illustrations/2016-08-08/bahdanau-etal-alignment.png" />
 <figcaption style="max-width: 400px">The attention mechanism produces an alignment between source
 sentence and target sentence. Illustration from
