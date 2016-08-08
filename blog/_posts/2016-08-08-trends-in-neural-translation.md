@@ -69,7 +69,7 @@ allows the decoder to focus on different parts of the input image
 as it generates the output text.
 
 <div style="float: left">
-<img src="/graphics/illustrations/2016-08-08/luong-hybrid-nmt.png" />
+<img src="/graphics/illustrations/2016-08-08/bahdanau-etal-alignment.png" />
 <br />
 <em>The attention mechanism produces an alignment between source
 sentence and target sentence. Illustration from
