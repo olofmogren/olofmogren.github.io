@@ -47,7 +47,7 @@ a word is seen as a symbol, so the input to the encoder is
 a unique index for each unique word, and the decoder being
 constrained to pick words from this vocabulary.
 
-<figure style="float: right; max-width: 40%">
+<figure style="float: right; max-width: 40%; clear: right;">
 <img src="/graphics/illustrations/2016-08-08/bahdanau-etal-alignment.png" style="max-width: 90%" />
 <figcaption style="max-width: 90%" >The attention mechanism produces an alignment between source
 sentence and target sentence. Illustration from
@@ -104,7 +104,7 @@ The model is however simple and elegant, and gets good BLEU scores
 translating between German and English, as well as Russian and
 English.
 
-<figure style="float: left; max-width: 40%">
+<figure style="float: left; max-width: 40%; clear: left;">
 <img src="/graphics/illustrations/2016-08-08/luong-hybrid-nmt.png" style="max-width: 90%"  />
 <figcaption style="max-width: 90%" >Hybrid word-character model for NMT. From Minh-Thang Luong's slides.</figcaption>
 </figure>
