@@ -13,8 +13,6 @@ layout: default
 
 <a href="{{ p.url }}"><h2> {{ p.title }} </h2></a>
 
-<p><em>{{ p.date | date: '%Y-%m-%d' }}</em></p>
-
 <div style="float: right;">
 <p>
 <img src="{{ p.imgsrc }}" alt="{{ p.imgalt }}"/>
@@ -27,7 +25,8 @@ layout: default
 </p>
 
 <p>
-<em>{{ p.authors }}</em><br />
+<em>{{ p.authors }}, 
+{{ p.date | date: '%Y-%m-%d' }}</em><br />
 <a href="{{ p.url }}">Read more</a>.
 </p>
 {% endfor %}
