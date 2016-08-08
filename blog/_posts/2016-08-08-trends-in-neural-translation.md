@@ -113,7 +113,8 @@ on four different language pairs: English-German, English-Russian,
 English-Czech, and English-Finnish.
 
 <div style="float: left">
-<img src="/graphics/illustrations/2016-08-08/manning-nmt-history.png" />
+<img src="/graphics/illustrations/2016-08-08/luong-hybrid-nmt.png" />
+<br />
 <em>Hybrid word-character model for NMT. From Minh-Thang Luong's slides.</em>
 </div>
 
