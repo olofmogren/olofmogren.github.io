@@ -68,6 +68,17 @@ for tasks such as image captioning where the attention mechanism
 allows the decoder to focus on different parts of the input image
 as it generates the output text.
 
+<div style="float: left">
+<img src="/graphics/illustrations/2016-08-08/luong-hybrid-nmt.png" />
+<br />
+<em>The attention mechanism produces an alignment between source
+sentence and target sentence. Illustration from
+Neural Machine Translation by Jointly Learning to Translate and Align
+by Dzmitry Bahdanau, KyungHuyn Cho, and Yoshua Bengio. ICLR 2015.
+[(PDF, arXiv)](https://arxiv.org/abs/1409.0473).
+</em>
+</div>
+
 The latter of the two problems has previously been addressed
 by letting the NMT system output special &lt;UNK&gt; tokens
 for words that are out-of-vocabulary (OOV)
@@ -75,7 +86,7 @@ and post-processing the output by replacing this with the
 correspondng word in the source sentence, or looking them up
 in a dictionary
 (See *"Addressing the Rare Word Problem in Neural Machine Translation"* by Minh-Thang Luong, Ilya Sutskever, Quoc Le, Oriol Vinyals, Wojciech Zaremba. ACL 2015
-[PDF, arXiv](https://arxiv.org/abs/1410.8206).
+[(PDF, arXiv)](https://arxiv.org/abs/1410.8206).
 This can result in the translated word being in the wrong inflection,
 or (worse) the word might not be in the dictionary at all
 (e.g. misspelled words).
