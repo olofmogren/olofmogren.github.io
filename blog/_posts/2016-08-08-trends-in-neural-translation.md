@@ -65,7 +65,7 @@ as it generates the output text.
 
 <figure style="float: left">
 <img src="/graphics/illustrations/2016-08-08/bahdanau-etal-alignment.png" />
-<figcaption>The attention mechanism produces an alignment between source
+<figcaption style="max-width: 400px">The attention mechanism produces an alignment between source
 sentence and target sentence. Illustration from
 Neural Machine Translation by Jointly Learning to Translate and Align
 by Dzmitry Bahdanau, KyungHuyn Cho, and Yoshua Bengio. ICLR 2015.
