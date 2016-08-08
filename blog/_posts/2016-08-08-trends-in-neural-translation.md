@@ -17,6 +17,12 @@ pdf:
 overwriteurl: 
 ---
 
+The following blog post was written as an attempt to summarize some
+of the important things happening in the field of
+neural machine translation (NMT). It was also a way of digesting
+a great tutorial on NMT given Sunday, August 7 at ACL in Berlin
+by some of the best people in the field: Christopher Manning,
+Minh-Tangh Luong, and Kyunghyun Cho.
 
 Machine translation has gone through a number of stages in the last decades.
 Phrase based statistical machine translation (SMT), the flavour
@@ -106,6 +112,11 @@ decoding part, produces the best translations. The evaluation is made
 on four different language pairs: English-German, English-Russian,
 English-Czech, and English-Finnish.
 
+<div style="float: left">
+<img src="/graphics/illustrations/2016-08-08/manning-nmt-history.png" />
+<em>Hybrid word-character model for NMT. From Minh-Thang Luong's slides.</em>
+</div>
+
 In
 *Achieving Open Vocabulary Neural Machine Translation with Hybrid Word-Character Models*
 by Minh-Thang Luong and Christopher D. Manning from Stanford
@@ -114,7 +125,7 @@ a model is presented that works as a normal word-based sequence-to-sequence
 model, as long as you feed it words in the vocabulary.
 When the model encounters an OOV term, the system employs a second sequence model
 working on character level. This model computes a representation
-for any word that is expressible in the vocabulary, and experimental
+for any word that is expressible in the given set of characters, and experimental
 results show that the representations computed in this way share
 many of the properties of neural word embeddings computed on
 word-level
@@ -123,4 +134,4 @@ The system shows large improvements in BLEU scores,
 especially when used with a small word vocabulary,
 on the task of translating between Czech and English.
 
-
+The presentations of these papers are some of 
