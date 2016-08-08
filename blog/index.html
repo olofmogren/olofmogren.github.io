@@ -13,7 +13,7 @@ layout: default
 
 <h2> {{ p.title }} </h2>
 
-<p><em>{{ p.date }}</em></p>
+<p><em>{{ p.date | date: '%Y-%m-%d' }}</em></p>
 
 <div style="float: right;">
 <p>
