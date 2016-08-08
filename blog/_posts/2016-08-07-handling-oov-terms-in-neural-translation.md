@@ -80,10 +80,10 @@ during ACL 2016, taking place this week in Berlin.
 In *Neural Machine Translation of Rare Words with Subword Units* by
 Rico Sennrich and Barry Haddow and Alexandra Birch from
 University of Edinburg
-[PDF, aclweb.org](http://aclweb.org/anthology/P/P16/P16-1162.pdf),
+[(PDF, aclweb.org)](http://aclweb.org/anthology/P/P16/P16-1162.pdf),
 a system is proposed that work on subword units.
 Words are segmented using the Byte Pair Encoding (BPE) algorithm
-[read about this on Wikipedia](https://en.wikipedia.org/wiki/Byte_pair_encoding)
+[(read about this on Wikipedia)](https://en.wikipedia.org/wiki/Byte_pair_encoding)
 into subword units of different length, and a vocabulary is built
 using frequent such units.
 The method internally creates embeddings for these subword units,
@@ -96,7 +96,7 @@ English.
 A second paper, by Junyoung Chung, Kyunghyun Cho, and Yoshua Bengio from
 New York University and Universit&eacute; de Montr&eacute;al,
 titled *A Character-level Decoder without Explicit Segmentation for Neural Machine Translation*
-[PDF, aclweb.rg](http://aclweb.org/anthology/P/P16/P16-1160.pdf),
+[(PDF, aclweb.org)](http://aclweb.org/anthology/P/P16/P16-1160.pdf),
 presents a model that also uses a vocabulary generated
 with BPE (see above) in combination with a *"bi-scale recurrent neural network"*,
 a recurrent network with GRU cells on two different time-scales,
@@ -109,7 +109,7 @@ English-Czech, and English-Finnish.
 In
 *Achieving Open Vocabulary Neural Machine Translation with Hybrid Word-Character Models*
 by Minh-Thang Luong and Christopher D. Manning from Stanford
-[PDF, aclweb.org](http://aclweb.org/anthology/P/P16/P16-1100.pdf),
+[(PDF, aclweb.org)](http://aclweb.org/anthology/P/P16/P16-1100.pdf),
 a model is presented that works as a normal word-based sequence-to-sequence
 model, as long as you feed it words in the vocabulary.
 When the model encounters an OOV term, the system employs a second sequence model
@@ -117,7 +117,8 @@ working on character level. This model computes a representation
 for any word that is expressible in the vocabulary, and experimental
 results show that the representations computed in this way share
 many of the properties of neural word embeddings computed on
-word-level [read more on Word embeddings on Wikipedia](https://en.wikipedia.org/wiki/Word_embedding).
+word-level
+[(read more on Word embeddings on Wikipedia)](https://en.wikipedia.org/wiki/Word_embedding).
 The system shows large improvements in BLEU scores,
 especially when used with a small word vocabulary,
 on the task of translating between Czech and English.
