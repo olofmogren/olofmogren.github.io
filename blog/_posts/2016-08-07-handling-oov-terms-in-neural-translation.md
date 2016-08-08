@@ -7,8 +7,8 @@ tags:
  - Recurrent Neural Networks
 imgsrc: /graphics/illustrations/2016-08-08/manning-nmt-history.png
 imgalt: History of machine translation systems. Slide by Christopher D. Manning.
-longversion:
-shortversion: 
+imgcaption: History of machine translation systems. Slide by Christopher D. Manning.
+shortversion: This blog post is inspired by the tutorial on neural machine translation on ACL 2016 in Berlin by Christopher Manning, Minh-Tangh Luong, and Kyunghyun Cho. It intends to shed light on some of the recent research activities related to neura machine translation, and give some pointers on where to read more.
 
 venue: 
 authors: Olof Mogren
@@ -68,7 +68,7 @@ for words that are out-of-vocabulary (OOV)
 and post-processing the output by replacing this with the
 correspondng word in the source sentence, or looking them up
 in a dictionary
-(See *"Addressing the Rare Word Problem in Neural Machine Translation"* by Thang Luong, Ilya Sutskever, Quoc Le, Oriol Vinyals, Wojciech Zaremba. ACL 2015
+(See *"Addressing the Rare Word Problem in Neural Machine Translation"* by Minh-Thang Luong, Ilya Sutskever, Quoc Le, Oriol Vinyals, Wojciech Zaremba. ACL 2015
 [PDF, arXiv](https://arxiv.org/abs/1410.8206).
 This can result in the translated word being in the wrong inflection,
 or (worse) the word might not be in the dictionary at all
@@ -108,7 +108,7 @@ English-Czech, and English-Finnish.
 
 In
 *Achieving Open Vocabulary Neural Machine Translation with Hybrid Word-Character Models*
-by Thang Luong and Christopher D. Manning from Stanford
+by Minh-Thang Luong and Christopher D. Manning from Stanford
 [PDF, aclweb.org](http://aclweb.org/anthology/P/P16/P16-1100.pdf),
 a model is presented that works as a normal word-based sequence-to-sequence
 model, as long as you feed it words in the vocabulary.
