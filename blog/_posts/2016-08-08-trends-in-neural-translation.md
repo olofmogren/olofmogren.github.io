@@ -47,6 +47,16 @@ a word is seen as a symbol, so the input to the encoder is
 a unique index for each unique word, and the decoder being
 constrained to pick words from this vocabulary.
 
+<figure style="float: right; max-width: 40%">
+<img src="/graphics/illustrations/2016-08-08/bahdanau-etal-alignment.png" style="max-width: 90%" />
+<figcaption style="max-width: 90%" >The attention mechanism produces an alignment between source
+sentence and target sentence. Illustration from
+Neural Machine Translation by Jointly Learning to Translate and Align
+by Dzmitry Bahdanau, KyungHuyn Cho, and Yoshua Bengio. ICLR 2015.
+<a href="https://arxiv.org/abs/1409.0473">(PDF, arXiv)</a>.
+</figcaption>
+</figure>
+
 These models worked well and got some promising scores in evaluations, but
 they had some drawbacks.
 Firstly, the longer the input sentence,
@@ -62,16 +72,6 @@ generating the output. This is also used in multi-modal models
 for tasks such as image captioning where the attention mechanism
 allows the decoder to focus on different parts of the input image
 as it generates the output text.
-
-<figure style="float: right; max-width: 40%">
-<img src="/graphics/illustrations/2016-08-08/bahdanau-etal-alignment.png" style="max-width: 90%" />
-<figcaption style="max-width: 90%" >The attention mechanism produces an alignment between source
-sentence and target sentence. Illustration from
-Neural Machine Translation by Jointly Learning to Translate and Align
-by Dzmitry Bahdanau, KyungHuyn Cho, and Yoshua Bengio. ICLR 2015.
-<a href="https://arxiv.org/abs/1409.0473">(PDF, arXiv)</a>.
-</figcaption>
-</figure>
 
 The latter of the two problems has previously been addressed
 by letting the NMT system output special &lt;UNK&gt; tokens
