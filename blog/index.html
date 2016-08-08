@@ -11,7 +11,7 @@ layout: default
 
 {% for p in site.categories.blog %}
 
-<h2><a href="{{ p.url }}"> {{ p.title }} </a></h2>
+<a href="{{ p.url }}"><h2> {{ p.title }} </h2></a>
 
 <p><em>{{ p.date | date: '%Y-%m-%d' }}</em></p>
 
