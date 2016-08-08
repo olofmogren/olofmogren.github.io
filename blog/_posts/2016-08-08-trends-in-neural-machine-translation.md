@@ -80,7 +80,7 @@ and post-processing the output by replacing this with the
 correspondng word in the source sentence, or looking them up
 in a dictionary
 (See *"Addressing the Rare Word Problem in Neural Machine Translation"* by Minh-Thang Luong, Ilya Sutskever, Quoc Le, Oriol Vinyals, Wojciech Zaremba. ACL 2015
-[(PDF, arXiv)](https://arxiv.org/abs/1410.8206).
+[PDF, arXiv](https://arxiv.org/abs/1410.8206) ).
 This can result in the translated word being in the wrong inflection,
 or (worse) the word might not be in the dictionary at all
 (e.g. misspelled words).
