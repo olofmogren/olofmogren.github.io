@@ -14,12 +14,14 @@ layout: default
 <h2> {{ p.title }} </h2>
 
 <p><em>{{ p.date }}</em></p>
+
+<div style="float: right;">
 <p>
-<img src="{{ p.imgsrc }}" alt="{{ p.imgalt }}" style="float: right;" />
+<img src="{{ p.imgsrc }}" alt="{{ p.imgalt }}"/>
 <br />
 *{{ p.imgcaption }}*
 </p>
-
+</div>
 <p>
 {{ p.shortversion }}
 </p>
