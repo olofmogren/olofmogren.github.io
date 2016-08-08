@@ -33,8 +33,8 @@ neural machine translation (NMT) systems, which
 after being introduced seriously in 2014 have seen many refinements. 
 These systems are also known as sequence-to-sequence models
 or encoder-decoder networks, and were initially 
-merely a neural network made out
-of two parts. Firstly, an encoder part taking an input sentence
+a fairly simple neural network model made out
+of two recurrent parts. Firstly, an encoder part taking an input sentence
 in the source language and computing an internal representation,
 and secondly the decoder part, a neural language model
 trained to be good at assigning a high probability to a
