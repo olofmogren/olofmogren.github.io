@@ -13,13 +13,10 @@ layout: default
 
 <a href="{{ p.url }}"><h2> {{ p.title }} </h2></a>
 
-<div style="float: right;">
-<p>
-<img src="{{ p.imgsrc }}" alt="{{ p.imgalt }}"/>
-<br />
-<em>{{ p.imgcaption }}</em>
-</p>
-</div>
+<figure style="float: right;">
+<img src="{{ p.imgsrc }}" alt="{{ p.imgalt }}" style="max-width: 40%"/>
+<figcaption>{{ p.imgcaption }}</figcaption>
+</figure>
 <p>
 {{ p.shortversion }}
 </p>
