@@ -99,6 +99,12 @@ The model is however simple and elegant, and gets good BLEU scores
 translating between German and English, as well as Russian and
 English.
 
+<div style="float: left">
+<img src="/graphics/illustrations/2016-08-08/luong-hybrid-nmt.png" />
+<br />
+<em>Hybrid word-character model for NMT. From Minh-Thang Luong's slides.</em>
+</div>
+
 A second paper, by Junyoung Chung, Kyunghyun Cho, and Yoshua Bengio from
 New York University and Universit&eacute; de Montr&eacute;al,
 titled *A Character-level Decoder without Explicit Segmentation for Neural Machine Translation*
@@ -111,12 +117,6 @@ BPE tokens in the encoding part, along with a pure character-based
 decoding part, produces the best translations. The evaluation is made
 on four different language pairs: English-German, English-Russian,
 English-Czech, and English-Finnish.
-
-<div style="float: left">
-<img src="/graphics/illustrations/2016-08-08/luong-hybrid-nmt.png" />
-<br />
-<em>Hybrid word-character model for NMT. From Minh-Thang Luong's slides.</em>
-</div>
 
 In
 *Achieving Open Vocabulary Neural Machine Translation with Hybrid Word-Character Models*
