@@ -47,11 +47,6 @@ a word is seen as a symbol, so the input to the encoder is
 a unique index for each unique word, and the decoder being
 constrained to pick words from this vocabulary.
 
-<!-- 2. merely a neural language model conditioned on some input text.
-I.e. a model that could compute a probability of possible output
-sentences given an input sentence, and useable to sample output
-text given some input in the source language. //-->
-
 These models worked well and got some promising scores in evaluations, but
 they had some drawbacks.
 Firstly, the longer the input sentence,
@@ -68,16 +63,15 @@ for tasks such as image captioning where the attention mechanism
 allows the decoder to focus on different parts of the input image
 as it generates the output text.
 
-<div style="float: left">
+<figure style="float: left">
 <img src="/graphics/illustrations/2016-08-08/bahdanau-etal-alignment.png" />
-<br />
-<em>The attention mechanism produces an alignment between source
+<figcaption>The attention mechanism produces an alignment between source
 sentence and target sentence. Illustration from
 Neural Machine Translation by Jointly Learning to Translate and Align
 by Dzmitry Bahdanau, KyungHuyn Cho, and Yoshua Bengio. ICLR 2015.
 <a href="https://arxiv.org/abs/1409.0473">(PDF, arXiv)</a>.
-</em>
-</div>
+</figcaption>
+</figure>
 
 The latter of the two problems has previously been addressed
 by letting the NMT system output special &lt;UNK&gt; tokens

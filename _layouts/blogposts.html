@@ -11,13 +11,10 @@ layout: default
 <p><em>{{ page.date | date: '%Y-%m-%d' }}</em></p>
 
 {% if page.imgsrc %}
-<div style="float: right;">
-<p>
+<figure style="float: right;">
 <img src="{{ page.imgsrc }}" alt="{{ page.imgalt }}"/>
-<br />
-<em>{{ page.imgcaption }}</em>
-</p>
-</div>
+<figcaption>{{ page.imgcaption }}</figcaption>
+</figure>
 {% endif %}
 
 <p>
