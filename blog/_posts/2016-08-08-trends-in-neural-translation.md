@@ -63,9 +63,9 @@ for tasks such as image captioning where the attention mechanism
 allows the decoder to focus on different parts of the input image
 as it generates the output text.
 
-<figure style="float: right">
-<img src="/graphics/illustrations/2016-08-08/bahdanau-etal-alignment.png" />
-<figcaption style="max-width: 400px">The attention mechanism produces an alignment between source
+<figure style="float: right; max-width: 40%">
+<img src="/graphics/illustrations/2016-08-08/bahdanau-etal-alignment.png" style="max-width: 90%" />
+<figcaption style="max-width: 90%" >The attention mechanism produces an alignment between source
 sentence and target sentence. Illustration from
 Neural Machine Translation by Jointly Learning to Translate and Align
 by Dzmitry Bahdanau, KyungHuyn Cho, and Yoshua Bengio. ICLR 2015.
@@ -104,9 +104,9 @@ The model is however simple and elegant, and gets good BLEU scores
 translating between German and English, as well as Russian and
 English.
 
-<figure style="float: left">
-<img src="/graphics/illustrations/2016-08-08/luong-hybrid-nmt.png" />
-<figcaption>Hybrid word-character model for NMT. From Minh-Thang Luong's slides.</figcaption>
+<figure style="float: left; max-width: 40%">
+<img src="/graphics/illustrations/2016-08-08/luong-hybrid-nmt.png" style="max-width: 90%"  />
+<figcaption style="max-width: 90%" >Hybrid word-character model for NMT. From Minh-Thang Luong's slides.</figcaption>
 </figure>
 
 A second paper, by Junyoung Chung, Kyunghyun Cho, and Yoshua Bengio from
