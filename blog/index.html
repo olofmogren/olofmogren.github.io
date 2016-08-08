@@ -11,7 +11,7 @@ layout: default
 
 {% for p in site.categories.blog %}
 
-<h2> {{ p.title }} </h2>
+<h2><a href="{{ p.url }}"> {{ p.title }} </a></h2>
 
 <p><em>{{ p.date | date: '%Y-%m-%d' }}</em></p>
 
@@ -28,7 +28,7 @@ layout: default
 
 <p>
 <em>{{ p.authors }}</em><br />
-<a href="{% if p.overwriteurl %}{{ p.overwriteurl }}{% else %}{{ p.url }}{% endif %}">Read more</a>.
+<a href="{{ p.url }}">Read more</a>.
 </p>
 {% endfor %}
 
