@@ -41,7 +41,8 @@ trained to be good at assigning a high probability to a
 well-formed sentence in the target language, which can be used to
 generate sentences that sound very good. Letting the language
 model be conditioned on the input turns it into a translation
-model (see Sutskever et.al., 2014).
+model. (See *Sequence to Sequence Learning with Neural Networks*
+Ilya Sutskever, Oriol Vinyals, Quoc V. Le. NIPS 2014, [PDF, arXiv](http://arxiv.org/abs/1409.3215)).
 These early NMT systems worked on word level, which means that
 a word is seen as a symbol, so the input to the encoder is
 a unique index for each unique word, and the decoder being
@@ -51,7 +52,7 @@ constrained to pick words from this vocabulary.
 <img src="/graphics/illustrations/2016-08-08/bahdanau-etal-alignment.png" style="max-width: 90%" />
 <figcaption style="max-width: 90%" >The attention mechanism produces an alignment between source
 sentence and target sentence. Illustration from
-Neural Machine Translation by Jointly Learning to Translate and Align
+<em>Neural Machine Translation by Jointly Learning to Translate and Align</em>
 by Dzmitry Bahdanau, KyungHuyn Cho, and Yoshua Bengio. ICLR 2015.
 <a href="https://arxiv.org/abs/1409.0473">(PDF, arXiv)</a>.
 </figcaption>
@@ -141,7 +142,4 @@ on the task of translating between Czech and English.
 
 These are some of the more interesting presentations that I look
 forward to during this year's ACL.
-
-<blockquote class="twitter-tweet" data-lang="sv"><p lang="en" dir="ltr">I just wrote a blog post inspired by the tutorial on NMT at <a href="https://twitter.com/hashtag/acl2016berlin?src=hash">#acl2016berlin</a> by <a href="https://twitter.com/chrmanning">@chrmanning</a>, <a href="https://twitter.com/kchonyc">@kchonyc</a>, and <a href="https://twitter.com/lmthang">@lmthang</a> - <a href="https://t.co/HPyjAxUZUW">https://t.co/HPyjAxUZUW</a></p>&mdash; Olof Mogren (@olofmogren) <a href="https://twitter.com/olofmogren/status/762759867551649792">8 augusti 2016</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
