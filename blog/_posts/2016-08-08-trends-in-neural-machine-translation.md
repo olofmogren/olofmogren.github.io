@@ -101,7 +101,7 @@ using frequent such units.
 The method internally creates embeddings for these subword units,
 something that has been criticized for making it lack
 the ability of relating words to each other.
-The author however argued that there is no reason why the
+Rico Sennrich however argued during his talk that there is no reason why the
 word boundaries would be the best unit to have embedded.
 There are examples of composite words in one language
 that translates into a sequence of words in another language.
