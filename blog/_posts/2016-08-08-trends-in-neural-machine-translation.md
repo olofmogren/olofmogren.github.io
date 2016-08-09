@@ -99,8 +99,13 @@ Words are segmented using the Byte Pair Encoding (BPE) algorithm
 into subword units of different length, and a vocabulary is built
 using frequent such units.
 The method internally creates embeddings for these subword units,
-and therefore lacks the ability of relating words to each other.
-The model is however simple and elegant, and gets good BLEU scores
+something that has been criticized for making it lack
+the ability of relating words to each other.
+The author however argued that there is no reason why the
+word boundaries would be the best unit to have embedded.
+There are examples of composite words in one language
+that translates into a sequence of words in another language.
+The model is rather simple and elegant, and gets good BLEU scores
 [(read more on BLEU on Wikipedia)](https://en.wikipedia.org/wiki/BLEU)
 translating between German and English, as well as Russian and
 English.
