@@ -11,9 +11,9 @@ layout: default
 <p><em>{{ page.date | date: '%Y-%m-%d' }}</em></p>
 
 {% if page.imgsrc %}
-<figure style="float: right;">
-<img src="{{ page.imgsrc }}" alt="{{ page.imgalt }}"/>
-<figcaption>{{ page.imgcaption }}</figcaption>
+<figure style="float: right; max-width: 40%;">
+<img src="{{ page.imgsrc }}" alt="{{ page.imgalt }}" style="max-width: 100%" />
+<figcaption style="max-width: 100%;">{{ page.imgcaption }}</figcaption>
 </figure>
 {% endif %}
 
