@@ -141,3 +141,7 @@ on the task of translating between Czech and English.
 
 These are some of the more interesting presentations that I look
 forward to during this year's ACL.
+
+<blockquote class="twitter-tweet" data-lang="sv"><p lang="en" dir="ltr">I just wrote a blog post inspired by the tutorial on NMT at <a href="https://twitter.com/hashtag/acl2016berlin?src=hash">#acl2016berlin</a> by <a href="https://twitter.com/chrmanning">@chrmanning</a>, <a href="https://twitter.com/kchonyc">@kchonyc</a>, and <a href="https://twitter.com/lmthang">@lmthang</a> - <a href="https://t.co/HPyjAxUZUW">https://t.co/HPyjAxUZUW</a></p>&mdash; Olof Mogren (@olofmogren) <a href="https://twitter.com/olofmogren/status/762759867551649792">8 augusti 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
