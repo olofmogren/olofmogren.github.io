@@ -8,7 +8,7 @@ tags:
 imgsrc: /graphics/illustrations/2016-08-08/manning-nmt-history.png
 imgalt: History of machine translation systems. Slide by Christopher D. Manning.
 imgcaption: History of machine translation systems. Slide by Christopher D. Manning.
-shortversion: This blog post was inspired by the tutorial on neural machine translation on ACL 2016 in Berlin by Christopher Manning, Minh-Tangh Luong, and Kyunghyun Cho. It intends to shed light on some of the recent research activities related to neural machine translation, and give some pointers on where to read more.
+shortversion: This blog post was inspired by the tutorial on neural machine translation on ACL 2016 in Berlin by Christopher Manning, Minh-Thang Luong, and Kyunghyun Cho. It intends to shed light on some of the recent research activities related to neural machine translation, and give some pointers on where to read more.
 
 venue: 
 authors: Olof Mogren
@@ -22,7 +22,7 @@ of the important things happening in the field of
 neural machine translation (NMT). It was also a way of digesting
 a great tutorial on NMT given Sunday, August 7 at ACL in Berlin
 by some of the best people in the field: Christopher Manning,
-Minh-Tangh Luong, and Kyunghyun Cho.
+Minh-Thang Luong, and Kyunghyun Cho.
 
 Machine translation has gone through a number of stages in the last decades.
 Phrase based statistical machine translation (SMT), the flavour
