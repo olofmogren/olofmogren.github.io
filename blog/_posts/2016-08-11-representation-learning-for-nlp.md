@@ -29,7 +29,7 @@ First out was Professor Katrin Erk from University of Texas, speaking about repr
 
 See [Katrin Erk's homepage](http://www.katrinerk.com/).
 
-<figure style="float: left; max-width: 40%; clear: left;">
+<figure style="float: left; max-width: 40%; clear: both;">
 <img src="/graphics/illustrations/2016-08-11/tensor-decomposition.jpg" style="max-width: 90%" />
 <figcaption style="max-width: 90%" >
 Tensor decompositions for sentence representation learning. From Animashree Anandkumar's slides.
@@ -65,7 +65,7 @@ Raia Hadsell from [Google Deepmind](http://deepmind.com/) was the last invited s
 
 She then moved on to talk about how things in this field are affecting each other, and lines are blurring. Examples of this are *Pixel Recurrent Neural Networks* by Aaron Van den Oord Google Deepmind, Nal Kalchbrenner Google Deepmind, Koray Kavukcuoglu Google Deepmind, presented at ICML 2016 [(PDf, jmlr.org)](http://jmlr.org/proceedings/papers/v48/oord16.pdf) as well as the *Conditional Image Generation with PixelCNN Decoders* by Aaron van den Oord, Nal Kalchbrenner, Oriol Vinyals, Lasse Espeholt, Alex Graves, Koray Kavukcuoglu [(PDF, arxiv.org)](http://arxiv.org/abs/1606.05328), in essence considering image data as sequentially structured data. 
 
-<figure style="float: right; max-width: 40%; clear: right;">
+<figure style="float: right; max-width: 40%; clear: both;">
 <img src="/graphics/illustrations/2016-08-11/progressive-neural-nets.jpg" style="max-width: 90%" />
 <figcaption style="max-width: 90%" >
 Progressive neural networks. From Raia Hadsell's slides.
@@ -78,7 +78,7 @@ She ended her talk with **Progresive nets**, a way of transferring learning from
 
 During the poster session, we had our own poster titled ["Assisting discussion Forum Users using Deep Recurrent Neural Networks"](http://mogren.one/publications/2016/assisting/), showing how a recurrent neural model can be used to assist people asking questions in a discussion forum, by suggesting forum posts, discussion channels and other users that might be of help for the problem you currently express. The session was rather crowded, and many visitors came by our poster to talk, giving both interesting questions and helpful suggestions.
 
-<figure style="float: left; max-width: 40%; clear: left;">
+<figure style="float: left; max-width: 40%; clear: both;">
 <img src="/graphics/illustrations/2016-08-11/panel.jpg" style="max-width: 90%" />
 <figcaption style="max-width: 90%" >
 Panel discussion.
