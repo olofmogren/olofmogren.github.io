@@ -29,16 +29,16 @@ First out was Professor Katrin Erk from University of Texas, speaking about repr
 
 See [Katrin Erk's homepage](http://www.katrinerk.com/).
 
+Next up was Animashree Anandkumar, Assistant Professor at the University of California Irvine, who began with a nice recap about existing techniques for learning embeddings for sentences; compositional word-representation approaches, skip-thought vectors, RNNs, and convnet approaches. The latter of these were then the focus of much of the talk, allowing for shift-invariance in language inputs. She moved on to show how these models can be formulated using tensor decomposition methods, allowing for a much faster training time. The method can then be applied to compute sentence embeddings and obtained competitive results on standard benchmarks. In summary, a truly inspiring talk.
+
+To learn more about tensor based methods, see [Animashree Anandkumar's web page at UCI](http://newport.eecs.uci.edu/anandkumar/).
+
 <figure style="float: left; max-width: 40%; clear: both;">
 <img src="/graphics/illustrations/2016-08-11/tensor-decomposition.jpg" style="max-width: 90%" />
 <figcaption style="max-width: 90%" >
 Tensor decompositions for sentence representation learning. From Animashree Anandkumar's slides.
 </figcaption>
 </figure>
-
-Next up was Animashree Anandkumar, Assistant Professor at the University of California Irvine, who began with a nice recap about existing techniques for learning embeddings for sentences; compositional word-representation approaches, skip-thought vectors, RNNs, and convnet approaches. The latter of these were then the focus of much of the talk, allowing for shift-invariance in language inputs. She moved on to show how these models can be formulated using tensor decomposition methods, allowing for a much faster training time. The method can then be applied to compute sentence embeddings and obtained competitive results on standard benchmarks. In summary, a truly inspiring talk.
-
-To learn more about tensor based methods, see [Animashree Anandkumar's web page at UCI](http://newport.eecs.uci.edu/anandkumar/).
 
 Besides the invited talks, three papers were awarded the best paper awards, and were given a few minutes each to introduce their work. When introdcing this session, Edward Grefenstette presented some stats: out of submissions comparable to a major conference, 37 papers were accepted to this workshop. 
 
