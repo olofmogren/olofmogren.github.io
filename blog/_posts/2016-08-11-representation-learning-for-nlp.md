@@ -2,9 +2,9 @@
 title: 1st Workshop on Representation Learning for NLP
 layout: blogposts
 tags:
- - NMT
- - Neural Machine Translation
- - Recurrent Neural Networks
+ - NLP
+ - ACL
+ - Representation Learning
 imgsrc: /graphics/illustrations/2016-08-11/humboldt.jpg
 imgalt: Main building of Humboldt University in Berlin, Unter den Linden, as seen from Bebelplatz. Image from Wikimedia Commons, Creative Commons Attribution-Share Alike 3.0 Unported license.
 imgcaption: Main building of Humboldt University in Berlin, Unter den Linden, as seen from Bebelplatz, Creative Commons Attribution-Share Alike 3.0 Unported license.
@@ -14,7 +14,11 @@ authors: Olof Mogren
 permalink:
 pdf: 
 overwriteurl: 
-published: false
+
+shortversion: On August 11th, the first [workshop in Representation Learning For NLP](https://sites.google.com/site/repl4nlp2016/) took place in conjunction with [ACL 2016](http://acl2016.org/) at Humboldt University in Berlin. The workshop was extremely popular, and the talks were moved to the largest auditorium to fit all visitors.
+
+
+published: true
 ---
 
 On August 11th, the first [workshop in Representation Learning For NLP](https://sites.google.com/site/repl4nlp2016/) took place in conjunction with [ACL 2016](http://acl2016.org/) at Humboldt University in Berlin. The workshop was extremely popular, and the talks were moved to the largest auditorium to fit all visitors.
@@ -62,7 +66,7 @@ Raia Hadsell from [Google Deepmind](http://deepmind.com/) was the last invited s
 She then moved on to talk about how things in this field are affecting each other, and lines are blurring. Examples of this are *Pixel Recurrent Neural Networks* by Aaron Van den Oord Google Deepmind, Nal Kalchbrenner Google Deepmind, Koray Kavukcuoglu Google Deepmind, presented at ICML 2016 [(PDf, jmlr.org)](http://jmlr.org/proceedings/papers/v48/oord16.pdf) as well as the *Conditional Image Generation with PixelCNN Decoders* by Aaron van den Oord, Nal Kalchbrenner, Oriol Vinyals, Lasse Espeholt, Alex Graves, Koray Kavukcuoglu [(PDF, arxiv.org)](http://arxiv.org/abs/1606.05328), in essence considering image data as sequentially structured data. 
 
 <figure style="float: right; max-width: 40%; clear: right;">
-<img src="/graphics/illustrations/2016-08-11/progressive-neural-net.jpg" style="max-width: 90%" />
+<img src="/graphics/illustrations/2016-08-11/progressive-neural-nets.jpg" style="max-width: 90%" />
 <figcaption style="max-width: 90%" >
 Progressive neural networks. From Raia Hadsell's slides.
 </figcaption>

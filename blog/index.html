@@ -9,8 +9,17 @@ layout: default
 
 <h1>Blog</h1>
 
+Welcome to my blog. I intend to write about interesting things related to machine learning, artificial neural networks, and natural language processing.
+
+</div>
+</div>
+</section>
+
 {% for p in site.categories.blog %}
 
+<section>
+<div class="inner">
+<div class="block block-copy">
 <a href="{{ p.url }}"><h2> {{ p.title }} </h2></a>
 
 <figure style="float: right; max-width: 40%" >
@@ -25,9 +34,9 @@ layout: default
 <em>{{ p.authors }}, 
 {{ p.date | date: '%Y-%m-%d' }}</em>
 </p>
-{% endfor %}
 
 </div>
 </div>
 </section>
+{% endfor %}
 
