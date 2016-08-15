@@ -1,4 +1,6 @@
 name: Olof Mogren
 baseurl: /
 # permalink: /:categories/:year/:slug/
+gems:
+  - jekyll-feed
 
