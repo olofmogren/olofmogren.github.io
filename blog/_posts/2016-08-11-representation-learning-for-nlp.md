@@ -1,5 +1,5 @@
 ---
-title: 1st Workshop on Representation Learning for NLP
+title: First Workshop on Representation Learning for NLP
 layout: blogposts
 tags:
  - NLP
