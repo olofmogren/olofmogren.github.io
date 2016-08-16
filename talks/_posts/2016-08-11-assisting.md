@@ -13,7 +13,7 @@ authors: Olof Mogren
 bibtex: 
 permalink:
 pdf: 
-overwriteurl: /publicatioms/2016/assisting/
+overwriteurl: /publications/2016/assisting/
 externallink: 
 ---
 
