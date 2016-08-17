@@ -1,0 +1,59 @@
+---
+title: Blog - Olof Mogren
+layout: default
+---
+
+<section>
+<div class="inner">
+<div class="block block-copy">
+
+<h1>Blog</h1>
+
+Welcome to my blog. I intend to write about interesting things related to machine learning, artificial neural networks, and natural language processing.
+
+</div>
+</div>
+</section>
+
+      <section class="features">
+        <div class="inner" style="border-width: 0px">
+          <div class="feature-grid">
+            <div class="table-row">
+{% for p in site.categories.blogtest %}
+
+<!--<section>
+<div class="inner">
+<div class="block block-copy">//-->
+
+              <div class="feature" style="border-width: 0px">
+
+
+<a href="{{ p.url }}"><h2> {{ p.title }} </h2></a>
+
+<!--<figure style="float: right; max-width: 40%" >//-->
+<figure style="max-width: 90%" >
+<img src="{{ p.imgsrc }}" alt="{{ p.imgalt }}" style="max-width: 100%" />
+<!--<figcaption>{{ p.imgcaption }}</figcaption>//-->
+</figure>
+<p>
+{{ p.shortversion }}
+</p>
+
+<p>
+<em>{{ p.authors }}, 
+{{ p.date | date: '%Y-%m-%d' }}</em>
+</p>
+
+<!--</div>
+</div>
+</section>//-->
+
+              </div>
+
+{% endfor %}
+
+            </div>
+          </div>
+        </div>
+      </section>
+
