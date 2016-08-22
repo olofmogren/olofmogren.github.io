@@ -18,7 +18,7 @@
 		<title>{{ post.title }}</title>
 		<link href="http://mogren.one{{ post.url }}"/>
 		<updated>{{ post.date | date_to_xmlschema }}</updated>
-		<id>http://mogren.one{{ post.id }}</id>
+		<id>http://mogren.one{{ post.url }}</id>
 		<content type="html">{{ post.content | xml_escape }}{% include rss_footer.html %}</content>
 	</entry>
 	{% endfor %}
