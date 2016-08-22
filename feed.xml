@@ -16,9 +16,9 @@
 	{% for post in site.posts limit:20 %}
 	<entry>
 		<title>{{ post.title }}</title>
-		<link href="http://paulstamatiou.com{{ post.url }}"/>
+		<link href="http://mogren.one{{ post.url }}"/>
 		<updated>{{ post.date | date_to_xmlschema }}</updated>
-		<id>http://paulstamatiou.com{{ post.id }}</id>
+		<id>http://mogren.one{{ post.id }}</id>
 		<content type="html">{{ post.content | xml_escape }}{% include rss_footer.html %}</content>
 	</entry>
 	{% endfor %}
