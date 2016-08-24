@@ -17,7 +17,7 @@
 	<entry>
 		<title>
                   {% if post.categories contains "blog" %}
-                  Blog:
+                  Blog post:
                   {% elsif post.categories contains "talks" %}
                   Talk:
                   {% elsif post.categories contains "publications" %}
