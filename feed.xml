@@ -14,6 +14,8 @@
 	<rights>Olof Mogren</rights>
 	
 	{% for post in site.posts limit:20 %}
+          {% if post.categories contains "blog-drafts" %}
+          {% else %}
 	<entry>
 		<title>
                   {% if post.categories contains "blog" %}
@@ -34,6 +36,7 @@
 		<id>http://mogren.one{{ post.url }}</id>
 		<content type="html">{{ post.shortversion | xml_escape }}</content>
 	</entry>
+          {% endif %}
 	{% endfor %}
 </feed>
 
