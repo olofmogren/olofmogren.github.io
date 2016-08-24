@@ -15,7 +15,18 @@
 	
 	{% for post in site.posts limit:20 %}
 	<entry>
-		<title>{{post.categories}}: {{ post.title }}</title>
+		<title>
+                  {% if "blog" in post.categories %}
+                  Blog:
+                  {% elif "talks" in post.categories %}
+                  Talk:
+                  {% elif "publications" in post.categories %}
+                  Publication:
+                  {% else %}
+                  {{ post.categories }}
+                  {% endif %}
+                  {{ post.title }}
+                </title>
 		<link href="http://mogren.one{{ post.url }}"/>
 		<updated>{{ post.date | date_to_xmlschema }}</updated>
 		<id>http://mogren.one{{ post.url }}</id>
