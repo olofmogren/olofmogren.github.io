@@ -16,12 +16,14 @@
 	{% for post in site.posts limit:20 %}
 	<entry>
 		<title>
-                  {% if "blog" in post.categories %}
+                  {% if post.categories contains "blog" %}
                   Blog:
-                  {% elsif "talks" in post.categories %}
+                  {% elsif post.categories contains "talks" %}
                   Talk:
-                  {% elsif "publications" in post.categories %}
+                  {% elsif post.categories contains "publications" %}
                   Publication:
+                  {% elsif post.categories contains "students" %}
+                  Students:
                   {% else %}
                   {{ post.categories }}
                   {% endif %}
