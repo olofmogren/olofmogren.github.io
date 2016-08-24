@@ -18,9 +18,9 @@
 		<title>
                   {% if "blog" in post.categories %}
                   Blog:
-                  {% elif "talks" in post.categories %}
+                  {% elsif "talks" in post.categories %}
                   Talk:
-                  {% elif "publications" in post.categories %}
+                  {% elsif "publications" in post.categories %}
                   Publication:
                   {% else %}
                   {{ post.categories }}
