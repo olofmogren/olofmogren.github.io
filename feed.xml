@@ -15,7 +15,7 @@
 	
 	{% for post in site.posts limit:20 %}
 	<entry>
-		<title>{{ post.title }}</title>
+		<title>{{post.category}}: {{ post.title }}</title>
 		<link href="http://mogren.one{{ post.url }}"/>
 		<updated>{{ post.date | date_to_xmlschema }}</updated>
 		<id>http://mogren.one{{ post.url }}</id>
