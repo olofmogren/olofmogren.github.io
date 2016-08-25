@@ -2,38 +2,38 @@
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-	
-	<title type="text" xml:lang="en">{{ site.root_desc }}</title>
-	<link type="application/atom+xml" href="http://mogren.one/feed.xml" rel="self"/>
- 	<link type="text" href="http://mogren.one" rel="alternate"/>
-	<updated>{{ site.time | date_to_xmlschema }}</updated>
-	<id>http://mogren.one</id>
-	<author>
-		<name>Olof Mogren</name>
-	</author>
-	<rights>Olof Mogren</rights>
-	
-	{% for post in site.posts limit:20 %}
-          {% if post.categories contains "blog-drafts" %}
-          {% else %}
-	<entry>
-                {% if post.categories contains "blog" %}
-		<title>Blog post: {{ post.title }}</title>
-                {% elsif post.categories contains "talks" %}
-                <title>Talk: {{ post.title }}</title>
-                {% elsif post.categories contains "publications" %}
-                <title>Publication: {{ post.title }}</title>
-                {% elsif post.categories contains "students" %}
-                <title>Students: {{ post.title }}</title>
-                {% else %}
-                <title>{{ post.categories }}: {{ post.title }}</title>
-                {% endif %}
-		<link href="http://mogren.one{{ post.url }}"/>
-		<updated>{{ post.date | date_to_xmlschema }}</updated>
-		<id>http://mogren.one{{ post.url }}</id>
-		<content type="html">{{ post.shortversion | xml_escape }}</content>
-	</entry>
-          {% endif %}
-	{% endfor %}
+  
+  <title type="text" xml:lang="en">{{ site.root_desc }}</title>
+  <link type="application/atom+xml" href="http://mogren.one/feed.xml" rel="self"/>
+   <link type="text" href="http://mogren.one" rel="alternate"/>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <id>http://mogren.one</id>
+  <author>
+    <name>Olof Mogren</name>
+  </author>
+  <rights>Olof Mogren</rights>
+  
+{% for post in site.posts limit:20 %}
+  {% if post.categories contains "blog-drafts" %}
+  {% else %}
+  <entry>
+    {% if post.categories contains "blog" %}
+    <title>Blog post: {{ post.title }}</title>
+    {% elsif post.categories contains "talks" %}
+    <title>Talk: {{ post.title }}</title>
+    {% elsif post.categories contains "publications" %}
+    <title>Publication: {{ post.title }}</title>
+    {% elsif post.categories contains "students" %}
+    <title>Students: {{ post.title }}</title>
+    {% else %}
+    <title>{{ post.categories }}: {{ post.title }}</title>
+    {% endif %}
+    <link href="http://mogren.one{{ post.url }}"/>
+    <updated>{{ post.date | date_to_xmlschema }}</updated>
+    <id>http://mogren.one{{ post.url }}</id>
+    <content type="html">{{ post.shortversion | xml_escape }}</content>
+  </entry>
+  {% endif %}
+{% endfor %}
 </feed>
 
