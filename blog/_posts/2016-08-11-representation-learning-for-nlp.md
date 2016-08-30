@@ -23,7 +23,7 @@ published: true
 
 On August 11th, the first [workshop on Representation Learning For NLP](https://sites.google.com/site/repl4nlp2016/) took place in conjunction with [ACL 2016](http://acl2016.org/) at Humboldt University in Berlin. The workshop was extremely popular, and the talks were moved to the largest auditorium to fit all visitors.
 
-<p style="text-align: center;">&gt;&gt; <a href="https://twitter.com/intent/tweet?text={{ "#repl4nlp writeup: massively popular workshop on #representationlearning at #acl2016berlin @olofmogren " | url_encode }}&url={{"http://mogren.one"}}{{ page.url | url_encode }}" rel="nofollow" target="_blank" title="Click to Tweet this">Click to Tweet this</a> &lt;&lt;</p>
+<p style="text-align: center;">&gt;&gt; <a href="https://twitter.com/intent/tweet?text={{ "#repl4nlp writeup: massively popular workshop on #representationlearning at #acl2016berlin @olofmogren" | url_encode }}&url={{"http://mogren.one"}}{{ page.url | url_encode }}" rel="nofollow" target="_blank" title="Click to Tweet this">Click to Tweet this</a> &lt;&lt;</p>
 
 ## Invited talks
 
