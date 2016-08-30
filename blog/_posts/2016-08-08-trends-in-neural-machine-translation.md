@@ -24,7 +24,7 @@ a great tutorial on NMT given Sunday, August 7 at ACL in Berlin
 by some of the best people in the field: Christopher Manning,
 Minh-Thang Luong, and Kyunghyun Cho.
 
-<p style="text-align: center;">&gt;&gt; <a href="https://twitter.com/intent/tweet?text={{ "Trends in Neural Machine Translation @olofmogren http://mogren.one" | url_encode }}{{ page.url | url_encode }}" rel="nofollow" target="_blank" title="Click to Tweet this">Click to Tweet this</a> &lt;&lt;</p>
+<p style="text-align: center;">&gt;&gt; <a href="https://twitter.com/intent/tweet?text={{ "Trends in Neural Machine Translation: solutions to handle rare words @olofmogren http://mogren.one" | url_encode }}{{ page.url | url_encode }}" rel="nofollow" target="_blank" title="Click to Tweet this">Click to Tweet this</a> &lt;&lt;</p>
 
 Machine translation has gone through a number of stages in the last decades.
 Phrase based statistical machine translation (SMT), the flavour
