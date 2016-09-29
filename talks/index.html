@@ -22,10 +22,7 @@ layout: default
 <li>
 <p>{{ post.date | date: "%Y-%m-%d" }}:
 <strong>{{ post.title }}</strong><br />
-(<em>{{ post.venue }}</em>)
-{% if post.externallink %}
-<a href="{{ post.externallink }}">(<em>details</em>)</a>
-{% endif %}
+(<em>{{ post.venue }}</em>{% if post.externallink %}<a href="{{ post.externallink }}"><em>details</em></a>{% endif %})
 <br />{{ post.shortversion }}
 </p>
 {% if post.pdf %}
