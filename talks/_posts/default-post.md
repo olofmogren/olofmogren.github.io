@@ -1,6 +1,6 @@
 ---
 title: 
-layout: posts
+layout: talks
 tags:
  - default
 imgsrc: 

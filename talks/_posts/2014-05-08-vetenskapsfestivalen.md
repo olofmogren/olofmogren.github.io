@@ -1,6 +1,6 @@
 ---
 title: Automatic Multi-Document Summarization
-layout: posts
+layout: talks
 tags:
  - default
 imgsrc: 

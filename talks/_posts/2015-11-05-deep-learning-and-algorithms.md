@@ -1,6 +1,6 @@
 ---
 title: Deep Learning and Algorithms
-layout: posts
+layout: talks
 tags:
  - default
 imgsrc: 

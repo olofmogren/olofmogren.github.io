@@ -1,6 +1,6 @@
 ---
 title: Machine Learning on GPUs using Torch7
-layout: posts
+layout: talks
 tags:
  - default
 imgsrc: 

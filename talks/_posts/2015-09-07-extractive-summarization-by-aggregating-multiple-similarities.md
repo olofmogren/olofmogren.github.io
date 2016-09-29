@@ -1,6 +1,6 @@
 ---
 title: Extractive Summarization by Aggregating Multiple Similarities
-layout: posts
+layout: talks
 tags:
  - default
 imgsrc: 

@@ -1,6 +1,6 @@
 ---
 title: Assisting Discussion Forum Users using Deep Recurrent Neural Networks
-layout: posts
+layout: talks
 tags:
  - default
 imgsrc: 

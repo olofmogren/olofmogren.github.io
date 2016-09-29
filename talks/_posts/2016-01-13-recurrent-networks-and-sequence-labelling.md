@@ -1,6 +1,6 @@
 ---
 title: Recurrent Networks and Sequence Labelling
-layout: posts
+layout: talks
 tags:
  - default
 imgsrc: 

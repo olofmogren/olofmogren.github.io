@@ -1,6 +1,6 @@
 ---
 title: Modelling the World with Deep Learning
-layout: posts
+layout: talks
 tags:
  - default
 imgsrc: 

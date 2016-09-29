@@ -1,6 +1,6 @@
 ---
 title: Neural Attention Models
-layout: posts
+layout: talks
 tags:
 imgsrc: 
 imgalt: 
