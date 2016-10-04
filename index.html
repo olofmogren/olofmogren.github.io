@@ -101,10 +101,10 @@ title: Olof Mogren - Researcher, Speaker, Blogger. Deep Learning, NLP, Sequence 
 {% endif %}
 <li>
 <p>{{ post.date | date: "%Y-%m-%d" }}:
-<strong>{{ post.title }}</strong><br />
+<strong>{% if post.longversion %}<a href="{{ post.url }}">{% endif %}{{ post.title }}{% if post.longversion %}</a>{% endif %}</strong><br />
 (<em>{{ post.venue }}</em>)
 <br />
-{{ p.shortversion }}
+{{ post.shortversion }}
 </p>
 </li>
 {% endfor %}
