@@ -6,6 +6,10 @@ tags:
 imgsrc: /graphics/illustrations/2016-09-29/googlenet.svg
 imgalt: GoogLeNet (2014), a convolutional network with 22 layers.
 longversion: "<p>
+A motivational talk about deep artificial neural networks,
+given to the students in FFR135 (Artificial neural networks).
+I gave motivations for using deep architechtures, and to learn
+hierarchical representations for data.
 </p>
 <p><strong>Reading:</strong></p>
 <p>
@@ -44,13 +48,13 @@ arXiv:1512.03385
 
 
 <li>The loss surfaces of multilayer networks;
-Choromanska, et.al.; % Henaff, Mathieu, Arous, LeCun;
-AISTATS 2015 \\ %~ \\
+Choromanska, Henaff, Mathieu, Arous, LeCun;
+AISTATS 2015
 <a href=\"https://arxiv.org/abs/1412.0233\">PDF, arXiv</a></li>
 
 
 <li>Identifying and attacking the saddle point problem in high-dimensional non-convex optimization;
-Dauphin, et.al.; %Pascanu, Gulcehre, Cho, Ganguli, Bengio;
+Dauphin, Pascanu, Gulcehre, Cho, Ganguli, Bengio;
 NIPS 2014
 <a href=\"http://papers.nips.cc/paper/5486-sparse-pca-via-covariance-thresholding\">PDF, papers.nips.cc</a></li>
 
@@ -58,11 +62,15 @@ NIPS 2014
 <li>Sequence to Sequence Learning with Neural Networks, Ilya Sutskever, Oriol Vinyals, Quoc V. Le. NIPS 2014 <a href=\"http://arxiv.org/abs/1409.3215\">PDF, arXiv</a></li>
 <li>Neural Machine Translation of Rare Words with Subword Units, Rico Sennrich and Barry Haddow and Alexandra Birch, ACL 2016: <a href=\"http://aclweb.org/anthology/P/P16/P16-1162.pdf\">PDF, aclweb.org</a><br />
 <li>Google's Neural Machine Translation System: Bridging the Gap between Human and Machine Translation, Yonghui Wu et.al. (Google): <a href=\"http://arxiv.org/abs/1609.08144\">PDF, arXiv</a><br />
-
-
-
 </ul>
+</p>
+"
+
 shortversion: "<p>
+A motivational talk about deep artificial neural networks,
+given to the students in FFR135 (Artificial neural networks).
+I gave motivations for using deep architechtures, and to learn
+hierarchical representations for data.
 </p>"
 
 venue: FFR135, Artificial Neural Networks
