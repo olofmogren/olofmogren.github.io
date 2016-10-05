@@ -5,8 +5,7 @@ tags:
  - default
 imgsrc: /graphics/illustrations/2016-09-29/googlenet.svg
 imgalt: GoogLeNet (2014), a convolutional network with 22 layers.
-longversion: "
-<p>
+longversion: "<p>
 </p>
 <p><strong>Reading:</strong></p>
 <p>
@@ -63,8 +62,7 @@ NIPS 2014
 
 
 </ul>
-shortversion: "
-<p>
+shortversion: "<p>
 </p>"
 
 venue: FFR135, Artificial Neural Networks
