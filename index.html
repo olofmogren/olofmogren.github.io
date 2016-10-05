@@ -85,20 +85,11 @@ title: Olof Mogren - Researcher, Speaker, Blogger. Deep Learning, NLP, Sequence 
         <div class="inner">
           <div class="block block-copy">
 <a href="/talks/"><h3>Recent Talks</h3></a>
-<div style="float: right;"><iframe src="https://calendar.google.com/calendar/embed?height=400&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=l6sjo71d4l4mts81870rpm56ek%40group.calendar.google.com&amp;color=%235229A3&amp;ctz=Europe%2FStockholm&mode=AGENDA&title=Upcoming%20Seminars" style="overflow-x:hidden;overflow-y:hidden; border-width:0" width="300" height="300" frameborder="0" scrolling="no"></iframe></div>
 
 
 
 <ul>
-{% for post in site.categories.talks %}
-{% assign currentdate = post.date | date: "%Y" %}
-{% if currentdate != date %}
-{% if forloop.first %}
-{% else %}
-{% break %}
-{% endif %}
-{% assign date = currentdate %}
-{% endif %}
+{% for post in site.categories.talks limit:5 %}
 <li>
 <p>
 {% if post.imgsrc %}
@@ -111,6 +102,14 @@ title: Olof Mogren - Researcher, Speaker, Blogger. Deep Learning, NLP, Sequence 
 {{ post.shortversion }}
 </p>
 </li>
+
+{% if forloop.index == 1 %}
+</ul>
+<div><iframe src="https://calendar.google.com/calendar/embed?height=400&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=l6sjo71d4l4mts81870rpm56ek%40group.calendar.google.com&amp;color=%235229A3&amp;ctz=Europe%2FStockholm&mode=AGENDA&title=Upcoming%20Seminars" style="overflow-x:hidden;overflow-y:hidden; border-width:0" width="60%" height="300" frameborder="0" scrolling="no"></iframe></div>
+<ul>
+
+{% endif %}
+
 {% endfor %}
 </ul>
 
