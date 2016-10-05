@@ -32,8 +32,22 @@ Belief Nets; Hinton, Osindero, Tehi; Neural Computation; 2006
 Larochelle, Bengio, Louradour, Lamblin; JMLR 2009
 <a href=\"http://www.jmlr.org/papers/v10/larochelle09a.html\">PDF, jmlr.org</a></li>
 
+<li>Imagenet classification with deep convolutional neural networks (&ldquo;AlexNet&rdquo;);
+Krizhevsky, Sutskever, Hinton, NIPS 2012;
+<a href=\"http://www.cs.toronto.edu/~fritz/absps/imagenet.pdf\">PDF, cs.toronto.edu</a></li>
+
+<li>Very deep convolutional networks for large-scale image recognition (&ldquo;VGGNet&rdquo;);
+Simonyan, Zisserman; 2014;
+arXiv 1409.1556;
+<a href=\"https://arxiv.org/abs/1409.1556\">PDF, arXiv</a></li>
+
+<li> Going Deeper with Convolutions (&ldquo;GoogLeNet&rdquo;);
+Szegedy, Liu, Jia, Sermanet, Reed, Anguelov, Erhan, Vanhoucke, Rabinovich; 2014;
+arXiv 1409.4842;
+<a href=\"https://arxiv.org/abs/1409.4842\">PDF, arXiv</a></li>
+
 <li>Improving neural networks by preventing co-adaptation of feature detectors;
-Hinton, Srivastava, Krizhevsky, Sutskever, Salakhutdinov; (2012);
+Hinton, Srivastava, Krizhevsky, Sutskever, Salakhutdinov; 2012;
 arXiv:1207.0580
 <a href=\"http://arxiv.org/abs/1207.0580\">PDF, arXiv</a></li>
 
@@ -42,7 +56,7 @@ Ioffe, Szegedy;
 arXiv:1502.03167
 <a href=\"http://arxiv.org/abs/1502.03167\">PDF, arXiv</a></li>
 
-<li>Deep Residual Learning for Image Recognition;
+<li>Deep Residual Learning for Image Recognition (&ldquo;ResNet&rdquo;);
 He, Zhang, Ren, Sun;
 arXiv:1512.03385
 <a href=\"http://arxiv.org/abs/1512.03385\">PDF, arXiv</a></li>
