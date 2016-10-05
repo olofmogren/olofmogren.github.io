@@ -3,7 +3,7 @@ title: Deep Learning Guest Lecture
 layout: talks
 tags:
  - default
-imgsrc: /graphics/illustrations/2016-09-29/googlenet.svg
+imgsrc: /graphics/illustrations/2016-10-06/googlenet.svg
 imgalt: GoogLeNet (2014), a convolutional network with 22 layers.
 longversion: "<p>
 A motivational talk about deep artificial neural networks,
