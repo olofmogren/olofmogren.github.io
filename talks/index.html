@@ -20,7 +20,12 @@ layout: default
 {% assign date = currentdate %}
 {% endif %}
 <li>
-<p>{{ post.date | date: "%Y-%m-%d" }}:
+<p>
+{% if post.imgsrc %}
+<figure style="float: right; max-width: 40%;"><img src="{{ post.imgsrc }}" style="width: 100%;" alt="" /></figure>
+{% endif %}
+
+{{ post.date | date: "%Y-%m-%d" }}:
 <strong>{{ post.title }}</strong><br />
 (<em>{{ post.venue }}</em>{% if post.externallink %} -<a href="{{ post.externallink }}"><em>web page</em></a>{% endif %})
 <br />{{ post.shortversion }}

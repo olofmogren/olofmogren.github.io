@@ -100,7 +100,11 @@ title: Olof Mogren - Researcher, Speaker, Blogger. Deep Learning, NLP, Sequence 
 {% assign date = currentdate %}
 {% endif %}
 <li>
-<p>{{ post.date | date: "%Y-%m-%d" }}:
+<p>
+{% if post.imgsrc %}
+<figure style="float: right; max-width: 40%;"><img src="{{ post.imgsrc }}" style="width: 100%;" alt="" /></figure>
+{% endif %}
+{{ post.date | date: "%Y-%m-%d" }}:
 <strong>{% if post.longversion or post.pdf %}<a href="{{ post.url }}">{% endif %}{{ post.title }}{% if post.longversion or post.pdf %}</a>{% endif %}</strong><br />
 (<em>{{ post.venue }}</em>)
 <br />

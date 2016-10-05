@@ -11,7 +11,7 @@ given to the students in FFR135 (Artificial neural networks).
 I gave motivations for using deep architechtures, and to learn
 hierarchical representations for data.
 </p>
-<p><strong>Reading:</strong></p>
+<p><strong>Reading (web):</strong></p>
 <p>
 <ul>
 <li><a href=\"/blog/2016/08/08/trends-in-neural-machine-translation.html\">My blog post about neural machine translation</a></li>
@@ -20,9 +20,10 @@ hierarchical representations for data.
 <li><a href=\"http://cs231n.stanford.edu/\">cs231n.stanford.edu</a> - Stanford's course on convnets, with nice browser-based demo!</li>
 </ul>
 </p>
+
+<p><strong>Reading (publications):</strong></p>
 <p>
 <ul>
-
 <li>A Fast Learning Algorithm for Deep
 Belief Nets; Hinton, Osindero, Tehi; Neural Computation; 2006
 <a href=\"https://www.cs.toronto.edu/~hinton/absps/fastnc.pdf\">PDF, cs.toronto.edu</a></li>
