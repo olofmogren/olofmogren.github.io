@@ -24,7 +24,7 @@ div.nametagsubdiv{margin-bottom: 0px;}
 h1.nametag{color: #999; text-align: left;display:inline; text-decoration: none; font-variant: small-caps;}
 a.nametag{color: #999; text-decoration: none;}
 div.nametagsubscript{padding-top: 0px; margin-top: 0px;}
-span.nametagsubscript{font-size: 8pt; margin-left: 10px;}
+span.nametagsubscript{font-size: 8pt; margin-left: 10px; padding-top: 0px; margin-top: 0px;}
 
 section.features{border-top:1px solid #eceff1;border-bottom:1px solid #eceff1;text-align:center;padding: 0px;}
 section.features .feature-grid{display:table;border-collapse:collapse}
