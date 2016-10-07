@@ -23,8 +23,15 @@ layout: default
 <figure style="float: right; max-width: 40%; max-height: 12em; clear: right;"><img src="{{ post.imgsrc }}" style="width: 100%; max-height: 12em;" alt="" /></figure>
 {% endif %}
 
+{% if post.overwriteurl %}<a href="{{ post.overwriteurl }}">
+{% elsif post.longversion %}<a href="{{ post.url }}">
+{% endif %}
+
 {{ post.date | date: "%Y-%m-%d" }}:
 <strong>{{ post.title }}</strong><br />
+{% if post.overwriteurl or post.longversion %}
+</a>
+{% endif %}
 ({% if post.externallink %}<a href="{{ post.externallink }}">{% endif %}<em>{{ post.venue }}</em>{% if post.externallink %}</a>{% endif %})
 <br />{{ post.shortversion }}
 </p>
