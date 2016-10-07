@@ -95,7 +95,7 @@ title: Olof Mogren - Researcher, Speaker, Blogger. Deep Learning, NLP, Sequence 
 {% if post.imgsrc %}
 <figure style="float: right; clear: right; max-width: 40%; max-height: 7em;"><img src="{{ post.imgsrc }}" style="max-width: 100%; max-height: 7em; width: auto;" alt="" /></figure>
 {% endif %}
-<strong>{% if post.longversion or post.pdf %}<a href="{{ post.url }}">{% endif %}{{ post.date | date: "%Y-%m-%d" }}: {{ post.title }}{% if post.longversion or post.pdf %}</a>{% endif %}</strong><br />
+<strong>{% if post.longversion or post.pdf %}<a href="{{ post.url }}">{% elsif post.overwriteurl %}<a href="{{ post.overwriteurl }}">{% endif %}{{ post.date | date: "%Y-%m-%d" }}: {{ post.title }}{% if post.longversion or post.pdf %}</a>{% endif %}</strong><br />
 (<em>{{ post.venue }}</em>)
 <br />
 {{ post.shortversion }}
