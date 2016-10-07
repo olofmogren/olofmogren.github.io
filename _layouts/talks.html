@@ -24,9 +24,12 @@ layout: default
 <p><a href="{{ page.pdf }}">Slides (PDF)</a></p>
 {% endif %}
 <p>
+{% if page.externallink %}
+<a href="{{ page.externallink }}">
+{% endif %}
 <em>{{ page.venue }}</em>
 {% if page.externallink %}
-<a href="{{ page.externallink }}">(details)</a>
+</a>
 {% endif %}
 <br />
 <em>{{ page.authors }}</em><br />
