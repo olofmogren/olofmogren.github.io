@@ -25,7 +25,7 @@ layout: default
 
 {{ post.date | date: "%Y-%m-%d" }}:
 <strong>{{ post.title }}</strong><br />
-(<em>{{ post.venue }}</em>{% if post.externallink %} -<a href="{{ post.externallink }}"><em>web page</em></a>{% endif %})
+({% if post.externallink %}<a href="{{ post.externallink }}">{% endif %}<em>{{ post.venue }}</em>{% if post.externallink %}</a>{% endif %})
 <br />{{ post.shortversion }}
 </p>
 {% if post.pdf %}
