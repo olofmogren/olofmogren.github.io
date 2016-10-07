@@ -19,7 +19,9 @@ nav #groups div,nav #groups{width:auto;display:flex;flex-direction:row;align-ite
 
 @media screen and (min-width: 960px){nav{padding-right:130px}
 }
-.nametag{color: #999; text-align: left;display:inline-block;flex-grow:1;flex-shrink:1; margin-left: 20px; margin-top: 12px; margin-bottom: 16px; text-transform: none;}
+div.nametag{color: #999; text-align: left;display:inline-block;flex-grow:1;flex-shrink:1; margin-left: 20px; margin-top: 12px; margin-bottom: 16px; text-transform: none;}
+h1.nametag{color: #999; text-align: left;display:inline; text-decoration: none; font-variant: small-caps;}
+a.nametag{color: #999; text-decoration: none;}
 
 section.features{border-top:1px solid #eceff1;border-bottom:1px solid #eceff1;text-align:center;padding: 0px;}
 section.features .feature-grid{display:table;border-collapse:collapse}
