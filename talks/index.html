@@ -27,8 +27,8 @@ layout: default
 {% elsif post.longversion or post.pdf %}<a href="{{ post.url }}">
 {% endif %}
 
-{{ post.date | date: "%Y-%m-%d" }}:
-<strong>{{ post.title }}</strong><br />
+<strong>{{ post.date | date: "%Y-%m-%d" }}:
+{{ post.title }}</strong><br />
 {% if post.overwriteurl or post.longversion or post.pdf %}
 </a>
 {% endif %}
