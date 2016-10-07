@@ -15,7 +15,7 @@ title: Olof Mogren - Researcher, Speaker, Blogger. Deep Learning, NLP, Sequence 
           <div class="block block-copy">
 
         <figure style="max-width: 40%; margin-top: 30px; {% cycle 'float: left', 'float: right' %}"><img src="{{ p.imgsrc }}" alt="{{ p.imgalt }}" style="max-width: 100%; " /></figure>
-<h2> {{ p.title }} </h2>
+<a href="{% if p.overwriteurl %}{{ p.overwriteurl }}{% else %}{{ p.url }}{% endif %}"><h2> {{ p.title }} </h2></a>
 
 <p>
 {{ p.shortversion }}
@@ -24,7 +24,6 @@ title: Olof Mogren - Researcher, Speaker, Blogger. Deep Learning, NLP, Sequence 
 <p>
 <em>{{ p.venue }}</em><br />
 <em>{{ p.authors }}</em><br />
-<a href="{% if p.overwriteurl %}{{ p.overwriteurl }}{% else %}{{ p.url }}{% endif %}">Read more.</a>
 </p>
           </div>
         </div>
