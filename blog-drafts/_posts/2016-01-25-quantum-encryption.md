@@ -3,8 +3,8 @@ title: Quantum Encryption
 layout: blogposts
 tags:
  - 
-imgsrc: 
-imgalt: 
+imgsrc: /graphics/illustrations/2016-01-25/lorenz.jpg
+imgalt: Lorenz SZ-40/42. A german electro-mechanical crypto machine used during WWII.
 imgcaption: 
 
 shortversion: In a presentation as an invited speaker at SOFSEM in the Czech Republic in January 2016, Gilles Brassard from Universite de Montreal gave a talk about how quantum technology will impact cryptographic systems and the computer security of today.
@@ -16,7 +16,7 @@ pdf:
 overwriteurl: 
 ---
 
-The hesitant advent of quantum computers promises big changes for cryptography and computer security. In a memo from August 2015, the NSA advised organizations not to make big investments in the improvement of conventional cryptographic techniques (such as elliptic curve technology), as quantum cryptography today is seen as a real future with both promises of increased privacy, as well as more serious security threats.
+The advent of quantum computers promises big changes for cryptography and computer security. In a memo from August 2015, the NSA advised organizations not to make big investments in the improvement of conventional cryptographic techniques (such as elliptic curve technology), as quantum cryptography today is seen as a real future with both promises of increased privacy, as well as more serious security threats.
 
 ![Representation of a cubit](/graphics/illustrations/2016-01-25/bloch_sphere.png)
 
