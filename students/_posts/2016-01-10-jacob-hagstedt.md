@@ -6,7 +6,7 @@ tags:
 imgsrc: 
 imgalt: 
 longversion:
-shortversion: <a href="https://sites.google.com/site/repl4nlp2016/">Appearing in Representation Learning for NLP, RepL4NLP 2016</a><br /><a href="/publications/2016/assisting/">More info</a>.
+shortversion: <a href="/publications/2016/assisting/">Appeared as a paper in Representation Learning for NLP, RepL4NLP, at ACL 2016</a>.
 
 venue: 
 authors: Jacob Hagstedt P Suorra
