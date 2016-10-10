@@ -7,7 +7,7 @@ imgsrc:
 imgalt: 
 imgcaption: 
 
-shortversion: August 7-12, the 54th conference of the Association of Computational Linguistics (ACL) took place at the Humboldt University in Berlin. This blog post contains a write-up of some of my favourite presentations during the conference.
+shortversion: In a presentation as an invited speaker at SOFSEM in the Czech Republic in January 2016, Gilles Brassard from the Universite de Montreal gave a talk about how quantum technology will impact cryptographic systems and the computer security of today.
 
 venue: 
 authors: Olof Mogren
@@ -20,7 +20,7 @@ The hesitant advent of quantum computers promises big changes for cryptography a
 
 ![Representation of a cubit](/graphics/illustrations/2016-01-25/bloch_sphere.png)
 
-A quantum computer is based on principles of quantum mechanics. Unlike classical computers working with binary bits (which can have values of zero and one), quantum computers work with quantum bits or cubits (which can have the values zero, one, and a value that is both zero and one at the same time).
+A quantum computer is based on principles of quantum mechanics. Unlike classical computers working with binary bits (which can have values of zero and one, more on [Wikipedia](https://en.wikipedia.org/wiki/Bit)), quantum computers work with quantum bits or cubits (which can have the values zero, one, and a value that is both zero and one at the same time).
 (For more info, see [Wikipedia](https://en.wikipedia.org/wiki/Quantum_computing)).
 For some problems, a quantum computer can be much faster than a conventional computer.
 The idea to build quantum computers dates back to the early 1980s, but it has proved difficult to construct them in practice.
@@ -28,7 +28,7 @@ However, there are now machines that can perform quantum calculations to a limit
 
 ![Gilles Brassard](/graphics/illustrations/2016-01-25/brassard_gilles.jpg)
 
-In a presentation as an invited speaker at SOFSEM in the Czech Republic in January 2016, Gilles Brassard from the Universite de Montreal gave a talk about how quantum technology will impact cryptographic systems and the computer security of today.
+In a presentation as an invited speaker at SOFSEM in the Czech Republic in January 2016, [Gilles Brassard from the Universite de Montreal](http://www-labs.iro.umontreal.ca/~brassard/web/en/) gave a talk about how quantum technology will impact cryptographic systems and the computer security of today.
 
 Brassard began with the words of writer Edgar Allan Poe, who in 1841 said that &ldquo;human ingenuity cannot concoct a cypher which human ingenuity cannot resolve&rdquo;, a statement that hasn't been disproved as of this day.
 At that time cryptography was simple translation tables, in which a character was replaced with another, and both sender and receiver had to know the secret cipher key.
@@ -45,9 +45,9 @@ Another scenario is that the code-makers (those who create cryptographic technol
 Would this restore the balance?
 Today, there is research in this area, but no convincing solutions have been presented.
 If the communication channel is based on quantum mechanics, things come into new light.
-Even if a hacker can see the encrypted communication based on a quantum channel, an observer can never observe the communication without altering the information transmitted (this is a direct consequence of Heisenberg's uncertainty principle).
+Even if a hacker can see the encrypted communication based on a quantum channel, an observer can never observe the communication without altering the information transmitted (this is a direct consequence of Heisenberg's uncertainty principle, more on [Wikipedia](https://en.wikipedia.org/wiki/Uncertainty_principle)).
 So if anyone reads what you transmit, you can discover it.
-This fact makes it possible to use relatively simple encryption techniques and still have a security which in principle is proven safe against all types of attacks (this is known as Quantum Key Distribution ).
+This fact makes it possible to use relatively simple encryption techniques and still have a security which in principle is proven safe against all types of attacks (this is known as Quantum Key Distribution, more on [Wikipedia](https://en.wikipedia.org/wiki/Quantum_key_distribution)).
 
 This brings us to the current situation in this cat-and-mouse game.
 Unfortunately, building the machines required to perform quantum cryptography as defined in the theoretical publications is impossible.
