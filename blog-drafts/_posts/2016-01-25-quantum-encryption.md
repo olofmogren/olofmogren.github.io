@@ -18,7 +18,7 @@ overwriteurl:
 
 The hesitant advent of quantum computers promises big changes for cryptography and computer security. In a memo from August 2015, the NSA advised organizations not to make big investments in the improvement of conventional cryptographic techniques (such as elliptic curve technology), as quantum cryptography today is seen as a real future with both promises of increased privacy, as well as more serious security threats.
 
--> ![Representation of a cubit](/graphics/illustrations/2016-01-25/bloch_sphere.png) <-
+<center> ![Representation of a cubit](/graphics/illustrations/2016-01-25/bloch_sphere.png) </center>
 
 A quantum computer is based on principles of quantum mechanics. Unlike classical computers working with binary bits (which can have values of zero and one, more on [Wikipedia](https://en.wikipedia.org/wiki/Bit)), quantum computers work with quantum bits or cubits (which can have the values zero, one, and a value that is both zero and one at the same time).
 (For more info, see [Wikipedia](https://en.wikipedia.org/wiki/Quantum_computing)).
@@ -26,7 +26,7 @@ For some problems, a quantum computer can be much faster than a conventional com
 The idea to build quantum computers dates back to the early 1980s, but it has proved difficult to construct them in practice.
 However, there are now machines that can perform quantum calculations to a limited extent.
 
--> ![Gilles Brassard](/graphics/illustrations/2016-01-25/brassard_gilles.jpg) <-
+<center> ![Gilles Brassard](/graphics/illustrations/2016-01-25/brassard_gilles.jpg) </center>
 
 In a presentation as an invited speaker at SOFSEM in the Czech Republic in January 2016, [Gilles Brassard from Universite de Montreal](http://www-labs.iro.umontreal.ca/~brassard/web/en/) gave a talk about how quantum technology will impact cryptographic systems and the computer security of today.
 
@@ -56,11 +56,11 @@ Brassard mentioned as a joke, a prototype that he built together with some stude
 The machine was safe, provided that those who wanted to crack the cipher was deaf!
 Several more sophisticated systems have been built since then, China has built a network that stretches 2000 km from Beijing to Shanghai (see [China's quantum communications network almost ready](http://www.itproportal.com/2015/08/31/chinas-quantum-communications-network-almost-ready/)).
 
--> ![Vadim Makarov](/graphics/illustrations/2016-01-25/makarov.jpg) <-
+<center> ![Vadim Makarov](/graphics/illustrations/2016-01-25/makarov.jpg) </center>
 
 In several cases when such systems was presented, a group led by [Vadim Makarov](http://www.vad1.com/) at the [Institute for Quantum Computing, University of Waterloo, Canada](https://uwaterloo.ca/institute-for-quantum-computing/) managed to intercept a communication without discovery, and thus overcome the secret key and decipher the communication.
 
--> ![Quantum Chip from DWave](/graphics/illustrations/2016-01-25/dwave_128chip.jpg) <-
+<center> ![Quantum Chip from DWave](/graphics/illustrations/2016-01-25/dwave_128chip.jpg) </center>
 
 Brassard ended his presentation with &ldquo;the jury is still out&rdquo;, so far noone has won the crypto war.
 Although there are techniques that has been proven safe in theory, you can not actually build these systems today, and the ones who have tried has been hacked.
