@@ -7,7 +7,7 @@ imgsrc: /graphics/illustrations/2016-01-25/lorenz.jpg
 imgalt: Lorenz SZ-40/42. A german electro-mechanical crypto machine used during WWII.
 imgcaption: 
 
-shortversion: In a presentation as an invited speaker at SOFSEM in the Czech Republic in January 2016, Gilles Brassard from Universite de Montreal gave a talk about how quantum technology will impact cryptographic systems and the computer security of today.
+shortversion: In an invited talk at SOFSEM in January 2016, Gilles Brassard from Universite de Montreal gave a talk about how quantum technology will impact cryptographic systems and the computer security of today.
 
 venue: 
 authors: Olof Mogren
@@ -28,7 +28,7 @@ However, there are now machines that can perform quantum calculations to a limit
 
 ![Gilles Brassard](/graphics/illustrations/2016-01-25/brassard_gilles.jpg)
 
-In a presentation as an invited speaker at SOFSEM in the Czech Republic in January 2016, [Gilles Brassard from Universite de Montreal](http://www-labs.iro.umontreal.ca/~brassard/web/en/) gave a talk about how quantum technology will impact cryptographic systems and the computer security of today.
+In an invited talk at SOFSEM in the Czech Republic in January 2016, [Gilles Brassard from Universite de Montreal](http://www-labs.iro.umontreal.ca/~brassard/web/en/) gave a talk about how quantum technology will impact cryptographic systems and the computer security of today.
 
 Brassard began with the words of writer Edgar Allan Poe, who in 1841 said that &ldquo;human ingenuity cannot concoct a cypher which human ingenuity cannot resolve&rdquo;, a statement that hasn't been disproved as of this day.
 At that time cryptography was simple translation tables, in which a character was replaced with another, and both sender and receiver had to know the secret cipher key.
