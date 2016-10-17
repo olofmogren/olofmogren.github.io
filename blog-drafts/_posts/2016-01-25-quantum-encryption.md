@@ -20,8 +20,8 @@ The advent of quantum computers promises big changes for cryptography and comput
 
 ![Representation of a cubit](/graphics/illustrations/2016-01-25/bloch_sphere.png)
 
-A quantum computer is based on principles of quantum mechanics. Unlike classical computers working with binary bits (which can have values of zero and one, more on [Wikipedia](https://en.wikipedia.org/wiki/Bit)), quantum computers work with quantum bits or cubits (which can have the values zero, one, and a value that is both zero and one at the same time).
-(For more info, see [Wikipedia](https://en.wikipedia.org/wiki/Quantum_computing)).
+A quantum computer is based on principles of quantum mechanics. Unlike classical computers working with binary bits (which can have values of zero and one, more on [Wikipedia](https://en.wikipedia.org/wiki/Bit)), quantum computers work with quantum bits or cubits (which can have the values zero, one, and a value that is both zero and one at the same time,
+for more info, see [Wikipedia](https://en.wikipedia.org/wiki/Quantum_computing)).
 For some problems, a quantum computer can be much faster than a conventional computer.
 The idea to build quantum computers dates back to the early 1980s, but it has proved difficult to construct them in practice.
 However, there are now machines that can perform quantum calculations to a limited extent.
