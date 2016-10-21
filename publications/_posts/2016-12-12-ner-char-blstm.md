@@ -4,7 +4,7 @@ layout: posts
 tags:
  - prio
  - frontpage
-imgsrc: /publications/2016/ner-char-lstm/ner.png
+imgsrc: /publications/2016/ner-char-blstm/ner.png
 imgalt: Biomedical NER illustration.
 longversion:
 shortversion: We propose a novel approach for named entity recognition in medical data, using a character-based deep bidirectional recurrent neural network. A character-based neural model can learn features and patterns based on the character sequence, and is not limited to a fixed vocabulary. This makes the model very well suited for the NER task in the medical domain. Our experimental evaluation shows promising results.
