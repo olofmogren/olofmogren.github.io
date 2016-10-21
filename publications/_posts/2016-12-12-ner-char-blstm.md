@@ -11,7 +11,7 @@ shortversion: We propose a novel approach for named entity recognition in medica
 venue: To appear in <a href="http://nactem.ac.uk/biotxtm2016/">Fifth Workshop on Building and Evaluating Resources for Biomedical Text Mining (BioTxtM 2016) at COLING 2016</a> in Osaka, December 12.
 authors: Simon Almgren, Sean Pavlov, Olof Mogren
 bibtex: 
-permalink: /publications/2016/assisting/
+permalink: /publications/2016/ner-char-blstm/
 pdf: 
 ---
 
