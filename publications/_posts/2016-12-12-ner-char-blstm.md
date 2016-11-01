@@ -12,5 +12,6 @@ venue: To appear in <a href="http://nactem.ac.uk/biotxtm2016/">Fifth Workshop on
 authors: Simon Almgren, Sean Pavlov, Olof Mogren
 bibtex: '@inproceedings{almgrenpavlovmogren2016bioner, \n title={Named Entity Recognition in Swedish Medical Journals with Deep Bidirectional Character-Based LSTMs}, \n author={Simon Almgren, Sean Pavlov, Olof Mogren}, \n booktitle={Proceedings of the Fifth Workshop on Building and Evaluating Resources for Biomedical Text Mining (BioTxtM 2016)}, \n pages={1}, \n year={2016}}'
 permalink: /publications/2016/ner-char-blstm/
-pdf: 
+pdf: /publications/2016/ner-char-blstm/almgren2016ner-char-bilstm.pdf
+
 ---
