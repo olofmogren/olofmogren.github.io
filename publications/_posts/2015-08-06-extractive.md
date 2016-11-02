@@ -1,5 +1,5 @@
 ---
-title: Extractive Summarization by Aggregating Multiple Similarities
+title: Extractive summarization by aggregating multiple similarities
 layout: posts
 tags:
  - summarization
@@ -13,7 +13,7 @@ shortversion: Many existing methods for extracting summaries rely on comparing t
 
 venue: RANLP 2015, Hissar, Bulgaria, September 6th-11th
 authors: Olof Mogren, Mikael Kågebäck, Devdatt Dubhashi
-bibtex: '@article{mogrenextractive,\n  title={Extractive Summarization by Aggregating Multiple Similarities},\n  author={Mogren, Olof and Kågebäck, Mikael and Dubhashi, Devdatt},\n  journal={RECENT ADVANCES IN NATURAL LANGUAGE PROCESSING 2015},\n  pages={451}\n}'
+bibtex: '@article{mogrenextractive,\n  title={Extractive summarization by aggregating multiple similarities},\n  author={Mogren, Olof and Kågebäck, Mikael and Dubhashi, Devdatt},\n  journal={Recent advances in natural language processing 2015},\n  pages={451}\n}'
 permalink: /publications/2015/extractive/
 pdf: /summarization/mogren2015extractive.pdf
 overwriteurl: /summarization/
