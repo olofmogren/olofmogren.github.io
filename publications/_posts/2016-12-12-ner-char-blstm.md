@@ -1,5 +1,5 @@
 ---
-title: Named Entity Recognition in Swedish Health Records with Character-Based Deep Bidirectional LSTMs
+title: Named entity recognition in Swedish health records with character-based deep bidirectional LSTMs
 layout: posts
 tags:
  - prio
