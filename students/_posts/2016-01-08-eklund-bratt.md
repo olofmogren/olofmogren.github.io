@@ -1,5 +1,5 @@
 ---
-title: Proactive Intelligent Personal Assistant for a Car Environment
+title: Proactive intelligent personal assistant for a car environment
 layout: posts
 tags:
  - masterthesis
