@@ -13,9 +13,21 @@ layout: default
 {% for post in site.categories.students %}
 {% assign currentdate = post.date | date: "%Y" %}
 {% if currentdate != date %}
+{% if forloop.first %}
+{% else %}
+        </div>
+      </div>
+    </div>
+  </section>
+{% endif %}
 <h3 id="y{{currentdate}}">{{ currentdate }}</h3>
+  <section class="features">
+    <div class="inner">
+      <div class="feature-grid">
+        <div class="table-row">
 {% assign date = currentdate %}
 {% endif %}
+          <div class="feature">
 <p>{{ post.authors }}:<br />
 <em>{{ post.title }}</em>
 {% if post.shortversion %}
@@ -29,6 +41,13 @@ layout: default
 <br /><a href="{{ post.url }}">(<em>read more </em>)</a>
 {% endif %}
 </p>
+          </div>
+{% if forloop.last%}
+        </div>
+      </div>
+    </div>
+  </section>
+{% endif %}
 {% endfor %}
 
           </div>
