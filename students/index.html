@@ -21,8 +21,9 @@ layout: default
 {% if post.shortversion %}
 <br />{{ post.shortversion }}
 {% endif %}
+<br />Defended {{ post.date }}
 {% if post.externallink %}
-<br /><a href="{{ post.externallink }}"><em>More info({{ post.externallink | remove_first: 'http://' | remove_first: 'https://' | split:"/" | first }})</em></a>
+<br /><a href="{{ post.externallink }}"><em>More info ({{ post.externallink | remove_first: 'http://' | remove_first: 'https://' | split:"/" | first }})</em></a>
 {% endif %}
 {% if post.longversion %}
 <br /><a href="{{ post.url }}">(<em>read more </em>)</a>
