@@ -21,7 +21,7 @@ layout: default
 {% if post.shortversion %}
 <br />{{ post.shortversion }}
 {% endif %}
-<br />Defended {{ post.date }}
+<br />Defended {{ post.date | date: "%Y-%m-%d" }}
 {% if post.externallink %}
 <br /><a href="{{ post.externallink }}"><em>More info ({{ post.externallink | remove_first: 'http://' | remove_first: 'https://' | split:"/" | first }})</em></a>
 {% endif %}
