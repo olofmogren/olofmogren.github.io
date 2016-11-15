@@ -14,5 +14,6 @@ bibtex:
 permalink:
 pdf: 
 overwriteurl: 
+externallink: http://studentarbeten.chalmers.se/publication/238024-information-retrieval-in-instant-messaging-platforms-using-recurrent-neural-networks-assisting-discu
 ---
 
