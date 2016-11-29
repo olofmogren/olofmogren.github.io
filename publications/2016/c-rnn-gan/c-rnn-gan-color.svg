@@ -1108,7 +1108,7 @@
            id="rect11879"
            style="opacity:1;fill:#c6e1ff;fill-opacity:1;stroke:#000000;stroke-width:5.44799995;stroke-linejoin:round;stroke-miterlimit:21.79999924;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
         <rect
-           style="opacity:1;fill:#fad5e6;fill-opacity:1;stroke:#000000;stroke-width:5.44799995;stroke-linejoin:round;stroke-miterlimit:21.79999924;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           style="opacity:1;fill:#f4eac7;fill-opacity:1;stroke:#000000;stroke-width:5.44799995;stroke-linejoin:round;stroke-miterlimit:21.79999924;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
            id="rect7587-6-2-9-1"
            width="1213.1057"
            height="361.54761"
@@ -1459,18 +1459,18 @@
            height="75.833313"
            width="994.5343"
            id="rect12015-5"
-           style="opacity:1;fill:#fad5e6;fill-opacity:1;stroke:#000000;stroke-width:5.44799995;stroke-linejoin:round;stroke-miterlimit:21.79999924;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+           style="opacity:1;fill:#f4eac7;fill-opacity:1;stroke:#000000;stroke-width:5.44799995;stroke-linejoin:round;stroke-miterlimit:21.79999924;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
         <text
            sodipodi:linespacing="125%"
            id="text12017-3"
            y="837.72437"
-           x="181.7114"
+           x="191.7114"
            style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
            xml:space="preserve"><tspan
              id="tspan12019-5"
              style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Italic';text-align:center;text-anchor:middle"
              y="837.72437"
-             x="181.7114"
+             x="191.7114"
              sodipodi:role="line">Random generator</tspan></text>
         <g
            transform="translate(324.74605,0)"
