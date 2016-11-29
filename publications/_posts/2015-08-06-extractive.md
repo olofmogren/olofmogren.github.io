@@ -5,7 +5,6 @@ tags:
  - summarization
  - lic
  - prio
- - frontpage
 imgsrc: /graphics/illustrations/mogren_summarization.svg
 imgalt: Extractive Multi-Document Summarization
 longversion:
