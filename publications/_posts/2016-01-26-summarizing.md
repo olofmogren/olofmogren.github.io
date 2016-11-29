@@ -1,5 +1,5 @@
 ---
-title: Summarizing Online User Reviews Using Bicliques
+title: Summarizing online user reviews using bicliques
 layout: posts
 tags:
  - lic

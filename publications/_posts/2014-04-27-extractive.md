@@ -1,5 +1,5 @@
 ---
-title: Extractive Summarization using Continuous Vector Space Models
+title: Extractive summarization using continuous vector space models
 layout: posts
 tags:
  - summarization
