@@ -1,5 +1,5 @@
 ---
-title: Proactive intelligent personal assistant for a car environment
+title: CARAI - Development of an intelligent personal assistant for cars
 layout: posts
 tags:
  - masterthesis
@@ -14,5 +14,6 @@ bibtex:
 permalink:
 pdf: 
 overwriteurl: 
+externallink: http://studentarbeten.chalmers.se/publication/238604-carai-development-of-an-intelligent-personal-assistant-for-cars
 ---
 
