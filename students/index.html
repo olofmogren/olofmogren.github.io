@@ -32,7 +32,7 @@ layout: default
 <em>{{ post.title }}</em>
 <br />Defended {{ post.date | date: "%Y-%m-%d" }}
 {% if post.shortversion %}
-<br />{{ post.shortversion }}"
+<br />{{ post.shortversion }}
 {% endif %}
 {% if post.externallink %}
 <br /><a href="{{ post.externallink }}"><em>More info ({{ post.externallink | remove_first: 'http://' | remove_first: 'https://' | split:"/" | first }})</em></a>
