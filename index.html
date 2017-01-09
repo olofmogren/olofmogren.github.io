@@ -44,10 +44,12 @@ title: Olof Mogren - Researcher, Speaker, Blogger. Deep Learning, NLP, Sequence 
 <a href="/blog/"><h3>Blog</h3></a>
 
 {% for post in site.categories.blog limit:2 %}
+<a href="{% if p.overwriteurl %}{{ p.overwriteurl }}{% else %}{{ p.url }}{% endif %}"><p><strong>{{ post.title }}</strong>
 {% if post.imgsrc %}
-<img src="{{ post.imgsrc }}" style="max-width: 100%" />
+<br /><img src="{{ post.imgsrc }}" style="max-width: 100%" /></a><br />
+{% else %}
+</a><br />
 {% endif %}
-<p><strong><a href="{% if p.overwriteurl %}{{ p.overwriteurl }}{% else %}{{ p.url }}{% endif %}">{{ post.title }}</a></strong><br />
 <em>{{ post.date | date: "%Y-%m-%d" }}</em>
 {% if post.shortversion %}
 <br />{{ post.shortversion }}
