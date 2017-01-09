@@ -48,14 +48,24 @@ title: Olof Mogren - Researcher, Speaker, Blogger. Deep Learning, NLP, Sequence 
 <a href="http://users.ics.aalto.fi/praiko/" title="Tapani Raiko's web page at aalto.fi">Tapani Raiko from Aalto University</a>.</p>
               </div>
               <div class="feature">
-<a href="/about/"><h3>Deep learning course</h3></a>
-<p>During period four (March-May 2016), I  developed and taught a PhD course in <a href="http://www.cse.chalmers.se/research/lab/courses/deep-learning/">Deep Learning</a>, together with <a href="http://www.kageback.se/">Mikael Kågebäck</a> and <a href="http://www.cse.chalmers.se/~frejohk/">Fredrik Johansson</a>.</p>
-<p>The course covered some of the most important topics in the field, including convolutional neural networks, recurrent neural networks, unsupervised methods, and regularization techniques.</p>
-<p>We used a &ldquo;flipped classroom&rdquo; approach, with  video lectures from some of the best researchers in the field, along with discussion sessions.</p>
-<p><a href="http://www.cse.chalmers.se/research/lab/courses/deep-learning/" title="Deep Learning Course Web Page, chalmers.se">Read more at the course web page.</a></p>              </div>
+<a href="/blog/"><h3>Blog</h3></a>
+
+{% for post in site.categories.blog %}
+{% if forloop.first %}
+{% else %}
+{% break %}
+{% endif %}
+<p><strong><a href="{{ post.url }}">{{ post.title }}</a></strong>:<br />
+<em>{{ post.date }}</em>
+{% if post.shortversion %}
+<br />{{ post.shortversion }}
+{% endif %}
+</p>
+{% endfor %}
+              </div>
               <div class="feature">
 <a href="students"><h3>Students</h3></a>
-<p>The following students are currently writing their master's theses under my supervision.</p>
+<p>The following students recently wrote their master's theses under my supervision.</p>
 
 {% for post in site.categories.students %}
 {% assign currentdate = post.date | date: "%Y" %}
