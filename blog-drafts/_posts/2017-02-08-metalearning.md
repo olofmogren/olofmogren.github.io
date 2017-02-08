@@ -3,7 +3,7 @@ title: Metalearning
 layout: blogposts
 tags:
  - 
-imgsrc: /graphics/illustrations/2016-12-15/nips-cake.png
+imgsrc: /graphics/illustrations/2017-02-08/learning-to-learn-computation-graph.png
 imgalt: 
 imgcaption: 
 
