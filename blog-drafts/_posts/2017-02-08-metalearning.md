@@ -46,14 +46,27 @@ symposium for recurrent neural networks and other methods that can learn algorit
 being massively popular, having to be moved from a large room
 to one of the largest areas to house all participants.
 
+As I mentioned, the idea of metalearning is not new.
+Some examples of previous work are
+(Schmidthuber 1987, 1992, 1993), nets that modify their own weights.
+In 1997, the Success Story Algorithm used inspiration from both
+genetic algorithms and reinforcement learning,
+and Daniel, et.al., 2016, also uses a reinforcement learnin approach.
+
+Another branch of metalearning is to train a model on a large dataset,
+and then transfer the knowledge to a task where only limited data is available.
+This problem is known as <strong>one-shot learning</strong>, something
+that has been attacked using memory augmented networks such as
+the differentiable neural computer (Santoro, et.al., 2016), and
+other attention-based RNNs (Vinyals, et.al., 2016).
 
 *Learning to learn by gradient descent by gradient descent*
 [(abstract, pdf, nips.cc)](https://papers.nips.cc/paper/6461-learning-to-learn-by-gradient-descent-by-gradient-descent)
 not only wins my award for the nicest play on words in the title,
 it's also a really nice paper outlining how to use LSTMs to learn
 the optimization strategy for an optimization problem.
-The paper presents a rather straight-forward approach of
-training an LSTM network to output the update for one parameter
+The idea is a rather straight-forward approach of
+training an LSTM network to output the update for one parameter (at a time)
 in a neural network, given its current gradient as input.
 
 
