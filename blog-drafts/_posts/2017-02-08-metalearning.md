@@ -76,7 +76,7 @@ at every timestep \\(t\\) it outputs an update \\(g_t\\) for each
 parameter \\(\theta\\) in the optimizee model.
 They define the following loss:
 
-\\[\mathcal{L}(\phi) = \mathbb{E}_{f} \left[\sum_{t=2}^T w_t f(\theta_t)\right]\\]
+\\\[\mathcal{L}(\phi) = \mathbb{E}_{f} \left[\sum_{t=2}^T w_t f(\theta_t)\right]\\\]
 
 
 
