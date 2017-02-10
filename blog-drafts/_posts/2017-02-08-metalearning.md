@@ -16,6 +16,8 @@ pdf:
 overwriteurl: 
 ---
 
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
 Around ten years ago, representation learning started to revolutionalize
 many fields for real.
 The trend is obvious not only in computer vision, but also
