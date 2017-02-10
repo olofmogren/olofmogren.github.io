@@ -69,9 +69,14 @@ The idea is a rather straight-forward approach of
 training an LSTM network to output the update for one parameter (at a time)
 in a neural network, given its current gradient as input.
 
-Technically, the LSTM optimizer is a recurrent model with parameters \\(\phi\\),
-which at every timestep \\(t\\) outputs an update \\(g_t$\\) for each parameter in
-the optimizee model.
+Technically, the paper distinguishes between the *optimizer* with parameters \\(\phi\\)
+and the *optimizee* with parameters \\(\theta\\).
+The optimizer is trained using the Adam optimizer, and
+at every timestep \\(t\\) it outputs an update \\(g_t\\) for each
+parameter \\(\theta\\) in the optimizee model.
+They define the following loss:
+
+\\[ \mathcal{L}(\phi) = \mathbb{E}_{f} \left[\sum_{t=1}^T w_t f(\theta_t)\right]\\]
 
 
 
