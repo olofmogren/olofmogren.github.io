@@ -69,8 +69,8 @@ The idea is a rather straight-forward approach of
 training an LSTM network to output the update for one parameter (at a time)
 in a neural network, given its current gradient as input.
 
-Technically, the LSTM optimizer is a recurrent model with parameters $\phi$,
-which at every timestep $t$ outputs an update $g_t$ for each parameter in
+Technically, the LSTM optimizer is a recurrent model with parameters \\(\phi\\),
+which at every timestep \\(t\\) outputs an update \\(g_t$\\) for each parameter in
 the optimizee model.
 
 
