@@ -3,7 +3,6 @@ title: Assisting discussion forum users using deep recurrent neural networks
 layout: posts
 tags:
  - prio
- - frontpage
 imgsrc: /publications/2016/assisting/rnn-recommendation.svg
 imgalt: LSTM recommendation model
 longversion:
