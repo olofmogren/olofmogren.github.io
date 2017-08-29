@@ -13,7 +13,7 @@ trained to predict the missing second form of the query word.
 Our results show that the exact form can be predicted for English with an accuracy
 of 94.7%. For Swedish, which has a more complex morphology with more inflectional
 patterns for nouns and verbs, the accuracy is 89.3%."
-longversion: "We present a model for predicting word forms based on morphological relational
+longversion: "<p>We present a model for predicting word forms based on morphological relational
 reasoning with analogies. While previous
 work has explored tasks such as morphological inflection and reinflection, these
 models rely on an explicit enumeration of morphological features, which may not
@@ -26,7 +26,7 @@ Our results show that the exact form can be predicted for English with an accura
 of 94.7%. For Swedish, which has a more complex morphology with more inflectional
 patterns for nouns and verbs, the accuracy is 89.3%. We also show that using
 the auxiliary task of learning the relation type speeds up convergence and improves
-the prediction accuracy for the word generation task."
+the prediction accuracy for the word generation task.</p><h2>Source code</h2><p>The source code used for the experiments can be downloaded from <a href=\"https://github.com/olofmogren/char-rnn-wordrelations\">https://github.com/olofmogren/char-rnn-wordrelations</a>.</p>"
 venue: To appear at <a href="https://sites.google.com/view/sclem2017/">Subword & Character Level Models in NLP (SCLeM) workshop at EMNLP 2017</a> in Copenhagen, Denmark, September 7.
 authors: Olof Mogren, Richard Johansson
 bibtex: '@inproceedings{mogren2017character, \n title={Character-based recurrent neural networks for morphological relational reasoning}, \n author={Olof Mogren and Richard Johansson}, \n booktitle={Subword & Character Level Models in NLP (SCLeM) workshop at EMNLP 2017}, \n pages={1}, \n year={2017}}'
