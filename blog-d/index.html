@@ -1,0 +1,63 @@
+---
+title: Blog - Olof Mogren
+layout: default
+---
+
+<section>
+<div class="inner">
+<div class="block block-copy">
+
+<h1>Blog Drafts</h1>
+
+<p>
+This is where drafts for my blog resides before being publicly published on my blog. Please have patience and visit my blog instead:
+</p>
+
+<p><a href="/blog">BLOG</a></p>
+
+</div>
+</div>
+</section>
+
+      <section class="features">
+        <div class="inner" style="border-width: 0px">
+          <div class="feature-grid">
+            <div class="table-row">
+{% for p in site.categories.blog-drafts %}
+
+<!--<section>
+<div class="inner">
+<div class="block block-copy">//-->
+
+              <div class="feature" style="border-width: 0px">
+
+
+<a href="{{ p.url }}"><h2> {{ p.title }} </h2></a>
+
+<!--<figure style="float: right; max-width: 40%" >//-->
+<figure style="max-width: 90%" >
+<img src="{{ p.imgsrc }}" alt="{{ p.imgalt }}" style="max-width: 100%" />
+<!--<figcaption>{{ p.imgcaption }}</figcaption>//-->
+</figure>
+<p>
+{{ p.shortversion }}
+</p>
+
+<p>
+<em>{{ p.authors }}, 
+{{ p.date | date: '%Y-%m-%d' }}</em>
+</p>
+
+<!--</div>
+</div>
+</section>//-->
+
+              </div>
+
+{% endfor %}
+
+            </div>
+          </div>
+        </div>
+      </section>
+
