@@ -19,11 +19,24 @@ shortversion: On August 11th, the first workshop on Representation Learning For 
 
 
 published: true
+tweetid: 764149547073437696
 ---
 
 On August 11th, the first [workshop on Representation Learning For NLP](https://sites.google.com/site/repl4nlp2016/) took place in conjunction with [ACL 2016](http://acl2016.org/) at Humboldt University in Berlin. The workshop was extremely popular, and the talks were moved to the largest auditorium to fit all visitors.
 
-<p style="text-align: center;">&gt;&gt; <a href="https://twitter.com/intent/tweet?text={{ "#repl4nlp writeup: massively popular workshop on #representationlearning at #acl2016berlin @olofmogren" | url_encode }}&url={{"http://mogren.one"}}{{ page.url | url_encode }}" rel="nofollow" target="_blank" title="Click to Tweet this">Click to Tweet this</a> &lt;&lt;</p>
+{% if page.tweetid %}
+<div style="width: 100%; border: #ccc solid 1px; overflow: auto;">
+<div style="float: left; margin-left: 20px;"><p>Retweet or comment this on Twitter:</p></div>
+<div style="overflow-y: hidden; width: 60%; height: 24px; float: left; margin-top: 16px;" scrolling="no">
+<div style="position: relative; bottom: 4px; left: -4px; overflow-y: hidden; overflow-x: hidden; width: 600px; height: 32px;" scrolling="no">
+<div style="position: relative; top: -180px; width: 600px;">
+<blockquote class="twitter-tweet" data-lang="en"><a href="https://twitter.com/olofmogren/status/{{ page.tweetid }}">&nbsp;</a></blockquote><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+</div>
+</div>
+</div>
+{% endif %}
+
 
 ## Invited talks
 

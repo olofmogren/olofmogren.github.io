@@ -15,6 +15,7 @@ authors: Olof Mogren
 permalink:
 pdf: 
 overwriteurl: 
+tweetid: 762759867551649792
 ---
 
 The following blog post was written as an attempt to summarize some
@@ -24,7 +25,18 @@ a great tutorial on NMT given Sunday, August 7 at ACL in Berlin
 by some of the best people in the field: Christopher Manning,
 Minh-Thang Luong, and Kyunghyun Cho.
 
-<p style="text-align: center;">&gt;&gt; <a href="https://twitter.com/intent/tweet?text={{ "Trends in Neural Machine Translation: solutions to handle rare words @olofmogren" | url_encode }}&url={{"http://mogren.one"}}{{ page.url | url_encode }}" rel="nofollow" target="_blank" title="Click to Tweet this">Click to Tweet this</a> &lt;&lt;</p>
+{% if page.tweetid %}
+<div style="width: 100%; border: #ccc solid 1px; overflow: auto;">
+<div style="float: left; margin-left: 20px;"><p>Retweet or comment this on Twitter:</p></div>
+<div style="overflow-y: hidden; width: 60%; height: 24px; float: left; margin-top: 16px;" scrolling="no">
+<div style="position: relative; bottom: 4px; left: -4px; overflow-y: hidden; overflow-x: hidden; width: 600px; height: 32px;" scrolling="no">
+<div style="position: relative; top: -180px; width: 600px;">
+<blockquote class="twitter-tweet" data-lang="en"><a href="https://twitter.com/olofmogren/status/{{ page.tweetid }}">&nbsp;</a></blockquote><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+</div>
+</div>
+</div>
+{% endif %}
 
 Machine translation has gone through a number of stages in the last decades.
 Phrase based statistical machine translation (SMT), the flavour
