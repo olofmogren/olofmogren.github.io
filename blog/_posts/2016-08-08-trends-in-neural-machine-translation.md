@@ -26,7 +26,7 @@ by some of the best people in the field: Christopher Manning,
 Minh-Thang Luong, and Kyunghyun Cho.
 
 {% if page.tweetid %}
-{{ layout.tweetcode }}
+{{ layout.tweetcodepre }}{{ page.tweetid }}{{ layout.tweetcodepost }}
 {% endif %}
 
 Machine translation has gone through a number of stages in the last decades.
