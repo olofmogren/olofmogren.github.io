@@ -19,10 +19,10 @@ nav #groups div,nav #groups{width:auto;display:flex;flex-direction:row;align-ite
 
 @media screen and (min-width: 960px){nav{padding-right:130px}
 }
-div.nametag{color: #999; text-align: left;display:inline-block; flex-grow:1; flex-shrink:1; margin-left: 20px; margin-top: 12px; margin-bottom: 16px; text-transform: none;}
+div.nametag{color: #2b5381; text-align: left;display:inline-block; flex-grow:1; flex-shrink:1; margin-left: 20px; margin-top: 12px; margin-bottom: 16px; text-transform: none;}
 div.nametagsubdiv{margin-bottom: 0px; padding-bottom: 0px;}
-h1.nametag{color: #999; text-align: left;display:inline; text-decoration: none; font-variant: small-caps;}
-a.nametag{color: #999; text-decoration: none;}
+h1.nametag{color: #2b5381; text-align: left;display:inline; text-decoration: none; font-variant: small-caps;}
+a.nametag{color: #2b5381; text-decoration: none;}
 div.nametagsubscript{}/*padding-top: 0px; margin-top: 0px;}*/
 span.nametagsubscript{font-size: 8pt; margin-left: 10px;}/* padding-top: 0px; margin-top: 0px;}*/
 
