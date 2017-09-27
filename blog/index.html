@@ -44,8 +44,8 @@ Welcome to my blog. I intend to write about interesting things related to machin
 {{ p.date | date: '%Y-%m-%d' }}</em>
 </p>
 
-{% if page.tweetid %}
-{{ layout.tweetcodepre }}{{ page.tweetid }}{{ layout.tweetcodepost }}
+{% if p.tweetid %}
+{{ layout.tweetcodepre }}{{ p.tweetid }}{{ layout.tweetcodepost }}
 {% endif %}
 
 <!--</div>
