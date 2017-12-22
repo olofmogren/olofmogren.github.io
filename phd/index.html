@@ -1,0 +1,79 @@
+---
+title: Multi-Document Summarization and Semantic Relatedness - Olof Mogren
+layout: default
+---
+
+
+      <section>
+        <div class="inner">
+          <div class="block block-copy">
+<h1>Representation learning for natural language</h1>
+<p><strong>PhD thesis proposal</strong></p>
+<p><strong>Olof Mogren</strong></p>
+<img src="../graphics/illustrations/2017-12-22/phd.svg" alt="Relation embeddings computed using the proposed model in Paper IV." style="float: right; max-width: 40%;" />
+<p><strong>Abstract:</strong>
+Artificial neural networks have obtained astonishing results in a diverse number of tasks.
+One of the reasons for the success is their ability to learn the whole task at once
+(end-to-end learning), including the representations for data.
+This thesis will explore representations for natural language through the
+study of a number of tasks ranging from automatic multi-document summarization
+to named entity recognition and the transformation of words into morphological
+forms specified by analogies.
+The summarization work explores the feasibility
+of using neural representations for words, and how to best combine these with
+traditional approaches to extractive multi-document summarization.
+The resulting solution obtains state-of-the-art results on standard
+benchmark datasets.
+The rest of the thesis studies models trained end-to-end for the specific tasks,
+and focus not only on the end result of the trained models, but also on the
+internal representations of data that they learn.
+Firstly, a character-based recurrent neural network model is presented
+that recognize medical terms in health record data.
+Secondly a novel recurrent neural model that transforms a query word into the
+morphological form demonstrated by another word.
+The model is trained and evaluated using word analogies and
+takes as input the raw character-sequence of the words with no
+explicit features needed.
+As the model learns to transform words, it learns internal representations that
+disentangles morphological relations that were never specified explicitly.
+Thirdly, a regularizer is presented that improves disentanglement in the
+learned representations by penalizing the correlation between activations
+in a layer.
+</p>
+<p><strong>Supervisors:</strong> Richard Johansson and Devdatt Dubhashi<br />
+<strong>Defense:</strong> to be announced.<br />
+<strong>Discussion leader:</strong> Prof. Dr. Hinrich Schütze, CIS Ludwig-Maximilians Universit&auml;t, M&uuml;nchen<br />
+<strong>Fulltext:</strong> <a href="http://mogren.one/phd/mogren2018phd.pdf">Download the whole thesis in PDF format. </a></p>
+<h2>Paper I: Extractive Summarization using Continuous Vector Space Models</h2>
+<p><strong>Comments:</strong> This is a workshop paper showing preliminary results on multi-document summarization with continuous vector space models for sentence representation. The experiments were performed on opinionated online user reviews.<br />
+<strong>My contributions:</strong> I implemented the submodular optimization algorithm for sentence selection and created the setup for the experimental evaluation.<br />
+<em>2nd Workshop on Continuous Vector Space Models and their Compositionality CVSC 2014, Gothenburg Sweden</em><br />
+<em>Mikael Kågebäck, Olof Mogren, Nina Tahmasebi, Devdatt Dubhashi</em><br />
+<a href="/publications/2014/extractive">More info</a>, <a href="http://mogren.one/summarization/kageback2014extractive.pdf">PDF fulltext</a>.</p>
+<h2>Paper II: Extractive Summarization by Aggregating Multiple Similarities</h2>
+<p><strong>Comments:</strong> Many existing methods for extracting summaries rely on comparing the similarity of two sentences in some way. In this paper, we present new ways of measuring this similarity, based on sentiment analysis and continuous vector space representations, and show that combining these together with similarity measures from existing methods, helps to create better summaries. The finding is demonstrated with MULTSUM, a novel summarization method that uses ideas from kernel methods to combine sentence similarity measures. Submodular optimization is then used to produce summaries that take several different similarity measures into account. Our method improves over the state-of-the-art on standard benchmark datasets; it is also fast and scale to large document collections, and the results are statistically significant.<br />
+<strong>My contributions:</strong> I am the main author of this work. I designed the study, performed the experiments, and wrote the manuscript.<br />
+<em>RANLP 2015, Hissar, Bulgaria, September 6th-11th</em><br />
+<em>Olof Mogren, Mikael Kågebäck, Devdatt Dubhashi</em><br />
+<a href="/summarization">More info</a>, <a href="/summarization/mogren2015extractive.pdf">PDF fulltext</a>.</p>
+<h2>Paper III: Named entity recognition in Swedish health records with character-based deep bidirectional LSTMs</h2>
+<p><strong>Comments:</strong> .<br />
+<strong>My contributions:</strong> .<br />
+<em>Fifth workshop on building and evaluating resources for biomedical text mining (BioTxtM 2016) at COLING 2016</em><br />
+<em>Simon Almgren, Sean Pavlov, Olof Mogren</em><br />
+<a href="/publications/2016/ner-char-blstm/">More info</a>, <a href="/publications/2016/ner-char-blstm/almgren2016ner-char-bilstm.pdf">PDF fulltext</a>.</p>
+<h2>Paper IV: Character-based recurrent neural networks for morphological relational reasoning</h2>
+<p><strong>Comments:</strong> .<br />
+<strong>My contributions:</strong> .<br />
+<em>Submitted draft. Early version published at the EMNLP Workshop on Subword and Character-level Models in NLP</em><br />
+<em>Olof Mogren, Richard Johansson</em><br />
+<a href="mogren2017character.pdf">PDF fulltext</a>.</p>
+<h2>Paper V: Disentangled activations in deep networks</h2>
+<p><strong>Comments:</strong> .<br />
+<strong>My contributions:</strong> .<br />
+<em>Submitted draft. Early version presented at the NIPS Workshop on Learning Disentangled Features</em><br />
+<em>Mikael K&aring;geb&auml:ck</em><br />
+<a href="kageback2017disentanglement.pdf">PDF fulltext</a>.</p>
+        </div>
+      </section>
+
