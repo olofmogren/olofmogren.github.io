@@ -14,5 +14,6 @@ bibtex:
 permalink:
 pdf: 
 overwriteurl: 
+externallink: http://studentarbeten.chalmers.se/publication/248967-semi-supervised-named-entity-recognition-of-medical-entities-in-swedish
 ---
 
