@@ -23,6 +23,6 @@ bibtex:
 permalink:
 pdf: 
 overwriteurl: 
-externallink: 
+externallink: http://studentarbeten.chalmers.se/publication/251317-blood-glucose-prediction-for-type-1-diabetes-using-machine-learning-long-short-term-memory-based-mod
 ---
 
