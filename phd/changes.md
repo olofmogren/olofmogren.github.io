@@ -14,11 +14,11 @@ layout: freepage
 
 * Research questions
     - Research questions are now stated explicitly in the Introduction chapter.
-    - I connect to the research questions in Abstract.
+    - I connect to the research questions in the Abstract.
     - The research questions are answered in the Conclusions chapter.
 * Methodology chapter
     - A methodology chapter was added.
-    - Outlines the research strategy and evaluation techniques.
+    - The chapter outlines the research strategy and evaluation techniques.
 * Ethical discussion
     - An ethical discussion was added to the methodology chapter.
     - Ethical discussion includes information about sensitive data in Stockholm EPR corpus, and mentions that we were provided with the help of performing the evaluations.
