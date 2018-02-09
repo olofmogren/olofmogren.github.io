@@ -5,6 +5,8 @@ layout: freepage
 
 # Changes to PhD thesis
 
+[Download PDF fulltext of thesis draft 2018-02-09.](mogren2018phd-draft-20180209.pdf)
+
 [PhD thesis information page.](/phd/)
 
 ## 2018-02-09
