@@ -3,9 +3,13 @@ title: Changes to PhD thesis - Olof Mogren
 layout: default
 ---
 
+<section>
+<div class="inner">
+<div class="block block-copy">
+                        
 # Changes to PhD thesis
 
-[Back to the PhD thesis information page.](/phd/)
+[PhD thesis information page.](/phd/)
 
 ## 2018-02-09
 
@@ -21,9 +25,14 @@ layout: default
     - An ethical discussion was added to the methodology chapter.
     - Ethical discussion includes information about sensitive data in Stockholm EPR corpus, and mentions that we were provided with the help of performing the evaluations.
 * Tying the work to the "red thread"
-    - Introduction, Conclusions, and Abstract have been updated, tying things more clearly together and to the central topic of representation learning.
+    - Introduction, Conclusions, and Abstract have been updated, tying things more clearly together and to the overarching topic of representation learning.
 * Contributions
     - The main contributions in the thesis are now more clearly stated in the Conclusions chapter.
     - Suitable changes to Abstract and Introduction have also been made.
 * Acknowledgements
     - Hercules Dalianis is now correctly acknowledged for his contributions to the evaluations in Paper III.
+
+</div>
+</div>
+</section>
+
