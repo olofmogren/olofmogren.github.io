@@ -3,9 +3,9 @@ title: Changes to PhD thesis - Olof Mogren
 layout: default
 ---
 
-<section>
-<div class="inner">
-<div class="block block-copy">
+ <section>
+ <div class="inner">
+ <div class="block block-copy">
                         
 # Changes to PhD thesis
 
@@ -32,7 +32,7 @@ layout: default
 * Acknowledgements
     - Hercules Dalianis is now correctly acknowledged for his contributions to the evaluations in Paper III.
 
-</div>
-</div>
-</section>
+ </div>
+ </div>
+ </section>
 
