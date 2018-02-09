@@ -28,6 +28,6 @@ layout: freepage
     - The main contributions in the thesis are now more clearly stated in the Conclusions chapter.
     - Suitable changes to Abstract and Introduction have also been made.
 * Acknowledgements
-    - Hercules Dalianis is now correctly acknowledged for his contributions to the evaluations in Paper III.
+    - Hercules Dalianis is now acknowledged for his contributions to the evaluations in Paper III.
 
 
