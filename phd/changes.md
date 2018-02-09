@@ -1,9 +1,9 @@
 ---
-title: Changes to PhD thesis - Olof Mogren
+title: Changes to PhD thesis draft - Olof Mogren
 layout: freepage
 ---
 
-# Changes to PhD thesis
+# Changes to PhD thesis draft
 
 [Download PDF fulltext of thesis draft 2018-02-09.](mogren2018phd-draft-20180209.pdf)
 
