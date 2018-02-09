@@ -18,10 +18,10 @@ layout: default
 * Ethical discussion
     - An ethical discussion was added to the methodology chapter.
     - Ethical discussion includes information about sensitive data in Stockholm EPR corpus, and mentions that we were provided with the help of performing the evaluations.
-    - 
 * Tying the work to the "red thread"
     - Introduction, Conclusions, and Abstract have been updated, tying things more clearly together and to the central topic of representation learning.
 * Contributions
     - The main contributions in the thesis are now more clearly stated in the Conclusions chapter.
     - Suitable changes to Abstract and Introduction have also been made.
-
+* Acknowledgements
+    - Hercules Dalianis is now correctly acknowledged for his contributions to the evaluations in Paper III.
