@@ -5,6 +5,8 @@ layout: default
 
 # Changes to PhD thesis
 
+[/phd/](Back to the PhD thesis information page.)
+
 ## 2018-02-09
 
 
