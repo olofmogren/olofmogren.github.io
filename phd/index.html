@@ -11,35 +11,93 @@ layout: default
 <p><strong>PhD thesis proposal</strong></p>
 <p><strong>Olof Mogren</strong></p>
 <img src="../graphics/illustrations/2017-12-22/phd.svg" alt="Relation embeddings computed using the proposed model in Paper IV." style="float: right; max-width: 40%;" />
-<p><strong>Abstract:</strong>
+
+<div id="abstract">
+<p><strong>Abstract:</strong> <a href="javascript://document.getElementById('abstract'.visibility='hidden'; javascript://document.getElementById('popsummary'.visibility='visible';)" style="color: grey">Popular scientific summary (Click to change)</a><br />
 Artificial neural networks have obtained astonishing results in a diverse number of tasks.
 One of the reasons for the success is their ability to learn the whole task at once
 (end-to-end learning), including the representations for data.
-This thesis will explore representations for natural language through the
+This thesis will investigate representation learning for natural language through the
 study of a number of tasks ranging from automatic multi-document summarization
 to named entity recognition and the transformation of words into morphological
 forms specified by analogies.
-The summarization work explores the feasibility
-of using neural representations for words, and how to best combine these with
-traditional approaches to extractive multi-document summarization.
-The resulting solution obtains state-of-the-art results on standard
-benchmark datasets.
-The rest of the thesis studies models trained end-to-end for the specific tasks,
-and focus not only on the end result of the trained models, but also on the
-internal representations of data that they learn.
-Firstly, a character-based recurrent neural network model is presented
+</p><p>
+In the first two papers, we investigate whether 
+automatic multi-document summarization can benefit from
+learned representations, and what are the best ways of incorporating
+learned representations in an extractive summarization system.
+We propose a novel summarization approach that represents sentences using
+word embeddings, and a strategy for aggregating multiple sentence similarity
+scores to compute summaries that take multiple aspects into account.
+The approach is evaluated quantitatively using the de facto evaluation
+system ROUGE, and obtains state-of-the-art results on standard
+benchmark datasets for generic multi-document summarization.
+</p><p>
+
+The rest of the thesis studies models trained end-to-end for some specific tasks,
+and investigates how to train the models to perform well,
+and to learn internal representations of data that explain the
+factors of variation in the data.
+</p><p>
+
+Specifically, we investigate whether character-based \glspl{RNN} can
+learn the necessary representations for tasks such as \gls{NER} and 
+morphological analogies, and what is the best way of learning the
+representations needed to solve the mentioned tasks.
+We devise
+a novel character-based recurrent neural network model
 that recognize medical terms in health record data.
-Secondly a novel recurrent neural model that transforms a query word into the
+The model is trained on openly available data, and evaluated using
+standard metrics on sensitive medical health record data in Swedish.
+We conclude that the model learns to solve the task and is able
+to generalize from the training data domain to the test domain.
+
+</p><p>
+We then present
+a novel recurrent neural model that transforms a query word into the
 morphological form demonstrated by another word.
 The model is trained and evaluated using word analogies and
 takes as input the raw character-sequence of the words with no
 explicit features needed.
+We conclude that character-based \glspl{RNN} can successfully
+learn good representations internally and that the proposed model
+performs well on the analogy task, beating the baseline with
+a large margin.
 As the model learns to transform words, it learns internal representations that
-disentangles morphological relations that were never specified explicitly.
-Thirdly, a regularizer is presented that improves disentanglement in the
+disentangles morphological relations
+using only cues from the training objective,
+which is to perform well on the word transformation task.
+</p><p>
+
+In other settings, such cues may not be available at training time, and
+we therefore present
+a regularizer that improves disentanglement in the
 learned representations by penalizing the correlation between activations
 in a layer.
+In the second part of the thesis we have proposed models and associated
+training strategies that solves the tasks and simultaneously learns
+informative internal representations; in {\paperkagebackdisentanglement}
+this is enforced by an explicit regularization signal, suitable for when
+such a signal is missing from the training data (e.g. in the case of autoencoders).
 </p>
+
+</div>
+
+<div id="popsummary" style="visibility: hidden;">
+<p><a href="javascript://document.getElementById('abstract'.visibility='hidden'; javascript://document.getElementById('popsummary'.visibility='visible';)" style="color: grey">Abstract</a> <strong>Popular scientific summary:</strong> <a href="javascript://document.getElementById('abstract'.visibility='hidden'; javascript://document.getElementById('popsummary'.visibility='visible';)" style="color: grey">(Click to change)</a><br />
+
+The advances in artificial intelligence (AI) have been astonishing in recent years, with new algorithms showing super-human performance for a wide number of tasks. Until recently, self-driving cars, high accuracy image classification, and digital assistants which can take commands in natural language were only fantasies. Yet they are now about to become ubiquitous technologies.
+</p><p>
+
+An important reason for this development is the availability of large datasets and powerful computers, allowing practitioners to train larger machine learning models with higher learning capacity. Artificial neural networks (ANNs) is a class of machine learning models that has been of paramount  importance to the development. Since 2006, this has been called deep learning, because it has become possible to train and use deeper models with higher capacity.
+</p><p>
+
+The architecture of ANNs allows designers to combine simple building blocks, called layers, into deep models. Each layer performs a relatively simple computation, transforming its input data into vectors of numbers that we call representations. With deep learning, a complete model is trained using suitable data to perform a task such as image classification, predicting the sentiment of a text, or to predict the best moves in a game of chess. The training works by iteratively making attempts on performing the task, then measuring the error, and finally updating internal parameters in the model to make it perform slightly better in the next iteration. This means that during training, the representations that is computed by the layers in the model changes into something that is increasingly useful to solve the task.
+</p><p>
+
+This thesis studies such representations that are computed using artificial neural networks that are trained on and applied to natural language. The thesis studies the use of learned vector representations for words which we show are useful for automatic multi-document summarization, and demonstrates that when using these in combination with traditional approaches, we obtain summaries of unprecedented quality. Furthermore, we study the use of deep neural sequence models working on the raw character stream as input, and how this class of models can be used to detect medical terms such as drugs, symptoms, and body parts in medical health records. We also propose a novel deep neural sequence model that is trained to transform words into inflected forms as demonstrated by analogies: "see" is to "sees" as "eat" is to what? The model outperforms previous rule-based approaches by a massive margin, and when inspecting the internal representations of this model, we can see that it learns to distinguish classes of word-form transforms, without being told to do so. This is an effect from training the model to perform the task of transforming words while seeing analogous words demonstrating the forms. Finally, we study how to improve the capability of learned representations to disentangle the underlying factors of variation in the data, in cases where the training objective does not directly provide such cues for the learning algorithm. This can be useful for unsupervised representation learning, such as using autoencoders for task agnostic representations or when the final use-case is unknown.
+</p>
+</div>
 <p>
 <strong>Supervisor:</strong> Richard Johansson<br />
 <strong>Co-supervisor:</strong> Devdatt Dubhashi<br />
