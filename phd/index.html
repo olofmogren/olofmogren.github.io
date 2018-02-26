@@ -8,13 +8,16 @@ layout: default
         <div class="inner">
           <div class="block block-copy">
 <h1>Representation learning for natural language</h1>
-<p><strong>PhD thesis proposal</strong></p>
 <p><strong>Olof Mogren</strong></p>
 <img src="../graphics/illustrations/2017-12-22/phd.svg" alt="Relation embeddings computed using the proposed model in Paper IV." style="float: right; max-width: 40%; margin: 4em;" />
 
+<p><strong>PhD thesis</strong> to be defended in public on <strong>March 23, 2018 at 10:00</strong> in room <strong>MC, Hörsalsvägen 5</strong>, entrance floor, Chalmers for the Degree of Doctor of Philosophy.</p>
+
+<strong>Opponent:</strong> Prof. Dr. Hinrich Schütze, CIS Ludwig-Maximilians Universit&auml;t, M&uuml;nchen<br />
+
 <div id="abstract">
 <p><strong>Abstract:</strong></br />
-<a href="no-js.html" onclick="document.getElementById('abstract').style.display='none'; document.getElementById('popsummary').style.display='block';return false;" style="color: grey">Click to view popular scientific summary instead.</a><br />
+<a href="/no-js.html" onclick="document.getElementById('abstract').style.display='none'; document.getElementById('popsummary').style.display='block';return false;" style="color: grey">Click to view popular scientific summary instead.</a><br />
 Artificial neural networks have obtained astonishing results in a diverse number of tasks.
 One of the reasons for the success is their ability to learn the whole task at once
 (end-to-end learning), including the representations for data.
@@ -85,27 +88,20 @@ such a signal is missing from the training data (e.g. in the case of autoencoder
 </div>
 
 <div id="popsummary" style="display: none;">
-<p><strong>Popular scientific summary:</strong><br />
-<a href="no-js.html" onclick="document.getElementById('abstract').style.display='block'; document.getElementById('popsummary').style.display='none';return false;" style="color: grey">Click to view abstract instead.</a><br />
+<p><strong>Popular science summary:</strong><br />
+<a href="/no-js.html" onclick="document.getElementById('abstract').style.display='block'; document.getElementById('popsummary').style.display='none';return false;" style="color: grey">Click to view abstract instead.</a><br />
 
-The advances in artificial intelligence (AI) have been astonishing in recent years, with new algorithms showing super-human performance for a wide number of tasks. Until recently, self-driving cars, high accuracy image classification, and digital assistants which can take commands in natural language were only fantasies. Yet they are now about to become ubiquitous technologies.
+The advances in artificial intelligence have been astonishing in recent years, with new algorithms showing super-human performance for a wide number of tasks. An important reason for this development is the availability of large datasets and powerful computers, making it possible to train larger machine learning models with higher learning capacity. Artificial neural networks (ANNs) are machine learning models that have been of paramount importance to the development. ANNs are composed of layers of artificial neurons, each of which can only perform a simple computation, but when stacked together in deep architectures, they can be trained to approximate complicated non-linear functions. These models have achieved fantastic results in tasks on various data modalities such as audio, vision, and text. One reason for the success is the internal vector representations computed by the layers, each transforming their input into numerical feature vectors which are increasingly useful for the end task. A complete model is often trained at once (end-to-end learning), and the representations are optimized during training to solve the given task.
 </p><p>
+This thesis studies the representations computed using artificial neural networks that are trained on and applied to natural language. In paper I and II, we apply learned representations for words to improve the performance of multi-document summarization. In Paper III, we study the use of deep neural sequence models working on the raw character stream as input, and how this class of models can be used to detect medical terms in text (such as drugs, symptoms, and body parts). The system is evaluated on medical health records in Swedish. In paper IV, we propose a novel deep neural sequence model trained to transform words into inflected forms as demonstrated by analogies: "see" is to "sees" as "eat" is to what? The model outperforms previous rule-based approaches by a massive margin, and when inspecting the internal representations computed by this model, one can see that it learns to distinguish classes of transformations of word forms, without being explicitly told to do so. This is an effect from training the model to transform words while provided with the analogous words forms. In other cases, however, the training objective may not provide such cues for the learning algorithm. In Paper V, we study how to improve the way learned representations disentangle the underlying factors of variation in the data. This can be useful for unsupervised representation learning, such as using autoencoders for task agnostic representations or when the final use case is unknown.
 
-An important reason for this development is the availability of large datasets and powerful computers, allowing practitioners to train larger machine learning models with higher learning capacity. Artificial neural networks (ANNs) is a class of machine learning models that has been of paramount  importance to the development. Since 2006, this has been called deep learning, because it has become possible to train and use deeper models with higher capacity.
-</p><p>
-
-The architecture of ANNs allows designers to combine simple building blocks, called layers, into deep models. Each layer performs a relatively simple computation, transforming its input data into vectors of numbers that we call representations. With deep learning, a complete model is trained using suitable data to perform a task such as image classification, predicting the sentiment of a text, or to predict the best moves in a game of chess. The training works by iteratively making attempts on performing the task, then measuring the error, and finally updating internal parameters in the model to make it perform slightly better in the next iteration. This means that during training, the representations that is computed by the layers in the model changes into something that is increasingly useful to solve the task.
-</p><p>
-
-This thesis studies such representations that are computed using artificial neural networks that are trained on and applied to natural language. The thesis studies the use of learned vector representations for words which we show are useful for automatic multi-document summarization, and demonstrates that when using these in combination with traditional approaches, we obtain summaries of unprecedented quality. Furthermore, we study the use of deep neural sequence models working on the raw character stream as input, and how this class of models can be used to detect medical terms such as drugs, symptoms, and body parts in medical health records. We also propose a novel deep neural sequence model that is trained to transform words into inflected forms as demonstrated by analogies: "see" is to "sees" as "eat" is to what? The model outperforms previous rule-based approaches by a massive margin, and when inspecting the internal representations of this model, we can see that it learns to distinguish classes of word-form transforms, without being told to do so. This is an effect from training the model to perform the task of transforming words while seeing analogous words demonstrating the forms. Finally, we study how to improve the capability of learned representations to disentangle the underlying factors of variation in the data, in cases where the training objective does not directly provide such cues for the learning algorithm. This can be useful for unsupervised representation learning, such as using autoencoders for task agnostic representations or when the final use-case is unknown.
 </p>
 </div>
 <p>
 <strong>Supervisor:</strong> Richard Johansson<br />
 <strong>Co-supervisor:</strong> Devdatt Dubhashi<br />
-<strong>Defense time and place:</strong> to be announced.<br />
-<strong>Opponent:</strong> Prof. Dr. Hinrich Schütze, CIS Ludwig-Maximilians Universit&auml;t, M&uuml;nchen<br />
-<strong>Fulltext:</strong> <a href="http://mogren.one/phd/mogren2018phd-draft-20180223.pdf">Download the whole thesis in PDF format. (2018-02-23)</a></p>
+<strong>Defense time and place:</strong> .<br />
+<strong>Fulltext:</strong> <a href="http://mogren.one/phd/mogren2018phd-draft-20180226.pdf">Download the whole thesis in PDF format. (2018-02-26)</a></p>
 <h2>Paper I: Extractive summarization using continuous vector space models</h2>
 <p><strong>Comments:</strong> This is a workshop paper showing preliminary results on multi-document summarization with continuous vector space models for sentence representation. The experiments were performed on opinionated online user reviews.<br />
 <strong>My contributions:</strong> I implemented the submodular optimization algorithm for sentence selection and created the setup for the experimental evaluation.<br />
