@@ -34,13 +34,18 @@ by Olof Mogren.
 <a name="nlp"></a>
 * **Natural language processingg (NLP)** - the study of computational processsing of language as written or spoken by people.
 
-<a name="gradient descent"></a>
+<a name="gradientdescent"></a>
 * **Gradient descent** - an approach to optimize a function (generally of high dimensional inputs). First, one computes the gradient (the derivative in high dimensions). Secondly, a small step is taken in the direction of steepest descent. The process is iterated until some convergence is achieved.
 
 <a name="representation"></a>
 * **Representation** - in this thesis, a *representation* is typically a vector that represents some data object such as a word, an image, or a sentence. [Artificial neural networks](#ann) computes a vector as output from each [layer](#layer).
 
 <a name="feature"></a>
-* **Feature** - 
+* **Feature** - traditional machine learning approaches do not learn their representations. They require features to be computed and fed to the learning algorithm. These features are often the result of massive engineering efforts, and provide a data representation that can not be further optimized by the computer to better suit the task. The learned representations in [artificial neural networks](#ann) are features but they were not engineered.
+
+<a name="objective"></a>
+* **Objective** - the loss function or error function that mesures how well the model is doing. By mesuring this one has something to optimize, to make the model perform better (see [gradient descent](#gradientdescent)).
+
+
 
 
