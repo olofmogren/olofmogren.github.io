@@ -10,7 +10,7 @@ by Olof Mogren.
 
 
 <a name="vector"></a>
-* **Vector** - a sequence of numbers. If its length is two or three, these can be interpreted as coordinates in 2D or 3D. In higher dimensions they can still be interpreted as coordinates, but in high-dimensional space. Vectors are often written with boldface: ***v***.
+* **Vector** - a sequence of numbers. If its length is two or three, these can be interpreted as coordinates in 2D or 3D. In higher dimensions they can still be interpreted as coordinates, but in high-dimensional space. To be able to visualize high-dimensional vectors, one often project them down to two dimensions, a process that inherently makes the vectors lose much information. Vectors are often written with boldface: ***v***.
 
 <a name="matrix"></a>
 * **Matrix** - a grid/table of numbers. Can be seen as a sequence of [vectors](#vector). Matrices are often written using capital letters: *M*.
@@ -23,7 +23,7 @@ by Olof Mogren.
 
 
 <a name="artificialneuron"></a>
-* **Artificial neuron** - 
+* **Artificial neuron** - inspired by biological neurons, these units take a [vector](#vector) of inputs from the previous layer (which may be the data input), computes a weighted sum by first multiplying the input ***x*** with a weight vector ***w***, and adding a bias term *b*. $\mathbf{a} = \mathbf{w} \cdot \mathbf{x} + b$.
 
 <a name="layer"></a>
 * **Neural network layer** - a number of [artificial neurons](#artificialneuron), each taking a vector as input, and gives a number as output. Together, the numbers of outputs from all [artificial neurons](#artificialneuron) in the layer can be seen as a [vector](#vector), and each [layer](#layer) transforms its input vector into an output vector.
@@ -35,7 +35,7 @@ by Olof Mogren.
 * **Natural language processingg (NLP)** - the study of computational processsing of language as written or spoken by people.
 
 <a name="gradient descent"></a>
-* **Gradient descent** - 
+* **Gradient descent** - an approach to optimize a function (generally of high dimensional inputs). First, one computes the gradient (the derivative in high dimensions). Secondly, a small step is taken in the direction of steepest descent. The process is iterated until some convergence is achieved.
 
 <a name="representation"></a>
 * **Representation** - in this thesis, a *representation* is typically a vector that represents some data object such as a word, an image, or a sentence. [Artificial neural networks](#ann) computes a vector as output from each [layer](#layer).
