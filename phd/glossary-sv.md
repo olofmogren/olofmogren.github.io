@@ -25,6 +25,7 @@ Ordlistan listar först den engelska termen, och därefter den svenska, om en s�
 
 <a name="vector"></a>
 * **Vector** - *vektor* - en sekvens av tal. Om vektorns längd är två eller tre, så kan dessa tolkas som tvådimensionella eller tredimensionella koordinater. Är längden större, så kan de också tolkas som koordinater, fast i ett högdimensionellt vektorrum. För att kunna visualisera högdimensionella vektorer, projicerar man ofta ner dessa till två dimensioner. Detta är en process som gör att man förlorar information från den ursprungliga vektorn. Vi skriver vektorer med fetstil: ***v***. Exempelvis, en fyrdimensionell vektor:
+|     |
 | --- |
 | 0.3 |
 | 0.8 |
