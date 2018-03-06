@@ -6,8 +6,9 @@ layout: freepage
 
 Detta är en ordlista för de som saknar teknisk bakgrund för att underlätta
 läsandet av avhandlingen
-[*Representation learning for natural language*](http://mogren.one/phd)
-av Olof Mogren.
+[*Representation learning for natural language*](http://mogren.one/phd),
+eller för att hänga med lite bättre på disputationen.
+
 
 Ordlistan är inte i alfabetisk ordning, utan försöker istället sig på att förklara
 saker från enkla till mer komplexa.
