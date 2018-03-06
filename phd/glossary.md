@@ -10,10 +10,20 @@ by Olof Mogren.
 
 
 <a name="vector"></a>
-* **Vector** - a sequence of numbers. If its length is two or three, these can be interpreted as coordinates in 2D or 3D. In higher dimensions they can still be interpreted as coordinates, but in high-dimensional space. To be able to visualize high-dimensional vectors, one often project them down to two dimensions, a process that inherently makes the vectors lose much information. Vectors are often written with boldface: ***v***.
+* **Vector** - a sequence of numbers. If its length is two or three, these can be interpreted as coordinates in 2D or 3D. In higher dimensions they can still be interpreted as coordinates, but in high-dimensional space. To be able to visualize high-dimensional vectors, one often project them down to two dimensions, a process that inherently makes the vectors lose much information. Vectors are often written with boldface: ***v***. For example, a 4-dimensional vector:
+| 0.3 |
+| 0.8 |
+| 0.7 |
+| 0.3 |
+([Read more on Wikipedia.](https://en.wikipedia.org/wiki/Row_and_column_vectors))
 
 <a name="matrix"></a>
-* **Matrix** - a grid/table of numbers. Can be seen as a sequence of [vectors](#vector). Matrices are often written using capital letters: *M*.
+* **Matrix** - a grid/table of numbers. Can be seen as a sequence of [vectors](#vector). Matrices are often written using capital letters: *M*. For example, a 4x3 matrix:
+| 0.3 | 0.5 | 0.0 |
+| 0.8 | 0.2 | 1.9 |
+| 0.7 | 0.7 | 0.0 |
+| 0.3 | 0.1 | 1.1 |
+([Read more on Wikipedia.](https://en.wikipedia.org/wiki/Matrix_(mathematics))) 
 
 <a name="mlmodel"></a>
 * **Machine learning model** - a structural view of a machine learning algorithm. Examples can be [*artificial neural networks*](ann) or other statistical models. In general, a model is trained by updating its internal parameters, which are often stored as matrices (see [matrix](#matrix)).
@@ -23,13 +33,13 @@ by Olof Mogren.
 
 
 <a name="artificialneuron"></a>
-* **Artificial neuron** - inspired by biological neurons, these units take a [vector](#vector) of inputs from the previous layer (which may be the data input), computes a weighted sum by first multiplying the input ***x*** with a weight vector ***w***, and adding a bias term *b*. $\mathbf{a} = \mathbf{w} \cdot \mathbf{x} + b$.
+* **Artificial neuron** - inspired by biological neurons, these units take a [vector](#vector) of inputs from the previous layer (which may be the data input), computes a weighted sum by first multiplying the input ***x*** with a weight vector ***w***, and adding a bias term *b*. $***a*** = ***w*** &middot; ***x*** + b. The result is fed through a non-linear [activation function](#activationfunction) to get the output from the unit.
 
 <a name="layer"></a>
 * **Neural network layer** - a number of [artificial neurons](#artificialneuron), each taking a vector as input, and gives a number as output. Together, the numbers of outputs from all [artificial neurons](#artificialneuron) in the layer can be seen as a [vector](#vector), and each [layer](#layer) transforms its input vector into an output vector.
 
 <a name="activationfunction"></a>
-* **Activation function** - 
+* **Activation function** - a function that takes the pre-activation ***a*** in a [unit](#artificialneuron) or [layer](#layer), and applies an element wise non-linearity. Common choices are s-shaped sigmoidal functions such as the [logistic function (Wikipedia)](https://en.wikipedia.org/wiki/Logistic_function) or [hyperbolic tangent (Wikipedia)](https://en.wikipedia.org/wiki/Hyperbolic_function#Tanh).
 
 <a name="nlp"></a>
 * **Natural language processingg (NLP)** - the study of computational processsing of language as written or spoken by people.
