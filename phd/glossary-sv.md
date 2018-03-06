@@ -42,31 +42,31 @@ Ordlistan listar först den engelska termen, och därefter den svenska, om en s�
 ([Läs mer på Wikipedia.](https://en.wikipedia.org/wiki/Matrix_(mathematics))) 
 
 <a name="mlmodel"></a>
-* **Machine learning model** - a structural view of a machine learning algorithm. Examples can be [*artificial neural networks*](ann) or other statistical models. In general, a model is trained by updating its internal parameters, which are often stored as matrices (see [matrix](#matrix)).
+* **Machine learning model** - *maskininlärningsmodell* - ett sett att strukturera bilden av en maskininlärningsalgoritm. Exempel kan vara [*neuronnät*](ann) eller andra statistiska modeller. Generellt så tränas en modell genom att man uppdaterar dess interna parametrar, vilka ofta lagras i [matriser](#matrix).
 
 <a name="ann"></a>
-* **Artificial neural network** - a class of [machine learning model](#mlmodel) lightly inspired by animal brains. This connectionist approach, where large models can be built using simple building blocks ([artificial neurons or units](#artificialneuron), [layers](#layer), [activation functions](#activationfunction)). An artificial neural network can approximate any given continuous function to an arbitrary precision, provided that it has enough [units](#artificialneuron).
+* **Artificial neural network** - *neuronnät eller artificiella neurala nätverk (svengelska, men vanligt förekommande)* - en klass av [maskininlårningsmodeller](#mlmodel) som är *lite* inspirerade av hjärnan. Ett neuronnät byggs med hjälp av enkla byggstenar ([artificiella neuroner eller units](#artificialneuron), [lager](#layer), [aktiveringsfunktioner](#activationfunction)). Ett neuronnät kan approximera vilken given reellvärd funktion som helst, bara den har tillräckligt många [neuroner](#artificialneuron).
 
 <a name="artificialneuron"></a>
-* **Artificial neuron** - inspired by biological neurons, these units take a [vector](#vector) of inputs from the previous layer (which may be the data input), computes a weighted sum by first multiplying the input ***x*** with a weight vector ***w***, and adding a bias term *b*. ***a*** = ***w*** &middot; ***x*** + b. The result is fed through a non-linear [activation function](#activationfunction) to get the output from the unit.
+* **Artificial neuron** - *artificiell neuron* - inspirerad av biologiska neuroner. Dessa moduler (units) tar en [vektor](#vector) som input från föregående lager (eller från input-datan), beräknar en viktad summa genom att först multiplicera input-vektorn ***x*** med en vektor av parametrar (eller vikter) ***w***, och adderar en bias *b*. ***a*** = ***w*** &middot; ***x*** + b. Resultatet skickas sen genom en icke-linjär [aktiveringsfunktion](#activationfunction) för att få det slutgiltiga resultatet från neuronen..
 
 <a name="layer"></a>
-* **Neural network layer** - a number of [artificial neurons](#artificialneuron), each taking a vector as input, and gives a number as output. Together, the numbers of outputs from all [artificial neurons](#artificialneuron) in the layer can be seen as a [vector](#vector), and each [layer](#layer) transforms its input vector into an output vector.
+* **Neural network layer** - *lager* - ett antal [artificiella neuroner](#artificialneuron), som alla tar en vektor sin indata, och ger ett tal som utdata. Tillsammans, så utgör deras utdata en [vektor](#vector), och varje [layer](#layer) transformerar alltså sin indata-vektor till en utdata-vektor.
 
 <a name="activationfunction"></a>
-* **Activation function** - a function that takes the pre-activation ***a*** in a [unit](#artificialneuron) or [layer](#layer), and applies an element wise non-linearity. Common choices are s-shaped sigmoidal functions such as the [logistic function (Wikipedia)](https://en.wikipedia.org/wiki/Logistic_function) or [hyperbolic tangent (Wikipedia)](https://en.wikipedia.org/wiki/Hyperbolic_function#Tanh).
+* **Activation function** - *aktiveringsffunktion* - en funktion som tar en pre-aktivering ***a*** i en [artificiell neuron](#artificialneuron) eller [layer](#layer), och applicerar en elementvis icke-linearitet. Det är vanligt att man använder s-formade sigmoidfunktioner såsom [logistiska funktionen (Wikipedia)](https://en.wikipedia.org/wiki/Logistic_function) eller [hyperbolisk tangent (Wikipedia)](https://en.wikipedia.org/wiki/Hyperbolic_function#Tanh).
 
 <a name="gradientdescent"></a>
-* **Gradient descent** - an approach to optimize a function (generally of high dimensional inputs). First, one computes the gradient (the derivative in high dimensions). Secondly, a small step is taken in the direction of steepest descent. The process is iterated until some convergence is achieved.
+* **Gradient descent** - *följa gradientens riktning* - en optimeringsteknik (generellt så optimerar vi funktioner som har högdimensionella indata). Först beräknas gradienten (motsvarar derivatan i endimensionella fallet). Därefter tas ett litet steg i riktning mot brantaste sluttningen. Processen upprepas tills något avslutningskriterium uppnåtts.
 
 <a name="representation"></a>
-* **Representation** - in this thesis, a *representation* is typically a vector that represents some data object such as a word, an image, or a sentence. [Artificial neural networks](#ann) computes a vector as output from each [layer](#layer).
+* **Representation** - *representation* - i denna avhandling så syftar *representation* typiskt på en vektor som beräknats för att representera ett objekt såsom ett ord, en bild, eller en mening. [Neuronnät](#ann) beräknar en sådan vektorrepresentation vid varje lager [layer](#layer).
 
 <a name="feature"></a>
-* **Feature** - traditional machine learning approaches do not learn their representations. They require features to be computed and fed to the learning algorithm. These features are often the result of massive engineering efforts, and provide a data representation that can not be further optimized by the computer to better suit the task. The learned representations in [artificial neural networks](#ann) are features but they were not engineered.
+* **Feature** - *egenskap* - i många tekniker för maskininlärning så krävs att man beräknar *features* och ger som indata till programmet. Dessa *features* eller *egenskaper* är ofta resultatet av en stor arbetsinsats, och ger en vy av datan som inte kan förändras för att få systemet att fungera bättre. I [neuronnät](#ann) så lär sig systemet alla features som används, i form av de inlärda representationerna.
 
 <a name="objective"></a>
-* **Objective** - the loss function or error function that mesures how well the model is doing. By mesuring this one has something to optimize, to make the model perform better (see [gradient descent](#gradientdescent)). The objective is often expressed as some kind of distance between the output computed by the model (with its current set of weights) and a reference output taken from the [training data](#trainingdata).
+* **Objective** - *felfunktion* - mäter hur bra modellen fungerar. Denna används som kriterium för att optimera parametrarna i en modell (se [gradient descent](#gradientdescent)). Felfunktionen är ofta formulerad genom ett avståndsmått som mäter skillnaden på utdatan från modellen jämfört med den önskade utdatan som den ser ut i [träningsdatan](#trainingdata).
 
 
 
