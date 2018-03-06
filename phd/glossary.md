@@ -11,6 +11,7 @@ by Olof Mogren.
 
 <a name="vector"></a>
 * **Vector** - a sequence of numbers. If its length is two or three, these can be interpreted as coordinates in 2D or 3D. In higher dimensions they can still be interpreted as coordinates, but in high-dimensional space. To be able to visualize high-dimensional vectors, one often project them down to two dimensions, a process that inherently makes the vectors lose much information. Vectors are often written with boldface: ***v***. For example, a 4-dimensional vector:
+| --- |
 | 0.3 |
 | 0.8 |
 | 0.7 |
@@ -19,6 +20,7 @@ by Olof Mogren.
 
 <a name="matrix"></a>
 * **Matrix** - a grid/table of numbers. Can be seen as a sequence of [vectors](#vector). Matrices are often written using capital letters: *M*. For example, a 4x3 matrix:
+| --- | --- | --- |
 | 0.3 | 0.5 | 0.0 |
 | 0.8 | 0.2 | 1.9 |
 | 0.7 | 0.7 | 0.0 |
