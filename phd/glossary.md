@@ -5,10 +5,11 @@ This is a glossary for non-technical people to read
 by Olof Mogren.
 
 
+<a name="vector"></a>
 * **Vector** - a sequence of numbers. If its length is two or three, these can be interpreted as coordinates in 2D or 3D. In higher dimensions they can still be interpreted as coordinates, but in high-dimensional space. Vectors are often written with boldface: ***v***.
 
 <a name="matrix"></a>
-* **Matrix** - a grid/table of numbers. Can be seen as a sequence of vectors. Matrices are often written using capital letters: *M*.
+* **Matrix** - a grid/table of numbers. Can be seen as a sequence of [vectors](#vector). Matrices are often written using capital letters: *M*.
 
 <a name="mlmodel"></a>
 * **Machine learning model** - a structural view of a machine learning algorithm. Examples can be [*artificial neural networks*](ann) or other statistical models. In general, a model is trained by updating its internal parameters, which are often stored as matrices (see [matrix](#matrix)).
