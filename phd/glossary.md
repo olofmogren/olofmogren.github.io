@@ -22,7 +22,7 @@ by Olof Mogren.
 * **Artificial neuron** - 
 
 <a name="layer"></a>
-* **Neuural network layer** - 
+* **Neural network layer** - 
 
 <a name="activationfunction"></a>
 * **Activation function** - 
