@@ -33,7 +33,7 @@ by Olof Mogren.
 
 
 <a name="artificialneuron"></a>
-* **Artificial neuron** - inspired by biological neurons, these units take a [vector](#vector) of inputs from the previous layer (which may be the data input), computes a weighted sum by first multiplying the input ***x*** with a weight vector ***w***, and adding a bias term *b*. $***a*** = ***w*** &middot; ***x*** + b. The result is fed through a non-linear [activation function](#activationfunction) to get the output from the unit.
+* **Artificial neuron** - inspired by biological neurons, these units take a [vector](#vector) of inputs from the previous layer (which may be the data input), computes a weighted sum by first multiplying the input ***x*** with a weight vector ***w***, and adding a bias term *b*. ***a*** = ***w*** &middot; ***x*** + b. The result is fed through a non-linear [activation function](#activationfunction) to get the output from the unit.
 
 <a name="layer"></a>
 * **Neural network layer** - a number of [artificial neurons](#artificialneuron), each taking a vector as input, and gives a number as output. Together, the numbers of outputs from all [artificial neurons](#artificialneuron) in the layer can be seen as a [vector](#vector), and each [layer](#layer) transforms its input vector into an output vector.
