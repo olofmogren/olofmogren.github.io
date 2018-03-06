@@ -12,7 +12,7 @@ av Olof Mogren.
 Ordlistan är inte i alfabetisk ordning, utan försöker istället sig på att förklara
 saker från enkla till mer komplexa.
 
-Ordlistan listar först den engelska termen, och därefter den svenska, om en sådan finns.
+Ordlistan listar först den engelska termen, och därefter ett försök till en svensk översättning.
 
 <a name="nlp"></a>
 * **Natural language processingg (NLP)** - *datorlingvistik/computational linguistics* - studien av hur naturligt språk (skrivet eller talat av människor) kan bearbetas av datorer. På senare tid så har [maskininlärning](#machinelearning) blivit ett allt viktigare verktyg inom NLP. Bägge är viktiga delar av  artificiell intelligens.
