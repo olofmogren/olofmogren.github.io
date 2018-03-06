@@ -1,3 +1,7 @@
+---
+layout: freepage
+---
+
 # Glossary for *Representation learning for natural language*
 
 This is a glossary for people with a non-technical background to read 
