@@ -22,7 +22,7 @@ by Olof Mogren.
 * **Artificial neuron** - 
 
 <a name="layer"></a>
-* **Neural network layer** - 
+* **Neural network layer** - a number of [artificial neurons](#artificialneuron), each taking a vector as input, and gives a number as output. Together, the numbers of outputs from all [artificial neurons](#artificialneuron) in the layer can be seen as a [vector](#vector), and each [layer](#layer) transforms its input vector into an output vector.
 
 <a name="activationfunction"></a>
 * **Activation function** - 
@@ -34,7 +34,7 @@ by Olof Mogren.
 * **Gradient descent** - 
 
 <a name="representation"></a>
-* **Representation** - 
+* **Representation** - in this thesis, a *representation* is typically a vector that represents some data object such as a word, an image, or a sentence. [Artificial neural networks](#ann) computes a vector as output from each [layer](#layer).
 
 <a name="feature"></a>
 * **Feature** - 
