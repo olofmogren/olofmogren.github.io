@@ -29,10 +29,10 @@ Ordlistan listar först den engelska termen, och därefter ett försök till en 
 
 <a name="matrix"></a>
 * **Matrix** - *matris* - ett rutnät eller tabell av tal. Denna kan ses som en sekvens av [vektorer](#vector) (antingen dess rader eller dess kolumner). Vi benämner matriser med stor bokstav: *M*. Exempelvis, en 4x3-matris:<br  />
-[ 0.3, 0.5, 0.0<br  />
-&nbsp;&nbsp;0.8, 0.2, 1.9<br  />
-&nbsp;&nbsp;0.7, 0.7, 0.0<br  />
-&nbsp;&nbsp;0.3, 0.1, 1.1]<br  />
+0.3, 0.5, 0.0<br  />
+0.8, 0.2, 1.9<br  />
+0.7, 0.7, 0.0<br  />
+0.3, 0.1, 1.1<br  />
 (Notera engelska decimalpunkter. Komma separerar talen i matrisen i detta fall.)<br  />
 ([Läs mer på Wikipedia.](https://en.wikipedia.org/wiki/Matrix_(mathematics))) 
 
