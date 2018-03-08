@@ -26,10 +26,10 @@ The glossary is not in alphabetical order, but ordered by incresing complexity.
 
 <a name="matrix"></a>
 * **Matrix** - a grid/table of numbers. Can be seen as a sequence of [vectors](#vector) (either its rows or its columns). Matrices are often written using capital letters: *M*. For example, a 4x3 matrix:<br />
-[ 0.3, 0.5, 0.0<br />
-&nbsp;&nbsp;0.8, 0.2, 1.9<br />
-&nbsp;&nbsp;0.7, 0.7, 0.0<br />
-&nbsp;&nbsp;0.3, 0.1, 1.1 ]<br />
+0.3, 0.5, 0.0<br />
+0.8, 0.2, 1.9<br />
+0.7, 0.7, 0.0<br />
+0.3, 0.1, 1.1<br />
 ([Read more on Wikipedia.](https://en.wikipedia.org/wiki/Matrix_(mathematics))) 
 
 <a name="mlmodel"></a>
