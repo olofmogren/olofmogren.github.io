@@ -28,7 +28,7 @@ Ordlistan listar först den engelska termen, och därefter ett försök till en 
 * **Vector** - *vektor* - en sekvens av tal. Om vektorns längd är två eller tre, så kan dessa tolkas som tvådimensionella eller tredimensionella koordinater. Är längden större, så kan de också tolkas som koordinater, fast i ett högdimensionellt vektorrum. För att kunna visualisera högdimensionella vektorer, projicerar man ofta ner dessa till två dimensioner. Detta är en process som gör att man förlorar information från den ursprungliga vektorn. Vi skriver vektorer med fetstil: ***v***. Exempelvis, en fyrdimensionell vektor: [0.3, 0.8, 0.7, 0.3]. (Notera engelska decimalpunkter. Komma separerar talen i vektorn i detta fall.) ([Läs mer på Wikipedia.](https://en.wikipedia.org/wiki/Row_and_column_vectors))
 
 <a name="matrix"></a>
-* **Matrix** - *matris* - ett rutnät eller tabell av tal. Denna kan ses som en sekvens av [vektorer](#vector). Vi benämner matriser med stor bokstav: *M*. Exempelvis, en 4x3-matris:<br  />
+* **Matrix** - *matris* - ett rutnät eller tabell av tal. Denna kan ses som en sekvens av [vektorer](#vector) (antingen dess rader eller dess kolumner). Vi benämner matriser med stor bokstav: *M*. Exempelvis, en 4x3-matris:<br  />
 [ 0.3, 0.5, 0.0<br  />
 0.8, 0.2, 1.9<br  />
 0.7, 0.7, 0.0<br  />

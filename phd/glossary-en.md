@@ -25,7 +25,7 @@ The glossary is not in alphabetical order, but ordered by incresing complexity.
 [ 0.3, 0.8, 0.7, 0.3] &nbsp; ([Read more on Wikipedia.](https://en.wikipedia.org/wiki/Row_and_column_vectors))
 
 <a name="matrix"></a>
-* **Matrix** - a grid/table of numbers. Can be seen as a sequence of [vectors](#vector). Matrices are often written using capital letters: *M*. For example, a 4x3 matrix:<br />
+* **Matrix** - a grid/table of numbers. Can be seen as a sequence of [vectors](#vector) (either its rows or its columns). Matrices are often written using capital letters: *M*. For example, a 4x3 matrix:<br />
 [ 0.3, 0.5, 0.0<br />
 0.8, 0.2, 1.9<br />
 0.7, 0.7, 0.0<br />
