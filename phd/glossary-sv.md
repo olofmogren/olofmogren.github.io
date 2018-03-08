@@ -25,23 +25,15 @@ Ordlistan listar först den engelska termen, och därefter ett försök till en 
 * **Training data** - *träningsdata* - datan som en [maskininlärningsmodell](#mlmodel) använder för att lära sig en uppgift. Exempelvis för en bildklassificerare, så består datan av bilder tillsammans med deras korrekta klassificeringar. Uppgiften blir för modellen att lära sig att beräkna den korrekta klassen utan att titta på klassificeringen från datan.
 
 <a name="vector"></a>
-* **Vector** - *vektor* - en sekvens av tal. Om vektorns längd är två eller tre, så kan dessa tolkas som tvådimensionella eller tredimensionella koordinater. Är längden större, så kan de också tolkas som koordinater, fast i ett högdimensionellt vektorrum. För att kunna visualisera högdimensionella vektorer, projicerar man ofta ner dessa till två dimensioner. Detta är en process som gör att man förlorar information från den ursprungliga vektorn. Vi skriver vektorer med fetstil: ***v***. Exempelvis, en fyrdimensionell vektor:
-
-| 0.3 |
-| 0.8 |
-| 0.7 |
-| 0.3 |
-
-([Läs mer på Wikipedia.](https://en.wikipedia.org/wiki/Row_and_column_vectors))
+* **Vector** - *vektor* - en sekvens av tal. Om vektorns längd är två eller tre, så kan dessa tolkas som tvådimensionella eller tredimensionella koordinater. Är längden större, så kan de också tolkas som koordinater, fast i ett högdimensionellt vektorrum. För att kunna visualisera högdimensionella vektorer, projicerar man ofta ner dessa till två dimensioner. Detta är en process som gör att man förlorar information från den ursprungliga vektorn. Vi skriver vektorer med fetstil: ***v***. Exempelvis, en fyrdimensionell vektor: [0.3, 0.8, 0.7, 0.3]. (Notera engelska decimalpunkter. Komma separerar talen i vektorn i detta fall.) ([Läs mer på Wikipedia.](https://en.wikipedia.org/wiki/Row_and_column_vectors))
 
 <a name="matrix"></a>
-* **Matrix** - *matris* - ett rutnät eller tabell av tal. Denna kan ses som en sekvens av [vektorer](#vector). Vi benämner matriser med stor bokstav: *M*. Exempelvis, en 4x3-matris:
-
-| 0.3 | 0.5 | 0.0 |
-| 0.8 | 0.2 | 1.9 |
-| 0.7 | 0.7 | 0.0 |
-| 0.3 | 0.1 | 1.1 |
-
+* **Matrix** - *matris* - ett rutnät eller tabell av tal. Denna kan ses som en sekvens av [vektorer](#vector). Vi benämner matriser med stor bokstav: *M*. Exempelvis, en 4x3-matris:<br  />
+[ 0.3, 0.5, 0.0 
+0.8, 0.2, 1.9
+0.7, 0.7, 0.0
+0.3, 0.1, 1.1]<br  />
+(Notera engelska decimalpunkter. Komma separerar talen i vektorn i detta fall.)<br  />
 ([Läs mer på Wikipedia.](https://en.wikipedia.org/wiki/Matrix_(mathematics))) 
 
 <a name="mlmodel"></a>
