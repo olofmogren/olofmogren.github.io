@@ -33,7 +33,7 @@ Ordlistan listar först den engelska termen, och därefter ett försök till en 
 0.8, 0.2, 1.9<br  />
 0.7, 0.7, 0.0<br  />
 0.3, 0.1, 1.1]<br  />
-(Notera engelska decimalpunkter. Komma separerar talen i vektorn i detta fall.)<br  />
+(Notera engelska decimalpunkter. Komma separerar talen i matrisen i detta fall.)<br  />
 ([Läs mer på Wikipedia.](https://en.wikipedia.org/wiki/Matrix_(mathematics))) 
 
 <a name="mlmodel"></a>
