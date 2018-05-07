@@ -2,6 +2,7 @@
 
 ## Face images
 * [CMU Face Images Data Set](https://archive.ics.uci.edu/ml/datasets/CMU+Face+Images)
+  This data consists of 640 black and white face images of people taken with varying pose (straight, left, right, up), expression (neutral, happy, sad, angry), eyes (wearing sunglasses or not), and size.
 * [Facial Expression Dataset (AM-FED)](https://www.affectiva.com/facial-expression-dataset/)
 
 ## Activities, IMU sensors
