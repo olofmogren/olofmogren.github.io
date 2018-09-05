@@ -4,6 +4,31 @@ title: Olof Mogren - Researcher, Speaker, Blogger. Deep Learning, NLP, Sequence 
 ---
 
 
+{% for p in site.categories.talks%}
+{% if p.tags contains "frontpage" %}
+{% else %}
+{% continue %}
+{% endif %}
+
+      <section class="research-topic">
+        <div class="inner">
+          <div class="block block-copy">
+
+        <figure style="max-width: 40%; margin-top: 30px; {% cycle 'float: left', 'float: right' %}"><img src="{{ p.imgsrc }}" alt="{{ p.imgalt }}" style="max-width: 100%; " /></figure>
+<a href="{% if p.overwriteurl %}{{ p.overwriteurl }}{% else %}{{ p.url }}{% endif %}"><h2> {{ p.title }} </h2></a>
+
+<p>
+{{ p.shortversion }}
+</p>
+
+<p>
+<em>{{ p.venue }}</em><br />
+<em>{{ p.authors }}</em><br />
+</p>
+          </div>
+        </div>
+      </section>
+{% endfor %}
 {% for p in site.categories.publications %}
 {% if p.tags contains "frontpage" %}
 {% else %}
