@@ -1,5 +1,5 @@
 ---
-title: Are you looking to write a master thesis related to machine learning?
+title: Several different projects related to machine learning awaits skilled students.
 
 layout: posts
 tags:
@@ -22,7 +22,7 @@ you.
 shortversion: "Master students wanted for a number of different master thesis projects."
 
 venue: 
-authors: Olof Mogren
+authors: Are you looking to write a master thesis related to machine learning?
 bibtex: 
 permalink:
 pdf: 
