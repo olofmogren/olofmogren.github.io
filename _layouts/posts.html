@@ -16,10 +16,12 @@ layout: default
 <p>
 {% if page.content %}
 {{ page.content }}
-{% elif page.longversion %}
+{% else %}}
+{{% if page.longversion %}
 {{ page.longversion }}
 {% else %}
 {{ page.shortversion }}
+{% endif %}
 {% endif %}
 </p>
 <p>
