@@ -10,6 +10,7 @@ layout: default
 
 <ul>
 {% for post in site.categories.talks %}
+{% if post.title %}
 {% assign currentdate = post.date | date: "%Y" %}
 {% if currentdate != date %}
 </ul>
@@ -41,6 +42,7 @@ Click title for slides and more info.
 Click title for more info.
 {% endif %}
 </li>
+{% endif %}
 {% endfor %}
 </ul>
 
