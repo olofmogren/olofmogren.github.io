@@ -7,6 +7,20 @@ tags:
 imgsrc: /graphics/illustrations/2018-09-05/cega_570_wide.png
 imgalt: Clarke error grid analysis on blood glucose predictions from our paper.
 longversion: "
+"
+shortversion: "
+September 5-6, 2018, RISE AI is presenting work at the Swedish symposium on
+deep learning.
+"
+
+venue: Swedish symposium on deep learning
+authors: Olof Mogren
+bibtex: 
+permalink:
+pdf: /talks/slides/mogren-2017-05-14-can-we-trust-ai.pdf
+overwriteurl: 
+externallink: "https://clasp.gu.se/news-events/the-second-swedish-symposium-on-deep-learning-"
+---
 September 5-6, 2018, RISE AI is presenting work at the Swedish symposium on
 deep learning.
 
@@ -42,18 +56,4 @@ in machine learning, related to natural language processing,
 computer vision, and health applications.
 
 Does this sound interesting? Do not hesitate to contact us. olof@mogren.one or +46-722-363990.
-"
-shortversion: "
-September 5-6, 2018, RISE AI is presenting work at the Swedish symposium on
-deep learning.
-"
-
-venue: Swedish symposium on deep learning
-authors: Olof Mogren
-bibtex: 
-permalink:
-pdf: /talks/slides/mogren-2017-05-14-can-we-trust-ai.pdf
-overwriteurl: 
-externallink: "https://clasp.gu.se/news-events/the-second-swedish-symposium-on-deep-learning-"
----
 
