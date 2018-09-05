@@ -13,7 +13,7 @@ deep learning.
 <h2>Poster: Blood glucose prediction with confidence</h2>
 Welcome to come talk to us at our poster about blood glucose prediction.
 Our work was presented at the
-<a href="https://sites.google.com/view/kdhd-2018/bglp-challenge">
+<a href=\"https://sites.google.com/view/kdhd-2018/bglp-challenge\">
 Blood glucose level prediction challenge
 </a>
 at ICML this year and contains work on recurrent neural networks trained
