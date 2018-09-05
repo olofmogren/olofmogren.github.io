@@ -18,7 +18,7 @@ venue: Swedish symposium on deep learning
 authors: Olof Mogren
 bibtex: 
 permalink:
-pdf: /talks/slides/mogren-2017-05-14-can-we-trust-ai.pdf
+pdf: 
 overwriteurl: 
 externallink: "https://clasp.gu.se/news-events/the-second-swedish-symposium-on-deep-learning-"
 ---
