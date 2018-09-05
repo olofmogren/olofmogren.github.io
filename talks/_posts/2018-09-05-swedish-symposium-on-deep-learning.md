@@ -11,6 +11,7 @@ longversion: "
 shortversion: "
 September 5-6, 2018, RISE AI is presenting work at the Swedish symposium on
 deep learning.
+We have a poster about our work on blood glucose prediction with confidence estimation, and an oral presentation about character-based recurrent neural networks for morphological transformations. Come and talk to us!
 "
 
 venue: Swedish symposium on deep learning
