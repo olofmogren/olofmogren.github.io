@@ -35,7 +35,7 @@ by seeing analogous word transformations. The presentation
 takes place between the keynotes by Chris Dyer and Joakim Nivre.
 </p><p>
 
-## Master students wanted for exciting thesis projects in machine learning
+<h2>Master students wanted for exciting thesis projects in machine learning</h2>
 Are you looking to write a master thesis in machine learning?
 Do you have a solid background on machine learning, neural networks,
 statistics, mathematics, and algorithms? 
