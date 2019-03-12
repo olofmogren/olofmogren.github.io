@@ -18,7 +18,7 @@ longversion: "
 <p><a href='https://www.youtube.com/watch?v=jmuKHothMR8'>Video capture of presentation.</a></p>
 
 <div style='float: right; clear: right; max-width: 60%; margin: 4em;'>
-<iframe width='300' height='300' src='https://www.youtube.com/embed/jmuKHothMR8?rel=0' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>
+<iframe width='400' height='300' src='https://www.youtube.com/embed/jmuKHothMR8?rel=0' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>
 </div>
 "
 shortversion: "
