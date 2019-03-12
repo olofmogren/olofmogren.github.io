@@ -16,6 +16,10 @@ longversion: "
 <p><a href='https://papers.nips.cc/paper/7892-neural-ordinary-differential-equations'>Paper fulltext PDF.</a></p>
 
 <p><a href='https://www.youtube.com/watch?v=jmuKHothMR8'>Video capture of presentation.</a></p>
+
+<div style='float: right; clear: right; max-width: 60%; margin: 4em;'>
+<iframe width='400' height='300' src='https://www.youtube.com/embed/jmuKHothMR8?rel=0' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>
+</div>
 "
 shortversion: "
 Seminar presentation of &ldquo;Neural ordinary differential equations&rdquo; by Chen, et.al., receving best paper award at NeurIPS 2018.
