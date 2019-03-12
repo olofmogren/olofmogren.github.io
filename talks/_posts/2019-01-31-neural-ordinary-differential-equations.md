@@ -16,6 +16,7 @@ longversion: "
 
 "
 shortversion: "
+Seminar presentation of &ltq;Neural ordinary differential equations&rtq; Chen, et.al., receving best paper award at NeurIPS 2018.
 "
 
 venue: Learning machines seminars at Research institutes of Sweden
@@ -24,5 +25,6 @@ bibtex:
 permalink:
 pdf: https://papers.nips.cc/paper/7892-neural-ordinary-differential-equations
 overwriteurl: 
-externallink: 
+externallink: https://youtu.be/jmuKHothMR8
+
 ---
