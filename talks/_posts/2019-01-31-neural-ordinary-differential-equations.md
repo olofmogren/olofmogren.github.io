@@ -25,7 +25,7 @@ venue: Learning machines seminars at Research institutes of Sweden
 authors: Olof Mogren
 bibtex: 
 permalink:
-pdf: /files/2019-01-31-mogren-odenets.pdf
+pdf: /files/2019-01-31-mogren-odenet.pdf
 overwriteurl: 
 externallink: 
 ---
