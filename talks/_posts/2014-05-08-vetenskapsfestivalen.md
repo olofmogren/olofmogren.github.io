@@ -6,7 +6,7 @@ tags:
 imgsrc: 
 imgalt: 
 longversion:
-shortversion: Live demo of summarization techniques developed in our group at "Vetsnskapsfestivalen" ("Science Festival"). 
+shortversion: Live demo of summarization techniques developed in our group at "Vetenskapsfestivalen" ("Science Festival"). 
 
 venue: Presentation and demo, Vetenskapsfestivalen, Göteborg
 authors: Olof Mogren
