@@ -136,6 +136,10 @@ title: Olof Mogren - Researcher, Speaker, Blogger. Deep Learning, NLP, Sequence 
 <strong>{% if post.longversion or post.pdf %}<a href="{{ post.url }}">{% elsif post.overwriteurl %}<a href="{{ post.overwriteurl }}">{% endif %}{{ post.date | date: "%Y-%m-%d" }}: {{ post.title }}{% if post.longversion or post.pdf or post.overwriteurl %}</a>{% endif %}</strong><br />
 (<em>{{ post.venue }}</em>)
 <br />
+{{ post.url }}
+<br />
+{{ post.overwriteurl }}
+<br />
 {{ post.shortversion }}
 
 </p>
