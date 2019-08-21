@@ -19,14 +19,9 @@ shortversion: On August 11th, the first workshop on Representation Learning For 
 
 
 published: true
-tweetid: 764149547073437696
 ---
 
 On August 11th, the first [workshop on Representation Learning For NLP](https://sites.google.com/site/repl4nlp2016/) took place in conjunction with [ACL 2016](http://acl2016.org/) at Humboldt University in Berlin. The workshop was extremely popular, and the talks were moved to the largest auditorium to fit all visitors.
-
-{% if page.tweetid %}
-{{ layout.tweetcodepre }}{{ page.tweetid }}{{ layout.tweetcodepost }}
-{% endif %}
 
 
 ## Invited talks

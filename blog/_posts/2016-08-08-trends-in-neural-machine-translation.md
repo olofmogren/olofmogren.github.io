@@ -15,7 +15,6 @@ authors: Olof Mogren
 permalink:
 pdf: 
 overwriteurl: 
-tweetid: 762759867551649792
 ---
 
 The following blog post was written as an attempt to summarize some
@@ -24,10 +23,6 @@ neural machine translation (NMT). It was also a way of digesting
 a great tutorial on NMT given Sunday, August 7 at ACL in Berlin
 by some of the best people in the field: Christopher Manning,
 Minh-Thang Luong, and Kyunghyun Cho.
-
-{% if page.tweetid %}
-{{ layout.tweetcodepre }}{{ page.tweetid }}{{ layout.tweetcodepost }}
-{% endif %}
 
 Machine translation has gone through a number of stages in the last decades.
 Phrase based statistical machine translation (SMT), the flavour
