@@ -3,7 +3,6 @@ title: "Neural ordinary differential equations"
 layout: talks
 tags:
  - default
- - frontpage
 imgsrc: /graphics/illustrations/2019-01-31/neural-odes.png
 imgalt: Neural ordinary differential equations.
 longversion: "
