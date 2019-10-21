@@ -7,8 +7,8 @@ tags:
 imgsrc: /publications/2019/generative/z-traversal.png
 imgalt: "Traversing the latent space."
 shortversion: "
-<div style="float: right; clear: right; max-width: 60%; margin: 4em;" />
-<iframe width="300" height="300" src="https://www.youtube.com/embed/rxKvVlrCi7g?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<div style=\"float: right; clear: right; max-width: 60%; margin: 4em;\" />
+<iframe width=\"300\" height=\"300\" src=\"https://www.youtube.com/embed/rxKvVlrCi7g?rel=0\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>
 </div>
 In this work, we propose a method to generatively model
 the joint distribution of images and corresponding semantic
