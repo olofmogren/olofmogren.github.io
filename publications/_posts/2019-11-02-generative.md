@@ -12,6 +12,6 @@ venue: To be presented at  <a href="https://sites.google.com/view/cvcreative/hom
 authors: Marie Korneliusson, John Martinsson, Olof Mogren
 bibtex: '@inproceedings{korneliusson2019generative, \n title={Generative modelling of semantic segmentation data in the fashion domain}, \n author={Marie Korneliusson and John Martinsson and Olof Mogren}, \n booktitle={Proceedings of Second Workshop on Computer Vision for Fashion, Art and Design at ICCV 2019}, \n year={2019}}'
 permalink: /publications/2019/generative/
-pdf: 
+pdf: /publications/2019/generative/korneliusson2019generative.pdf
 
 ---
