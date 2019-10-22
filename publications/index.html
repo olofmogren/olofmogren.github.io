@@ -25,7 +25,7 @@ This is a selection of my publications. Please also see my <a href="https://scho
 {% endif %}
 
 <div class="fullwidth-articlelistitem" style="border: 1px #000 solid;">
-<div style="display: inline">
+<div style="width: 45%; display: inline-block;">
 <a href="{% if p.overwriteurl %}{{ p.overwriteurl }}{% else %}{{ p.url }}{% endif %}"><h2> {{ p.title }} </h2></a>
 
 <p>
@@ -44,7 +44,7 @@ This is a selection of my publications. Please also see my <a href="https://scho
 {% endif %}
 </p>
 </div>
-<div style="display: inline">
+<div style="width: 45%; display: inline-block;">
 <img src="{{ p.imgsrc }}" alt="{{ p.imgalt }}" style="max-width: 100%; max-height: 100%;" />
 </div>
 {% endfor %}
