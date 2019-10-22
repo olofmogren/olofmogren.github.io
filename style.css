@@ -25,6 +25,7 @@ h1.nametag{color: #2b5381; text-align: left;display:inline; text-decoration: non
 a.nametag{color: #2b5381; text-decoration: none;}
 div.nametagsubscript{}/*padding-top: 0px; margin-top: 0px;}*/
 span.nametagsubscript{color: #2b5381; font-size: 8pt; margin-left: 10px;}/* padding-top: 0px; margin-top: 0px;}*/
+div.fullwidth-articlelistitem{width: 100%}
 
 section.features{border-top:1px solid #eceff1;border-bottom:1px solid #eceff1;text-align:center;padding: 0px;}
 section.features .feature-grid{display:table;border-collapse:collapse}

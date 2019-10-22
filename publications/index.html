@@ -24,6 +24,7 @@ This is a selection of my publications. Please also see my <a href="https://scho
 {% endif %}
 {% endif %}
 
+<div class="fullwidth-articlelistitem">
 <a href="{% if p.overwriteurl %}{{ p.overwriteurl }}{% else %}{{ p.url }}{% endif %}"><h2> {{ p.title }} </h2></a>
 
 <p>
@@ -42,6 +43,7 @@ This is a selection of my publications. Please also see my <a href="https://scho
 <a href="javascript:void(null);" onclick="showBibtex(event, '{{ p.bibtex }}')">bibtex</a>.
 {% endif %}
 </p>
+</div>
 {% endfor %}
 {% endfor %}
 
