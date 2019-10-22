@@ -25,10 +25,10 @@ This is a selection of my publications. Please also see my <a href="https://scho
 {% endif %}
 
 <div class="fullwidth-articlelistitem" style="border: 1px #000 solid;">
+<div style="display: inline">
 <a href="{% if p.overwriteurl %}{{ p.overwriteurl }}{% else %}{{ p.url }}{% endif %}"><h2> {{ p.title }} </h2></a>
 
 <p>
-<img src="{{ p.imgsrc }}" alt="{{ p.imgalt }}" style="float: right; max-width: 40%; max-height: 100%; clear: right;" />
 
 {{ p.shortversion }}
 </p>
@@ -43,6 +43,9 @@ This is a selection of my publications. Please also see my <a href="https://scho
 <a href="javascript:void(null);" onclick="showBibtex(event, '{{ p.bibtex }}')">bibtex</a>.
 {% endif %}
 </p>
+</div>
+<div style="display: inline">
+<img src="{{ p.imgsrc }}" alt="{{ p.imgalt }}" style="max-width: 100%; max-height: 100%;" />
 </div>
 {% endfor %}
 {% endfor %}
