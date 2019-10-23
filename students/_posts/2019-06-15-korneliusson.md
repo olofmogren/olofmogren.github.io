@@ -5,8 +5,8 @@ tags:
  - masterthesis
 imgsrc: /publications/2019/generative/z-traversal.png
 imgalt: 
-longversion: ""
-shortversion: "In this work, we propose a method to generatively model the joint distribution of images and corresponding semantic segmentation maps using generative adversarial networks. We extend the Style-GAN architecture by iteratively growing the network during training, to add new output channels that model the semantic segmentation maps. We train the proposed method on a large dataset of fashion images and our experimental evaluation shows that the model produces samples that are coherent and plausible with semantic segmentation maps that closely match the semantics in the image. "
+longversion: "In this work, we propose a method to generatively model the joint distribution of images and corresponding semantic segmentation maps using generative adversarial networks. We extend the Style-GAN architecture by iteratively growing the network during training, to add new output channels that model the semantic segmentation maps. We train the proposed method on a large dataset of fashion images and our experimental evaluation shows that the model produces samples that are coherent and plausible with semantic segmentation maps that closely match the semantics in the image."
+shortversion: "Generative adversarial networks modelling joint distribution over images and segmentation masks. Applied to fashion data."
 
 venue: 
 authors: Marie Korneliusson 
