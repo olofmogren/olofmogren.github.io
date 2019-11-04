@@ -13,12 +13,11 @@ layout: default
 {% if post.title %}
 {% assign currentdate = post.date | date: "%Y" %}
 {% if currentdate < yearunix-2 %}
-yearunix-2
 {% continue %}
 {% endif %}
 {% if currentdate != date %}
 </ul>
-<h2 id="y{{currentdate}}">{{ currentdate }} {{ yearunix }}</h2>
+<h2 id="y{{currentdate}}">{{ currentdate }} {{ yearunix-2 }}</h2>
 <ul>
 {% assign date = currentdate %}
 {% endif %}
