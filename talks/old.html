@@ -1,0 +1,57 @@
+---
+title: Talks - Olof Mogren
+layout: default
+---
+
+<section>
+<div class="inner">
+<div class="block block-copy">
+<h1>Talks</h1>
+{% capture yearunix %}{{'now' | date: '%Y'}}{% endcapture %}
+<ul>
+{% for post in site.categories.talks %}
+{% if post.title %}
+{% assign currentdate = post.date | date: "%Y" %}
+{% if currentdate < yearunix-2 %}
+yearunix-2
+{% continue %}
+{% endif %}
+{% if currentdate != date %}
+</ul>
+<h2 id="y{{currentdate}}">{{ currentdate }}</h2>
+<ul>
+{% assign date = currentdate %}
+{% endif %}
+<li>
+<p>
+{% if post.imgsrc %}
+<figure style="float: right; max-width: 40%; max-height: 12em; clear: right;"><img src="{{ post.imgsrc }}" style="width: 100%; max-height: 12em;" alt="" /></figure>
+{% endif %}
+
+{% if post.overwriteurl %}<a href="{{ post.overwriteurl }}" name="{{ post.date | date: "%Y-%m-%d" }}">
+{% elsif post.longversion or post.pdf %}<a href="{{ post.url }}">
+{% endif %}
+
+<strong>{{ post.date | date: "%Y-%m-%d" }}:
+{{ post.title }}</strong><br />
+{% if post.overwriteurl or post.longversion or post.pdf %}
+</a>
+{% endif %}
+(<em>{{ post.venue }}</em>)
+<br />{{ post.shortversion }}
+</p>
+{% if post.pdf %}
+Click title for slides and more info.
+{% elsif post.longversion %}
+Click title for more info.
+{% endif %}
+</li>
+{% endif %}
+{% endfor %}
+</ul>
+
+
+</div>
+<div>
+</section>
+
