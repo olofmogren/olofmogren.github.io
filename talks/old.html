@@ -18,7 +18,7 @@ yearunix-2
 {% endif %}
 {% if currentdate != date %}
 </ul>
-<h2 id="y{{currentdate}}">{{ currentdate }}</h2>
+<h2 id="y{{currentdate}}">{{ currentdate }} {{ yearunix }}</h2>
 <ul>
 {% assign date = currentdate %}
 {% endif %}
