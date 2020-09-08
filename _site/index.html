@@ -1,0 +1,425 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+      
+      <meta charset="utf-8">
+      <title>Olof Mogren - Researcher, Speaker, Blogger. Deep Learning, NLP, Sequence Modelling.</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width">
+      <link rel="stylesheet" href="/style.css">
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script>
+        function showBibtex(event, text) {
+          var el, x, y;
+
+          el = document.getElementById('PopUp');
+          if (window.event) {
+            x = window.event.clientX + document.documentElement.scrollLeft
+                + document.body.scrollLeft;
+                y = window.event.clientY + document.documentElement.scrollTop +
+                + document.body.scrollTop;
+          }
+          else {
+            x = event.clientX + window.scrollX;
+            y = event.clientY + window.scrollY;
+          }
+          x -= 2; y -= 2;
+          y = y+15
+          el.style.left = x + "px";
+          el.style.top = y + "px";
+          el.style.display = "block";
+          document.getElementById('PopUpText').innerHTML = text;
+       }
+    </script>
+  </head>
+  <body class="home">
+
+    <div class="bodydiv">
+      <header id="header-waypoint">
+        <nav id="stickyNav" class="sticky-nav">
+          <div class="nametag">
+            <div class="nametagsubdiv"><a href="http://mogren.one/" class="nametag"><h1 class="nametag">O<span style="font-size: 22px;">lof</span> M<span style="font-size: 22px;">ogren</span></h1></a></div>
+            <div class="nametagsubscript"><span class="nametagsubscript">Senior machine learning researcher, PhD, at Research institutes of Sweden.</span></div>
+          </div>
+          <div id="groups" style="margin-right: 80px;">
+            <div id="group1" style="z-index: 5;">
+              <a href="/blog" style="color: #999;">Blog</a>
+              <a href="/talks" style="color: #999;">Talks</a>
+            </div>
+            <div id="group2" style="z-index: 5;">
+              <a href="/publications" style="color: #999;">Publications</a>
+              <a href="/about" style="color: #999;">About</a>
+            </div>
+          </div>
+        </nav>
+
+      </header>
+
+      <a class="github-ribbon" href="https://github.com/olofmogren">
+        <img style="position: absolute; top: 0; right: 0; border: 0; z-index: 4;"
+             src="/graphics/git-ribbon.png" alt="Fork me on GitHub">
+      </a>
+
+      <div id="PopUp" style="display: none; position: absolute; left: 100px; top: 50px; border: solid black 1px; padding: 10px; background-color: rgb(200,200,200); text-align: justify; font-size: 12px; min-width: 400px;">
+        <pre id="PopUpText">TEXT</pre>
+        <input name="close" type="button" value="Close" onclick="document.getElementById('PopUp').style.display = 'none';" />
+      </div>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <section class="research-topic">
+        <div class="inner">
+          <div class="block block-copy">
+
+        <figure style="max-width: 40%; margin-top: 30px; float: left"><img src="" alt="" style="max-width: 100%; " /></figure>
+<a href="/publications/2019/semantic/"><h2> Semantic segmentation of fashion images using feature pyramid networks </h2></a>
+
+<p>
+ Our main objective is to facilitate fashion image analysis. We do this through semantic segmentation of fashion images, using both textural information and cues from shape and context, where target classes are clothing categories. Our main contributions are *state-of-the-art semantic segmentation of fashion images*, and *modest memory and GPU/CPU usage*.
+
+</p>
+
+<p>
+<em>To be presented at  <a href="https://sites.google.com/view/cvcreative/home">Second Workshop on Computer Vision for Fashion, Art and Design at ICCV 2019</a>.</em><br />
+<em>John Martinsson, Olof Mogren</em><br />
+</p>
+          </div>
+        </div>
+      </section>
+
+
+
+
+      <section class="research-topic">
+        <div class="inner">
+          <div class="block block-copy">
+
+        <figure style="max-width: 40%; margin-top: 30px; float: right"><img src="/publications/2019/generative/z-traversal.png" alt="Traversing the latent space." style="max-width: 100%; " /></figure>
+<a href="/publications/2019/generative/"><h2> Generative modelling of semantic segmentation data in the fashion domain </h2></a>
+
+<p>
+ In this work, we propose a method to generatively model the joint distribution of images and corresponding semantic segmentation maps using generative adversarial networks. We extend the Style-GAN architecture by iteratively growing the network during training, to add new output channels that model the semantic segmentation maps. We train the proposed method on a large dataset of fashion images and our experimental evaluation shows that the model produces samples that are coherent and plausible with semantic segmentation maps that closely match the semantics in the image. 
+</p>
+
+<p>
+<em>To be presented at  <a href="https://sites.google.com/view/cvcreative/home">Second Workshop on Computer Vision for Fashion, Art and Design at ICCV 2019</a>.</em><br />
+<em>Marie Korneliusson, John Martinsson, Olof Mogren</em><br />
+</p>
+          </div>
+        </div>
+      </section>
+
+
+
+
+      <section class="research-topic">
+        <div class="inner">
+          <div class="block block-copy">
+
+        <figure style="max-width: 40%; margin-top: 30px; float: left"><img src="/publications/2017/character-based/character-based-relation-model.svg" alt="Character-based recurrent neural networks for morphological relational reasoning. The <em>FC relation</em> layer is connected to an auxilliary output layer, trained to predict a label for the current type of relation. The final output is generated by the <em>Decoder RNN</em>." style="max-width: 100%; " /></figure>
+<a href="/publications/2017/character-based/"><h2> Character-based recurrent neural networks for morphological relational reasoning </h2></a>
+
+<p>
+ Given a demo relation (a pair of word forms) and a query word, we devise a character-based recurrent neural network architecture using three separate encoders and a decoder, trained to predict the missing second form of the query word. Our results show that the exact form can be predicted for English with an accuracy of 94.7%. For Swedish, which has a more complex morphology with more inflectional patterns for nouns and verbs, the accuracy is 89.3%.
+</p>
+
+<p>
+<em>To appear at <a href="https://sites.google.com/view/sclem2017/">Subword & Character Level Models in NLP (SCLeM) workshop at EMNLP 2017</a> in Copenhagen, Denmark, September 7.</em><br />
+<em>Olof Mogren, Richard Johansson</em><br />
+</p>
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+
+      <section class="research-topic">
+        <div class="inner">
+          <div class="block block-copy">
+
+        <figure style="max-width: 40%; margin-top: 30px; float: right"><img src="/publications/2016/c-rnn-gan/c-rnn-gan-color.svg" alt="C-RNN-GAN" style="max-width: 100%; " /></figure>
+<a href="/publications/2016/c-rnn-gan/"><h2> C-RNN-GAN: Continuous recurrent neural networks with adversarial training </h2></a>
+
+<p>
+Generative adversarial networks have been proposed as a way of efficiently training deep generative neural networks. We propose a generative adversarial model that works on continuous sequential data, and apply it by training it on a collection of classical music. We conclude that it generates music that sounds better and better as the model is trained, report statistics on generated music, and let the reader judge the quality by downloading the generated songs.
+</p>
+
+<p>
+<em><a href="http://www.cs.nott.ac.uk/~psztg/cml/2016/index.html">Constructive Machine Learning Workshop (CML) at NIPS 2016</a> in Barcelona, Spain, December 10.</em><br />
+<em>Olof Mogren</em><br />
+</p>
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <section class="features">
+        <div class="inner">
+          <div class="feature-grid">
+            <div class="table-row">
+              <div class="feature">
+<a href="/blog/"><h3>Blog</h3></a>
+
+
+<p><a href="/blog/2017/09/13/emnlp.html"><strong>EMNLP 2017</strong>
+
+<br /><img src="/graphics/illustrations/2017-09-13/emnlp.jpg" style="max-width: 80%" /></a><br />
+
+<em>2017-09-13</em>
+
+<br />The EMNLP conference took place in Copenhagen in September 2017. In this blog post I share some observations that I made during the conference. These included subword-level models, multilingual NLP, language grounding, and inspiration from children.
+
+</p>
+
+<p><a href="/blog/2016/08/22/acl2016.html"><strong>ACL 2016</strong>
+
+<br /><img src="/graphics/illustrations/2016-08-22/acl-logo54.png" style="max-width: 80%" /></a><br />
+
+<em>2016-08-22</em>
+
+<br />August 7-12, the 54th conference of the Association of Computational Linguistics (ACL) took place at the Humboldt University in Berlin. This blog post contains a write-up of some of my favourite presentations during the conference.
+
+</p>
+
+              </div>
+              <div class="feature">
+<a href="/phd/"><h3>PhD defense</h3></a>
+<p>On March 23rd, 2018 at 10:00, I successfully defended my doctorate thesis titled <br />
+<em>&ldquo;Representation learning for natural language&rdquo;</em>.</p>
+<p>Opponent was <br />
+<a href="http://www.cis.uni-muenchen.de/personen/professoren/schuetze/" title="Hinrich Sch&uuml;tze's web page"></a>Professor Doktor Hinrich Sch&uuml;tze.</p>
+<a href="/lic/"><h3>Licentiate seminar</h3></a>
+<p>On November 20th, 2015 at 10:00, I successfully defended my licentiate thesis titled <br />
+<em>&ldquo;Multi-document summarization and semantic relatedness&rdquo;</em>.</p>
+<p>Discussion leader was <br />
+<a href="http://users.ics.aalto.fi/praiko/" title="Tapani Raiko's web page at aalto.fi">Tapani Raiko from Aalto University</a>.</p>
+              </div>
+              <div class="feature">
+<a href="/students"><h3>Students</h3></a>
+<p>The following students recently wrote their master's theses under my supervision.</p>
+
+
+<p><a href="/students">More students.</a></p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="inner">
+          <div class="block block-copy">
+<a href="/talks/"><h3>Recent talks</h3></a>
+
+<ul>
+
+<li>
+<p>
+
+<figure style="float: right; clear: right; max-width: 40%; max-height: 7em;"><img src="/graphics/illustrations/2019-01-31/neural-odes.png" style="max-width: 100%; max-height: 7em; width: auto;" alt="" /></figure>
+
+<strong><a href="/talks/2019/01/31/neural-ordinary-differential-equations.html">2019-01-31: Neural ordinary differential equations</a></strong><br />
+(<em>Learning machines seminars at Research institutes of Sweden</em>)
+<br />
+/talks/2019/01/31/neural-ordinary-differential-equations.html
+<br />
+
+<br />
+ Seminar presentation of &ldquo;Neural ordinary differential equations&rdquo; by Chen, et.al., receving best paper award at NeurIPS 2018. 
+
+</p>
+</li>
+
+
+<li>
+<p>
+
+<figure style="float: right; clear: right; max-width: 40%; max-height: 7em;"><img src="/graphics/illustrations/2018-09-05/cega_570_wide.png" style="max-width: 100%; max-height: 7em; width: auto;" alt="" /></figure>
+
+<strong><a href="/talks/2018/09/05/swedish-symposium-on-deep-learning.html">2018-09-05: Swedish symposium on deep learning</a></strong><br />
+(<em>Swedish symposium on deep learning</em>)
+<br />
+/talks/2018/09/05/swedish-symposium-on-deep-learning.html
+<br />
+
+<br />
+ September 5-6, 2018, RISE AI is presenting work at the Swedish symposium on deep learning. We have a poster about our work on blood glucose prediction with confidence estimation, and an oral presentation about character-based recurrent neural networks for morphological transformations. Come and talk to us! 
+
+</p>
+</li>
+
+
+<li>
+<p>
+
+<figure style="float: right; clear: right; max-width: 40%; max-height: 7em;"><img src="/graphics/illustrations/2017-05-14/can-we-trust-ai.svg" style="max-width: 100%; max-height: 7em; width: auto;" alt="" /></figure>
+
+<strong><a href="/talks/2017/05/14/can-we-trust-ai.html">2017-05-14: Can we trust AI: A talk at the science festival</a></strong><br />
+(<em>Vetenskapsfestivalen</em>)
+<br />
+/talks/2017/05/14/can-we-trust-ai.html
+<br />
+
+<br />
+During the science festival in Gothenburg, we had a session discussing artificial intelligence. The theme for the whole festival was &ldquo;trust&rdquo;, so we naturally named our session &ldquo;Can we trust AI&rdquo;. I gave an introduction, and shared my view of some of the recent progress that has been made in AI and machine learning, and then we had four other speakers giving their views of current state of the art. Finally, I chaired a discussion session that was much appreciated with the audience. The room was filled, and many people came up to us afterwards and kept the discussion going. The other speakers were Annika Larsson from Autoliv, Ola Gustavsson from Dagens Nyheter, and Hans Salomonsson from Data Intelligence Sweden AB.
+
+</p>
+</li>
+
+
+<li>
+<p>
+
+<figure style="float: right; clear: right; max-width: 40%; max-height: 7em;"><img src="/graphics/illustrations/2017-02-02/gomez-drug-design-optimization.svg" style="max-width: 100%; max-height: 7em; width: auto;" alt="" /></figure>
+
+<strong><a href="/talks/2017/02/02/nips-takeaways.html">2017-02-02: Takeaways from NIPS: meta-learning and one-shot learning</a></strong><br />
+(<em>Chalmers Machine Learning Seminars</em>)
+<br />
+/talks/2017/02/02/nips-takeaways.html
+<br />
+
+<br />
+Before the representation learning revolution, hand-crafted features were a prerequisite for a successful application of most machine learning algorithms. Just like learned features have been massively successful in many applications, some recent work has shown that you can also automate the learning algorithms themselves. In this talk, I'll cover some of the related ideas presented at this year's NIPS conference.
+
+</p>
+</li>
+
+
+<li>
+<p>
+
+<figure style="float: right; clear: right; max-width: 40%; max-height: 7em;"><img src="/graphics/illustrations/2016-10-06/googlenet.svg" style="max-width: 100%; max-height: 7em; width: auto;" alt="" /></figure>
+
+<strong><a href="/talks/2016/10/06/deep-learning-guest-lecture.html">2016-10-06: Deep Learning Guest Lecture</a></strong><br />
+(<em>FFR135, Artificial Neural Networks</em>)
+<br />
+/talks/2016/10/06/deep-learning-guest-lecture.html
+<br />
+
+<br />
+<p> A motivational talk about deep artificial neural networks, given to the students in FFR135 (Artificial neural networks). I gave motivations for using deep architechtures, and to learn hierarchical representations for data. </p>
+
+</p>
+</li>
+
+
+</ul>
+
+<p><a href="/talks/">More info and more talks.</a></p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="inner">
+          <div class="block block-copy">
+<a href="/about/"><h2>About me</h2></a>
+<p>I am a senior research scientist at RISE Research institutes of Sweden
+and head of the deep learning research group in Gothenburg.</p>
+
+<p><img style="float: right; clear: right; margin: 10px;" src="graphics/mogren-2018-julia-sjoberg.png" /> March 23, 2018, I defended my PhD thesis, <a href="/phd/">Representation learning for natural language (click for more info)</a>.
+</p><p>
+During 2016-2017, I was the organizer of <em>Chalmers machine learning seminars</em>.
+</p><p>
+In 2016, I taught a <a href="http://www.cse.chalmers.se/research/lab/courses/deep-learning/">PhD course in Deep Learning</a>, together with Mikael Kågebäck and Fredrik Johansson.
+I have also taught 
+<a href="http://www.cse.chalmers.se/research/lab/courses/algorithms-for-machine-learning-tda-231/">Algorithms for Machine Learning and Inference</a>,
+<a href="https://ai-course-tin172-dit410.github.io/">AI</a>
+(specifically the parts about probabilistic methods, including probabilistic graphical models),
+Object Oriented Programming, Data Structures, and Algorithms (<a href="http://www.cse.chalmers.se/~ptr/alg.html">basic course</a>, and <a href="http://www.cse.chalmers.se/~huangch/course/advanced_algorithm_2015.html">advanced course</a>).</p>
+<p><a href="/about">Read more about me.</a></p>
+          </div>
+        </div>
+      </section>
+
+
+
+
+        <section class="foot">
+          <strong>Olof Mogren</strong> Research institutes of Sweden<br /><br />
+          <a href="https://www.linkedin.com/in/olof-mogren-5392b452" title="Follow me on LinkedIn"><img src="/graphics/logos/linkedin_logo_42x40-white.png" alt="LinkedIn" /></a>&nbsp;<!--
+          //--><a href="https://twitter.com/olofmogren" title="Follow me on Twitter"><img src="/graphics/logos/twitter_logo_49x40-white.png" alt="Twitter" /></a>&nbsp;<!--
+          <a href="https://flokk.no/i/9be9cd2a348d" title="Follow me on Diaspora"><img src="/graphics/logos/diaspora_logo_42x40-white.png" alt="Diaspora" /></a>&nbsp;
+          //--><a href="http://mogren.one/feed.xml" title="Follow my posts with RSS."><img src="/graphics/logos/rss.svg" style="width: 40px; height: 40px;" alt="Atom/RSS Feed" /></a>
+        </section>
+
+      </div><!-- main content //-->
+    </div>
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=11067757; 
+var sc_invisible=1; 
+var sc_security="5e553e07"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="free web stats"
+href="http://statcounter.com/free-web-stats/"
+target="_blank"><img class="statcounter"
+src="//c.statcounter.com/11067757/0/5e553e07/1/" alt="free
+web stats"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+  </body>
+</html>

@@ -1,0 +1,131 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+      
+      <meta charset="utf-8">
+      <title>C-RNN-GAN: Continuous recurrent neural networks with adversarial training</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width">
+      <link rel="stylesheet" href="/style.css">
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script>
+        function showBibtex(event, text) {
+          var el, x, y;
+
+          el = document.getElementById('PopUp');
+          if (window.event) {
+            x = window.event.clientX + document.documentElement.scrollLeft
+                + document.body.scrollLeft;
+                y = window.event.clientY + document.documentElement.scrollTop +
+                + document.body.scrollTop;
+          }
+          else {
+            x = event.clientX + window.scrollX;
+            y = event.clientY + window.scrollY;
+          }
+          x -= 2; y -= 2;
+          y = y+15
+          el.style.left = x + "px";
+          el.style.top = y + "px";
+          el.style.display = "block";
+          document.getElementById('PopUpText').innerHTML = text;
+       }
+    </script>
+  </head>
+  <body class="home">
+
+    <div class="bodydiv">
+      <header id="header-waypoint">
+        <nav id="stickyNav" class="sticky-nav">
+          <div class="nametag">
+            <div class="nametagsubdiv"><a href="http://mogren.one/" class="nametag"><h1 class="nametag">O<span style="font-size: 22px;">lof</span> M<span style="font-size: 22px;">ogren</span></h1></a></div>
+            <div class="nametagsubscript"><span class="nametagsubscript">Senior machine learning researcher, PhD, at Research institutes of Sweden.</span></div>
+          </div>
+          <div id="groups" style="margin-right: 80px;">
+            <div id="group1" style="z-index: 5;">
+              <a href="/blog" style="color: #999;">Blog</a>
+              <a href="/talks" style="color: #999;">Talks</a>
+            </div>
+            <div id="group2" style="z-index: 5;">
+              <a href="/publications" style="color: #999;">Publications</a>
+              <a href="/about" style="color: #999;">About</a>
+            </div>
+          </div>
+        </nav>
+
+      </header>
+
+      <a class="github-ribbon" href="https://github.com/olofmogren">
+        <img style="position: absolute; top: 0; right: 0; border: 0; z-index: 4;"
+             src="/graphics/git-ribbon.png" alt="Fork me on GitHub">
+      </a>
+
+      <div id="PopUp" style="display: none; position: absolute; left: 100px; top: 50px; border: solid black 1px; padding: 10px; background-color: rgb(200,200,200); text-align: justify; font-size: 12px; min-width: 400px;">
+        <pre id="PopUpText">TEXT</pre>
+        <input name="close" type="button" value="Close" onclick="document.getElementById('PopUp').style.display = 'none';" />
+      </div>
+
+  <section>
+<div class="inner">
+<div class="block block-copy">
+
+
+<h1>C-RNN-GAN: Continuous recurrent neural networks with adversarial training</h1>
+
+
+<img src="/publications/2016/c-rnn-gan/c-rnn-gan-color.svg" alt="C-RNN-GAN" style="float: right; max-width: 40%;" />
+
+
+<p>
+
+Generative adversarial networks have been proposed as a way of efficiently training deep generative neural networks. We propose a generative adversarial model that works on continuous sequential data, and apply it by training it on a collection of classical music. We conclude that it generates music that sounds better and better as the model is trained, report statistics on generated music, and let the reader judge the quality by downloading the generated songs.</p><h2>Generated music samples</h2><p><a href="http://mogren.one/files/c-rnn-gan-sample11.mp3">sample11.mp3</a></br><a href="http://mogren.one/files/c-rnn-gan-sample.mp3">sample09.mp3</a></br></p><p>More samples of generated music can be downloaded from <a href="https://github.com/olofmogren/c-rnn-gan-samples/">https://github.com/olofmogren/c-rnn-gan-samples/</a>.</p><h2>Source code</h2><p>The source code used for the experiments can be downloaded from <a href="https://github.com/olofmogren/c-rnn-gan/">https://github.com/olofmogren/c-rnn-gan/</a>.
+
+</p>
+<p>
+<em><strong>Olof Mogren</strong></em>
+</p>
+<p>
+<em><a href="http://www.cs.nott.ac.uk/~psztg/cml/2016/index.html">Constructive Machine Learning Workshop (CML) at NIPS 2016</a> in Barcelona, Spain, December 10.</em><br />
+
+<a href="/publications/2016/c-rnn-gan/mogren2016crnngan.pdf">PDF Fulltext</a>
+
+
+<a href="javascript:void(null);" onclick="showBibtex(event, '@inproceedings{mogren2016crnngan, \n title={C-RNN-GAN: A continuous recurrent neural network with adversarial training}, \n author={Olof Mogren}, \n booktitle={Constructive Machine Learning Workshop (CML) at NIPS 2016}, \n pages={1}, \n year={2016}}')">bibtex</a>.
+
+</p>
+</div>
+</div>
+</section>
+
+
+
+        <section class="foot">
+          <strong>Olof Mogren</strong> Research institutes of Sweden<br /><br />
+          <a href="https://www.linkedin.com/in/olof-mogren-5392b452" title="Follow me on LinkedIn"><img src="/graphics/logos/linkedin_logo_42x40-white.png" alt="LinkedIn" /></a>&nbsp;<!--
+          //--><a href="https://twitter.com/olofmogren" title="Follow me on Twitter"><img src="/graphics/logos/twitter_logo_49x40-white.png" alt="Twitter" /></a>&nbsp;<!--
+          <a href="https://flokk.no/i/9be9cd2a348d" title="Follow me on Diaspora"><img src="/graphics/logos/diaspora_logo_42x40-white.png" alt="Diaspora" /></a>&nbsp;
+          //--><a href="http://mogren.one/feed.xml" title="Follow my posts with RSS."><img src="/graphics/logos/rss.svg" style="width: 40px; height: 40px;" alt="Atom/RSS Feed" /></a>
+        </section>
+
+      </div><!-- main content //-->
+    </div>
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=11067757; 
+var sc_invisible=1; 
+var sc_security="5e553e07"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="free web stats"
+href="http://statcounter.com/free-web-stats/"
+target="_blank"><img class="statcounter"
+src="//c.statcounter.com/11067757/0/5e553e07/1/" alt="free
+web stats"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+  </body>
+</html>

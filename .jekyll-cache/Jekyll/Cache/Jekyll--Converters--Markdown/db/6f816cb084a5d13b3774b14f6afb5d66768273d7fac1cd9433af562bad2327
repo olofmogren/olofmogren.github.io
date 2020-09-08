@@ -1,0 +1,249 @@
+I"X@<p>A few days ago the EMNLP conference (Empirical Methods in Natural Language Processing) took place
+in Copenhagen.
+With this post, I hope to share some of the high-level observations I made during the conference
+about trends in the area, or at least to gather my thoughts a bit after five days of intense
+soaking of information.</p>
+
+<h2 id="subword-level-modeling">Subword-level modeling</h2>
+
+<p>Throughout EMNLP, subword-level models was a recurring topic. One of the most attended workshops
+was
+<a href="https://sites.google.com/view/sclem2017/home">SCLeM (Subword and character-level methods)</a>,
+organized by Hinrich Schütze, Yadollah Yaghoobzadeh,
+Manaal Faruqui, and Isabel Trancoso, a workshop with an exciting line-up of invited speakers.</p>
+
+<p>Subword-level models solve natural language tasks on the raw character-stream, without the
+need to tokenize the text (split it into word-tokens).
+Eliminating tokenization also eliminates a substantial source of errors
+and lets the model work with an open vocabulary (it can generalize to unseen words).
+A neural subword-level model can learn where the boundaries are for chunks of
+the text that carries meaning, and can get efficiency gains from not having to
+consider distributions over large vocabularies in the output layers.
+Subword models are de-facto standard in neural machine translation since late 2016,
+and the idea is spreading to many other tasks.</p>
+
+<figure style="max-width: 40%; float: right;">
+<img src="/graphics/illustrations/2017-09-13/mikolov-future-work.jpg" alt="Thomáš Mikolov" style="max-width: 100%" />
+<figcaption>
+Thomáš Mikolov.
+</figcaption>
+</figure>
+
+<p>Thomáš Mikolov gave a thorough walk-through
+on the history of
+<a href="https://en.wikipedia.org/wiki/Language_model#Neural_language_models">neural language modelling, NLM (Wikipedia)</a>
+on subword-level.
+He explained that working on word-level is suboptimal when there is character
+variability, e.g. as in Czech.
+Mikolov called the word-based language models introduced in 2007 a “pseudo-solution”.
+In 2010, the RNN LMs were introduced, but the performance of these models working on
+characters was not satisfactory, or they required too much time to train.
+Still today, character-based RNN LMs perform slightly worse than their word-based counterparts,
+but they are not limited to the vocabulary seen at training time.
+Mikolov mentioned some of their recent papers on reducing computation in RNNs:
+<strong>Alternative structures for character-level RNNs</strong>, Piotr Bojanowski, Armand Joulin, Tomáš Mikolov, ICLR 2016,
+<a href="https://openreview.net/pdf?id=wVqzL1ypocG0qV7mtLqm">(PDF, openreview.net)</a>,
+and on training an RNN to learn when to update the weights:
+<strong>Variable Computation in Recurrent Neural Networks</strong>, Yacine Jernite, Edouard Grave, Armand Joulin, Tomas Mikolov, ICLR 2017
+<a href="https://arxiv.org/abs/1611.06188">(PDF, arxiv.org)</a>.</p>
+
+<figure style="max-width: 40%; float: right;">
+<img src="/graphics/illustrations/2017-09-13/cho---what-is-a-sentence.png" alt="What is a sentence?" style="max-width: 100%" />
+<figcaption>
+Kyunghyun Cho started with a thought-provoking question.
+</figcaption>
+</figure>
+
+<p>Kyunghyun Cho started his talk with the question “What is a sentence?”
+He explained that looking up
+<a href="https://en.wikipedia.org/wiki/Sentence_(linguistics)">“sentence” on Wikipedia</a>
+does not give you an answer to this question.
+It gives you many pointers as to how a sentence <em>should be</em>, but not what it is.
+This lead into a discussion about how our machine learning systems should
+best read our language (see figure).
+In 2015, neural machine translation had improved to a point where to OOV tokens
+had become a limiting factor.
+Some solutions to this was
+Sennrich et.al., ACL 2016,
+<a href="http://aclweb.org/anthology/P/P16/P16-1162.pdf">(PDF, aclweb.org)</a>,
+using byte-pair-encoding, BPE, to compute a subword vocabulary,
+and
+Luong and Manning, ACL 2016,
+<a href="http://aclweb.org/anthology/P/P16/P16-1100.pdf">(PDF, aclweb.org)</a>,
+using a hybrid approach with a character-based RNN as
+fallback for OOV (out-of-vocabulary) terms.
+These approaches still required the preprocessing step of tokenization.
+Chung et al., ACL 2016,
+<a href="http://www.aclweb.org/anthology/P/P16/P16-1160.pdf">(PDF, aclweb.org)</a>
+proposed a model with a decoder working only with characters,
+without any tokenization neccessary. The attention mechanism works perfectly,
+even when the encoder works on subwords, and the decoder works with raw characters.
+It consistently obtains results better than or equally good as the models using
+subword units on both sides.</p>
+
+<figure style="max-width: 40%; float: right;">
+<img src="/graphics/illustrations/2017-09-13/livescu.jpg" alt="Siamese convnets." style="max-width: 100%" />
+<figcaption>
+Training embeddings of different sound recordings of the same word into similar embeddings using convnets and siamese training.
+</figcaption>
+</figure>
+
+<p>Karen Livescu described her work on embedding speech into vector representations
+using convnets, something that can be used for query-by-example, and can
+easily learn intra-speaker variations.
+These acoustic embeddings can be trained jointly with textual embeddings,
+by using a form of siamese training. She declared that the goal
+is to do NLP directly on the speech signal, but that there is much work left to do.</p>
+
+<p>In the SCLeM poster sessions we presented our work on
+<a href="/publications/2017/character-based/">Character-based recurrent neural networks for morphological relational reasoning (mogren.one)</a>,
+where we train a character-based RNN model on how to represent morphological transformations of words,
+and can transfer these transformations between words.
+Our poster was in good company of 23 other posters with a range of related topics, from
+morphology to embeddings of parts of Chinese characters.</p>
+
+<p>The subword-level trend is an exciting development as it does away with one more
+preprocessing step, and lets the model learn a larger part of the problem.
+Learning as much as possible generally makes for robust NLP solutions.
+In the workshop panel discussion, Sharon Goldwater declared that some bias is preferable in
+NLP models because it can help reduce the dependency on large datasets, a concern
+that can be motivated in some low-resource settings.
+The splitting of words however, is often arbitrary, and the rules about where a space
+<em>should be</em> in a character sequence differs between languages.
+Subword level models are certainly something we will see more of in the future.</p>
+
+<p>Some related papers from the main conference:</p>
+
+<ul>
+  <li><strong>Joint Embeddings of Chinese Words, Characters, and Fine-grained Subcharacter Components</strong>, Jinxing Yu; Xun Jian; Hao Xin; Yangqiu Song, <a href="http://www.aclweb.org/anthology/D/D17/D17-1027.pdf">(PDF, aclweb.org)</a></li>
+  <li><strong>A Sub-Character Architecture for Korean Language Processing</strong>, Karl Stratos, <a href="http://www.aclweb.org/anthology/D/D17/D17-1076.pdf">(PDF, aclweb.org)</a></li>
+  <li><strong>Cross-lingual Character-Level Neural Morphological Tagging</strong>, Ryan Cotterell and Georg Heigold, <a href="http://www.aclweb.org/anthology/D/D17/D17-1079.pdf">(PDF, aclweb.org)</a></li>
+  <li><strong>Charmanteau: Character Embedding Models For Portmanteau Creation</strong>, Varun Gangal; Harsh Jhamtani; Graham Neubig; Eduard Hovy; Eric Nyberg, <a href="http://www.aclweb.org/anthology/D/D17/D17-1314.pdf">(PDF, aclweb.org)</a></li>
+  <li><strong>Mimicking Word Embeddings using Subword RNNs</strong>,  Yuval Pinter, Robert Guthrie,  Jacob Eisenstein, <a href="http://www.aclweb.org/anthology/D/D17/D17-1010.pdf">(PDF, aclweb.org)</a></li>
+</ul>
+
+<h2 id="multilingual-nlp">Multilingual NLP</h2>
+
+<p>Besides machine translation being the topic of a large chunk of this year’s papers,
+multilingual work was definately a trend throughout the whole conference.
+(Machine translation and multilinguality made up about a third of all submitted papers this year).</p>
+
+<figure style="max-width: 40%; float: right;">
+<img src="/graphics/illustrations/2017-09-13/soegaard-multilingual.jpg" alt="Søgaard: Multilingual embeddings." style="max-width: 100%" />
+<figcaption>
+Søgaard: Multilingual embeddings.
+</figcaption>
+</figure>
+
+<p>On Friday, Manaal Faruqui, Anders Søgaard, and Ivan Vulić gave a nice
+tutorial on multilingual embeddings,
+surveying the field of how to train word embeddings shareable across languages,
+with the obvious benefit for working with low-resource languages.
+Søgaard highlighted a useful resource being the Watchtower; a great resource, certainly
+with a lot of religious stuff, but with contemporary language, and in plenty of languages.
+“We put it all on github with the blessing of Jehova’s witnesses”.</p>
+
+<p>An example of multilingual (and multi-modal) NLP systems was presented in
+<strong>Image Pivoting for Learning Multilingual Multimodal Representations</strong>, Spandana Gella; Rico Sennrich; Frank Keller; Mirella Lapata, <a href="http://www.aclweb.org/anthology/D/D17/D17-1302.pdf">(PDF, aclweb.org)</a>,
+where image descriptions in English and German is embedded into the same embedding space
+as the image itself, allowing for multi-lingual image search.</p>
+
+<p><strong>Cross-Lingual Transfer Learning for POS Tagging without Cross-Lingual Resources</strong>, Joo-Kyung Kim; Young-Bum Kim; Ruhi Sarikaya; Eric Fosler-Lussier, <a href="http://www.aclweb.org/anthology/D/D17/D17-1301.pdf">(PDF, aclweb.org)</a>
+showed that using a combination of word-embeddings and character-embeddings,
+along with “language-adversarial” training (inspired by adversarial training;
+helps the internal representations to be language agnostic),
+can be used to transfer-learn a POS tagger with tagged data in one language,
+and apply it to another language (which is also tagged and used for training,
+but contains a limited number of examples).</p>
+
+<p><strong>Trainable Greedy Decoding for Neural Machine Translation</strong>,  Jiatao Gu; Kyunghyun Cho; Victor O.K. Li, <a href="http://www.aclweb.org/anthology/D/D17/D17-1209.pdf">(PDF, aclweb.org)</a>
+proposes a new approach for decoding in a trained NMT model (otherwise, most reseach
+focuses on the model design and how to train them to achieve good results; decoding is
+normally done using beam-search). The solution uses the REINFORCE policy gradient method
+to observe and manipulate the internal state of a trained NMT system, and for most
+tested language pairs, they show an improvement in BLEU scores.</p>
+
+<h2 id="inspiration-from-infants-learning">Inspiration from infants learning</h2>
+
+<p>Nando de Freitas gave an exciting keynote speech on Saturday morning, in which he began by saying he
+didn’t know much about language (something that may indicate that machine learning is
+becoming such an intricate part of natural language processing that NLP conferences are keen on having
+prominent machine learning researchers as keynote speakers even if language is not their main
+field of interest). On his first slide, he showed a video of his daughter as a one-year-old
+pulling lego blocks apart, and being noteably excited when she finally figured out how to do so.</p>
+
+<figure style="max-width: 40%; float: right;">
+<img src="/graphics/illustrations/2017-09-13/freitas.jpg" alt="Conditional policies for one-shot imitation learning." style="max-width: 100%" />
+<figcaption>
+Nando de Freitas: Conditional policies for one-shot imitation learning.
+</figcaption>
+</figure>
+
+<p>He continued to talk about how intelligence is a product of the environment, how the learning we
+do is performed in a context, because we are built with a lot of prior knowledge.
+The process of learning in a one-year-old child, is not a one-year long process.
+A child is itself a product of a process that took millions of years.
+An interesting question follows: how do you learn a system that has the capacity to continue learning?</p>
+
+<p>A number of papers has been published the last year about learning to learn, or meta-learning.
+<strong>Learning to learn by gradient descent by gradient descent</strong>, 
+Marcin Andrychowicz, Misha Denil, Sergio Gómez, Matthew W. Hoffman, David Pfau, Tom Schaul, Nando de Freitas, <a href="https://papers.nips.cc/paper/6461-learning-to-learn-by-gradient-descent-by-gradient-descent">(abstract, PDF, nips.cc)</a>
+was published at NIPS 2016, a really nice paper outlining how to use LSTMs to learn
+the optimization strategy for an optimization problem.
+Learning to learn is closely related to zero-shot learning (or few-shot learning)
+and thus has great applications to natural language tasks, where one often
+has resources in a few languages but wants the systems to also work on languages with lesser resources.</p>
+
+<p>The route to starting to understand intelligence is to use simulations,
+Freitas stated.
+Simulations lets you develop agents with <strong>grounded language</strong>, in experiments on
+how to command machines with natural language.</p>
+
+<p>Sharon Goldwater gave her keynote talk about unsupervised speech recognition,
+using neural embeddings of speech signals, and clustering techniques.
+Studying unsupervised machine learning techniques allows us to study how language learning
+could be happening in infants, Goldwater continued.
+Children learn consonants and vowels simultaneously as they are learning larger 
+language parts such as words and sentences.</p>
+
+<h2 id="other-exciting-topics">Other exciting topics</h2>
+
+<p><strong>Learning how to Active Learn: A Deep Reinforcement Learning Approach</strong>, Meng Fang; Yuan Li; Trevor Cohn, <a href="http://www.aclweb.org/anthology/D/D17/D17-1064.pdf">(PDF, aclweb.org)</a>
+framed active learning as a decision process and approached it
+using Deep Q-learning. Previous work have typically
+used heuristics to select the training data in an active learning setup,
+something that may not generalize as well. The method is demonstrated
+on bilingual named entity recognition, where they transfer learning from one
+source language to a target language.</p>
+
+<p><strong>Repeat before Forgetting: Spaced Repetition for Efficient and Effective Training of Neural Networks</strong>, Hadi Amiri; Timothy Miller; Guergana Savova, <a href="http://www.aclweb.org/anthology/D/D17/D17-1254.pdf">(PDF, aclweb.org)</a>
+train a system to choose how often each training example needs to be seen by
+a neural network during training. Interesting idea, and a nice presentation
+with motivations from the exponential decay of human memory.</p>
+
+<p><strong>Language grounding</strong> was something that Freitas talked a lot about, and there were also
+a few papers on the topic, this of course is closely connected to multi-modal learning which is covered
+above.</p>
+
+<ul>
+  <li><strong>Deriving continous grounded meaning representations from referentially structured multimodal contexts</strong>, Sina Zarrieß; David Schlangen, <a href="http://www.aclweb.org/anthology/D/D17/D17-1101.pdf">(PDF, aclweb.org)</a></li>
+  <li><strong>Sound-Word2Vec: Learning Word Representations Grounded in Sounds</strong>, Ashwin Vijayakumar; Ramakrishna Vedantam; Devi Parikh, <a href="http://www.aclweb.org/anthology/D/D17/D17-1097.pdf">(PDF, aclweb.org)</a></li>
+</ul>
+
+<p><strong>Racism</strong>. In his keynote presentation, Dan Juravsky talked about his work on analysing the
+language of police officers stopping vehicles in traffic. Using some simple features
+such as variations of politeness, friendliness, and respectfulness, they trained a simple
+supervised classifier, and found that the officers show more respect to white people than to
+black people. Also more respect towards older people. He concluded with a quote from
+Herbert H. Clark and Michael F. Schober 1992:
+“The common misconception is that language has to do with words and what they mean.
+It doesn’t. It has to do with people and what they mean”.</p>
+
+<p>For those of you who weren’t able to attend, refer to the
+<a href="http://aclweb.org/anthology/P/P16/">proceedings</a>, and to the
+<a href="https://ku.cloud.panopto.eu/Panopto/Pages/Sessions/List.aspx#folderID=%229042b495-7b6b-4169-a5a1-d250cc0ee4ec%22">video recordings</a>.
+To select a talk, you need to click on day and time and room.
+Refer to the
+<a href="http://emnlp2017.net/main-program.html">program</a> to know where to look.</p>
+
+:ET

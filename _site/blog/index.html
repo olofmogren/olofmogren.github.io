@@ -1,0 +1,257 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+      
+      <meta charset="utf-8">
+      <title>Blog - Olof Mogren</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width">
+      <link rel="stylesheet" href="/style.css">
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script>
+        function showBibtex(event, text) {
+          var el, x, y;
+
+          el = document.getElementById('PopUp');
+          if (window.event) {
+            x = window.event.clientX + document.documentElement.scrollLeft
+                + document.body.scrollLeft;
+                y = window.event.clientY + document.documentElement.scrollTop +
+                + document.body.scrollTop;
+          }
+          else {
+            x = event.clientX + window.scrollX;
+            y = event.clientY + window.scrollY;
+          }
+          x -= 2; y -= 2;
+          y = y+15
+          el.style.left = x + "px";
+          el.style.top = y + "px";
+          el.style.display = "block";
+          document.getElementById('PopUpText').innerHTML = text;
+       }
+    </script>
+  </head>
+  <body class="home">
+
+    <div class="bodydiv">
+      <header id="header-waypoint">
+        <nav id="stickyNav" class="sticky-nav">
+          <div class="nametag">
+            <div class="nametagsubdiv"><a href="http://mogren.one/" class="nametag"><h1 class="nametag">O<span style="font-size: 22px;">lof</span> M<span style="font-size: 22px;">ogren</span></h1></a></div>
+            <div class="nametagsubscript"><span class="nametagsubscript">Senior machine learning researcher, PhD, at Research institutes of Sweden.</span></div>
+          </div>
+          <div id="groups" style="margin-right: 80px;">
+            <div id="group1" style="z-index: 5;">
+              <a href="/blog" style="color: #999;">Blog</a>
+              <a href="/talks" style="color: #999;">Talks</a>
+            </div>
+            <div id="group2" style="z-index: 5;">
+              <a href="/publications" style="color: #999;">Publications</a>
+              <a href="/about" style="color: #999;">About</a>
+            </div>
+          </div>
+        </nav>
+
+      </header>
+
+      <a class="github-ribbon" href="https://github.com/olofmogren">
+        <img style="position: absolute; top: 0; right: 0; border: 0; z-index: 4;"
+             src="/graphics/git-ribbon.png" alt="Fork me on GitHub">
+      </a>
+
+      <div id="PopUp" style="display: none; position: absolute; left: 100px; top: 50px; border: solid black 1px; padding: 10px; background-color: rgb(200,200,200); text-align: justify; font-size: 12px; min-width: 400px;">
+        <pre id="PopUpText">TEXT</pre>
+        <input name="close" type="button" value="Close" onclick="document.getElementById('PopUp').style.display = 'none';" />
+      </div>
+
+  <section>
+<div class="inner">
+<div class="block block-copy">
+
+<h1>Blog</h1>
+
+Welcome to my blog. I intend to write about interesting things related to machine learning, artificial neural networks, and natural language processing.
+
+</div>
+</div>
+</section>
+
+      <section class="features">
+        <div class="inner" style="border-width: 0px">
+          <div class="feature-grid">
+            <div class="table-row">
+
+
+<!--<section>
+<div class="inner">
+<div class="block block-copy">//-->
+
+              <div class="feature" style="border-width: 0px">
+
+
+<a href="/blog/2017/09/13/emnlp.html"><h2> EMNLP 2017 </h2></a>
+
+<!--<figure style="float: right; max-width: 40%" >//-->
+<figure style="max-width: 90%" >
+<img src="/graphics/illustrations/2017-09-13/emnlp.jpg" alt="There were sun in Copenhagen. One of the days. The rest of the conference, it poured." style="max-width: 100%" />
+<!--<figcaption></figcaption>//-->
+</figure>
+<p>
+The EMNLP conference took place in Copenhagen in September 2017. In this blog post I share some observations that I made during the conference. These included subword-level models, multilingual NLP, language grounding, and inspiration from children.
+</p>
+
+<p>
+<em>Olof Mogren, 
+2017-09-13</em>
+</p>
+
+<!--</div>
+</div>
+</section>//-->
+
+              </div>
+
+
+
+<!--<section>
+<div class="inner">
+<div class="block block-copy">//-->
+
+              <div class="feature" style="border-width: 0px">
+
+
+<a href="/blog/2016/08/22/acl2016.html"><h2> ACL 2016 </h2></a>
+
+<!--<figure style="float: right; max-width: 40%" >//-->
+<figure style="max-width: 90%" >
+<img src="/graphics/illustrations/2016-08-22/acl-logo54.png" alt="ACL 2016 in Berlin." style="max-width: 100%" />
+<!--<figcaption></figcaption>//-->
+</figure>
+<p>
+August 7-12, the 54th conference of the Association of Computational Linguistics (ACL) took place at the Humboldt University in Berlin. This blog post contains a write-up of some of my favourite presentations during the conference.
+</p>
+
+<p>
+<em>Olof Mogren, 
+2016-08-22</em>
+</p>
+
+<!--</div>
+</div>
+</section>//-->
+
+              </div>
+
+
+
+<!--<section>
+<div class="inner">
+<div class="block block-copy">//-->
+
+              <div class="feature" style="border-width: 0px">
+
+
+<a href="/blog/2016/08/11/representation-learning-for-nlp.html"><h2> First Workshop on Representation Learning for NLP </h2></a>
+
+<!--<figure style="float: right; max-width: 40%" >//-->
+<figure style="max-width: 90%" >
+<img src="/graphics/illustrations/2016-08-11/humboldt.jpg" alt="Main building of Humboldt University in Berlin, Unter den Linden, as seen from Bebelplatz. Image from Wikimedia Commons, Creative Commons Attribution-Share Alike 3.0 Unported license." style="max-width: 100%" />
+<!--<figcaption>Main building of Humboldt University in Berlin, Unter den Linden, as seen from Bebelplatz, Creative Commons Attribution-Share Alike 3.0 Unported license.</figcaption>//-->
+</figure>
+<p>
+On August 11th, the first workshop on Representation Learning For NLP took place in conjunction with ACL 2016 at Humboldt University in Berlin. The workshop was extremely popular, and the talks were moved to the largest auditorium to fit all visitors.
+</p>
+
+<p>
+<em>Olof Mogren, 
+2016-08-11</em>
+</p>
+
+<!--</div>
+</div>
+</section>//-->
+
+              </div>
+
+
+
+<!--<section>
+<div class="inner">
+<div class="block block-copy">//-->
+
+              <div class="feature" style="border-width: 0px">
+
+
+<a href="/blog/2016/08/08/trends-in-neural-machine-translation.html"><h2> Trends in Neural Machine Translation </h2></a>
+
+<!--<figure style="float: right; max-width: 40%" >//-->
+<figure style="max-width: 90%" >
+<img src="/graphics/illustrations/2016-08-08/manning-nmt-history.png" alt="History of machine translation systems. Slide by Christopher D. Manning." style="max-width: 100%" />
+<!--<figcaption>History of machine translation systems. Slide by Christopher D. Manning.</figcaption>//-->
+</figure>
+<p>
+This blog post was inspired by the tutorial on neural machine translation on ACL 2016 in Berlin by Christopher Manning, Minh-Thang Luong, and Kyunghyun Cho. It intends to shed light on some of the recent research activities related to neural machine translation, and give some pointers on where to read more.
+</p>
+
+<p>
+<em>Olof Mogren, 
+2016-08-08</em>
+</p>
+
+<!--</div>
+</div>
+</section>//-->
+
+              </div>
+
+
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+<!--
+<section>
+<div class="inner">
+<div class="block block-copy" style="text-align: center;">
+<a class="twitter-timeline"  href="https://twitter.com/search?q=mogren.one%2Fblog" data-widget-id="909709909234679808">Tweets om mogren.one/blog</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
+</div>
+</section>
+//-->
+
+
+
+        <section class="foot">
+          <strong>Olof Mogren</strong> Research institutes of Sweden<br /><br />
+          <a href="https://www.linkedin.com/in/olof-mogren-5392b452" title="Follow me on LinkedIn"><img src="/graphics/logos/linkedin_logo_42x40-white.png" alt="LinkedIn" /></a>&nbsp;<!--
+          //--><a href="https://twitter.com/olofmogren" title="Follow me on Twitter"><img src="/graphics/logos/twitter_logo_49x40-white.png" alt="Twitter" /></a>&nbsp;<!--
+          <a href="https://flokk.no/i/9be9cd2a348d" title="Follow me on Diaspora"><img src="/graphics/logos/diaspora_logo_42x40-white.png" alt="Diaspora" /></a>&nbsp;
+          //--><a href="http://mogren.one/feed.xml" title="Follow my posts with RSS."><img src="/graphics/logos/rss.svg" style="width: 40px; height: 40px;" alt="Atom/RSS Feed" /></a>
+        </section>
+
+      </div><!-- main content //-->
+    </div>
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=11067757; 
+var sc_invisible=1; 
+var sc_security="5e553e07"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="free web stats"
+href="http://statcounter.com/free-web-stats/"
+target="_blank"><img class="statcounter"
+src="//c.statcounter.com/11067757/0/5e553e07/1/" alt="free
+web stats"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+  </body>
+</html>

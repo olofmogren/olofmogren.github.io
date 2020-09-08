@@ -1,0 +1,251 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+      
+      <meta charset="utf-8">
+      <title>Representation learning for language - Olof Mogren</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width">
+      <link rel="stylesheet" href="/style.css">
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script>
+        function showBibtex(event, text) {
+          var el, x, y;
+
+          el = document.getElementById('PopUp');
+          if (window.event) {
+            x = window.event.clientX + document.documentElement.scrollLeft
+                + document.body.scrollLeft;
+                y = window.event.clientY + document.documentElement.scrollTop +
+                + document.body.scrollTop;
+          }
+          else {
+            x = event.clientX + window.scrollX;
+            y = event.clientY + window.scrollY;
+          }
+          x -= 2; y -= 2;
+          y = y+15
+          el.style.left = x + "px";
+          el.style.top = y + "px";
+          el.style.display = "block";
+          document.getElementById('PopUpText').innerHTML = text;
+       }
+    </script>
+  </head>
+  <body class="home">
+
+    <div class="bodydiv">
+      <header id="header-waypoint">
+        <nav id="stickyNav" class="sticky-nav">
+          <div class="nametag">
+            <div class="nametagsubdiv"><a href="http://mogren.one/" class="nametag"><h1 class="nametag">O<span style="font-size: 22px;">lof</span> M<span style="font-size: 22px;">ogren</span></h1></a></div>
+            <div class="nametagsubscript"><span class="nametagsubscript">Senior machine learning researcher, PhD, at Research institutes of Sweden.</span></div>
+          </div>
+          <div id="groups" style="margin-right: 80px;">
+            <div id="group1" style="z-index: 5;">
+              <a href="/blog" style="color: #999;">Blog</a>
+              <a href="/talks" style="color: #999;">Talks</a>
+            </div>
+            <div id="group2" style="z-index: 5;">
+              <a href="/publications" style="color: #999;">Publications</a>
+              <a href="/about" style="color: #999;">About</a>
+            </div>
+          </div>
+        </nav>
+
+      </header>
+
+      <a class="github-ribbon" href="https://github.com/olofmogren">
+        <img style="position: absolute; top: 0; right: 0; border: 0; z-index: 4;"
+             src="/graphics/git-ribbon.png" alt="Fork me on GitHub">
+      </a>
+
+      <div id="PopUp" style="display: none; position: absolute; left: 100px; top: 50px; border: solid black 1px; padding: 10px; background-color: rgb(200,200,200); text-align: justify; font-size: 12px; min-width: 400px;">
+        <pre id="PopUpText">TEXT</pre>
+        <input name="close" type="button" value="Close" onclick="document.getElementById('PopUp').style.display = 'none';" />
+      </div>
+
+        <section>
+        <div class="inner">
+          <div class="block block-copy">
+<h1>Representation learning for natural language</h1>
+<img src="../graphics/illustrations/2017-12-22/phd.svg" alt="Relation embeddings computed using the proposed model in Paper IV." style="float: right; max-width: 40%; margin: 4em;" />
+<div style="float: right; clear: right; max-width: 60%; margin: 4em;" />
+<iframe width="300" height="300" src="https://www.youtube.com/embed/su0absbCuo8?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
+<p><strong>Olof Mogren</strong></p>
+
+<p><strong>PhD thesis</strong> was successfully defended <strong>March 23, 2018 at 10:00</strong> at Chalmers university of technology for the <strong>Degree of Doctor of Philosophy</strong>.</p>
+
+<p><strong>Opponent:</strong> Prof. Dr. Hinrich Schütze, CIS Ludwig-Maximilians Universit&auml;t, M&uuml;nchen</p>
+
+<p><strong>Video:</strong> <a href="https://www.youtube.com/watch?v=su0absbCuo8">Youtube</a></p>
+
+<div id="abstract">
+<p><strong>Abstract:</strong></br />
+<a href="/no-js.html" onclick="document.getElementById('abstract').style.display='none'; document.getElementById('popsummary').style.display='block';return false;" style="color: grey">Click to view popular scientific summary instead.</a><br />
+Artificial neural networks have obtained astonishing results in a diverse number of tasks.
+One of the reasons for the success is their ability to learn the whole task at once
+(end-to-end learning), including the representations for data.
+This thesis will investigate representation learning for natural language through the
+study of a number of tasks ranging from automatic multi-document summarization
+to named entity recognition and the transformation of words into morphological
+forms specified by analogies.
+</p><p>
+In the first two papers, we investigate whether 
+automatic multi-document summarization can benefit from
+learned representations, and what are the best ways of incorporating
+learned representations in an extractive summarization system.
+We propose a novel summarization approach that represents sentences using
+word embeddings, and a strategy for aggregating multiple sentence similarity
+scores to compute summaries that take multiple aspects into account.
+The approach is evaluated quantitatively using the de facto evaluation
+system ROUGE, and obtains state-of-the-art results on standard
+benchmark datasets for generic multi-document summarization.
+</p><p>
+
+The rest of the thesis studies models trained end-to-end for some specific tasks,
+and investigates how to train the models to perform well,
+and to learn internal representations of data that explain the
+factors of variation in the data.
+</p><p>
+
+Specifically, we investigate whether character-based recurrent neural networks (RNN) can
+learn the necessary representations for tasks such as named entity recognition (NER) and 
+morphological analogies, and what is the best way of learning the
+representations needed to solve the mentioned tasks.
+We devise
+a novel character-based recurrent neural network model
+that recognize medical terms in health record data.
+The model is trained on openly available data, and evaluated using
+standard metrics on sensitive medical health record data in Swedish.
+We conclude that the model learns to solve the task and is able
+to generalize from the training data domain to the test domain.
+
+</p><p>
+We then present
+a novel recurrent neural model that transforms a query word into the
+morphological form demonstrated by another word.
+The model is trained and evaluated using word analogies and
+takes as input the raw character-sequence of the words with no
+explicit features needed.
+We conclude that character-based RNNs can successfully
+learn good representations internally and that the proposed model
+performs well on the analogy task, beating the baseline with
+a large margin.
+As the model learns to transform words, it learns internal representations that
+disentangles morphological relations
+using only cues from the training objective,
+which is to perform well on the word transformation task.
+</p><p>
+
+In other settings, such cues may not be available at training time, and
+we therefore present
+a regularizer that improves disentanglement in the
+learned representations by penalizing the correlation between activations
+in a layer.
+In the second part of the thesis we have proposed models and associated
+training strategies that solves the tasks and simultaneously learns
+informative internal representations; in Paper V
+this is enforced by an explicit regularization signal, suitable for when
+such a signal is missing from the training data (e.g. in the case of autoencoders).
+</p>
+
+</div>
+
+<div id="popsummary" style="display: none;">
+<p><strong>Popular science summary:</strong><br />
+<a href="/no-js.html" onclick="document.getElementById('abstract').style.display='block'; document.getElementById('popsummary').style.display='none';return false;" style="color: grey">Click to view abstract instead.</a><br />
+
+The advances in artificial intelligence have been astonishing in recent years, with new algorithms showing super-human performance for a wide number of tasks. An important reason for this development is the availability of large datasets and powerful computers, making it possible to train larger machine learning models with higher learning capacity. Artificial neural networks (ANNs) are machine learning models that have been of paramount importance to the development. ANNs are composed of layers of artificial neurons, each of which can only perform a simple computation, but when stacked together in deep architectures, they can be trained to approximate complicated non-linear functions. These models have achieved fantastic results in tasks on various data modalities such as audio, vision, and text. One reason for the success is the internal vector representations computed by the layers, each transforming their input into numerical feature vectors which are increasingly useful for the end task. A complete model is often trained at once (end-to-end learning), and the representations are optimized during training to solve the given task.
+</p><p>
+This thesis studies the representations computed using artificial neural networks that are trained on and applied to natural language. In paper I and II, we apply learned representations for words to improve the performance of multi-document summarization. In Paper III, we study the use of deep neural sequence models working on the raw character stream as input, and how this class of models can be used to detect medical terms in text (such as drugs, symptoms, and body parts). The system is evaluated on medical health records in Swedish. In paper IV, we propose a novel deep neural sequence model trained to transform words into inflected forms as demonstrated by analogies: "see" is to "sees" as "eat" is to what? The model outperforms previous rule-based approaches by a massive margin, and when inspecting the internal representations computed by this model, one can see that it learns to distinguish classes of transformations of word forms, without being explicitly told to do so. This is an effect from training the model to transform words while provided with the analogous words forms. In other cases, however, the training objective may not provide such cues for the learning algorithm. In Paper V, we study how to improve the way learned representations disentangle the underlying factors of variation in the data. This can be useful for unsupervised representation learning, such as using autoencoders for task agnostic representations or when the final use case is unknown.
+
+</p>
+</div>
+<p>
+<strong>Supervisor:</strong> Richard Johansson<br />
+<strong>Co-supervisor:</strong> Devdatt Dubhashi<br />
+<strong>Fulltext:</strong> <a href="http://mogren.one/phd/mogren2018phd-20180301.pdf">Download the whole thesis in PDF format. (2018-03-01)</a></p>
+<strong>Defense presentation slides:</strong> <a href="http://mogren.one/phd/mogren2018phd-defense-slides-20180323.pdf">Download the defense presentation slides in PDF format. (2018-03-23)</a></p>
+<strong>Glossary for people without background in computer science or mathematics:</strong> <a href="glossary-en.html">English</a>, <a href="glossary-sv.html">Swedish</a>.</p>
+<h2>Paper I: Extractive summarization using continuous vector space models</h2>
+<p><strong>Comments:</strong> This is a workshop paper showing preliminary results on multi-document summarization with continuous vector space models for sentence representation. The experiments were performed on opinionated online user reviews.<br />
+<strong>My contributions:</strong> I implemented the submodular optimization algorithm for sentence selection and created the setup for the experimental evaluation.<br />
+<em>2nd Workshop on Continuous Vector Space Models and their Compositionality CVSC 2014, Gothenburg Sweden</em><br />
+<em>Mikael Kågebäck, Olof Mogren, Nina Tahmasebi, Devdatt Dubhashi</em><br />
+<a href="/publications/2014/extractive">More info</a>, <a href="http://mogren.one/summarization/kageback2014extractive.pdf">PDF fulltext</a>.</p>
+<h2>Paper II: Extractive summarization by aggregating multiple similarities</h2>
+<p><strong>Comments:</strong> Many existing methods for extracting summaries rely on comparing the similarity of two sentences in some way. In this paper, we present new ways of measuring this similarity, based on sentiment analysis and continuous vector space representations, and show that combining these together with similarity measures from existing methods, helps to create better summaries. The finding is demonstrated with MULTSUM, a novel summarization method that uses ideas from kernel methods to combine sentence similarity measures. Submodular optimization is then used to produce summaries that take several different similarity measures into account. Our method improves over the state-of-the-art on standard benchmark datasets; it is also fast and scale to large document collections, and the results are statistically significant.<br />
+<strong>My contributions:</strong> I am the main author of this work. I designed the study, performed the experiments, and wrote the manuscript.<br />
+<em>RANLP 2015, Hissar, Bulgaria, September 6th-11th</em><br />
+<em>Olof Mogren, Mikael Kågebäck, Devdatt Dubhashi</em><br />
+<a href="/summarization">More info</a>, <a href="/summarization/mogren2015extractive.pdf">PDF fulltext</a>.</p>
+<h2>Paper III: Named entity recognition in Swedish health records with character-based deep bidirectional LSTMs</h2>
+<p><strong>Comments:</strong> In this paper, we train a deep character based recurrent neural network to recognize medical entities in Swedish patient health records.<br/>
+<strong>My contributions:</strong> I designed the study, supervised the experimental work, and wrote
+the manuscript.<br />
+<em>Fifth workshop on building and evaluating resources for biomedical text mining (BioTxtM 2016) at COLING 2016</em><br />
+<em>Simon Almgren, Sean Pavlov, Olof Mogren</em><br />
+<a href="/publications/2016/ner-char-blstm/">More info</a>, <a href="/publications/2016/ner-char-blstm/almgren2016ner-char-bilstm.pdf">PDF fulltext</a>.</p>
+<h2>Paper IV: Character-based recurrent neural networks for morphological relational reasoning</h2>
+<p><strong>Comments:</strong> In this paper, we propose a
+novel character-based neural architecture to perform
+morphological relational reasoning; a syntactic analogy task
+similar to the tasks used to evaluate the performance of word embedding models,
+but where these closed-vocabulary solutions fail much because of the
+limited vocabulary.
+Within the model, the internally computed representations were evaluated and
+visualized, showing that the model can learn to compute representations that
+capture and disentangle the necessary underlying factors of variation:
+the class of the morphological relation that was demonstrated in the analogy.<br />
+<strong>My contributions:</strong> I designed the study, performed the experiments, and wrote the majority of the manuscript.<br />
+<em>Submitted draft. Early version published at the EMNLP Workshop on Subword and Character-level Models in NLP</em><br />
+<em>Olof Mogren, Richard Johansson</em><br />
+<a href="mogren2018character.pdf">PDF fulltext</a>.</p>
+<h2>Paper V: Disentangled activations in deep networks</h2>
+<p><strong>Comments:</strong> In this paper, we propose a regularization technique that
+penalizes correlation between activations in a layer.
+This helps a model learn more interpretable and disentangled
+activations.
+Also, it helps with the design of deep learning models by estimating the required
+dimensionality, while being computationally inexpensive and simple to implement.<br />
+<strong>My contributions:</strong> I contributed to the design of the study, performed parts of the experiments, and wrote parts of the manuscript.<br />
+<em>Submitted draft. Early version presented at the NIPS Workshop on Learning Disentangled Features</em><br />
+<em>Mikael K&aring;geb&auml;ck, Olof Mogren</em><br />
+<a href="kageback2018disentanglement.pdf">PDF fulltext</a>.</p>
+        </div>
+      </section>
+
+
+
+        <section class="foot">
+          <strong>Olof Mogren</strong> Research institutes of Sweden<br /><br />
+          <a href="https://www.linkedin.com/in/olof-mogren-5392b452" title="Follow me on LinkedIn"><img src="/graphics/logos/linkedin_logo_42x40-white.png" alt="LinkedIn" /></a>&nbsp;<!--
+          //--><a href="https://twitter.com/olofmogren" title="Follow me on Twitter"><img src="/graphics/logos/twitter_logo_49x40-white.png" alt="Twitter" /></a>&nbsp;<!--
+          <a href="https://flokk.no/i/9be9cd2a348d" title="Follow me on Diaspora"><img src="/graphics/logos/diaspora_logo_42x40-white.png" alt="Diaspora" /></a>&nbsp;
+          //--><a href="http://mogren.one/feed.xml" title="Follow my posts with RSS."><img src="/graphics/logos/rss.svg" style="width: 40px; height: 40px;" alt="Atom/RSS Feed" /></a>
+        </section>
+
+      </div><!-- main content //-->
+    </div>
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=11067757; 
+var sc_invisible=1; 
+var sc_security="5e553e07"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="free web stats"
+href="http://statcounter.com/free-web-stats/"
+target="_blank"><img class="statcounter"
+src="//c.statcounter.com/11067757/0/5e553e07/1/" alt="free
+web stats"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+  </body>
+</html>

@@ -1,0 +1,193 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+      
+      <meta charset="utf-8">
+      <title></title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width">
+      <link rel="stylesheet" href="/style.css">
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script>
+        function showBibtex(event, text) {
+          var el, x, y;
+
+          el = document.getElementById('PopUp');
+          if (window.event) {
+            x = window.event.clientX + document.documentElement.scrollLeft
+                + document.body.scrollLeft;
+                y = window.event.clientY + document.documentElement.scrollTop +
+                + document.body.scrollTop;
+          }
+          else {
+            x = event.clientX + window.scrollX;
+            y = event.clientY + window.scrollY;
+          }
+          x -= 2; y -= 2;
+          y = y+15
+          el.style.left = x + "px";
+          el.style.top = y + "px";
+          el.style.display = "block";
+          document.getElementById('PopUpText').innerHTML = text;
+       }
+    </script>
+  </head>
+  <body class="home">
+
+    <div class="bodydiv">
+      <header id="header-waypoint">
+        <nav id="stickyNav" class="sticky-nav">
+          <div class="nametag">
+            <div class="nametagsubdiv"><a href="http://mogren.one/" class="nametag"><h1 class="nametag">O<span style="font-size: 22px;">lof</span> M<span style="font-size: 22px;">ogren</span></h1></a></div>
+            <div class="nametagsubscript"><span class="nametagsubscript">Senior machine learning researcher, PhD, at Research institutes of Sweden.</span></div>
+          </div>
+          <div id="groups" style="margin-right: 80px;">
+            <div id="group1" style="z-index: 5;">
+              <a href="/blog" style="color: #999;">Blog</a>
+              <a href="/talks" style="color: #999;">Talks</a>
+            </div>
+            <div id="group2" style="z-index: 5;">
+              <a href="/publications" style="color: #999;">Publications</a>
+              <a href="/about" style="color: #999;">About</a>
+            </div>
+          </div>
+        </nav>
+
+      </header>
+
+      <a class="github-ribbon" href="https://github.com/olofmogren">
+        <img style="position: absolute; top: 0; right: 0; border: 0; z-index: 4;"
+             src="/graphics/git-ribbon.png" alt="Fork me on GitHub">
+      </a>
+
+      <div id="PopUp" style="display: none; position: absolute; left: 100px; top: 50px; border: solid black 1px; padding: 10px; background-color: rgb(200,200,200); text-align: justify; font-size: 12px; min-width: 400px;">
+        <pre id="PopUpText">TEXT</pre>
+        <input name="close" type="button" value="Close" onclick="document.getElementById('PopUp').style.display = 'none';" />
+      </div>
+
+  <section>
+<div class="inner">
+<div class="block block-copy">
+
+<h1 id="glossary-for-representation-learning-for-natural-language">Glossary for <em>Representation learning for natural language</em></h1>
+
+<p>This is a glossary for people with a non-technical background to read 
+<a href="http://mogren.one/phd"><em>Representation learning for natural language</em></a>
+by Olof Mogren.</p>
+
+<p>The glossary is not in alphabetical order, but ordered by incresing complexity.</p>
+
+<p><a name="nlp"></a></p>
+<ul>
+  <li><strong>Natural language processingg (NLP)</strong> - the study of computational processsing of language as written or spoken by people. In recent years, <a href="#machinelearning">machine learning</a> has become an important tool for NLP. Both are important components of artificial intelligence.</li>
+</ul>
+
+<p><a name="machinelearning"></a></p>
+<ul>
+  <li><strong>Machine learning</strong> - any approach that solves a task, and that uses <a href="#trainingdata">data</a> to improve. By comparing its output with the desired output using a <a href="#objective">loss function</a>, and trying to minimize the loss, the algorithm can improve. A machine learning algorithm can be trained once and then deployed, or it can be continuously improved during operation.</li>
+</ul>
+
+<p><a name="trainingdata"></a></p>
+<ul>
+  <li><strong>Training data</strong> - the data fed to a <a href="#mlmodel">machine learning model</a> for it to learn. For example, for an image classifier, the training data will consist of images coupled with their correct classifications. The task is for the model to learn to compute the correct classifications without looking at the correct classes from the training data.</li>
+</ul>
+
+<p><a name="vector"></a></p>
+<ul>
+  <li><strong>Vector</strong> - a sequence of numbers. If its length is two or three, these can be interpreted as coordinates in 2D or 3D. In higher dimensions they can still be interpreted as coordinates, but in high-dimensional space. To be able to visualize high-dimensional vectors, one often project them down to two dimensions, a process that inherently makes the vectors lose much information. Vectors are often written with boldface: <strong><em>v</em></strong>. For example, a 4-dimensional vector:
+[ 0.3, 0.8, 0.7, 0.3]   (<a href="https://en.wikipedia.org/wiki/Row_and_column_vectors">Read more on Wikipedia.</a>)</li>
+</ul>
+
+<p><a name="matrix"></a></p>
+<ul>
+  <li><strong>Matrix</strong> - a grid/table of numbers. Can be seen as a sequence of <a href="#vector">vectors</a> (either its rows or its columns). Matrices are often written using capital letters: <em>M</em>. For example, a 4x3 matrix:<br />
+0.3, 0.5, 0.0<br />
+0.8, 0.2, 1.9<br />
+0.7, 0.7, 0.0<br />
+0.3, 0.1, 1.1<br />
+(<a href="https://en.wikipedia.org/wiki/Matrix_(mathematics)">Read more on Wikipedia.</a>)</li>
+</ul>
+
+<p><a name="mlmodel"></a></p>
+<ul>
+  <li><strong>Machine learning model</strong> - a structural view of a machine learning algorithm. Examples can be <a href="ann"><em>artificial neural networks</em></a> or other statistical models. In general, a model is trained by updating its internal parameters, which are often stored as matrices (see <a href="#matrix">matrix</a>).</li>
+</ul>
+
+<p><a name="ann"></a></p>
+<ul>
+  <li><strong>Artificial neural network</strong> - a class of <a href="#mlmodel">machine learning model</a> lightly inspired by animal brains. This connectionist approach, where large models can be built using simple building blocks (<a href="#artificialneuron">artificial neurons or units</a>, <a href="#layer">layers</a>, <a href="#activationfunction">activation functions</a>). An artificial neural network can approximate any given continuous function to an arbitrary precision, provided that it has enough <a href="#artificialneuron">units</a>.</li>
+</ul>
+
+<p><a name="artificialneuron"></a></p>
+<ul>
+  <li><strong>Artificial neuron</strong> - inspired by biological neurons, these units take a <a href="#vector">vector</a> of inputs from the previous layer (which may be the data input), computes a weighted sum by first multiplying the input <strong><em>x</em></strong> with a weight vector <strong><em>w</em></strong>, and adding a bias term <em>b</em>. <strong><em>a</em></strong> = <strong><em>w</em></strong> · <strong><em>x</em></strong> + b. The result is fed through a non-linear <a href="#activationfunction">activation function</a> to get the output from the unit.</li>
+</ul>
+
+<p><a name="layer"></a></p>
+<ul>
+  <li><strong>Neural network layer</strong> - a number of <a href="#artificialneuron">artificial neurons</a>, each taking a vector as input, and gives a number as output. Together, the numbers of outputs from all <a href="#artificialneuron">artificial neurons</a> in the layer can be seen as a <a href="#vector">vector</a>, and each <a href="#layer">layer</a> transforms its input vector into an output vector.</li>
+</ul>
+
+<p><a name="activationfunction"></a></p>
+<ul>
+  <li><strong>Activation function</strong> - a function that takes the pre-activation <strong><em>a</em></strong> in a <a href="#artificialneuron">unit</a> or <a href="#layer">layer</a>, and applies an element wise non-linearity. Common choices are s-shaped sigmoidal functions such as the <a href="https://en.wikipedia.org/wiki/Logistic_function">logistic function (Wikipedia)</a> or <a href="https://en.wikipedia.org/wiki/Hyperbolic_function#Tanh">hyperbolic tangent (Wikipedia)</a>.</li>
+</ul>
+
+<p><a name="gradientdescent"></a></p>
+<ul>
+  <li><strong>Gradient descent</strong> - an approach to optimize a function (generally of high dimensional inputs). First, one computes the gradient (the derivative in high dimensions). Secondly, a small step is taken in the direction of steepest descent. The process is iterated until some convergence is achieved.</li>
+</ul>
+
+<p><a name="representation"></a></p>
+<ul>
+  <li><strong>Representation</strong> - in this thesis, a <em>representation</em> is typically a vector that represents some data object such as a word, an image, or a sentence. <a href="#ann">Artificial neural networks</a> computes a vector as output from each <a href="#layer">layer</a>.</li>
+</ul>
+
+<p><a name="feature"></a></p>
+<ul>
+  <li><strong>Feature</strong> - traditional machine learning approaches do not learn their representations. They require features to be computed and fed to the learning algorithm. These features are often the result of massive engineering efforts, and provide a data representation that can not be further optimized by the computer to better suit the task. The learned representations in <a href="#ann">artificial neural networks</a> are features but they were not engineered.</li>
+</ul>
+
+<p><a name="objective"></a></p>
+<ul>
+  <li><strong>Objective</strong> - the loss function or error function that mesures how well the model is doing. By mesuring this one has something to optimize, to make the model perform better (see <a href="#gradientdescent">gradient descent</a>). The objective is often expressed as some kind of distance between the output computed by the model (with its current set of weights) and a reference output taken from the <a href="#trainingdata">training data</a>.</li>
+</ul>
+
+
+
+</div>
+</div>
+</section>
+
+
+
+        <section class="foot">
+          <strong>Olof Mogren</strong> Research institutes of Sweden<br /><br />
+          <a href="https://www.linkedin.com/in/olof-mogren-5392b452" title="Follow me on LinkedIn"><img src="/graphics/logos/linkedin_logo_42x40-white.png" alt="LinkedIn" /></a>&nbsp;<!--
+          //--><a href="https://twitter.com/olofmogren" title="Follow me on Twitter"><img src="/graphics/logos/twitter_logo_49x40-white.png" alt="Twitter" /></a>&nbsp;<!--
+          <a href="https://flokk.no/i/9be9cd2a348d" title="Follow me on Diaspora"><img src="/graphics/logos/diaspora_logo_42x40-white.png" alt="Diaspora" /></a>&nbsp;
+          //--><a href="http://mogren.one/feed.xml" title="Follow my posts with RSS."><img src="/graphics/logos/rss.svg" style="width: 40px; height: 40px;" alt="Atom/RSS Feed" /></a>
+        </section>
+
+      </div><!-- main content //-->
+    </div>
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=11067757; 
+var sc_invisible=1; 
+var sc_security="5e553e07"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="free web stats"
+href="http://statcounter.com/free-web-stats/"
+target="_blank"><img class="statcounter"
+src="//c.statcounter.com/11067757/0/5e553e07/1/" alt="free
+web stats"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+  </body>
+</html>

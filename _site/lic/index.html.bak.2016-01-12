@@ -1,0 +1,212 @@
+<html>
+  <head>
+    <title>Licentiate Thesis Presentation: Olof Mogren</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <link rel="canonical" href="http://mogren.one/lic/" />
+    <script type="text/javascript">
+      function redirectIfAvailable()
+      {
+        var img = document.body.appendChild(document.createElement("img"));
+        img.onload = function()
+        {
+          //alert('Serving from mogren.one.')
+          window.location = 'http://mogren.one/lic/'
+        };
+        img.onerror = function()
+        {
+          //alert('Serving from chalmers.se.')
+        };
+        img.src = "http://mogren.one/graphics/pixel.gif";
+      }
+    </script>
+  </head>
+  <body onload="if(window.location.href.startsWith('http://www.cse')){ redirectIfAvailable(); }">
+    <div id="bodydiv" class="container">
+
+    <h1>Multi-Document Summarization and Semantic Relatedness</h1>
+    <p class="bold">Licentiate Thesis</p>
+    <p class="bold">Olof Mogren</p>
+      <img src="../graphics/mogren_summarization.jpg" alt="Extractive Multi-Document Summarization" style="float: right;" />
+      <p>
+        <span class="bold">Abstract:</span>
+
+Automatic summarization is the process of presenting the contents of written documents
+in a short, comprehensive fashion. Many approaches have been proposed for this problem,
+some of which extract content from the input documents (extractive methods), and others
+that generate the language in the summary based on some representation of the document
+contents (abstractive methods).
+      </p>
+      <p>
+This thesis is concerned with extractive summarization in the multi-document setting,
+and we define the problem as choosing the most informative sentences from the input
+documents, while minimizing the redundancy in the summary. This definition calls for
+a way of measuring the similarity between sentences that captures as much as possible
+of the meaning. We present novel ways of measuring the similarity between sentences,
+based on neural word embeddings and sentiment analysis. We also show that combining
+multiple sentence similarity scores, by multiplicative aggregation, helps in the process of
+creating better extractive summaries.
+      </p>
+      <p>
+We also discuss the use of information extraction for improving the quality of automatic
+summarization by providing ways of assessing the salience of information elements, as
+well as helping with the fluency of the output and providing the temporal dimension.
+Furthermore, we present graph-based algorithms for clustering words by co-occurrence,
+and for summarizing short online user-reviews by computing bicliques. The biclique
+algorithm provides a fast, simple algorithm for summarization in many e-commerce
+settings.
+
+<!--Automatic Multi-Document Summarization can be a helpful tool for people surging
+        through many sources of information. It is also an exciting area of research,
+        and the topic of this licentiate thesis proposal.
+        This licentiate thesis will present my work on how to make summarization
+        systems more aware of the semantics in the input text and discuss
+        different ways of measuring semantic relatedness of textual units.//-->
+
+        <!-- Welcome to the information page about the planned licentiate thesis of Olof Mogren. //-->
+      </p>
+      <p>
+        The thesis is comprised of five different papers, listed below.
+        Click on the links for
+        information and to download the fulltexts and related material.
+      </p>
+      <p>
+        <span class="bold">Supervisors:</span> Peter Damaschke and Devdatt Dubhashi
+      </p>
+      <p>
+        <span class="bold">Defense:</span> The thesis was successfully defended in public
+        on November 20th, 2015 at 10:00
+        in room ML2, H&ouml;rsalsv&auml;gen 7B, Chalmers University of Technology,
+      </p>
+
+      <p>
+        <span class="bold">Discussion leader</span> was Tapani Raiko from
+        Aalto University.
+      </p>
+
+      <p>
+        <span class="bold">Fulltext:</span> <a href="mogren2015licentiate.pdf">Download the whole thesis in PDF format</a>.
+      </p>
+
+
+      <h3>Paper I: Extractive Summarization using Continuous Vector Space Models</h3>
+      <p>
+         <span class="indent">
+           <span class="bold">Comments:</span> This is a workshop paper showing preliminary results on multi-document summarization with continuous vector space models for sentence representation. The experiments were performed on opinionated online user reviews.
+         </span>
+         <br />
+         <span class="indent">
+           <span class="bold">My contributions:</span> I implemented the submodular optimization algorithm for sentence selection and created the setup for the experimental evaluation. 
+         </span>
+         <br />
+         <span class="publishedin indent">2nd Workshop on Continuous Vector Space Models and their Compositionality CVSC 2014, Gothenburg Sweden</span>
+         <br />
+         <span class="authorlist indent">Mikael K&aring;geb&auml;ck, Olof Mogren, Nina Tahmasebi, Devdatt Dubhashi</span>
+         <br />
+         <span class="indent"><a href="../publications/2014/extractive">More info</a>, <a href="../summarization/kageback2014extractive.pdf">PDF download</a>.</span>
+      </p>
+      <h3>Paper II: Extractive Summarization by Aggregating Multiple Similarities</h3>
+      <p>
+         <span class="indent"><span class="bold">Comments:</span>
+Many existing methods for extracting summaries rely on comparing the similarity of two sentences in some way.
+In this paper, we present new ways of measuring this similarity, based on sentiment analysis and
+continuous vector space representations, and show that combining these
+together with similarity measures from existing methods, helps to create better summaries.
+The finding is demonstrated with MULTSUM, a novel summarization method that uses
+ideas from kernel methods to combine sentence similarity measures. Submodular
+optimization is then used to produce summaries that take several different similarity measures into account.
+Our method improves over the state-of-the-art on standard benchmark datasets;
+it is also fast and scale to large document collections, and the results are statistically significant.</span>
+         <br />
+         <span class="indent">
+           <span class="bold">My contributions:</span> I am the main author of this work. I designed the study, performed the experiments, and wrote the manuscript.
+         </span>
+         <br />
+         <span class="publishedin indent">
+           RANLP 2015, Hissar, Bulgaria, September 6th-11th
+         </span>
+         <br />
+         <span class="authorlist indent">
+           Olof Mogren, Mikael K&aring;geb&auml;ck, Devdatt Dubhashi
+         </span>
+         <br />
+         <span class="indent"><a href="../summarization/">More info</a>, <a href="../summarization/mogren2015extractive.pdf">PDF download</a>.</span>
+      </p>
+      <h3>Paper III: Visions and open challenges for a knowledge-based culturomics</h3>
+      <p>
+         <span class="indent"><span class="bold">Comments:</span> This is a white paper outlining some ideas and challenges within the field of culturomics.</span>
+         <br />
+         <span class="indent">
+           <span class="bold">My contributions:</span> I wrote section 5, titled "Temporal Semantic Summarization", where I shared my views on possible research directions on generic multi-document summarization.
+         </span>
+         <br />
+         <span class="publishedin indent">International Journal on Digital Libraries, February 2015</span>
+         <br />
+         <span class="authorlist indent">
+Nina Tahmasebi,
+Lars Borin,
+Gabriele Capannini,
+Devdatt Dubhashi,
+Peter Exner,
+Markus Forsberg,
+Gerhard Gossen,
+Fredrik D. Johansson,
+Richard Johansson,
+Mikael K&aring;geb&auml;ck,
+Olof Mogren,
+Pierre Nugues,
+Thomas Risse
+         </span>
+         <br />
+      <span class="indent"><a href="../publications/2015/visions">More info</a>, <a href="../publications/2015/visions/tahmasebi-visions-2015.pdf">PDF download</a>.</span>
+      </p>
+
+      <h3>Paper IV: Editing Simple Graphs</h3>
+      <img src="wordgraph.png" alt="Wikipedia Word-Co-Occurrence Graph. Illustration created with Gephi." style="float: right;" />
+      <p>
+         <span class="indent"><span class="bold">Comments:</span> Inspired by the word-co-occurrence
+           graph from Wikipedia documents, this paper presents an FPT approach to cluster the words.</span>
+         <br />
+         <span class="indent">
+           <span class="bold">My contributions:</span> I contributed to the study and the analysis, and to the writing of the manuscript, including illustrations.
+         </span>
+         <br />
+         <span class="publishedin indent">Journal of Graph Algorithms and Applications 18 (2014), 557-576</span>
+         <br />
+         <span class="authorlist indent">Peter Damaschke, Olof Mogren</span>
+         <br />
+         <span class="indent"><a href="../publications/2014/editing/">More info</a>, <a href="../publications/2014/editing/damaschke2014editing.pdf">PDF download</a>.</span>
+      </p>
+      
+      <h3>Paper V: Summarizing Online User Reviews Using Bicliques</h3>
+      <p>
+         <span class="indent"><span class="bold">Comments:</span> This paper presents an approach to summarize online user-reviews based on finding bicliques in the bipartite word-document graph.</span>
+         <br />
+         <span class="indent">
+           <span class="bold">My contributions:</span> I contributed to the study, did a substantial part of the experimental work, and contributed to the writing of the manuscript.
+         </span>
+         <br />
+         <span class="publishedin indent">To appear in SOFSEM 2016</span>
+         <br />
+         <span class="authorlist indent">Azam Sheikh Muhammad, Peter Damaschke, Olof Mogren</span>
+         <br />
+         <span class="indent"><a href="../summarization/muhammad2015summarizing.pdf">PDF download</a>.</span>
+      </p>
+    
+
+	    <br clear="all" />
+	    <!--<img src="../../graphics/mogren_chalmers_web_portrait_155x191.jpg" style="border: 0px solid #999; float: left; margin: 25px; margin-left: 0px;" />//-->
+
+    <a href="http://mogren.one/"><h1 class="grey small">Olof Mogren</h1></a>
+    <p class="grey small">PhD Student,<br />
+       Department of Computer Science and Engineering,<br />
+       Chalmers University of Technology,<br />
+       41296 G&ouml;teborg, Sweden</p>
+
+    <h2 class="grey small">Contact</h2>
+    <p class="grey small"><span class="bold">Visiting:</span> Room 6447, EDIT building, Campus Johanneberg.</p>
+    <p class="grey small"><span class="bold">Email:</span> last name at chalmers.se.</p>
+    <p class="grey small"><span class="bold">Telephone:</span> +46-703-969624.</p>
+
+  </div>
+  </body>
+</html>

@@ -1,0 +1,236 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+      
+      <meta charset="utf-8">
+      <title>First Workshop on Representation Learning for NLP</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width">
+      <link rel="stylesheet" href="/style.css">
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script>
+        function showBibtex(event, text) {
+          var el, x, y;
+
+          el = document.getElementById('PopUp');
+          if (window.event) {
+            x = window.event.clientX + document.documentElement.scrollLeft
+                + document.body.scrollLeft;
+                y = window.event.clientY + document.documentElement.scrollTop +
+                + document.body.scrollTop;
+          }
+          else {
+            x = event.clientX + window.scrollX;
+            y = event.clientY + window.scrollY;
+          }
+          x -= 2; y -= 2;
+          y = y+15
+          el.style.left = x + "px";
+          el.style.top = y + "px";
+          el.style.display = "block";
+          document.getElementById('PopUpText').innerHTML = text;
+       }
+    </script>
+  </head>
+  <body class="home">
+
+    <div class="bodydiv">
+      <header id="header-waypoint">
+        <nav id="stickyNav" class="sticky-nav">
+          <div class="nametag">
+            <div class="nametagsubdiv"><a href="http://mogren.one/" class="nametag"><h1 class="nametag">O<span style="font-size: 22px;">lof</span> M<span style="font-size: 22px;">ogren</span></h1></a></div>
+            <div class="nametagsubscript"><span class="nametagsubscript">Senior machine learning researcher, PhD, at Research institutes of Sweden.</span></div>
+          </div>
+          <div id="groups" style="margin-right: 80px;">
+            <div id="group1" style="z-index: 5;">
+              <a href="/blog" style="color: #999;">Blog</a>
+              <a href="/talks" style="color: #999;">Talks</a>
+            </div>
+            <div id="group2" style="z-index: 5;">
+              <a href="/publications" style="color: #999;">Publications</a>
+              <a href="/about" style="color: #999;">About</a>
+            </div>
+          </div>
+        </nav>
+
+      </header>
+
+      <a class="github-ribbon" href="https://github.com/olofmogren">
+        <img style="position: absolute; top: 0; right: 0; border: 0; z-index: 4;"
+             src="/graphics/git-ribbon.png" alt="Fork me on GitHub">
+      </a>
+
+      <div id="PopUp" style="display: none; position: absolute; left: 100px; top: 50px; border: solid black 1px; padding: 10px; background-color: rgb(200,200,200); text-align: justify; font-size: 12px; min-width: 400px;">
+        <pre id="PopUpText">TEXT</pre>
+        <input name="close" type="button" value="Close" onclick="document.getElementById('PopUp').style.display = 'none';" />
+      </div>
+
+  <section>
+<div class="inner">
+<div class="block block-copy">
+
+
+<h1>First Workshop on Representation Learning for NLP</h1>
+<p><em>2016-08-11</em></p>
+
+
+<figure style="float: right; max-width: 40%;">
+<img src="/graphics/illustrations/2016-08-11/humboldt.jpg" alt="Main building of Humboldt University in Berlin, Unter den Linden, as seen from Bebelplatz. Image from Wikimedia Commons, Creative Commons Attribution-Share Alike 3.0 Unported license." style="max-width: 100%" />
+<figcaption style="max-width: 100%;">Main building of Humboldt University in Berlin, Unter den Linden, as seen from Bebelplatz, Creative Commons Attribution-Share Alike 3.0 Unported license.</figcaption>
+</figure>
+
+
+
+
+<p>On August 11th, the first <a href="https://sites.google.com/site/repl4nlp2016/">workshop on Representation Learning For NLP</a> took place in conjunction with <a href="http://acl2016.org/">ACL 2016</a> at Humboldt University in Berlin. The workshop was extremely popular, and the talks were moved to the largest auditorium to fit all visitors.</p>
+
+<h2 id="invited-talks">Invited talks</h2>
+
+<p>First out was Professor Katrin Erk from University of Texas, speaking about representations for language that is not made using deep learning, and in fact are not learned at all. This was a little bit surprising for an opening talk in a workshop on representation learning, where most titles in the proceedings contain words like <a href="https://en.wikipedia.org/wiki/LSTM">“LSTMs”</a>, <a href="https://en.wikipedia.org/wiki/Gated_recurrent_unit">“GRUs”</a>, <a href="https://en.wikipedia.org/wiki/Recurrent_neural_network">“RNNs”</a> and <a href="https://en.wikipedia.org/wiki/Artificial_neural_network">“Neural Models”</a>. However, Professor Erk gave a nice talk and connected <a href="https://en.wikipedia.org/wiki/Distributional_semantics">distributional semantics</a> with applications such as <a href="https://en.wikipedia.org/wiki/Textual_entailment">textual entailment</a> and <a href="https://en.wikipedia.org/wiki/Natural_language_understanding">text comprehension</a>. She gave some insights about <a href="https://en.wikipedia.org/wiki/Rule-based_system">rule-based systems</a>, <a href="https://en.wikipedia.org/wiki/Graphical_model">probabilistic graphical models</a>, and generalization to unseen words.</p>
+
+<p>See <a href="http://www.katrinerk.com/">Katrin Erk’s homepage</a>.</p>
+
+<p>Next up was Animashree Anandkumar, Assistant Professor at the University of California Irvine, who began with a nice recap about existing techniques for learning embeddings for sentences; compositional word-representation approaches, skip-thought vectors, RNNs, and convnet approaches. The latter of these were then the focus of much of the talk, allowing for shift-invariance in language inputs. She moved on to show how these models can be formulated using tensor decomposition methods, allowing for a much faster training time. The method can then be applied to compute sentence embeddings and obtained competitive results on standard benchmarks. In summary, a truly inspiring talk.</p>
+
+<p>To learn more about tensor based methods, see <a href="http://newport.eecs.uci.edu/anandkumar/">Animashree Anandkumar’s web page at UCI</a>.</p>
+
+<figure style="float: left; max-width: 40%; clear: both;">
+<img src="/graphics/illustrations/2016-08-11/tensor-decomposition.jpg" style="max-width: 90%" />
+<figcaption style="max-width: 90%">
+Tensor decompositions for sentence representation learning. From Animashree Anandkumar's slides.
+</figcaption>
+</figure>
+
+<p>Besides the invited talks, three papers were awarded the best paper awards, and were given a few minutes each to introduce their work. When introdcing this session, Edward Grefenstette presented some stats: out of submissions comparable to a major conference, 37 papers were accepted to this workshop.</p>
+
+<h2 id="best-paper-awards">Best paper awards</h2>
+
+<ul>
+  <li><em>Mapping Unseen Words to Task-Trained Embedding Spaces</em>, by Pranava Swaroop Madhyastha, Mohit Bansal, Kevin Gimpel, and Karen Livescu. <a href="http://aclweb.org/anthology/W/W16/W16-1612.pdf">(PDF, aclweb.org)</a>.
+    <ul>
+      <li>A technique to handle out-of-vocabulary words. Gives improvements in downstream tasks such as dependency parsing and sentiment classification.</li>
+    </ul>
+  </li>
+  <li><em>Making Sense of Word Embeddings</em> by Maria Pelevina, Nikolay Arefyev, Chris Biemann, and Alexander Panchenko. <a href="http://aclweb.org/anthology/W/W16/W16-1620.pdf">(PDF, aclweb.org)</a>
+    <ul>
+      <li>This paper propose a method to learn word sense embeddings, that can be initialized with traditional word embeddings. The resultng system performs comparable to state-of-the-art methods for word-sense-induction.</li>
+    </ul>
+  </li>
+  <li><em>Domain Adaptation for Neural Networks by Parameter Augmentation</em> by Yusuke Watanabe, Kazuma Hashimoto, and Yoshimasa Tsuruoka. <a href="http://aclweb.org/anthology/W/W16/W16-1629.pdf">(PDF, aclweb.org)</a>
+    <ul>
+      <li>Using a source dataset, such as <a href="http://mscoco.org/">MS COCO</a>, and a target dataset being a Japanese guidebook. The proposed method is similar to having a neural network for two tasks by attaching two output parts, but here the authors use what they call “augmented parameters”. This means that they have two output layers, with partly shared parameters. The target output uses parameter $theta_t + theta_g$, and the source output layer uses parameters $theta_g + theta_s$</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="afternoon-invited-talks">Afternoon Invited Talks</h2>
+
+<p>Hal Daumé III, assistant professor at University of Maryland was the third invited talk. Using plenty of both enthusiasm and humour, he took us through multi-lingual word embedding approaches for problems such as <a href="https://en.wikipedia.org/wiki/Transliteration">transliteration</a>. He concluded by stating that for many problems in <a href="https://en.wikipedia.org/wiki/Natural_language_processing">NLP</a>, a complex non-linear model is not needed, but you can get by with a bag of n-grams model and standard <a href="https://en.wikipedia.org/wiki/Canonical_correlation">CCA</a>. However, using multi-lingual signals are often of help, and <a href="https://en.wikipedia.org/wiki/Word_embedding">embeddings</a> should be given some wiggle-room.</p>
+
+<p>Raia Hadsell from <a href="http://deepmind.com/">Google Deepmind</a> was the last invited speaker, giving a nice talk about different approaches for representation learning, and things that you can do with the learned representations. She divided this into five different categories:</p>
+
+<ol>
+  <li><strong>Unsupervised learning</strong> - These are representations that we are all well accustomed to. E.g. Skipgram, gloVe.</li>
+  <li><strong>Supervised learning</strong> - E.g. using representations that was computed as an internal representation in a supervised model.</li>
+  <li><strong>Sequence modelling</strong> - RNNs, LSTMs, GRUs, etc.</li>
+  <li><strong>Reinforcement learning</strong> - Models that interpret the environment, control themselves, and act in their environment, trained end-to-end, e.g. Deep Q-learning. See <a href="https://www.nervanasys.com/demystifying-deep-reinforcement-learning/">“Demystifying Deep Reinforcement Learning” at nervanasys.com</a>.</li>
+  <li><strong>Semi-supervised learning</strong> - E.g. siamese networks; needing only a measure of similarity to train.</li>
+</ol>
+
+<p>She then moved on to talk about how things in this field are affecting each other, and lines are blurring. Examples of this are <em>Pixel Recurrent Neural Networks</em> by Aaron Van den Oord Google Deepmind, Nal Kalchbrenner Google Deepmind, Koray Kavukcuoglu Google Deepmind, presented at ICML 2016 <a href="http://jmlr.org/proceedings/papers/v48/oord16.pdf">(PDf, jmlr.org)</a> as well as the <em>Conditional Image Generation with PixelCNN Decoders</em> by Aaron van den Oord, Nal Kalchbrenner, Oriol Vinyals, Lasse Espeholt, Alex Graves, Koray Kavukcuoglu <a href="http://arxiv.org/abs/1606.05328">(PDF, arxiv.org)</a>, in essence considering image data as sequentially structured data.</p>
+
+<figure style="float: right; max-width: 40%; clear: both;">
+<img src="/graphics/illustrations/2016-08-11/progressive-neural-nets.jpg" style="max-width: 90%" />
+<figcaption style="max-width: 90%">
+Progressive neural networks. From Raia Hadsell's slides.
+</figcaption>
+</figure>
+
+<p>She ended her talk with <strong>Progresive nets</strong>, a way of transferring learning from one task to another, using the learning from a source task without forgetting the it, and at the same time really boosting training time to learn the target task. An example was training a system for manipulating a robotic arm, first by simulations (the source task), and then with a real robot arm (the target task).</p>
+
+<h2 id="poster-session-and-panel-discussion">Poster Session and Panel Discussion</h2>
+
+<p>During the poster session, we had our own poster titled <a href="http://mogren.one/publications/2016/assisting/">“Assisting discussion Forum Users using Deep Recurrent Neural Networks”</a>, showing how a recurrent neural model can be used to assist people asking questions in a discussion forum, by suggesting forum posts, discussion channels and other users that might be of help for the problem you currently express. The session was rather crowded, and many visitors came by our poster to talk, giving both interesting questions and helpful suggestions.</p>
+
+<figure style="float: left; max-width: 40%; clear: both;">
+<img src="/graphics/illustrations/2016-08-11/panel.jpg" style="max-width: 90%" />
+<figcaption style="max-width: 90%">
+Panel discussion.
+</figcaption>
+</figure>
+
+<p>The whole workshop was finally concluded with a great panel discussion, chaired by Kyunghyun Cho, with all the invited speakers and also Emily Bender, Professor in Linguistics at University of Washington, and Chris Dyer from Google Deepmind. The panel made up a great mix of people with different backgrounds, and a lively discussion was held, yet a feeling of consensus appeared, and a concluding comment was that it’s OK to do NLP research coming from the linguistic side, and it’s also OK to approach linguistic problems without the linguistic assumptions, letting machines figure out how human language works.</p>
+
+
+
+<p>
+<em>Olof Mogren</em><br />
+</p>
+
+
+
+</div>
+</div>
+</section>
+
+<section>
+<div class="inner">
+<div class="block block-copy">
+<div id="disqus_thread"></div>
+<script>
+
+/**
+ *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
+  /*
+  var disqus_config = function () {
+  this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+  };
+  */
+  (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = '//mogren-one.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</div>
+</section>
+
+<script id="dsq-count-scr" src="//mogren-one.disqus.com/count.js" async></script>
+
+
+
+        <section class="foot">
+          <strong>Olof Mogren</strong> Research institutes of Sweden<br /><br />
+          <a href="https://www.linkedin.com/in/olof-mogren-5392b452" title="Follow me on LinkedIn"><img src="/graphics/logos/linkedin_logo_42x40-white.png" alt="LinkedIn" /></a>&nbsp;<!--
+          //--><a href="https://twitter.com/olofmogren" title="Follow me on Twitter"><img src="/graphics/logos/twitter_logo_49x40-white.png" alt="Twitter" /></a>&nbsp;<!--
+          <a href="https://flokk.no/i/9be9cd2a348d" title="Follow me on Diaspora"><img src="/graphics/logos/diaspora_logo_42x40-white.png" alt="Diaspora" /></a>&nbsp;
+          //--><a href="http://mogren.one/feed.xml" title="Follow my posts with RSS."><img src="/graphics/logos/rss.svg" style="width: 40px; height: 40px;" alt="Atom/RSS Feed" /></a>
+        </section>
+
+      </div><!-- main content //-->
+    </div>
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=11067757; 
+var sc_invisible=1; 
+var sc_security="5e553e07"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="free web stats"
+href="http://statcounter.com/free-web-stats/"
+target="_blank"><img class="statcounter"
+src="//c.statcounter.com/11067757/0/5e553e07/1/" alt="free
+web stats"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+  </body>
+</html>

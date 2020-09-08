@@ -1,0 +1,165 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+      
+      <meta charset="utf-8">
+      <title>About me - Olof Mogren</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width">
+      <link rel="stylesheet" href="/style.css">
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script>
+        function showBibtex(event, text) {
+          var el, x, y;
+
+          el = document.getElementById('PopUp');
+          if (window.event) {
+            x = window.event.clientX + document.documentElement.scrollLeft
+                + document.body.scrollLeft;
+                y = window.event.clientY + document.documentElement.scrollTop +
+                + document.body.scrollTop;
+          }
+          else {
+            x = event.clientX + window.scrollX;
+            y = event.clientY + window.scrollY;
+          }
+          x -= 2; y -= 2;
+          y = y+15
+          el.style.left = x + "px";
+          el.style.top = y + "px";
+          el.style.display = "block";
+          document.getElementById('PopUpText').innerHTML = text;
+       }
+    </script>
+  </head>
+  <body class="home">
+
+    <div class="bodydiv">
+      <header id="header-waypoint">
+        <nav id="stickyNav" class="sticky-nav">
+          <div class="nametag">
+            <div class="nametagsubdiv"><a href="http://mogren.one/" class="nametag"><h1 class="nametag">O<span style="font-size: 22px;">lof</span> M<span style="font-size: 22px;">ogren</span></h1></a></div>
+            <div class="nametagsubscript"><span class="nametagsubscript">Senior machine learning researcher, PhD, at Research institutes of Sweden.</span></div>
+          </div>
+          <div id="groups" style="margin-right: 80px;">
+            <div id="group1" style="z-index: 5;">
+              <a href="/blog" style="color: #999;">Blog</a>
+              <a href="/talks" style="color: #999;">Talks</a>
+            </div>
+            <div id="group2" style="z-index: 5;">
+              <a href="/publications" style="color: #999;">Publications</a>
+              <a href="/about" style="color: #999;">About</a>
+            </div>
+          </div>
+        </nav>
+
+      </header>
+
+      <a class="github-ribbon" href="https://github.com/olofmogren">
+        <img style="position: absolute; top: 0; right: 0; border: 0; z-index: 4;"
+             src="/graphics/git-ribbon.png" alt="Fork me on GitHub">
+      </a>
+
+      <div id="PopUp" style="display: none; position: absolute; left: 100px; top: 50px; border: solid black 1px; padding: 10px; background-color: rgb(200,200,200); text-align: justify; font-size: 12px; min-width: 400px;">
+        <pre id="PopUpText">TEXT</pre>
+        <input name="close" type="button" value="Close" onclick="document.getElementById('PopUp').style.display = 'none';" />
+      </div>
+
+  <section>
+<div class="inner">
+<div class="block block-copy">
+<h1>About me</h1>
+<p>
+I am a senior research scientist at RISE Research institutes of Sweden
+and head of the machine learning research group in Gothenburg.
+</p>
+
+<p><img style="float: right;" src="/graphics/mogren-2018-julia-sjoberg.png" />
+I have a PhD in machine learning from Chalmers university of technology, my thesis is called <a href="/phd/">Representation learning for natural language (click for details)</a>.
+I have worked on 
+<a href="http://mogren.one/summarization/">summarization</a>, 
+<a href="/publications/2016/assisting/">dialogue systems</a>,
+<a href="/publications/2016/c-rnn-gan/">adversarial training</a>, and
+character-based RNNs for
+<a href="/publications/2016/ner-char-blstm/">sequence labeling</a> and
+<a href="/publications/2017character-based/">morphological analogies</a>.
+I also have experience in convnets and policy gradient methods.
+</p><p>
+I enjoy doing AI research to make the world a better place for us all, and I am an avid listener of the <a href="http://thetalkingmachines.com/">Talking Machines podcast</a> every two weeks.
+</p><p>
+I <a href="https://twitter.com/olofmogren">tweet</a> and <a href="/blog/">blog</a> about things I find interesting, and give <a href="/talks/">talks</a> in our popular learning machines seminar series at RISE AI (and at other events).
+During 2016-2017, I was the organizer of a seminar series at the
+machine learning research group at Chalmers.
+Most of my recent code is written in Python with Pytorch, and I also have experience with Tensorflow, Theano, and Lasagne.
+</p>
+<p><a href="http://www.cse.chalmers.se/~richajo/">Richard Johansson</a> and <a href="http://www.cse.chalmers.se/~dubhashi/">Devdatt Dubhashi</a> was my PhD supervisors.</p>
+
+<p>Also see my licentiate thesis, titled <a href="/lic">&quot;Multi-document summarization and semantic relatedness&quot;</a>,
+and my master's thesis <a href="/networks">Dynamics of geographical routing in small-world networks</a>.
+</p>
+
+<h3>Teaching</h3>
+<p>I have developed and taught a PhD course in deep learning, together with Mikael Kågebäck and Fredrik Johansson.
+The course covered some of the most important topics in the field, including convolutional neural networks, recurrent neural networks, unsupervised methods, and regularization techniques.
+We used a &ldquo;flipped classroom&rdquo; approach, with  video lectures from some of the best researchers in the field, along with discussion sessions.
+</p>
+<p>I have supervised a number of <a href="/students">master students</a>.</p>
+
+<p>Furthermore, I have taught the following courses.</p>
+<ul>
+<li><a href="http://physics.gu.se/~frtbm/joomla/index.php?option=com_content&view=article&id=115&catid=79&Itemid=290">Neural networks (FFR135)</a>. (Guest lecture about deep learning).</li>
+<li><a href="http://www.cse.chalmers.se/research/lab/courses/algorithms-for-machine-learning-tda-231/">Algorithms for machine learning and inference (TDA231)</a>. (Lecturing the part on deep learning, convnets, backprop, teaching assistant).</li>
+<li><a href="https://ai-course-tin172-dit410.github.io/">AI</a> (Lecturing on probabilistic graphical models, teaching assistant)</li>
+<li>Object oriented programming (teaching assistant)</li>
+<li>Data structures (teaching assistant)</li>
+<li>Algorithms, basic and advanced courses (teaching assistant)
+</li>
+</ul>
+<h3>Other things</h3>
+<p>During 2016-217, I was the organizer of <a href="http://www.cse.chalmers.se/research/lab/seminars/">Chalmer Machine Learning Seminars</a>.</p>
+<p>When not doing research or teaching, I am a long distance runner and the lucky father of two wonderful children.</p>
+<h3>Contact</h3>
+<!--<p><em>Visiting:</em> Room 6447, EDIT building, Campus Johanneberg.<br />//-->
+<em>Email:</em> first name at last name dot one.<br />
+<em>Telephone:</em> +46-703-969624.<br />
+<em>Follow me on</em>
+<a href="https://www.linkedin.com/in/olof-mogren-5392b452">LinkedIn</a>,
+<a href="https://twitter.com/olofmogren">Twitter</a>,
+or
+<a href="http://mogren.one/feed.xml">RSS</a>.
+</p>
+</div>
+</div>
+</section>
+
+
+        <section class="foot">
+          <strong>Olof Mogren</strong> Research institutes of Sweden<br /><br />
+          <a href="https://www.linkedin.com/in/olof-mogren-5392b452" title="Follow me on LinkedIn"><img src="/graphics/logos/linkedin_logo_42x40-white.png" alt="LinkedIn" /></a>&nbsp;<!--
+          //--><a href="https://twitter.com/olofmogren" title="Follow me on Twitter"><img src="/graphics/logos/twitter_logo_49x40-white.png" alt="Twitter" /></a>&nbsp;<!--
+          <a href="https://flokk.no/i/9be9cd2a348d" title="Follow me on Diaspora"><img src="/graphics/logos/diaspora_logo_42x40-white.png" alt="Diaspora" /></a>&nbsp;
+          //--><a href="http://mogren.one/feed.xml" title="Follow my posts with RSS."><img src="/graphics/logos/rss.svg" style="width: 40px; height: 40px;" alt="Atom/RSS Feed" /></a>
+        </section>
+
+      </div><!-- main content //-->
+    </div>
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=11067757; 
+var sc_invisible=1; 
+var sc_security="5e553e07"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="free web stats"
+href="http://statcounter.com/free-web-stats/"
+target="_blank"><img class="statcounter"
+src="//c.statcounter.com/11067757/0/5e553e07/1/" alt="free
+web stats"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+  </body>
+</html>
