@@ -1,55 +1,78 @@
 ---
-title: Publications - Olof Mogren
 layout: default
+title: Olof Mogren, PhD - Deep Learning Researcher.
 ---
 
-<section>
-<div class="inner">
-<div class="block block-copy">
+{% assign filtercolors = "rgba(220,200,160,.5), rgba(200,160,220,.5), rgba(140,160,200,.5), rgba(140,220,200,.5), rgba(140,220,220,.5), rgba(200,160,220,.5)" | split: ", " %}
+{% assign filtercolors = "rgba(80,40,110,.7), rgba(30,110,80,.7), rgba(30,40,100,.7), rgba(244,170,90,.7), rgba(110,80,40,.7), rgba(30,110,110,.7), rgba(100,40,110,.7)" | split: ", " %}
 
-<h1>Publications</h1>
+      <section class="features">
+        <div class="inner">
+          <div class="feature-grid">
+            <h1>Publications</h1>
 
-This is a selection of my publications. Please also see my <a href="https://scholar.google.se/citations?user=m_n28oAAAAAJ&amp;hl=en">page on Google Scholar</a>.
 
-
-{% for prio in (0..1) %}
+{% assign globalcounter = 0 %}
+{% assign colcounter = 0 %}
 {% for p in site.categories.publications %}
-{% if p.tags contains "prio" %}
-{% if prio == 1 %}
-{% continue %}
-{% endif %}
-{% else %}
-{% if prio == 0 %}
-{% continue %}
-{% endif %}
-{% endif %}
+  {% assign currentdate = p.date | date: "%Y" %}
+  {% assign colno = colcounter | modulo: 3 %}
+  {% if currentdate != date or colno == 0 %}
+    {% if globalcounter != 0 %}
+            </div>
+    {% endif %}
+    {% if currentdate != date %}
+            <h3>{{ currentdate }}</h3>
+      {% assign colcounter = 0 %}
+    {% endif %}
+            <div class="table-row">
+    {% assign date = currentdate %}
+  {% endif %}
 
-<div class="fullwidth-articlelistitem">
-<div style="width: 45%; display: inline-block;">
-<a href="{% if p.overwriteurl %}{{ p.overwriteurl }}{% else %}{{ p.url }}{% endif %}"><h2> {{ p.title }} </h2></a>
+  {% assign colorindex = globalcounter | modulo: filtercolors.size %}
+  {% assign color = filtercolors[colorindex] %}
+              <div class="feature" style="margin: 0px; padding: 0px;">
+                <div class="overlay-container">
+  {% if p.background-image %}
+                  <div class="overlay-box">
+                    <img src="{{ p.background-image }}" style="width: 100%; height: 100%;" alt="" />
+                  </div>
+  {% else %}
+                  <div class="overlay-box">
+                    <img src="{{ p.imgsrc }}" style="width: 100%; height: 100%;" alt="" />
+                  </div>
+  {% endif %}
+                  <div class="overlay-box" style="background-color: {{ color }};">
+                    &nbsp;
+                  </div>
 
-<p>
-
-{{ p.shortversion }}
-</p>
-
-<p>
-<em>{{ p.venue }}</em><br />
-<em>{{ p.authors }}</em><br />
-{% if p.pdf %}
-<a href="{{ p.pdf }}">PDF Fulltext</a>
-{% endif %}
-{% if p.bibtex %}
-<a href="javascript:void(null);" onclick="showBibtex(event, '{{ p.bibtex }}')">bibtex</a>.
-{% endif %}
-</p>
-</div><div style="width: 45%; display: inline-block;">
-<img src="{{ p.imgsrc }}" alt="{{ p.imgalt }}" style="max-width: 400px; max-height: 300px; margin: auto;" />
-</div></div>
+                  <div class="overlay-box" style="text-align: left;">
+                    <div style="padding: 20px;">
+                      <span style="font-size: 26px; font-weight: bold; color: #ffffff;">{{ p.title }}</span>
+                    </div>
+                  </div>
+                  <div class="overlay-footnote">
+                    <p class="overlay-footnote">{{ p.venueshort }}</p>
+                  </div>
+                  <div id="div-abstract-{{- globalcounter -}}" class="overlay-box overlay-highlight" style="visibility: hidden;">
+                    <p><strong>{{ p.title }}:</strong> {{ p.shortversion }}</p>
+                    <div class="overlay-footnote">
+                      <p class="overlay-footnote">Click to read more!</p>
+                    </div>
+                  </div>
+                  <div onmouseover="document.getElementById('div-abstract-{{- globalcounter -}}').style.visibility = 'visible';" onmouseout="document.getElementById('div-abstract-{{- globalcounter -}}').style.visibility = 'hidden';" class="overlay-box">
+                    <a class="overlay-box-link-whole-box" href="{% if p.overwriteurl %}{{ p.overwriteurl }}{% else %}{{ p.url }}{% endif %}"><span></span></a>
+                    <!-- div:background-blend-mode: lighten; img: filter: brightness(1.5);  //-->
+                  </div>
+                </div>
+              </div>
+  {% capture globalcounter %}{{ globalcounter | plus:1 }}{% endcapture %}
+  {% capture colcounter %}{{ colcounter | plus:1 }}{% endcapture %}
 {% endfor %}
-{% endfor %}
+            </div>
+          </div>
+        </div>
+      </section>
 
-</div>
-</div>
-</section>
+
 

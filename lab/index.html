@@ -1,57 +1,11 @@
----
-title: Deep learning lab - Olof Mogren
-layout: default
----
-
-
-      <section>
-        <div class="inner">
-          <div class="block block-copy">
-<h2>Deep learning lab</h2>
-<p>The following students have written their master's theses under my supervision.</p>
-
-{% for post in site.categories.students %}
-{% assign currentdate = post.date | date: "%Y" %}
-{% if currentdate != date %}
-{% if forloop.first %}
-{% else %}
-        </div>
-      </div>
-    </div>
-  </section>
-{% endif %}
-<h3 id="y{{currentdate}}">{{ currentdate }}</h3>
-  <section class="features">
-    <div class="inner">
-      <div class="feature-grid">
-        <div class="table-row">
-{% assign date = currentdate %}
-{% endif %}
-          <div class="feature">
-<p>{{ post.authors }}:<br />
-<em>{{ post.title }}</em>
-<br />Defended {{ post.date | date: "%Y-%m-%d" }}
-{% if post.shortversion %}
-<br />{{ post.shortversion }}
-{% endif %}
-{% if post.externallink %}
-<br /><a href="{{ post.externallink }}"><em>More info ({{ post.externallink | remove_first: 'http://' | remove_first: 'https://' | split:"/" | first }})</em></a>
-{% endif %}
-{% if post.longversion %}
-<br /><a href="{{ post.url }}">(<em>read more </em>)</a>
-{% endif %}
-</p>
-          </div>
-{% if forloop.last%}
-        </div>
-      </div>
-    </div>
-  </section>
-{% endif %}
-{% endfor %}
-
-          </div>
-        </div>
-      </section>
-
-
+<html>
+  <head>
+    <meta http-equiv="refresh" content="0;URL='/group/'" />
+  </head>
+  <body>
+  <h1>
+    Research group
+  </h1>
+  If nothing happens, click here: <a href="/group/">Group page</a>
+  </body>
+</html>

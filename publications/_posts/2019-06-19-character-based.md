@@ -28,9 +28,10 @@ demo relation, but generalizes to words with varying inflectional
 patterns, and can abstract away from the orthographic level to the level
 of morphological forms.
 </p>
-<p><a href="/publications/2017/character-based/">Preliminary version appeared in Subword & Character Level Models in NLP (SCLeM) workshop at EMNLP 2017 in Copenhagen, Denmark, September 7</a>.</p>
+<p><a href=\"/publications/2017/character-based/\">Preliminary version appeared in Subword & Character Level Models in NLP (SCLeM) workshop at EMNLP 2017 in Copenhagen, Denmark, September 7</a>.</p>
 <h2>Source code</h2><p>The source code used for the experiments can be downloaded from <a href=\"https://github.com/olofmogren/char-rnn-wordrelations\">https://github.com/olofmogren/char-rnn-wordrelations</a>.</p>"
-venue: To appear in <a href="http://jlm.ipipan.waw.pl/index.php/JLM/">Journal of language modelling</a>.
+venue: <a href="http://jlm.ipipan.waw.pl/index.php/JLM/">Journal of language modelling</a>.
+venueshort: JLM 2019
 authors: Olof Mogren, Richard Johansson
 bibtex: '@inproceedings{mogren2019character, \n title={Character-based recurrent neural networks for morphological relational reasoning}, \n author={Olof Mogren and Richard Johansson}, \n booktitle={Journal of Language Modelling}, \n year={2019}}'
 permalink: /publications/2019/character-based/

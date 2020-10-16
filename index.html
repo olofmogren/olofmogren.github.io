@@ -1,7 +1,38 @@
 ---
 layout: default
-title: Olof Mogren - Researcher, Speaker, Blogger. Deep Learning, NLP, Sequence Modelling.
+title: Olof Mogren, PhD - Deep Learning Researcher.
 ---
+
+      <section>
+        <div class="inner">
+          <div>
+<p>
+<img style="float: right; clear: right; margin: 10px; width: 30%; margin-right: 0px;" src="graphics/mogren-2018-julia-sjoberg.png" /> 
+I am a senior research scientist at <em>RISE Research institutes of Sweden</em>
+heading <em><a href="/group/">The Deep Learning Research Group in Gothenburg</a></em>. I have a <a href="/phd/">PhD from Chalmers University of Technology</a>, and I am the organizer of <em><a href="https://ri.se/en/education/learning-machines-seminars/">RISE Learning Machines Seminars</a></em>.
+</p><p>
+I work on problems within applied AI where privacy, fairness, and efficiency is central.
+This includes work on <a href="https://arxiv.org/abs/2010.02056">federated learning</a>,
+<a href="https://arxiv.org/abs/2006.08039">privacy-preserving representation learning</a>, and
+<a href="https://arxiv.org/abs/1611.09904">generative adversarial netorks</a>.
+The data modality varies, such as
+<a href="/summarization/">natural language</a>,
+<a href="/publications/2019/semantic/">vision</a>, and
+<a href="https://arxiv.org/abs/2006.09114">speech</a>.
+</p>
+<p>
+Some of our ongoing projects include
+<em>The Federated Learning Testbed</em>,
+<em>The Swedish Medical Data Lab</em>,
+<em>AI Driven Financial Rish Assessment of Circular Bussiness Models,</em>
+and <em>Smart Fire Detection</em>.
+</p>
+<p>
+Read more <a href="/about/">about me</a>, or <a href="/group/">about my research group</a>.
+</p>
+          </div>
+        </div>
+      </section>
 
 
 {% for p in site.categories.talks%}
@@ -12,7 +43,7 @@ title: Olof Mogren - Researcher, Speaker, Blogger. Deep Learning, NLP, Sequence 
 
       <section class="research-topic">
         <div class="inner">
-          <div class="block block-copy">
+          <div>
 
         <figure style="max-width: 40%; margin-top: 30px; {% cycle 'float: left', 'float: right' %}"><img src="{{ p.imgsrc }}" alt="{{ p.imgalt }}" style="max-width: 100%; " /></figure>
 <a href="{% if p.overwriteurl %}{{ p.overwriteurl }}{% else %}{{ p.url }}{% endif %}"><h2> {{ p.title }} </h2></a>
@@ -29,34 +60,80 @@ title: Olof Mogren - Researcher, Speaker, Blogger. Deep Learning, NLP, Sequence 
         </div>
       </section>
 {% endfor %}
-{% for p in site.categories.publications %}
-{% if p.tags contains "frontpage" %}
-{% else %}
-{% continue %}
-{% endif %}
 
-      <section class="research-topic">
+{%- if false -%}
+
+The following is the code for laying out publications in a grid.
+Lots of divs on top of each other.
+
+{%- endif -%}
+
+{% assign filtercolors = "rgba(220,200,160,.5), rgba(200,160,220,.5), rgba(140,160,200,.5), rgba(140,220,200,.5), rgba(140,220,220,.5), rgba(200,160,220,.5)" | split: ", " %}
+{% if false %} light colors {% endif %}
+{% assign filtercolors = "rgba(80,40,110,.7), rgba(30,110,80,.7), rgba(30,40,100,.7), rgba(244,170,90,.7), rgba(110,80,40,.7), rgba(30,110,110,.7), rgba(100,40,110,.7)" | split: ", " %}
+
+      <section class="features">
         <div class="inner">
-          <div class="block block-copy">
+          <div class="feature-grid">
 
-        <figure style="max-width: 40%; margin-top: 30px; {% cycle 'float: left', 'float: right' %}"><img src="{{ p.imgsrc }}" alt="{{ p.imgalt }}" style="max-width: 100%; " /></figure>
-<a href="{% if p.overwriteurl %}{{ p.overwriteurl }}{% else %}{{ p.url }}{% endif %}"><h2> {{ p.title }} </h2></a>
+{% assign counter = 0 %}
+{% for p in site.categories.publications %}
+  {% if p.tags contains "frontpage" %}
+    {% assign colno = counter | modulo: 3 %}
+    {% if colno == 0 %}
+      {% if counter != 0 %}
+            </div>
+      {% endif %}
+            <div class="table-row">
+    {% endif %}
+    {% assign colorindex = counter | modulo: filtercolors.size %}
+    {% assign color = filtercolors[colorindex] %}
+              <div class="feature" style="margin: 0px; padding: 0px;">
+                <div class="overlay-container">
+    {% if p.background-image %}
+                  <div class="overlay-box">
+                    <img src="{{ p.background-image }}" style="width: 100%; height: 100%;" alt="" />
+                  </div>
+    {% else %}
+                  <div class="overlay-box">
+                    <img src="{{ p.imgsrc }}" style="width: 100%; height: 100%;" alt="" />
+                  </div>
+    {% endif %}
+                  <div class="overlay-box" style="background-color: {{ color }};">
+                    &nbsp;
+                  </div>
 
-<p>
-{{ p.shortversion }}
-</p>
-
-<p>
-<em>{{ p.venue }}</em><br />
-<em>{{ p.authors }}</em><br />
-</p>
+                  <div class="overlay-box" style="text-align: left;">
+                    <div style="padding: 20px;">
+                      <span style="font-size: 26px; font-weight: bold; color: #ffffff;">{{ p.title }}</span>
+                    </div>
+                  </div>
+                  <div class="overlay-footnote">
+                    <p class="overlay-footnote">{{ p.venueshort }}</p>
+                  </div>
+                  <div id="div-abstract-{{- counter -}}" class="overlay-box overlay-highlight" style="visibility: hidden;">
+                    <p><strong>{{ p.title }}:</strong> {{ p.shortversion }}</p>
+                    <div class="overlay-footnote">
+                      <p class="overlay-footnote">Click to read more!</p>
+                    </div>
+                  </div>
+                  <div onmouseover="document.getElementById('div-abstract-{{- counter -}}').style.visibility = 'visible';" onmouseout="document.getElementById('div-abstract-{{- counter -}}').style.visibility = 'hidden';" class="overlay-box">
+                    <a class="overlay-box-link-whole-box" href="{% if p.overwriteurl %}{{ p.overwriteurl }}{% else %}{{ p.url }}{% endif %}"><span></span></a>
+                    <!-- div:background-blend-mode: lighten; img: filter: brightness(1.5);  //-->
+                  </div>
+                </div>
+              </div>
+    {% capture counter %}{{ counter | plus:1 }}{% endcapture %}
+  {% endif %}
+{% endfor %}
+            </div>
           </div>
         </div>
       </section>
-{% endfor %}
 
 
 
+{% if false %}
 
       <section class="features">
         <div class="inner">
@@ -92,10 +169,10 @@ title: Olof Mogren - Researcher, Speaker, Blogger. Deep Learning, NLP, Sequence 
 <a href="http://users.ics.aalto.fi/praiko/" title="Tapani Raiko's web page at aalto.fi">Tapani Raiko from Aalto University</a>.</p>
               </div>
               <div class="feature">
-<a href="/students"><h3>Students</h3></a>
+<a href="/group"><h3>Students</h3></a>
 <p>The following students recently wrote their master's theses under my supervision.</p>
 
-{% for post in site.categories.students %}
+{% for post in site.categories.group %}
 {% assign currentdate = post.date | date: "%Y" %}
 {% if currentdate != date %}
 {% if forloop.first %}
@@ -111,20 +188,24 @@ title: Olof Mogren - Researcher, Speaker, Blogger. Deep Learning, NLP, Sequence 
 {% endif %}
 </p>
 {% endfor %}
-<p><a href="/students">More students.</a></p>
+<p><a href="/group">Research group.</a></p>
 
               </div>
             </div>
           </div>
         </div>
       </section>
+{% endif %}
+
+
       <section>
         <div class="inner">
-          <div class="block block-copy">
+          <div>
+
 <a href="/talks/"><h3>Recent talks</h3></a>
 
 <ul>
-{% for post in site.categories.talks limit:5 %}
+{% for post in site.categories.talks limit:3 %}
 <li>
 <p>
 {% if post.imgsrc %}
@@ -132,8 +213,6 @@ title: Olof Mogren - Researcher, Speaker, Blogger. Deep Learning, NLP, Sequence 
 {% endif %}
 <strong>{% if post.longversion or post.pdf %}<a href="{{ post.url }}">{% elsif post.overwriteurl %}<a href="{{ post.overwriteurl }}">{% endif %}{{ post.date | date: "%Y-%m-%d" }}: {{ post.title }}{% if post.longversion or post.pdf or post.overwriteurl %}</a>{% endif %}</strong><br />
 (<em>{{ post.venue }}</em>)
-<br />
-{{ post.url }}
 <br />
 {{ post.overwriteurl }}
 <br />
@@ -149,26 +228,4 @@ title: Olof Mogren - Researcher, Speaker, Blogger. Deep Learning, NLP, Sequence 
           </div>
         </div>
       </section>
-      <section>
-        <div class="inner">
-          <div class="block block-copy">
-<a href="/about/"><h2>About me</h2></a>
-<p>I am a senior research scientist at RISE Research institutes of Sweden
-and head of the deep learning research group in Gothenburg.</p>
-
-<p><img style="float: right; clear: right; margin: 10px;" src="graphics/mogren-2018-julia-sjoberg.png" /> March 23, 2018, I defended my PhD thesis, <a href="/phd/">Representation learning for natural language (click for more info)</a>.
-</p><p>
-During 2016-2017, I was the organizer of <em>Chalmers machine learning seminars</em>.
-</p><p>
-In 2016, I taught a <a href="http://www.cse.chalmers.se/research/lab/courses/deep-learning/">PhD course in Deep Learning</a>, together with Mikael Kågebäck and Fredrik Johansson.
-I have also taught 
-<a href="http://www.cse.chalmers.se/research/lab/courses/algorithms-for-machine-learning-tda-231/">Algorithms for Machine Learning and Inference</a>,
-<a href="https://ai-course-tin172-dit410.github.io/">AI</a>
-(specifically the parts about probabilistic methods, including probabilistic graphical models),
-Object Oriented Programming, Data Structures, and Algorithms (<a href="http://www.cse.chalmers.se/~ptr/alg.html">basic course</a>, and <a href="http://www.cse.chalmers.se/~huangch/course/advanced_algorithm_2015.html">advanced course</a>).</p>
-<p><a href="/about">Read more about me.</a></p>
-          </div>
-        </div>
-      </section>
-
 

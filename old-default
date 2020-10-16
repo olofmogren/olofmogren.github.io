@@ -45,8 +45,8 @@
           </div>
           <div id="groups" style="margin-right: 80px;">
             <div id="group1" style="z-index: 5;">
-              <a href="/publications/" class="navlink">Publications</a>
               <a href="/talks/" class="navlink">Talks</a>
+              <a href="/publications/" class="navlink">Publications</a>
             </div>
             <div id="group2" style="z-index: 5;">
               <a href="/about/" class="navlink">About</a>
@@ -66,16 +66,18 @@
         <pre id="PopUpText">TEXT</pre>
         <input name="close" type="button" value="Close" onclick="document.getElementById('PopUp').style.display = 'none';" />
       </div>
-<!-- content goes here: //-->
 
   {{ content }}
 
-<!-- contend ends here //-->
-
         <section class="foot">
-          <strong>Olof Mogren, PhD,</strong> RISE Research institutes of Sweden<br /><br />
+          <strong>Olof Mogren</strong> RISE Research institutes of Sweden<br /><br />
+          <a href="https://www.linkedin.com/in/olof-mogren-5392b452" title="Follow me on LinkedIn"><img src="/graphics/logos/linkedin_logo_42x40-white.png" alt="LinkedIn" /></a>&nbsp;<!--
+          //--><a href="https://twitter.com/olofmogren" title="Follow me on Twitter"><img src="/graphics/logos/twitter_logo_49x40-white.png" alt="Twitter" /></a>&nbsp;<!--
+          <a href="https://flokk.no/i/9be9cd2a348d" title="Follow me on Diaspora"><img src="/graphics/logos/diaspora_logo_42x40-white.png" alt="Diaspora" /></a>&nbsp;
+          //--><a href="http://mogren.one/feed.xml" title="Follow my posts with RSS."><img src="/graphics/logos/rss.svg" style="width: 40px; height: 40px;" alt="Atom/RSS Feed" /></a>
         </section>
 
+      </div><!-- main content //-->
     </div>
 
 <!-- Start of StatCounter Code for Default Guide -->

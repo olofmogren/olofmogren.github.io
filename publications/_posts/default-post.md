@@ -9,6 +9,7 @@ longversion:
 shortversion: 
 
 venue: 
+venueshort: 
 authors: 
 bibtex: 
 permalink:

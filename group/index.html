@@ -1,0 +1,76 @@
+---
+title: Deep learning research group - Olof Mogren, PhD
+layout: default
+---
+
+
+      <section>
+        <div class="inner">
+          <div>
+<h2>Research group</h2>
+
+<p style="text-align: center;"><img src="/graphics/mogren-2018-julia-sjoberg.png" style="height: 200px;" alt="Olof Mogren" /><img src="/graphics/martinsson.jpg" style="height: 200px;" alt="John Martinsson" /><img src="/graphics/listozec.jpeg" style="height: 200px;" alt="Edvin Listo Zec" /><img src="/graphics/suetfeld.jpeg" style="height: 200px;" alt="Leon Ren&eacute; S&uuml;tfeld" /></p>
+
+<p>&nbsp;</p>
+
+<p>I have the honour to work with the following collection of brilliant people in my research group.</p>
+
+<ul>
+  <li>John Martinsson</li>
+  <li>Edvin Listo Zec</li>
+  <li>Leon Ren&eacute; S&uuml;tfeld</li>
+</ul>
+
+
+<p>Are you looking to write a master thesis related to machine learning?
+Several different projects related to machine learning awaits skilled students.
+</p>
+<p>The following students have written their master's theses under my supervision.</p>
+
+{% for post in site.categories.group %}
+{% if post.tags contains "masterthesis" %}
+{% assign currentdate = post.date | date: "%Y" %}
+{% if currentdate != date %}
+{% if forloop.first %}
+{% else %}
+        </div>
+      </div>
+    </div>
+  </section>
+{% endif %}
+<h3 id="y{{currentdate}}">{{ currentdate }}</h3>
+  <section class="features">
+    <div class="inner">
+      <div class="feature-grid">
+        <div class="table-row">
+{% assign date = currentdate %}
+{% endif %}
+          <div class="feature">
+<p>{{ post.authors }}:<br />
+<em>{{ post.title }}</em>
+<br />Defended {{ post.date | date: "%Y-%m-%d" }}
+{% if post.shortversion %}
+<br />{{ post.shortversion }}
+{% endif %}
+{% if post.externallink %}
+<br /><a href="{{ post.externallink }}"><em>More info ({{ post.externallink | remove_first: 'http://' | remove_first: 'https://' | split:"/" | first }})</em></a>
+{% endif %}
+{% if post.longversion %}
+<br /><a href="{{ post.url }}">(<em>read more </em>)</a>
+{% endif %}
+</p>
+          </div>
+{% endif %}
+{% if forloop.last%}
+        </div>
+      </div>
+    </div>
+  </section>
+{% endif %}
+{% endfor %}
+
+          </div>
+        </div>
+      </section>
+
+
