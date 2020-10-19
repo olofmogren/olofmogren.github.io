@@ -31,41 +31,7 @@ title: Olof Mogren, PhD - Deep Learning Researcher.
 
   {% assign colorindex = globalcounter | modulo: filtercolors.size %}
   {% assign color = filtercolors[colorindex] %}
-              <div class="feature" style="margin: 0px; padding: 0px;">
-                <div class="overlay-container">
-  {% if p.background-image %}
-                  <div class="overlay-box">
-                    <img src="{{ p.background-image }}" style="width: 100%; height: 100%;" alt="" />
-                  </div>
-  {% else %}
-                  <div class="overlay-box">
-                    <img src="{{ p.imgsrc }}" style="width: 100%; height: 100%;" alt="" />
-                  </div>
-  {% endif %}
-                  <div class="overlay-box" style="background-color: {{ color }};">
-                    &nbsp;
-                  </div>
-
-                  <div class="overlay-box" style="text-align: left;">
-                    <div style="padding: 20px;">
-                      <span style="font-size: 26px; font-weight: bold; color: #ffffff;">{{ p.title }}</span>
-                    </div>
-                  </div>
-                  <div class="overlay-footnote">
-                    <p class="overlay-footnote">{{ p.venueshort }}</p>
-                  </div>
-                  <div id="div-abstract-{{- globalcounter -}}" class="overlay-box overlay-highlight" style="visibility: hidden;">
-                    <p><strong>{{ p.title }}:</strong> {{ p.shortversion }}</p>
-                    <div class="overlay-footnote">
-                      <p class="overlay-footnote">Click to read more!</p>
-                    </div>
-                  </div>
-                  <div onmouseover="document.getElementById('div-abstract-{{- globalcounter -}}').style.visibility = 'visible';" onmouseout="document.getElementById('div-abstract-{{- globalcounter -}}').style.visibility = 'hidden';" class="overlay-box">
-                    <a class="overlay-box-link-whole-box" href="{% if p.overwriteurl %}{{ p.overwriteurl }}{% else %}{{ p.url }}{% endif %}"><span></span></a>
-                    <!-- div:background-blend-mode: lighten; img: filter: brightness(1.5);  //-->
-                  </div>
-                </div>
-              </div>
+  {% include publication.html p=p counter=counter color=color %} 
   {% capture globalcounter %}{{ globalcounter | plus:1 }}{% endcapture %}
   {% capture colcounter %}{{ colcounter | plus:1 }}{% endcapture %}
 {% endfor %}

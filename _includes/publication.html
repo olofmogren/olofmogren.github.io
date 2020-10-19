@@ -1,0 +1,36 @@
+              <div class="feature" style="margin: 0px; padding: 0px;">
+                <div class="overlay-container">
+    {% if include.p.background-image %}
+                  <div class="overlay-box">
+                    <img src="{{ include.p.background-image }}" style="width: 100%; height: 100%;" alt="" />
+                  </div>
+    {% else %}
+                  <div class="overlay-box">
+                    <img src="{{ include.p.imgsrc }}" style="width: 100%; height: 100%;" alt="" />
+                  </div>
+    {% endif %}
+                  <div class="overlay-box" style="background-color: {{ include.color }};">
+                    &nbsp;
+                  </div>
+
+                  <div class="overlay-box" style="text-align: left;">
+                    <div style="padding: 20px;">
+                      <span style="font-size: 26px; font-weight: bold; color: #ffffff;">{{ include.p.title }}</span>
+                    </div>
+                  </div>
+                  <div class="overlay-footnote">
+                    <p class="overlay-footnote">{{ include.p.venueshort }}</p>
+                  </div>
+                  <div id="div-abstract-{{- include.counter -}}" class="overlay-box overlay-highlight" style="visibility: hidden;">
+                    <p><strong>{{ include.p.title }}:</strong> {{ include.p.shortversion }}</p>
+                    <div class="overlay-footnote">
+                      <p class="overlay-footnote">Click to read more!</p>
+                    </div>
+                  </div>
+                  <div onmouseover="document.getElementById('div-abstract-{{- include.counter -}}').style.visibility = 'visible';" onmouseout="document.getElementById('div-abstract-{{- include.counter -}}').style.visibility = 'hidden';" class="overlay-box">
+                    <a class="overlay-box-link-whole-box" href="{% if include.p.overwriteurl %}{{ include.p.overwriteurl }}{% else %}{{ include.p.url }}{% endif %}"><span></span></a>
+                    <!-- div:background-blend-mode: lighten; img: filter: brightness(1.5);  //-->
+                  </div>
+                </div>
+              </div>
+
