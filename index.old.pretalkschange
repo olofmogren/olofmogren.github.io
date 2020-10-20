@@ -74,9 +74,7 @@ Lots of divs on top of each other.
 
       <section class="features">
         <div class="inner">
-          <h3><a href="/publications/">Publications</a></h3>
           <div class="feature-grid">
-            <div class="table-row">
 
 {% assign counter = 0 %}
 {% for p in site.categories.publications %}
@@ -85,14 +83,12 @@ Lots of divs on top of each other.
     {% if colno == 0 %}
       {% if counter != 0 %}
             </div>
-            <div class="table-row">
       {% endif %}
+            <div class="table-row">
     {% endif %}
     {% assign colorindex = counter | modulo: filtercolors.size %}
     {% assign color = filtercolors[colorindex] %}
-
-    {% include publication.html p=p counter=counter color=color category='publications' %}
-
+    {% include publication.html p=p counter=counter color=color %}
     {% capture counter %}{{ counter | plus:1 }}{% endcapture %}
   {% endif %}
 {% endfor %}
@@ -173,30 +169,26 @@ Lots of divs on top of each other.
           <div>
 
 <a href="/talks/"><h3>Recent talks</h3></a>
-          </div>
 
-          <div class="feature-grid">
-            <div class="table-row">
+<ul>
+{% for post in site.categories.talks limit:3 %}
+<li>
+<p>
+{% if post.imgsrc %}
+<figure style="float: right; clear: right; max-width: 40%; max-height: 7em;"><img src="{{ post.imgsrc }}" style="max-width: 100%; max-height: 7em; width: auto;" alt="" /></figure>
+{% endif %}
+<strong>{% if post.longversion or post.pdf %}<a href="{{ post.url }}">{% elsif post.overwriteurl %}<a href="{{ post.overwriteurl }}">{% endif %}{{ post.date | date: "%Y-%m-%d" }}: {{ post.title }}{% if post.longversion or post.pdf or post.overwriteurl %}</a>{% endif %}</strong><br />
+(<em>{{ post.venue }}</em>)
+<br />
+{{ post.overwriteurl }}
+<br />
+{{ post.shortversion }}
 
-{% assign counter = 0 %}
-{% for p in site.categories.talks limit:3 %}
-  {% assign colno = counter | modulo: 3 %}
-  {% if colno == 0 and counter != 0 %}
-            </div>
-            <div class="table-row">
-  {% endif %}
-  {% assign colorindex = counter | modulo: filtercolors.size %}
-  {% assign color = filtercolors[colorindex] %}
+</p>
+</li>
 
-  {% include publication.html p=p counter=counter color=color catecory='talks' %}
-
-  {% capture counter %}{{ counter | plus:1 }}{% endcapture %}
 {% endfor %}
-            </div>
-          </div>
-
-
-          <div>
+</ul>
 
 <p><a href="/talks/">More info and more talks.</a></p>
           </div>
