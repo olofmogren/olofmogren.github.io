@@ -1,7 +1,8 @@
-{% if include.category == 'publication' %}
-{% assign footer = include.p.venueshort %}
+{{ include.category }}
+{% if include.category == 'publications' %}
+  {% assign footer = include.p.venueshort %}
 {% else %}
-{% assign footer = include.p.date | date: "%Y-%m-%d" %}
+  {% assign footer = include.p.date | date: "%Y-%m-%d" %}
 {% endif %}
 
               <div class="feature" style="margin: 0px; padding: 0px;">

@@ -187,7 +187,7 @@ Lots of divs on top of each other.
   {% assign colorindex = counter | modulo: filtercolors.size %}
   {% assign color = filtercolors[colorindex] %}
 
-  {% include overlay-box.html p=p counter=counter color=color catecory='talks' %}
+  {% include overlay-box.html p=p counter=counter color=color category='talks' %}
 
   {% capture counter %}{{ counter | plus:1 }}{% endcapture %}
 {% endfor %}
