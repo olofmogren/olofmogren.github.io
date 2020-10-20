@@ -3,6 +3,7 @@ title: "Swedish symposium on deep learning"
 layout: talks
 tags:
  - default
+box-bg-imgsrc: /graphics/illustrations/2018-09-05/cega_570-grey.png
 imgsrc: /graphics/illustrations/2018-09-05/cega_570_wide.png
 imgalt: Clarke error grid analysis on blood glucose predictions from our paper.
 longversion: "
