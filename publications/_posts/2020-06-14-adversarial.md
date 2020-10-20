@@ -4,7 +4,7 @@ layout: posts
 tags:
  - prio
  - frontpage
-background-image: 
+box-bg-imgsrc: 
 imgsrc: /publications/2020/adversarial/anonymizedpeople.png
 imgalt: "Anonymized versions of images from CELEBA."
 shortversion: "
