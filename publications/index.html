@@ -31,7 +31,7 @@ title: Olof Mogren, PhD - Deep Learning Researcher.
 
   {% assign colorindex = globalcounter | modulo: filtercolors.size %}
   {% assign color = filtercolors[colorindex] %}
-  {% include publication.html p=p counter=counter color=color %} 
+  {% include overlay-box.html p=p counter=counter color=color category='publications' %} 
   {% capture globalcounter %}{{ globalcounter | plus:1 }}{% endcapture %}
   {% capture colcounter %}{{ colcounter | plus:1 }}{% endcapture %}
 {% endfor %}
