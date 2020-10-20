@@ -74,7 +74,7 @@ Lots of divs on top of each other.
 
       <section class="features">
         <div class="inner">
-          <h3><a href="/publications/">Publications</a></h3>
+          <a href="/publications/"><h3>Publications</h3></a>
           <div class="feature-grid">
             <div class="table-row">
 
@@ -91,7 +91,7 @@ Lots of divs on top of each other.
     {% assign colorindex = counter | modulo: filtercolors.size %}
     {% assign color = filtercolors[colorindex] %}
 
-    {% include publication.html p=p counter=counter color=color category='publications' %}
+    {% include overlay-box.html p=p counter=counter color=color category='publications' %}
 
     {% capture counter %}{{ counter | plus:1 }}{% endcapture %}
   {% endif %}
@@ -171,8 +171,7 @@ Lots of divs on top of each other.
       <section>
         <div class="inner">
           <div>
-
-<a href="/talks/"><h3>Recent talks</h3></a>
+            <a href="/talks/"><h3>Recent talks</h3></a>
           </div>
 
           <div class="feature-grid">
@@ -188,17 +187,11 @@ Lots of divs on top of each other.
   {% assign colorindex = counter | modulo: filtercolors.size %}
   {% assign color = filtercolors[colorindex] %}
 
-  {% include publication.html p=p counter=counter color=color catecory='talks' %}
+  {% include overlay-box.html p=p counter=counter color=color catecory='talks' %}
 
   {% capture counter %}{{ counter | plus:1 }}{% endcapture %}
 {% endfor %}
             </div>
-          </div>
-
-
-          <div>
-
-<p><a href="/talks/">More info and more talks.</a></p>
           </div>
         </div>
       </section>
