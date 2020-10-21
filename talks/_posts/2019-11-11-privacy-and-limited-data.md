@@ -6,18 +6,12 @@ tags:
 imgsrc: /graphics/illustrations/2019-11-11/adversarial-privacy.png
 imgalt: Adversarial privacy.
 longversion: "
-At this meetup, Olof Mogren talks on the topic of privacy and limited data. Olof Mogren is heading the deep learning research group in Gothenburg at RISE Research Institutes of Sweden. He received his PhD in computer science from the Chalmers University of Technology in 2018, with a thesis on deep representation learning for natural language processing. See the abstract below for more details on his coming presentation.
+</p><p>
+Many areas of advanced data analytics have seen astonishing progress with deep learning. Deep neural networks now power systems that excel in image processing, playing ancient board-games, and interpreting natural language. These networks have a high learning capacity, but they require large amounts of training data to come to their full potential. What choices do we have when the required amounts of data can not be met? And how do we ensure privacy for individuals that may be part of the datasets that underlie our conclusions?
 
 <div style=\"float: right; clear: right; max-width: 60%; margin: 4em;\" />
 <iframe width=\"360\" height=\"220\" src=\"https://www.youtube.com/embed/-yAAJJ84cwU\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>
 </div>
-
-</p><p>
-Our hosts for the evening will be AIIoS. AI Innovation of Sweden is a national centre for applied AI research and innovation, intending to strengthen the competitiveness of the Swedish industry and welfare. AI Innovation of Sweden is a national and neutral initiative, functioning as an engine in the Swedish AI ecosystem. The focus is on accelerating the implementation of AI through sharing knowledge and data and collaborative projects
-
-</p><p>
-<strong>Privacy and limited data</strong>
-Many areas of advanced data analytics have seen astonishing progress with deep learning. Deep neural networks now power systems that excel in image processing, playing ancient board-games, and interpreting natural language. These networks have a high learning capacity, but they require large amounts of training data to come to their full potential. What choices do we have when the required amounts of data can not be met? And how do we ensure privacy for individuals that may be part of the datasets that underlie our conclusions?
 
 </p><p>
 One strategy to deal with limited data is transfer learning: the process of training a model in two stages: first using a large generic dataset, and then on data from the target domain where the model will later be used and evaluated. For instance, you may pre-train a model for classification on a large and easily available dataset such as Imagenet, and then perform the fine-tuning on a different dataset, or even on a different task such as semantic segmentation. For convolutional neural networks in computer vision applications, this kind of initialization has been successfully employed for years, and similar approaches have now started to emerge for applications in natural language processing. The Transformer-based architectures such as BERT and GPT-2 can now be trained in similar ways for language applications.
