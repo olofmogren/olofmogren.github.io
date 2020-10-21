@@ -15,5 +15,6 @@ permalink:
 pdf: 
 overwriteurl: 
 externallink: http://www.cse.chalmers.se/edu/course/CSE-seminarier/
+redirect_from: /talks/2015/11/05/deep-learning-and-algorithms.html
 ---
 

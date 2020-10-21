@@ -1,6 +1,18 @@
 name: Olof Mogren
 baseurl: /
-# permalink: /:categories/:year/:slug/
+permalink: /:categories/:year/:slug/
 gems:
   - jekyll-feed
 
+plugins:
+  - jekyll-redirect-from
+whitelist:
+  - jekyll-redirect-from
+
+defaults:
+  -
+    scope:
+      path: 'blog'
+      type: posts
+    values:
+      permalink: /:categories/:year-:month-:day/:slug/

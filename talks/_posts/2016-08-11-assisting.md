@@ -15,5 +15,6 @@ permalink:
 pdf: 
 overwriteurl: /publications/2016/assisting/
 externallink: 
+redirect_from: /talks/2016/08/11/assisting.html
 ---
 

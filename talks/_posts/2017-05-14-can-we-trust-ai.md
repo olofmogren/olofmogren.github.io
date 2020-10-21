@@ -16,5 +16,6 @@ permalink:
 pdf: /talks/slides/mogren-2017-05-14-can-we-trust-ai.pdf
 overwriteurl: 
 externallink: "http://www.vetenskapsfestivalen.se/"
+redirect_from: /talks/2017/05/14/can-we-trust-ai.html
 ---
 

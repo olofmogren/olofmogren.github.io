@@ -25,5 +25,6 @@ permalink:
 pdf: /talks/slides/mogren-2017-02-02-nips-takeaways.pdf
 overwriteurl: 
 externallink: "http://www.cse.chalmers.se/research/lab/seminars/"
+redirect_from: /talks/2017/02/02/nips-takeaways.html
 ---
 

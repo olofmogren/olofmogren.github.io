@@ -1,20 +1,22 @@
 {% if include.category == 'publications' %}
   {% assign footer = include.p.venueshort %}
+{% elsif include.category == 'masterthesis' %}
+  {% assign footer = include.p.date | date: "%Y" %}
 {% else %}
   {% assign footer = include.p.date | date: "%Y-%m-%d" %}
 {% endif %}
 
               <div class="feature" style="margin: 0px; padding: 0px;">
                 <div class="overlay-container">
-    {% if include.p.box-bg-imgsrc %}
+{% if include.p.box-bg-imgsrc %}
                   <div class="overlay-box">
                     <img src="{{ include.p.box-bg-imgsrc }}" style="width: 100%; height: 100%;" alt="" />
                   </div>
-    {% else %}
+{% else %}
                   <div class="overlay-box">
                     <img src="{{ include.p.imgsrc }}" style="width: 100%; height: 100%;" alt="" />
                   </div>
-    {% endif %}
+{% endif %}
                   <div class="overlay-box" style="background-color: {{ include.color }};">
                     &nbsp;
                   </div>
@@ -22,6 +24,10 @@
                   <div class="overlay-box" style="text-align: left;">
                     <div style="padding: 20px;">
                       <span style="font-size: 26px; font-weight: bold; color: #ffffff;">{{ include.p.title }}</span>
+{% if include.category == 'masterthesis' %}
+                      <br /><br /><span style="font-size: 14px; font-weight: normal; font-style: italic; color: #ffffff;">{{ include.p.authors }}</span> 
+{% endif %}
+
                     </div>
                   </div>
                   <div class="overlay-footnote">

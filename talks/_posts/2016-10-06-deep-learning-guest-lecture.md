@@ -95,5 +95,6 @@ permalink:
 pdf: /talks/slides/mogren-2016-10-06-deeplearning.pdf
 overwriteurl: 
 externallink: "http://physics.gu.se/~frtbm/joomla/index.php?option=com_content&view=article&id=115&catid=79&Itemid=290"
+redirect_from: /talks/2016/10/06/deep-learning-guest-lecture.html
 ---
 

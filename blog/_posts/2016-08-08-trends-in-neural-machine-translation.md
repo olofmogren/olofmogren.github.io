@@ -15,6 +15,7 @@ authors: Olof Mogren
 permalink:
 pdf: 
 overwriteurl: 
+redirect_from: /blog/2016/08/08/trends-in-neural-machine-translation.html
 ---
 
 The following blog post was written as an attempt to summarize some

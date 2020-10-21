@@ -15,5 +15,6 @@ permalink:
 pdf: 
 overwriteurl: 
 externallink: https://www.chalmers.se/en/departments/rss/calendar/Pages/GPU-Computing-Workshop.aspx
+redirect_from: /talks/2015/11/12/machine-learning-on-gpus-using-torch7.html
 ---
 

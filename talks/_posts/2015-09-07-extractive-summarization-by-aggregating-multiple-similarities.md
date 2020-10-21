@@ -15,5 +15,6 @@ permalink:
 pdf: 
 overwriteurl: /summarization/
 externallink: 
+redirect_from: /talks/2015/09/07/extractive-summarization-by-aggregating-multiple-similarities.html
 ---
 

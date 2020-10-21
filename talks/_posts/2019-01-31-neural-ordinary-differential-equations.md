@@ -31,4 +31,5 @@ permalink:
 pdf: /files/2019-01-31-mogren-odenet.pdf
 overwriteurl: 
 externallink: 
+redirect_from: /talks/2019/01/31/neural-ordinary-differential-equations.html
 ---

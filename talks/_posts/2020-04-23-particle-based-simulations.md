@@ -20,4 +20,5 @@ permalink:
 pdf: files/2020/mogren-ml-particle-simulations.pdf
 overwriteurl: 
 externallink: https://ri.se/en/education/learning-machines-seminars/
+redirect_from:
 ---

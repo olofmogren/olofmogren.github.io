@@ -15,5 +15,7 @@ permalink:
 pdf: 
 overwriteurl: /summarization/
 externallink: 
+redirect_from: /talks/2014/11/04/automatic-multi-document-summarization.html
+
 ---
 

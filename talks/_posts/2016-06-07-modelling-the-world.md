@@ -15,5 +15,6 @@ permalink:
 pdf: /talks/slides/mogren-2016-06-07-deeplearning-sigma.pdf
 overwriteurl: 
 externallink: http://sigmaitc.se/events/sigma-smart-developers-society/
+redirect_from: /talks/2016/06/07/modelling-the-world.html
 ---
 

@@ -15,5 +15,6 @@ permalink:
 pdf: 
 overwriteurl: 
 externallink: 
+redirect_from: /talks/2016/01/13/recurrent-networks-and-sequence-labelling.html
 ---
 

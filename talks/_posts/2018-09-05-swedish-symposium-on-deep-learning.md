@@ -63,4 +63,5 @@ permalink:
 pdf: 
 overwriteurl: 
 externallink: "https://clasp.gu.se/news-events/the-second-swedish-symposium-on-deep-learning-"
+redirect_from: /talks/2018/09/05/swedish-symposium-on-deep-learning.html
 ---

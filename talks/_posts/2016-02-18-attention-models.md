@@ -15,5 +15,6 @@ permalink:
 pdf: /talks/slides/mogren-2016-02-18-ml-seminar-attention.pdf
 overwriteurl: 
 externallink: "http://www.cse.chalmers.se/research/lab/seminars/"
+redirect_from: /talks/2016/02/18/attention-models.html
 ---
 

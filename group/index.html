@@ -25,48 +25,28 @@ layout: default
 <p>Are you looking to write a master thesis related to machine learning?
 Several different projects related to machine learning awaits skilled students.
 </p>
-<p>The following students have written their master's theses under my supervision.</p>
+<p>The following master's theses were written under my supervision.</p>
 
-{% for post in site.categories.group %}
-{% if post.tags contains "masterthesis" %}
-{% assign currentdate = post.date | date: "%Y" %}
-{% if currentdate != date %}
-{% if forloop.first %}
-{% else %}
-        </div>
-      </div>
-    </div>
-  </section>
-{% endif %}
-<h3 id="y{{currentdate}}">{{ currentdate }}</h3>
-  <section class="features">
-    <div class="inner">
-      <div class="feature-grid">
-        <div class="table-row">
-{% assign date = currentdate %}
-{% endif %}
-          <div class="feature">
-<p>{{ post.authors }}:<br />
-<em>{{ post.title }}</em>
-<br />Defended {{ post.date | date: "%Y-%m-%d" }}
-{% if post.shortversion %}
-<br />{{ post.shortversion }}
-{% endif %}
-{% if post.externallink %}
-<br /><a href="{{ post.externallink }}"><em>More info ({{ post.externallink | remove_first: 'http://' | remove_first: 'https://' | split:"/" | first }})</em></a>
-{% endif %}
-{% if post.longversion %}
-<br /><a href="{{ post.url }}">(<em>read more </em>)</a>
-{% endif %}
-</p>
-          </div>
-{% endif %}
-{% if forloop.last%}
-        </div>
-      </div>
-    </div>
-  </section>
-{% endif %}
+{% assign filtercolors = "rgba(80,40,110,.7), rgba(30,110,80,.7), rgba(30,40,100,.7), rgba(244,170,90,.7), rgba(110,80,40,.7), rgba(30,110,110,.7), rgba(100,40,110,.7)" | split: ", " %}
+
+
+{% assign counter = 0 %}
+
+{% for p in site.categories.group %}
+  {% if p.tags contains "masterthesis" %}
+    {% assign colno = counter | modulo: 3 %}
+    {% if colno == 0 %}
+      {% if counter != 0 %}
+            </div>
+            <div class="table-row">
+      {% endif %}
+    {% endif %}
+    {% assign colorindex = counter | modulo: filtercolors.size %}
+    {% assign color = filtercolors[colorindex] %}
+
+    {% include overlay-box.html p=p counter=counter color=color category='masterthesis' %}
+    {% capture counter %}{{ counter | plus:1 }}{% endcapture %}
+  {% endif %}
 {% endfor %}
 
           </div>
