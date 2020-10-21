@@ -23,8 +23,12 @@
     <title>Talk: {{ post.title }}</title>
     {% elsif post.categories contains "publications" %}
     <title>Publication: {{ post.title }}</title>
-    {% elsif post.categories contains "students" %}
-    <title>Students: {{ post.title }}</title>
+    {% elsif post.categories contains "group" %}
+      {% if post.tags contains "masterthesis" %}
+    <title>Master thesis: {{ post.title }}</title>
+      {% else %}
+    <title>Research Group: {{ post.title }}</title>
+      {% endif %}
     {% else %}
     <title>{{ post.categories }}: {{ post.title }}</title>
     {% endif %}

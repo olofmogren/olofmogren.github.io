@@ -5,7 +5,7 @@ tags:
  - prio
  - frontpage
 background-image: 
-box-bg-imgsrc: publications/2020/privatespeech/ericsson2020privatespeech-bgbox.png
+box-bg-imgsrc: /publications/2020/privatespeech/ericsson2020privatespeech-bgbox.png
 imgsrc: /publications/2020/privatespeech/ericsson2020privatespeech.png
 imgalt: "Schematic diagram of our model: PCMelGAN."
 shortversion: "
