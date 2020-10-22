@@ -1,4 +1,4 @@
-{% assign color_rgbs = "0,0,0, 80,40,110, 30,110,80, 30,40,100, 50,50,50, 244,170,90, 110,80,40, 30,110,110, 100,40,110" | split: ", " %}
+{% assign color_rgbs = "80,40,110, 30,110,80, 30,40,100, 50,50,50, 244,170,90, 110,80,40, 30,110,110, 100,40,110, 0,0,0" | split: ", " %}
 
 {% assign colorindex = include.counter | modulo: color_rgbs.size %}
 {% assign gradientcolor1 = 'rgba(' | append: color_rgbs[colorindex] | append: ',.9)' %}
