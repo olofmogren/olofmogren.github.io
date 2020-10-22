@@ -1,9 +1,8 @@
-{% assign filtercolors = "rgba(80,40,110,.9), rgba(30,110,80,.9), rgba(30,40,100,.9), rgba(244,170,90,.9), rgba(110,80,40,.9), rgba(30,110,110,.9), rgba(100,40,110,.9)" | split: ", " %}
-{% assign gradientcolors = "rgba(80,40,110,.2), rgba(30,110,80,.2), rgba(30,40,100,.2), rgba(244,170,90,.2), rgba(110,80,40,.2), rgba(30,110,110,.2), rgba(100,40,110,.2)" | split: ", " %}
+{% assign color_rgbs = "0,0,0, 80,40,110, 30,110,80, 30,40,100, 50,50,50, 244,170,90, 110,80,40, 30,110,110, 100,40,110" | split: ", " %}
 
-{% assign colorindex = include.counter | modulo: filtercolors.size %}
-{% assign gradientcolor1 = filtercolors[colorindex] %}
-{% assign gradientcolor2 = gradientcolors[colorindex] %}
+{% assign colorindex = include.counter | modulo: color_rgbs.size %}
+{% assign gradientcolor1 = 'rgba(' | append: color_rgbs[colorindex] | append: ',.9)' %}
+{% assign gradientcolor2 = 'rgba(' | append: color_rgbs[colorindex] | append: ',.2)' %}
 
 
 {% if include.category == 'publications' %}
