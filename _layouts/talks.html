@@ -14,7 +14,9 @@ layout: default
 {% endif %}
 
 <p>
-{% if page.longversion %}
+{% if content %}
+{{ content }}
+{% elsif page.longversion %}
 {{ page.longversion }}
 {% else %}
 {{ page.shortversion }}

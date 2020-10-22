@@ -25,7 +25,7 @@ In this talk, we will go through the basics of transfer learning and some issues
 <strong>Video:</strong> <a href=\"https://www.youtube.com/watch/-yAAJJ84cwU\">Youtube</a>
 "
 shortversion: "
-Talk at the GAIA Meetup seminar series talk about privacy and limited data.
+GAIA Meetup seminar series talk about privacy and limited data.
 "
 
 venue: GAIA Meetup
@@ -35,6 +35,6 @@ permalink:
 pdf: /files/2019-11-11-privacy-and-limited-data.pdf
 overwriteurl: 
 externallink: 
-redirect_from: /talks/2019/01/31/neural-ordinary-differential-equations.html
+redirect_from: 
 ---
 

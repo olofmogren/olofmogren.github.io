@@ -21,5 +21,5 @@ permalink:
 pdf: /files/2019-04-11-unsupervised-pretraining.pdf
 overwriteurl: 
 externallink: 
-redirect_from: /talks/2019/01/31/neural-ordinary-differential-equations.html
+redirect_from: 
 ---
