@@ -68,10 +68,6 @@ Lots of divs on top of each other.
 
 {%- endif -%}
 
-{% assign filtercolors = "rgba(220,200,160,.5), rgba(200,160,220,.5), rgba(140,160,200,.5), rgba(140,220,200,.5), rgba(140,220,220,.5), rgba(200,160,220,.5)" | split: ", " %}
-{% if false %} light colors {% endif %}
-{% assign filtercolors = "rgba(80,40,110,.7), rgba(30,110,80,.7), rgba(30,40,100,.7), rgba(244,170,90,.7), rgba(110,80,40,.7), rgba(30,110,110,.7), rgba(100,40,110,.7)" | split: ", " %}
-
       <section class="features">
         <div class="inner">
           <a href="/publications/"><h3>Publications</h3></a>
@@ -88,10 +84,8 @@ Lots of divs on top of each other.
             <div class="table-row">
       {% endif %}
     {% endif %}
-    {% assign colorindex = counter | modulo: filtercolors.size %}
-    {% assign color = filtercolors[colorindex] %}
 
-    {% include overlay-box.html p=p counter=counter color=color category='publications' %}
+    {% include overlay-box.html p=p counter=counter category='publications' %}
 
     {% capture counter %}{{ counter | plus:1 }}{% endcapture %}
   {% endif %}
@@ -184,10 +178,8 @@ Lots of divs on top of each other.
             </div>
             <div class="table-row">
   {% endif %}
-  {% assign colorindex = counter | modulo: filtercolors.size %}
-  {% assign color = filtercolors[colorindex] %}
 
-  {% include overlay-box.html p=p counter=counter color=color category='talks' %}
+  {% include overlay-box.html p=p counter=counter category='talks' %}
 
   {% capture counter %}{{ counter | plus:1 }}{% endcapture %}
 {% endfor %}

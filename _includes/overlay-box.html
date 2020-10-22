@@ -1,3 +1,11 @@
+{% assign filtercolors = "rgba(80,40,110,.9), rgba(30,110,80,.9), rgba(30,40,100,.9), rgba(244,170,90,.9), rgba(110,80,40,.9), rgba(30,110,110,.9), rgba(100,40,110,.9)" | split: ", " %}
+{% assign gradientcolors = "rgba(80,40,110,.2), rgba(30,110,80,.2), rgba(30,40,100,.2), rgba(244,170,90,.2), rgba(110,80,40,.2), rgba(30,110,110,.2), rgba(100,40,110,.2)" | split: ", " %}
+
+{% assign colorindex = include.counter | modulo: filtercolors.size %}
+{% assign gradientcolor1 = filtercolors[colorindex] %}
+{% assign gradientcolor2 = gradientcolors[colorindex] %}
+
+
 {% if include.category == 'publications' %}
   {% assign footer = include.p.venueshort %}
 {% elsif include.category == 'masterthesis' %}
@@ -17,7 +25,8 @@
                     <img src="{{ include.p.imgsrc }}" style="width: 100%; height: 100%;" alt="" />
                   </div>
 {% endif %}
-                  <div class="overlay-box" style="background-color: {{ include.color }};">
+                  {% if false %} <div class="overlay-box" style="background-color: {{ color }};"> {% endif %}
+                  <div class="overlay-box" style="background-image: linear-gradient({{ gradientcolor1 }}, {{ gradientcolor2 }});">
                     &nbsp;
                   </div>
 

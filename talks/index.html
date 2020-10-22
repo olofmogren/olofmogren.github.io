@@ -3,9 +3,6 @@ layout: default
 title: Olof Mogren, PhD - Deep Learning Researcher.
 ---
 
-{% assign filtercolors = "rgba(220,200,160,.5), rgba(200,160,220,.5), rgba(140,160,200,.5), rgba(140,220,200,.5), rgba(140,220,220,.5), rgba(200,160,220,.5)" | split: ", " %}
-{% assign filtercolors = "rgba(80,40,110,.7), rgba(30,110,80,.7), rgba(30,40,100,.7), rgba(244,170,90,.7), rgba(110,80,40,.7), rgba(30,110,110,.7), rgba(100,40,110,.7)" | split: ", " %}
-
       <section class="features">
         <div class="inner">
           <div class="feature-grid">
@@ -23,9 +20,7 @@ title: Olof Mogren, PhD - Deep Learning Researcher.
             <div class="table-row">
   {% endif %}
 
-  {% assign colorindex = globalcounter | modulo: filtercolors.size %}
-  {% assign color = filtercolors[colorindex] %}
-  {% include overlay-box.html p=p counter=globalcounter color=color category='talks' %} 
+  {% include overlay-box.html p=p counter=globalcounter category='talks' %} 
   {% capture globalcounter %}{{ globalcounter | plus:1 }}{% endcapture %}
   {% capture colcounter %}{{ colcounter | plus:1 }}{% endcapture %}
 {% endfor %}
