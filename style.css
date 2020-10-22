@@ -54,7 +54,7 @@ section.foot a{font-size:0.875rem;font-weight:500;color:#fff;text-transform:uppe
 
 div.overlay-container{position: relative; width: 321px; height: 321px; overflow: hidden;}
 div.overlay-box{position: absolute; width: 100%; height: 100%;}
-div.overlay-highlight{box-sizing: border-box; background-color: #ffffffff; border: #333333ff 2px solid; padding: 8px;}
+div.overlay-highlight{box-sizing: border-box; background-image: linear-gradient(rgba(255, 255, 255, 1.0), rgba(255, 255, 255, 1.0), rgba(255, 255, 255, .5)); border: #333333ff 2px solid; padding: 8px;}
 div.overlay-footnote{position: absolute; bottom: 0px; right: 0px; margin: 0px; }
 p.overlay-footnote{background-color: #ffcc00cc; margin: 0px; padding: 2px 10px;}
 a.overlay-box-link-whole-box{display: block; width: 100%; height: 100%;}
