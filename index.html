@@ -171,7 +171,6 @@ Lots of divs on top of each other.
           <div class="feature-grid">
             <div class="table-row">
 
-{% assign counter = 0 %}
 {% for p in site.categories.talks limit:3 %}
   {% assign colno = counter | modulo: 3 %}
   {% if colno == 0 and counter != 0 %}
