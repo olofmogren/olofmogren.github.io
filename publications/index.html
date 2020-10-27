@@ -10,17 +10,20 @@ title: Olof Mogren, PhD - Deep Learning Researcher.
 {% assign globalcounter = 0 %}
 {% assign colcounter = 0 %}
 {% assign showyears = true %}
-{% assign minyear = "2015" %}
+{% assign firsthiddenyear = "2014" %}
+{% capture lastshownyear %}{{ firsthiddenyear | plus:1 }}{% endcapture %}
 {% for p in site.categories.publications %}
+  {% if p.tags contains 'unlist' %}{% continue %}{% endif %}
   {% assign currentdate = p.date | date: "%Y" %}
   {% assign colno = colcounter | modulo: 3 %}
+  {% if currentdate == firsthiddenyear %}{% assign showyears = false %}{% endif %}
   {% if showyears and currentdate != date %}{% assign showthisyear = true %}{% else %}{% assign showthisyear = false %}{% endif %}
-  {% if showyearthisyear or colno == 0 %}
+  {% if showthisyear or colno == 0 %}
     {% if globalcounter != 0 %}
             </div>
     {% endif %}
     {% if showthisyear %}
-            <h3>{{ currentdate }}{% if currentdate == minyear %}{{ ' and earlier' }}{% endif %}</h3>
+            <h3>{{ currentdate }}{% if currentdate == lastshownyear %}{{ ' and earlier' }}{% endif %}</h3>
       {% assign colcounter = 0 %}
     {% endif %}
             <div class="table-row">
@@ -29,7 +32,6 @@ title: Olof Mogren, PhD - Deep Learning Researcher.
 
   {% include overlay-box.html p=p counter=globalcounter category='publications' %} 
 
-  {% if currentdate == minyear %}{% assign showyears = false %}{% endif %}
   {% capture globalcounter %}{{ globalcounter | plus:1 }}{% endcapture %}
   {% capture colcounter %}{{ colcounter | plus:1 }}{% endcapture %}
 {% endfor %}
