@@ -4,6 +4,7 @@ permalink: /:categories/:year/:slug/
 gems:
   - jekyll-feed
 
+future: true
 plugins:
   - jekyll-redirect-from
 whitelist:
