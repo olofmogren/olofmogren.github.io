@@ -3,9 +3,9 @@ title: AI in the public sector
 layout: talks
 tags:
  - default
-box-bg-imgsrc: /graphics/mogren-2018-julia-sjoberg.png
-imgsrc: /graphics/mogren-2018-julia-sjoberg.png
-imgalt: Olof Mogren
+box-bg-imgsrc: 
+imgsrc: /graphics/illustrations/mogren_summarization.svg 
+imgalt: 
 longversion: "
 <p>Artificial intelligence (AI) can facilitate our work and solve many problems. In China, you can pay for a cup of coffee by smiling at a camera that recognizes your identity and deducts the amount from your bank account. Facebook can tag your friends in your photos without your intervention.
 </p></p>
