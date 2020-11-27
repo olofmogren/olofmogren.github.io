@@ -4,7 +4,7 @@ layout: talks
 tags:
  - default
 box-bg-imgsrc: 
-imgsrc: /graphics/mogren-2018-julia-sjoberg.png
+imgsrc: /graphics/illustrations/2020-11-27/stochastic-amplitude.png
 imgalt: Uncertainty in deep learning
 longversion: "Our world is full of uncertainties: measurement errors, modeling errors, or uncertainty due to test-data being out-of-distribution are some examples. Machine learning systems are increasingly being used in crucial applications such as medical decision making and autonomous vehicle control: in these applications, mistakes due to uncertainties can be life threatening.
 </p><p>
