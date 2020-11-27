@@ -15,7 +15,7 @@ shortversion: "Learned continuous representations for language units was the fir
 In 2016, Bolukbasi, et.al., presented their paper “Man is to Computer Programmer as Woman is to Homemaker? Debiasing Word Embeddings”, shedding lights on some of the gender bias that was available in trained word embeddings at the time. Datasets obviously encode the social bias that surrounds us, and models trained on that data may expose the bias in their decisions. It is important to be aware of what information a learned system is basing its predictions on. Some solutions have been proposed to limit the expression of societal bias in NLP systems. These include techniques such as data augmentation and representation calibration. Similar approaches may also be relevant for privacy and disentangled representations. In this talk, we’ll discuss some of these issues, and go through some of the solutions that have been proposed recently.
 "
 
-venue: Learning Machines Seminars at RISE Research Institutes of Sweden
+venue: GAIA Conference 2020
 authors: Olof Mogren
 bibtex: 
 permalink:
