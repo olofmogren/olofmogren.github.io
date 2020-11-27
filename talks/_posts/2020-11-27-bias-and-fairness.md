@@ -30,7 +30,7 @@ Sahlgren & Ohlsson, 2018, Gender Bias in Pretrained Swedish Embeddings
 Kiela & Bottou, EMNLP 2014, Learning Image Embeddings using Convolutional Neural Networks for Improved Multi-Modal Semantics
 </li>
 <li>
-Kågebäck, Mogren, Tahmasebi, Dubhashi, 2014, Extractive summarization using continuous vector space models
+Kågebäck, Mogren, Tahmasebi, Dubhashi, 2014, Extractive summarization using continuous vector space models <a href=\"http://mogren.one/summarization/\">http://mogren.one/summarization/</a>
 </li>
 <li>
 Zhao, et.al., NAACL 2018, Gender Bias in Coreference Resolution: Evaluation and Debiasing Methods
