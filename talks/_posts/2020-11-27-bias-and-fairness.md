@@ -45,7 +45,7 @@ Sato, et.al., ACL 2019, Effective Adversarial Regularization for Neural Machine 
 Wang, et.al., ICML 2019, Improving Neural Language Modeling via Adversarial Training
 </li>
 <li>
-Martinsson, J., Listo Zec, E., Gillblad, D., Mogren, O. Adversarial representation learning for synthetic replacement of private attributes. <a href="https://arxiv.org/abs/2006.08039">https://arxiv.org/abs/2006.08039</a>, 2020.
+Martinsson, J., Listo Zec, E., Gillblad, D., Mogren, O. Adversarial representation learning for synthetic replacement of private attributes. <a href=\"https://arxiv.org/abs/2006.08039\">https://arxiv.org/abs/2006.08039</a>, 2020.
 </li></ul>"
 shortversion: "Learned continuous representations for language units was the first trembling steps of making neural networks useful for natural language processing (NLP), and promised a future with semantically rich representations for downstream solutions. NLP has now seen some of the progress that previously happened in image processing: the availability of increased computing power and the development of algorithms have allowed people to train larger models that perform better than ever. Such models also make it possible to use transfer learning for language tasks, thus leveraging large widely available datasets.
 
