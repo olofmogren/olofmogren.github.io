@@ -4,7 +4,7 @@ layout: talks
 tags:
  - default
 box-bg-imgsrc: 
-imgsrc: /graphics/mogren-2018-julia-sjoberg.png
+imgsrc: /publications/2020/adversarial/anonymizedpeople.png
 imgalt: Learned representations and what they encode
 longversion: "
  Learned continuous embeddings for language units was some of the first trembling steps of making neural networks useful for natural language processing (NLP), and promised a future with semantically rich representations for downstream solutions. NLP has now seen some of the progress that previously happened in image processing: the availability of increased computing power and the development of algorithms have allowed people to train larger models that perform better than ever. Such models also make it possible to use transfer learning for language tasks, thus leveraging large widely available datasets.
