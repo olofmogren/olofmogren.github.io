@@ -1,0 +1,39 @@
+---
+layout: default
+title: Olof Mogren, PhD - Deep Learning Researcher.
+---
+      <section>
+        <div class="inner">
+          <div class="block block-copy">
+
+<h1>Publication PDF links</h1>
+{% assign globalcounter = 0 %}
+{% assign colcounter = 0 %}
+{% assign showyears = true %}
+{% assign firsthiddenyear = "2014" %}
+{% capture lastshownyear %}{{ firsthiddenyear | plus:1 }}{% endcapture %}
+{% for p in site.categories.publications %}
+  {% if p.tags contains 'unlist' %}{% continue %}{% endif %}
+  {% assign currentdate = p.date | date: "%Y" %}
+  {% assign colno = colcounter | modulo: 3 %}
+  {% if currentdate == firsthiddenyear %}{% assign showyears = false %}{% endif %}
+  {% if showyears and currentdate != date %}{% assign showthisyear = true %}{% else %}{% assign showthisyear = false %}{% endif %}
+  {% if showthisyear or colno == 0 %}
+    {% if showthisyear %}
+            <h3>{{ currentdate }}{% if currentdate == lastshownyear %}{{ ' and earlier' }}{% endif %}</h3>
+      {% assign colcounter = 0 %}
+    {% endif %}
+    {% assign date = currentdate %}
+  {% endif %}
+
+  <p><a href="{{ p.pdf }}">{{ p.authors }}, {{ p.title }}, {{ p.venue }}</a></p>
+
+  {% capture globalcounter %}{{ globalcounter | plus:1 }}{% endcapture %}
+  {% capture colcounter %}{{ colcounter | plus:1 }}{% endcapture %}
+{% endfor %}
+          </div>
+        </div>
+      </section>
+
+
+
