@@ -3,7 +3,6 @@ title: "Federated learning using a mixture of experts"
 layout: posts
 tags:
  - prio
- - frontpage
 background-image: 
 imgsrc: /publications/2020/federated/federatedfigure.png
 imgalt: "The proposed framework visualized."

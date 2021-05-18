@@ -3,7 +3,6 @@ title: "Grammatical gender in Swedish is predictable using recurrent neural netw
 layout: posts
 tags:
  - prio
- - frontpage
 imgsrc: 
 imgalt: ""
 shortversion: "
