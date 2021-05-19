@@ -3,11 +3,11 @@ layout: default
 title: Olof Mogren, PhD - Deep Learning Researcher.
 ---
 
-      <section class="features">
+      <section>
         <div class="inner">
-          <div class="feature-grid">
-            <h1>Publications</h1>
-            <p><a href="list">View as list instead</a>. Visit my <a href="https://scholar.google.se/citations?user=m_n28oAAAAAJ">Scholar page</a>.</p>
+          <div class="block block-copy">
+            <h1>Publication list</h1>
+            <p><a href="../">Back to default view</a>. Visit my <a href="https://scholar.google.se/citations?user=m_n28oAAAAAJ">Scholar page</a>.</p>
 {% assign globalcounter = 0 %}
 {% assign colcounter = 0 %}
 {% assign showyears = true %}
@@ -20,23 +20,18 @@ title: Olof Mogren, PhD - Deep Learning Researcher.
   {% if currentdate == firsthiddenyear %}{% assign showyears = false %}{% endif %}
   {% if showyears and currentdate != date %}{% assign showthisyear = true %}{% else %}{% assign showthisyear = false %}{% endif %}
   {% if showthisyear or colno == 0 %}
-    {% if globalcounter != 0 %}
-            </div>
-    {% endif %}
     {% if showthisyear %}
             <h3>{{ currentdate }}{% if currentdate == lastshownyear %}{{ ' and earlier' }}{% endif %}</h3>
       {% assign colcounter = 0 %}
     {% endif %}
-            <div class="table-row">
     {% assign date = currentdate %}
   {% endif %}
 
-  {% include overlay-box.html p=p counter=globalcounter category='publications' %} 
+            <p>{{ p.authors | replace: "Olof Mogren", "<strong>Olof Mogren</strong>"}}, <a href="{{ p.permalink }}">{{ p.title }}</a>, {{ p.venueshort }}</p> 
 
   {% capture globalcounter %}{{ globalcounter | plus:1 }}{% endcapture %}
   {% capture colcounter %}{{ colcounter | plus:1 }}{% endcapture %}
 {% endfor %}
-            </div>
           </div>
         </div>
       </section>
