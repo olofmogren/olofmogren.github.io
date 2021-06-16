@@ -35,6 +35,6 @@ venueshort: JLM 2019
 authors: Olof Mogren, Richard Johansson
 bibtex: '@inproceedings{mogren2019character, \n title={Character-based recurrent neural networks for morphological relational reasoning}, \n author={Olof Mogren and Richard Johansson}, \n booktitle={Journal of Language Modelling}, \n year={2019}}'
 permalink: /publications/2019/character-based/
-pdf: 
+pdf: /publications/2019/character-based/mogren2019character.pdf
 
 ---
