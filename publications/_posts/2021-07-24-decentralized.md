@@ -3,6 +3,7 @@ title: "Decentralized federated learning of deep neural networks on non-iid data
 layout: posts
 tags:
  - prio
+ - frontpage
 background-image: 
 imgsrc: /publications/2021/decentralized/decentralized.png
 imgalt: ""
