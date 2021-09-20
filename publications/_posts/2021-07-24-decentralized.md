@@ -23,12 +23,13 @@ data to learn a model suitable for the local data distribution. Our experiments 
 show that our proposed method is able to achieve
 higher accuracies as compared to strong baselines.
 "
-venue: 
-venueshort: 
+venue: 2021 Workshop on Federated Learning for User Privacy and Data Confidentiality at the 38th International Conference on Machine Learning
+venueshort: FL-ICML 2021
 authors: Noa Onoszko, Gustav Karlsson, Olof Mogren, Edvin Listo Zec
 bibtex: '@misc{onoszko2021decentralized,
       title={Decentralized federated learning of deep neural networks on non-iid data}, 
-      author={Edvin Listo Zec and Olof Mogren and John Martinsson and Leon René Sütfeld and Daniel Gillblad},
+      author={Onoszko, Noa and Karlsson, Gustav and Mogren, Olof and Listo Zec, Edvin},
+      booktitle={2021 Workshop on Federated Learning for User Privacy and Data Confidentiality at the 38th International Conference on Machine Learning},
       year={2021},
       eprint={2107.08517},
       archivePrefix={arXiv},
