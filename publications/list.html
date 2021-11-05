@@ -8,6 +8,7 @@ title: Olof Mogren, PhD - Deep Learning Researcher.
           <div class="block block-copy">
             <h1>Publication list</h1>
             <p><a href="../">Back to default view</a>. Visit my <a href="https://scholar.google.se/citations?user=m_n28oAAAAAJ">Scholar page</a>.</p>
+
 {% assign globalcounter = 0 %}
 {% assign colcounter = 0 %}
 {% assign showyears = true %}
@@ -27,7 +28,11 @@ title: Olof Mogren, PhD - Deep Learning Researcher.
     {% assign date = currentdate %}
   {% endif %}
 
-            <p>{{ p.authors | replace: "Olof Mogren", "<strong>Olof Mogren</strong>"}}, <a href="{{ p.permalink }}">{{ p.title }}</a>, {{ p.venueshort }}</p> 
+ <!--{{ p.authors | replace: "Olof Mogren", "<strong>Olof Mogren</strong>"}} //-->
+
+{% capture short_author_string %}{% include author_extras.html authors=p.authors %}{% endcapture %}
+            <p>
+              {{ short_author_string | strip }}, <a href="{{ p.permalink }}">{{ p.title }}</a>, {{ p.venue }}, {{ p.venueshort }}</p> 
 
   {% capture globalcounter %}{{ globalcounter | plus:1 }}{% endcapture %}
   {% capture colcounter %}{{ colcounter | plus:1 }}{% endcapture %}

@@ -1,10 +1,9 @@
 {% assign author_array = include.authors | split: ', ' %}
 {% assign short_author_string = '' %}
 {% for auth in author_array %}
-  {% assign last_names = auth | split: ' ' | shift%}
+  {% assign last_names = auth | split: ' ' | shift | join ' ' %}
   {% assign first_char = auth | slice: 0, 1 %}
-  {% assign short_author_string = short_author_string + ',' + first_char + '. ' + last_names %}
+  {% capture short_author_string %}{{ short_author_string }},  {{ first_char }}. {{ last_names }}{% endcapture %}
 {% endfor %}
-{% assign short_author_string = short_author_string | remove_first: ', ' %}
-
-
+{% assign short_author_string = short_author_string | remove_first: ', ' | replace: "O. Mogren", "<strong>O. Mogren</strong>" %}
+{{ short_author_string }}
