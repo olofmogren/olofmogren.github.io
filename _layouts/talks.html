@@ -27,7 +27,7 @@ layout: default
 {% if page.externallink %}
 <a href="{{ page.externallink }}">
 {% endif %}
-<em>{{ page.venue }}, {{ page.date }}</em>
+<em>{{ page.venue }}, {{ page.date | date: "%Y-%m-%d" }}</em>
 {% if page.externallink %}
 </a>
 {% endif %}
