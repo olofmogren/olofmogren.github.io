@@ -1,5 +1,5 @@
 ---
-title: "Federated learning using a mixture of experts"
+title: "Specialized federated learning using a mixture of experts"
 layout: posts
 tags:
  - prio
