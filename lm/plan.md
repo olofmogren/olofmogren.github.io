@@ -3,9 +3,9 @@
 | date | speaker                                   | confirmed      |
 | ---- | ----------------------------------------- | -------------- |
 |  2022-10-13  |  TT,                                  |  (confirmed)     |
-| <span style="color:grey"> 2022-10-17 </span> | <span style="color:grey"> MDP,                                </span> | <span style="color:grey"> (not confirmed) </span> |
+| <span style="color:grey"> 2022-10-17 </span> | <span style="color:grey"> MDP5,                               </span> | <span style="color:grey"> (not confirmed) </span> |
 |  2022-10-20  |  HK,                                  |  (confirmed)     |
-| <span style="color:grey"> 2022-10-27 </span> | <span style="color:grey"> BRUSMO,                             </span> | <span style="color:grey"> (not confirmed) </span> |
+| <span style="color:grey"> 2022-10-27 </span> | <span style="color:grey"> BR,US,MO,                           </span> | <span style="color:grey"> (not confirmed) </span> |
 | <span style="color:red"> 2022-11-03 </span> | <span style="color:red"> H,                                  </span> | <span style="color:red"> (confirmed)    </span> |
 |  2022-11-10  |  FK,                                  |  (confirmed)     |
 | <span style="color:grey"> 2022-11-17 </span> | <span style="color:grey"> US,                                 </span> | <span style="color:grey"> (not confirmed) </span> |
