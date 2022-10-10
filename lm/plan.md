@@ -3,6 +3,7 @@
 | date | speaker                                   | confirmed      |
 | ---- | ----------------------------------------- | -------------- |
 |  2022-10-13  |  Tomasz Trzcinski                     |  (confirmed)     |
+| <span style="color:grey"> 2022-10-17 </span> | <span style="color:grey"> Mark D. Plumbley?                   </span> | <span style="color:grey"> (not confirmed) </span> |
 |  2022-10-20  |  Hedvig Kjellström                    |  (confirmed)     |
 | <span style="color:grey"> 2022-10-27 </span> | <span style="color:grey"> Ben Recht?, Uriel Singer?, Muhammad Osama? </span> | <span style="color:grey"> (not confirmed) </span> |
 | <span style="color:red"> 2022-11-03 </span> | <span style="color:red"> Höstlov                             </span> | <span style="color:red"> (confirmed)    </span> |
