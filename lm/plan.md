@@ -13,9 +13,9 @@
 |  2022-12-01  |  Sara Beery, MIT                      |  (confirmed)     |
 |  2022-12-08  |  William Lidberg, Swedish University of Agricultural Sciences  |  (confirmed)     |
 | <span style="color:grey"> 2022-12-15 </span> | <span style="color:grey"> EG?,                                </span> | <span style="color:grey"> (not confirmed) </span> |
-| <span style="color:red"> 2022-12-22 </span> | <span style="color:red"> Christmas,                          </span> | <span style="color:red"> (confirmed)    </span> |
-| <span style="color:red"> 2022-12-29 </span> | <span style="color:red"> Christmas,                          </span> | <span style="color:red"> (confirmed)    </span> |
-| <span style="color:red"> 2023-01-05 </span> | <span style="color:red"> Christmas,                          </span> | <span style="color:red"> (confirmed)    </span> |
+| <span style="color:red"> 2022-12-22 </span> | <span style="color:red"> Christmas                           </span> | <span style="color:red"> (not confirmed) </span> |
+| <span style="color:red"> 2022-12-29 </span> | <span style="color:red"> Christmas                           </span> | <span style="color:red"> (not confirmed) </span> |
+| <span style="color:red"> 2023-01-05 </span> | <span style="color:red"> Christmas                           </span> | <span style="color:red"> (not confirmed) </span> |
 | <span style="color:grey"> 2023-01-12 </span> | <span style="color:grey"> GF?L?,                              </span> | <span style="color:grey"> (not confirmed) </span> |
 | <span style="color:purple"> 2023-01-19 </span> | <span style="color:purple"> *Up for grabs!!!*                   </span> | <span style="color:purple"> (not confirmed) </span> |
 | <span style="color:purple"> 2023-01-26 </span> | <span style="color:purple"> *Up for grabs!!!*                   </span> | <span style="color:purple"> (not confirmed) </span> |
