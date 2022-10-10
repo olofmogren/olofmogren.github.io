@@ -2,7 +2,7 @@
 
 | date | speaker                                   | confirmed      |
 | ---- | ----------------------------------------- | -------------- |
-|  2022-10-13  |  Tomasz Trzcinski, Warsaw University of Technology  |  (confirmed)     |
+|  2022-10-13  |  Tomasz Trzcinski, Warsaw University of Technology, Tooploox, IDEAS NCBR, Jagiellonian University  |  (confirmed)     |
 | <span style="color:grey"> 2022-10-17 </span> | <span style="color:grey"> MDP?,                               </span> | <span style="color:grey"> (not confirmed) </span> |
 |  2022-10-20  |  Hedvig Kjellström, KTH               |  (confirmed)     |
 | <span style="color:grey"> 2022-10-27 </span> | <span style="color:grey"> BR?,US?,MO?,                        </span> | <span style="color:grey"> (not confirmed) </span> |
