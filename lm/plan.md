@@ -2,16 +2,16 @@
 
 | date | speaker                                   | confirmed      |
 | ---- | ----------------------------------------- | -------------- |
-|  2022-10-13  |  TT,                                  |  (confirmed)     |
+|  2022-10-13  |  Tomasz Trzcinski                     |  (confirmed)     |
 | <span style="color:grey"> 2022-10-17 </span> | <span style="color:grey"> MDP?,                               </span> | <span style="color:grey"> (not confirmed) </span> |
-|  2022-10-20  |  HK,                                  |  (confirmed)     |
+|  2022-10-20  |  Hedvig Kjellström                    |  (confirmed)     |
 | <span style="color:grey"> 2022-10-27 </span> | <span style="color:grey"> BR?,US?,MO?,                        </span> | <span style="color:grey"> (not confirmed) </span> |
 | <span style="color:red"> 2022-11-03 </span> | <span style="color:red"> Höstlov                             </span> | <span style="color:red"> (confirmed)    </span> |
-|  2022-11-10  |  FK,                                  |  (confirmed)     |
+|  2022-11-10  |  Frederik Kratzert                    |  (confirmed)     |
 | <span style="color:grey"> 2022-11-17 </span> | <span style="color:grey"> US?,                                </span> | <span style="color:grey"> (not confirmed) </span> |
-|  2022-11-24  |  VL,                                  |  (confirmed)     |
-|  2022-12-01  |  SB,                                  |  (confirmed)     |
-|  2022-12-08  |  WL,                                  |  (confirmed)     |
+|  2022-11-24  |  Viktor Larsson                       |  (confirmed)     |
+|  2022-12-01  |  Sara Beery                           |  (confirmed)     |
+|  2022-12-08  |  William Lidberg                      |  (confirmed)     |
 | <span style="color:grey"> 2022-12-15 </span> | <span style="color:grey"> EG?,                                </span> | <span style="color:grey"> (not confirmed) </span> |
 | <span style="color:red"> 2022-12-22 </span> | <span style="color:red"> Christmas                           </span> | <span style="color:red"> (confirmed)    </span> |
 | <span style="color:red"> 2022-12-29 </span> | <span style="color:red"> Christmas                           </span> | <span style="color:red"> (confirmed)    </span> |
