@@ -1,7 +1,7 @@
 # Learning Machines Plan 2022-10-11
 
-| date | speaker                                   | confirmed      |
-| ---- | ----------------------------------------- | -------------- |
+| date | speaker                                   | photo | comment        |
+| ---- | ----------------------------------------- | ----- | -------------- |
 |  2022-10-13  |  [Tomasz Trzcinski, Warsaw University of Technology, Tooploox, IDEAS NCBR, Jagiellonian University](2022-10-13.md)  |  [photo](2022-10-13.jpg)  |  (confirmed)     |
 | <span style="color:grey"> 2022-10-17 </span> | <span style="color:grey"> MDP?,  </span> | <span style="color:grey"> [photo](2022-10-13.jpg) </span> | <span style="color:grey"> (not confirmed) </span> |
 |  2022-10-20  |  [Hedvig Kjellström, KTH](2022-10-20.md)  |  [photo](2022-10-20.jpg)  |  (confirmed)     |
