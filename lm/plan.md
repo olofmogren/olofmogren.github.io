@@ -2,16 +2,16 @@
 
 | date | speaker                                   | confirmed      |
 | ---- | ----------------------------------------- | -------------- |
-|  2022-10-13  |  Tomasz Trzcinski, Warsaw University of Technology, Tooploox, IDEAS NCBR, Jagiellonian University  |  (confirmed)     |
+|  2022-10-13  |  <a href=2022-10-13.md>Tomasz Trzcinski, Warsaw University of Technology, Tooploox, IDEAS NCBR, Jagiellonian University</a>  |  (confirmed)     |
 | <span style="color:grey"> 2022-10-17 </span> | <span style="color:grey"> MDP?,                               </span> | <span style="color:grey"> (not confirmed) </span> |
-|  2022-10-20  |  Hedvig Kjellström, KTH               |  (confirmed)     |
+|  2022-10-20  |  <a href=2022-10-20.md>Hedvig Kjellström, KTH</a>  |  (confirmed)     |
 | <span style="color:grey"> 2022-10-27 </span> | <span style="color:grey"> BR?,US?,MO?,                        </span> | <span style="color:grey"> (not confirmed) </span> |
 | <span style="color:red"> 2022-11-03 </span> | <span style="color:red"> Höstlov                             </span> | <span style="color:red"> (cancelled) </span> |
-|  2022-11-10  |  Frederik Kratzert, Google            |  (confirmed)     |
+|  2022-11-10  |  <a href=2022-11-10.md>Frederik Kratzert, Google</a>  |  (confirmed)     |
 | <span style="color:grey"> 2022-11-17 </span> | <span style="color:grey"> US?,                                </span> | <span style="color:grey"> (not confirmed) </span> |
-|  2022-11-24  |  Viktor Larsson, LTH                  |  (confirmed)     |
-|  2022-12-01  |  Sara Beery, MIT                      |  (confirmed)     |
-|  2022-12-08  |  William Lidberg, Swedish University of Agricultural Sciences  |  (confirmed)     |
+|  2022-11-24  |  <a href=2022-11-24.md>Viktor Larsson, LTH</a>  |  (confirmed)     |
+|  2022-12-01  |  <a href=2022-12-01.md>Sara Beery, MIT</a>  |  (confirmed)     |
+|  2022-12-08  |  <a href=2022-12-08.md>William Lidberg, Swedish University of Agricultural Sciences</a>  |  (confirmed)     |
 | <span style="color:grey"> 2022-12-15 </span> | <span style="color:grey"> EG?,                                </span> | <span style="color:grey"> (not confirmed) </span> |
 | <span style="color:red"> 2022-12-22 </span> | <span style="color:red"> Christmas                           </span> | <span style="color:red"> (cancelled) </span> |
 | <span style="color:red"> 2022-12-29 </span> | <span style="color:red"> Christmas                           </span> | <span style="color:red"> (cancelled) </span> |
