@@ -1,4 +1,4 @@
-# Learning Machines Plan 2022-10-10
+# Learning Machines Plan 2022-10-11
 
 | date | speaker                                   | confirmed      |
 | ---- | ----------------------------------------- | -------------- |
