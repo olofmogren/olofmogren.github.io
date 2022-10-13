@@ -1,8 +1,7 @@
-# Learning Machines Plan 2022-10-12
+# Learning Machines Plan 2022-10-13
 
 | date | speaker                                   | photo | shareable | meeting backdrop | youtube thumbnail | comment        |
 | ---- | ----------------------------------------- | ----- | ----- | ----- | ----- | -------------- |
-|  2022-10-13  |  [Tomasz Trzcinski, Warsaw University of Technology, Tooploox, IDEAS NCBR, Jagiellonian University](2022-10-13.md)  |  [photo](photo-tomasz-trzcinski.jpg)  |  [social media ](social-media-tomasz-trzcinski.png)  |  [meeting_backdrop ](meeting_backdrop-tomasz-trzcinski.png)  |  [youtube thumbnail ](youtube-thumbnail-tomasz-trzcinski.png)  |  (confirmed)     |
 | <span style="color:grey"> 2022-10-17 </span> | <span style="color:grey"> MDP?,  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey"> (not confirmed) </span> |
 |  2022-10-20  |  [Hedvig Kjellström, KTH](2022-10-20.md)  |  [photo](photo-hedvig-kjellstrom.jpg)  |  [social media ](social-media-hedvig-kjellstrom.png)  |  [meeting_backdrop ](meeting_backdrop-hedvig-kjellstrom.png)  |  [youtube thumbnail ](youtube-thumbnail-hedvig-kjellstrom.png)  |  (confirmed)     |
 | <span style="color:grey"> 2022-10-27 </span> | <span style="color:grey"> BR?,US?,MO?,  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey"> (not confirmed) </span> |
