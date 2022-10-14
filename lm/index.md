@@ -1,4 +1,4 @@
-# Learning Machines Plan 2022-10-13
+# Learning Machines Plan 2022-10-14
 
 | date | speaker                                   | photo | shareable | meeting backdrop | youtube thumbnail | comment        |
 | ---- | ----------------------------------------- | ----- | ----- | ----- | ----- | -------------- |
