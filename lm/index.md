@@ -2,7 +2,7 @@
 
 | date | speaker                                   | photo | shareable | meeting backdrop | youtube thumbnail | comment        |
 | ---- | ----------------------------------------- | ----- | ----- | ----- | ----- | -------------- |
-|  2022-10-20  |  [Hedvig Kjellström, KTH](2022-10-20.md)  |  [photo](photo-hedvig-kjellstrom.jpg)  |  [social media ](social-media-hedvig-kjellstrom.png)  |    |  [youtube thumbnail ](youtube-thumbnail-hedvig-kjellstrom.png)  |  (confirmed)     |
+|  2022-10-20  |  [Hedvig Kjellström, KTH](2022-10-20.md)  |  [photo](photo-hedvig-kjellstrom.jpg)  |  [social media ](social-media-hedvig-kjellstrom.png)  |  [meeting backdrop ](meeting-backdrop-hedvig-kjellstrom.png)  |  [youtube thumbnail ](youtube-thumbnail-hedvig-kjellstrom.png)  |  (confirmed)     |
 | <span style="color:grey"> 2022-10-27 </span> | <span style="color:grey"> BeRe?,UrSi?,AnWi?IdHä?,  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey"> (not confirmed) </span> |
 | <span style="color:red"> 2022-11-03 </span> | <span style="color:red"> Höstlov </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> (cancelled) </span> |
 |  2022-11-10  |  [Frederik Kratzert, Google](2022-11-10.md)  |  [photo](photo-frederik-kratzert.jpg)  |  [social media ](social-media-frederik-kratzert.png)  |    |  [youtube thumbnail ](youtube-thumbnail-frederik-kratzert.png)  |  (confirmed)     |
