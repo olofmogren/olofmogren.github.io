@@ -1,9 +1,12 @@
-# Learning Machines Plan 2022-10-19
+<style type="text/css" scoped>
+td, th {border: 1px solid black;}
+table {border-collapse: collapse;}
+</style># Learning Machines Plan 2022-10-19
 
 | date | speaker                                   | photo | shareable | meeting backdrop | youtube thumbnail | comment        |
 | ---- | ----------------------------------------- | ----- | ----- | ----- | ----- | -------------- |
 |  2022-10-20  |  [Hedvig Kjellström, KTH](2022-10-20.md)  |  [photo](photo-hedvig-kjellstrom.jpg)  |  [social media ](social-media-hedvig-kjellstrom.png)  |  [meeting backdrop ](meeting-backdrop-hedvig-kjellstrom.png)  |  [youtube thumbnail ](youtube-thumbnail-hedvig-kjellstrom.png)  |  (confirmed)     |
-| <span style="color:grey"> 2022-10-27 </span> | <span style="color:grey"> Anna W. ? Ricardo V. ? </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey"> (not confirmed) </span> |
+| <span style="color:grey"> 2022-10-27 </span> | <span style="color:grey"> Anna W. ? Ricardo V. ? Testing ? </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey"> (not confirmed) </span> |
 | <span style="color:red"> 2022-11-03 </span> | <span style="color:red"> Höstlov </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> (cancelled) </span> |
 |  2022-11-10  |  [Frederik Kratzert, Google](2022-11-10.md)  |  [photo](photo-frederik-kratzert.jpg)  |  [social media ](social-media-frederik-kratzert.png)  |  [meeting backdrop ](meeting-backdrop-frederik-kratzert.png)  |  [youtube thumbnail ](youtube-thumbnail-frederik-kratzert.png)  |  (confirmed)     |
 |  2022-11-17  |  [Muhammad Osama, Aptiv](2022-11-17.md)  |  [photo](photo-muhammad-osama.jpg)  |  [social media ](social-media-muhammad-osama.png)  |  [meeting backdrop ](meeting-backdrop-muhammad-osama.png)  |  [youtube thumbnail ](youtube-thumbnail-muhammad-osama.png)  |  (confirmed)     |
