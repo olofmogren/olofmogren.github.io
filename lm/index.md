@@ -1,11 +1,10 @@
 <style type="text/css" scoped>
 td, th {border: 1px solid #ccc; padding: 0.6em;}
 table {border-collapse: collapse;}
-</style># Learning Machines Plan 2022-10-19
+</style># Learning Machines Plan 2022-10-20
 
 | date | speaker                                   | photo | shareable | meeting backdrop | youtube thumbnail | comment        |
 | ---- | ----------------------------------------- | ----- | ----- | ----- | ----- | -------------- |
-|  2022-10-20  |  [Hedvig Kjellström, KTH](2022-10-20.md)  |  [photo](photo-hedvig-kjellstrom.jpg)  |  [social media ](social-media-hedvig-kjellstrom.png)  |  [meeting backdrop ](meeting-backdrop-hedvig-kjellstrom.png)  |  [youtube thumbnail ](youtube-thumbnail-hedvig-kjellstrom.png)  |  (confirmed)     |
 |  2022-10-27  |  [Ricardo Vinuesa, KTH](2022-10-27.md)  |  [photo](photo-ricardo-vinuesa.jpg)  |  [social media ](social-media-ricardo-vinuesa.png)  |  [meeting backdrop ](meeting-backdrop-ricardo-vinuesa.png)  |  [youtube thumbnail ](youtube-thumbnail-ricardo-vinuesa.png)  |  (confirmed)     |
 | <span style="color:red"> 2022-11-03 </span> | <span style="color:red"> Höstlov </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> (cancelled) </span> |
 |  2022-11-10  |  [Frederik Kratzert, Google](2022-11-10.md)  |  [photo](photo-frederik-kratzert.jpg)  |  [social media ](social-media-frederik-kratzert.png)  |  [meeting backdrop ](meeting-backdrop-frederik-kratzert.png)  |  [youtube thumbnail ](youtube-thumbnail-frederik-kratzert.png)  |  (confirmed)     |
