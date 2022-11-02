@@ -1,7 +1,7 @@
 <style type="text/css" scoped>
 td, th {border: 1px solid #ccc; padding: 0.6em;}
 table {border-collapse: collapse;}
-</style># Learning Machines Plan 2022-10-28
+</style># Learning Machines Plan 2022-11-02
 
 | date | speaker                                   | photo | shareable | meeting backdrop | youtube thumbnail | comment        |
 | ---- | ----------------------------------------- | ----- | ----- | ----- | ----- | -------------- |
