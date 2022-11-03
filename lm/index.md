@@ -1,11 +1,10 @@
 <style type="text/css" scoped>
 td, th {border: 1px solid #ccc; padding: 0.6em;}
 table {border-collapse: collapse;}
-</style># Learning Machines Plan 2022-11-02
+</style># Learning Machines Plan 2022-11-03
 
 | date | speaker                                   | photo | shareable | meeting backdrop | youtube thumbnail | comment        |
 | ---- | ----------------------------------------- | ----- | ----- | ----- | ----- | -------------- |
-| <span style="color:red"> 2022-11-03 </span> | <span style="color:red"> Höstlov </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> (cancelled) </span> |
 |  2022-11-10  |  [Frederik Kratzert, Google](2022-11-10.md)  |  [photo](photo-frederik-kratzert.jpg)  |  [social media ](social-media-frederik-kratzert.png)  |  [meeting backdrop ](meeting-backdrop-frederik-kratzert.png)  |  [youtube thumbnail ](youtube-thumbnail-frederik-kratzert.png)  |  (confirmed)     |
 |  2022-11-17  |  [Muhammad Osama, Aptiv](2022-11-17.md)  |  [photo](photo-muhammad-osama.jpg)  |  [social media ](social-media-muhammad-osama.png)  |  [meeting backdrop ](meeting-backdrop-muhammad-osama.png)  |  [youtube thumbnail ](youtube-thumbnail-muhammad-osama.png)  |  (confirmed)     |
 |  2022-11-24  |  [Viktor Larsson, LTH](2022-11-24.md)  |  [photo](photo-viktor-larsson.jpg)  |  [social media ](social-media-viktor-larsson.png)  |  [meeting backdrop ](meeting-backdrop-viktor-larsson.png)  |  [youtube thumbnail ](youtube-thumbnail-viktor-larsson.png)  |  (confirmed)     |
