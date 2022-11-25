@@ -1,11 +1,10 @@
 <style type="text/css" scoped>
 td, th {border: 1px solid #ccc; padding: 0.6em;}
 table {border-collapse: collapse;}
-</style># Learning Machines Plan 2022-11-23
+</style># Learning Machines Plan 2022-11-25
 
 | date | speaker                                   | photo | shareable | meeting backdrop | youtube thumbnail | comment        |
 | ---- | ----------------------------------------- | ----- | ----- | ----- | ----- | -------------- |
-|  2022-11-24  |  [Viktor Larsson, LTH](2022-11-24.md)  |  [photo](photo-viktor-larsson.jpg)  |  [social media ](social-media-viktor-larsson.png)  |  [meeting backdrop ](meeting-backdrop-viktor-larsson.png)  |  [youtube thumbnail ](youtube-thumbnail-viktor-larsson.png)  |  (confirmed)     |
 |  2022-12-01  |  [Sara Beery, MIT](2022-12-01.md)  |  [photo](photo-sara-beery.jpeg)  |  [social media ](social-media-sara-beery.png)  |  [meeting backdrop ](meeting-backdrop-sara-beery.png)  |  [youtube thumbnail ](youtube-thumbnail-sara-beery.png)  |  (confirmed)     |
 |  2022-12-08  |  [William Lidberg, Swedish University of Agricultural Sciences](2022-12-08.md)  |  [photo](photo-william-lidberg.jpg)  |  [social media ](social-media-william-lidberg.png)  |  [meeting backdrop ](meeting-backdrop-william-lidberg.png)  |  [youtube thumbnail ](youtube-thumbnail-william-lidberg.png)  |  (confirmed)     |
 | <span style="color:grey"> 2022-12-15 </span> | <span style="color:grey"> Erik G. ? </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey"> (not confirmed) </span> |
