@@ -1,7 +1,7 @@
 <style type="text/css" scoped>
 td, th {border: 1px solid #ccc; padding: 0.6em;}
 table {border-collapse: collapse;}
-</style># Learning Machines Plan 2022-11-25
+</style># Learning Machines Plan 2022-11-28
 
 | date | speaker                                   | photo | shareable | meeting backdrop | youtube thumbnail | comment        |
 | ---- | ----------------------------------------- | ----- | ----- | ----- | ----- | -------------- |
@@ -13,8 +13,8 @@ table {border-collapse: collapse;}
 | <span style="color:red"> 2023-01-05 </span> | <span style="color:red"> Christmas </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> (cancelled) </span> |
 |  2023-01-12  |  [Mark D. Plumbley, University of Surrey](2023-01-12.md)  |  [photo](photo-mark-d.-plumbley.jpg)  |  [social media ](social-media-mark-d.-plumbley.png)  |  [meeting backdrop ](meeting-backdrop-mark-d.-plumbley.png)  |  [youtube thumbnail ](youtube-thumbnail-mark-d.-plumbley.png)  |  (confirmed)     |
 |  2023-01-19  |  [Giulia Fanti, Carnegie Mellon University](2023-01-19.md)  |  [photo](photo-giulia-fanti.jpg)  |  [social media ](social-media-giulia-fanti.png)  |  [meeting backdrop ](meeting-backdrop-giulia-fanti.png)  |  [youtube thumbnail ](youtube-thumbnail-giulia-fanti.png)  |  (confirmed)     |
-| <span style="color:purple"> 2023-01-26 </span> | <span style="color:purple"> *Up for grabs!!!* </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple"> (not confirmed) </span> |
-| <span style="color:purple"> 2023-02-02 </span> | <span style="color:purple"> *Up for grabs!!!* </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple"> (not confirmed) </span> |
+| <span style="color:grey"> 2023-01-26 </span> | <span style="color:grey"> Mathias N. ? </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey"> (not confirmed) </span> |
+| <span style="color:grey"> 2023-02-02 </span> | <span style="color:grey"> Mathias N. ? </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey"> (not confirmed) </span> |
 | <span style="color:purple"> 2023-02-09 </span> | <span style="color:purple"> *Up for grabs!!!* </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple"> (not confirmed) </span> |
 | <span style="color:red"> 2023-02-16 </span> | <span style="color:red"> Sportlov-GBG </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> (cancelled) </span> |
 | <span style="color:purple"> 2023-02-23 </span> | <span style="color:purple"> *Up for grabs!!!* </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple"> (not confirmed) </span> |
