@@ -5,7 +5,7 @@ table {border-collapse: collapse;}
 
 | date | speaker                                   | photo | shareable | meeting backdrop | youtube thumbnail | comment        |
 | ---- | ----------------------------------------- | ----- | ----- | ----- | ----- | -------------- |
-| <span style="color:grey"> 2022-12-15 </span> | <span style="color:grey"> Erik G. ? </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey"> (not confirmed) </span> |
+| <span style="color:red"> 2022-12-15 </span> | <span style="color:red"> Christmas </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> (cancelled) </span> |
 | <span style="color:red"> 2022-12-22 </span> | <span style="color:red"> Christmas </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> (cancelled) </span> |
 | <span style="color:red"> 2022-12-29 </span> | <span style="color:red"> Christmas </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> (cancelled) </span> |
 | <span style="color:red"> 2023-01-05 </span> | <span style="color:red"> Christmas </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> (cancelled) </span> |
