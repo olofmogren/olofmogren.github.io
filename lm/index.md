@@ -1,7 +1,7 @@
 <style type="text/css" scoped>
 td, th {border: 1px solid #ccc; padding: 0.6em;}
 table {border-collapse: collapse;}
-</style># Learning Machines Plan 2022-12-09
+</style># Learning Machines Plan 2022-12-12
 
 | date | speaker                                   | photo | shareable | meeting backdrop | youtube thumbnail | comment        |
 | ---- | ----------------------------------------- | ----- | ----- | ----- | ----- | -------------- |
@@ -18,7 +18,7 @@ table {border-collapse: collapse;}
 |  2023-02-23  |  [Alexander Ilin, Aalto University](2023-02-23.md)  |    |  [social media ](social-media-alexander-ilin.jpg)  |  [meeting backdrop ](meeting-backdrop-alexander-ilin.jpg)  |  [youtube thumbnail ](youtube-thumbnail-alexander-ilin.jpg)  |  (confirmed)     |
 | <span style="color:red"> 2023-03-02 </span> | <span style="color:red"> Sportlov-STHLM </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> (cancelled) </span> |
 |  2023-03-09  |  [Shay Cohen, University of Edinburgh](2023-03-09.md)  |    |  [social media ](social-media-shay-cohen.jpg)  |  [meeting backdrop ](meeting-backdrop-shay-cohen.jpg)  |  [youtube thumbnail ](youtube-thumbnail-shay-cohen.jpg)  |  (confirmed)     |
-| <span style="color:grey"> 2023-03-16 </span> | <span style="color:grey"> Stefanos G. ? </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey"> (not confirmed) </span> |
+|  2023-03-16  |  [Stefanos Georganos, Karlstad University/KTH/ULB](2023-03-16.md)  |    |  [social media ](social-media-stefanos-georganos.jpg)  |  [meeting backdrop ](meeting-backdrop-stefanos-georganos.jpg)  |  [youtube thumbnail ](youtube-thumbnail-stefanos-georganos.jpg)  |  (confirmed)     |
 | <span style="color:purple"> 2023-03-23 </span> | <span style="color:purple"> *Up for grabs!!!* </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple"> (not confirmed) </span> |
 | <span style="color:grey"> 2023-03-30 </span> | <span style="color:grey"> Puzhao Z. ? </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey"> (not confirmed) </span> |
 | <span style="color:red"> 2023-04-06 </span> | <span style="color:red"> Påsklov/Skärtorsdag </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> (cancelled) </span> |
