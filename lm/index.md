@@ -1,10 +1,13 @@
 <style type="text/css" scoped>
 td, th {border: 1px solid #ccc; padding: 0.6em;}
 table {border-collapse: collapse;}
-</style># Learning Machines Plan 2022-12-12
+</style># Learning Machines Plan 2022-11-23
 
 | date | speaker                                   | photo | shareable | meeting backdrop | youtube thumbnail | comment        |
 | ---- | ----------------------------------------- | ----- | ----- | ----- | ----- | -------------- |
+|  2022-11-24  |  [Viktor Larsson, LTH](2022-11-24.md)  |  [photo](photo-viktor-larsson.jpg)  |  [social media ](social-media-viktor-larsson.jpg)  |  [meeting backdrop ](meeting-backdrop-viktor-larsson.jpg)  |  [youtube thumbnail ](youtube-thumbnail-viktor-larsson.jpg)  |  (confirmed)     |
+|  2022-12-01  |  [Sara Beery, MIT](2022-12-01.md)  |  [photo](photo-sara-beery.jpeg)  |  [social media ](social-media-sara-beery.jpg)  |  [meeting backdrop ](meeting-backdrop-sara-beery.jpg)  |  [youtube thumbnail ](youtube-thumbnail-sara-beery.jpg)  |  (confirmed)     |
+|  2022-12-08  |  [William Lidberg, Swedish University of Agricultural Sciences](2022-12-08.md)  |  [photo](photo-william-lidberg.jpg)  |  [social media ](social-media-william-lidberg.jpg)  |  [meeting backdrop ](meeting-backdrop-william-lidberg.jpg)  |  [youtube thumbnail ](youtube-thumbnail-william-lidberg.jpg)  |  (confirmed)     |
 | <span style="color:red"> 2022-12-15 </span> | <span style="color:red"> Christmas </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> (cancelled) </span> |
 | <span style="color:red"> 2022-12-22 </span> | <span style="color:red"> Christmas </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> (cancelled) </span> |
 | <span style="color:red"> 2022-12-29 </span> | <span style="color:red"> Christmas </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> (cancelled) </span> |
