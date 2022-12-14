@@ -1,11 +1,10 @@
 <style type="text/css" scoped>
 td, th {border: 1px solid #ccc; padding: 0.6em;}
 table {border-collapse: collapse;}
-</style># Learning Machines Plan 2022-11-23
+</style># Learning Machines Plan 2022-12-14
 
 | date | speaker                                   | photo | shareable | meeting backdrop | youtube thumbnail | comment        |
 | ---- | ----------------------------------------- | ----- | ----- | ----- | ----- | -------------- |
-|  2022-11-24  |  [Viktor Larsson, LTH](2022-11-24.md)  |  [photo](photo-viktor-larsson.jpg)  |  [social media ](social-media-viktor-larsson.jpg)  |  [meeting backdrop ](meeting-backdrop-viktor-larsson.jpg)  |  [youtube thumbnail ](youtube-thumbnail-viktor-larsson.jpg)  |  (confirmed)     |
 |  2022-12-01  |  [Sara Beery, MIT](2022-12-01.md)  |  [photo](photo-sara-beery.jpeg)  |  [social media ](social-media-sara-beery.jpg)  |  [meeting backdrop ](meeting-backdrop-sara-beery.jpg)  |  [youtube thumbnail ](youtube-thumbnail-sara-beery.jpg)  |  (confirmed)     |
 |  2022-12-08  |  [William Lidberg, Swedish University of Agricultural Sciences](2022-12-08.md)  |  [photo](photo-william-lidberg.jpg)  |  [social media ](social-media-william-lidberg.jpg)  |  [meeting backdrop ](meeting-backdrop-william-lidberg.jpg)  |  [youtube thumbnail ](youtube-thumbnail-william-lidberg.jpg)  |  (confirmed)     |
 | <span style="color:red"> 2022-12-15 </span> | <span style="color:red"> Christmas </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> (cancelled) </span> |
@@ -14,7 +13,7 @@ table {border-collapse: collapse;}
 | <span style="color:red"> 2023-01-05 </span> | <span style="color:red"> Christmas </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> (cancelled) </span> |
 |  2023-01-12  |  [Mark D. Plumbley, University of Surrey](2023-01-12.md)  |  [photo](photo-mark-d.-plumbley.jpg)  |  [social media ](social-media-mark-d.-plumbley.jpg)  |  [meeting backdrop ](meeting-backdrop-mark-d.-plumbley.jpg)  |  [youtube thumbnail ](youtube-thumbnail-mark-d.-plumbley.jpg)  |  (confirmed)     |
 |  2023-01-19  |  [Giulia Fanti, Carnegie Mellon University](2023-01-19.md)  |  [photo](photo-giulia-fanti.jpg)  |  [social media ](social-media-giulia-fanti.jpg)  |  [meeting backdrop ](meeting-backdrop-giulia-fanti.jpg)  |  [youtube thumbnail ](youtube-thumbnail-giulia-fanti.jpg)  |  (confirmed)     |
-| <span style="color:grey"> 2023-01-26 </span> | <span style="color:grey"> Lena V. ? Kristin B. ? Mathias N. ? </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey"> (not confirmed) </span> |
+|  2023-01-26  |  [Lena Voita, FAIR](2023-01-26.md)  |    |  [social media ](social-media-lena-voita.jpg)  |  [meeting backdrop ](meeting-backdrop-lena-voita.jpg)  |  [youtube thumbnail ](youtube-thumbnail-lena-voita.jpg)  |  (confirmed)     |
 |  2023-02-02  |  [Vincent Szolnoky, Chalmers University of Technology](2023-02-02.md)  |  [photo](photo-vincent-szolnoky.png)  |  [social media ](social-media-vincent-szolnoky.jpg)  |  [meeting backdrop ](meeting-backdrop-vincent-szolnoky.jpg)  |  [youtube thumbnail ](youtube-thumbnail-vincent-szolnoky.jpg)  |  (confirmed)     |
 | <span style="color:grey"> 2023-02-09 </span> | <span style="color:grey"> Timnit G. ? </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey"> (not confirmed) </span> |
 | <span style="color:red"> 2023-02-16 </span> | <span style="color:red"> Sportlov-GBG </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> (cancelled) </span> |
