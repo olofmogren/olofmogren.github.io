@@ -3,7 +3,7 @@ td, th {border: 1px solid #ccc; padding: 0.6em;}
 table {border-collapse: collapse;}
 </style># Learning Machines Plan 2022-12-22
 
-| date | speaker                                   | photo | shareable | meeting backdrop | youtube thumbnail | <a title="Speaker, Title, Abstract, Bio, Photo">comment</a>        |
+| date | speaker                                   | photo | shareable | meeting backdrop | youtube thumbnail | <a title="Speaker, Title, Abstract, Bio, Photo. Strikethrough means we don't have it yet.">comment</a>        |
 | ---- | ----------------------------------------- | ----- | ----- | ----- | ----- | -------------- |
 |  2022-12-08  |  [William Lidberg, Swedish University of Agricultural Sciences](2022-12-08.md)  |  [photo](photo-william-lidberg.jpg)  |  [social media ](social-media-william-lidberg.jpg)  |  [meeting backdrop ](meeting-backdrop-william-lidberg.jpg)  |  [youtube thumbnail ](youtube-thumbnail-william-lidberg.jpg)  |  STABP  |
 | <span style="color:red"> 2022-12-15 </span> | <span style="color:red"> Christmas </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
