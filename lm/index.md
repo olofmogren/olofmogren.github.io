@@ -1,16 +1,15 @@
 <style type="text/css" scoped>
 td, th {border: 1px solid #ccc; padding: 0.6em;}
 table {border-collapse: collapse;}
-</style># Learning Machines Plan 2023-01-23
+</style># Learning Machines Plan 2023-01-26
 
 | date | speaker                                   | photo | shareable | meeting backdrop | youtube thumbnail | <a title="Speaker, Title, Abstract, Bio, Photo. Strikethrough means we don't have it yet.">comment</a>        |
 | ---- | ----------------------------------------- | ----- | ----- | ----- | ----- | -------------- |
-| <span style="color:red"> 2023-01-05 </span> | <span style="color:red"> Christmas </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
 |  2023-01-12  |  [Mark D. Plumbley, University of Surrey](2023-01-12.md)  |  [photo](photo-mark-d.-plumbley.jpg)  |  [social media ](social-media-mark-d.-plumbley.jpg)  |  [meeting backdrop ](meeting-backdrop-mark-d.-plumbley.jpg)  |  [youtube thumbnail ](youtube-thumbnail-mark-d.-plumbley.jpg)  |  STABP  |
 |  2023-01-19  |  [Giulia Fanti, Carnegie Mellon University](2023-01-19.md)  |  [photo](photo-giulia-fanti.jpg)  |  [social media ](social-media-giulia-fanti.jpg)  |  [meeting backdrop ](meeting-backdrop-giulia-fanti.jpg)  |  [youtube thumbnail ](youtube-thumbnail-giulia-fanti.jpg)  |  STABP  |
 |  2023-01-26  |  [Lena Voita, FAIR](2023-01-26.md)  |  [photo](photo-lena-voita.jpg)  |  [social media ](social-media-lena-voita.jpg)  |  [meeting backdrop ](meeting-backdrop-lena-voita.jpg)  |  [youtube thumbnail ](youtube-thumbnail-lena-voita.jpg)  |  STABP  |
 |  2023-02-02  |  [Vincent Szolnoky, Chalmers University of Technology](2023-02-02.md)  |  [photo](photo-vincent-szolnoky.png)  |  [social media ](social-media-vincent-szolnoky.jpg)  |  [meeting backdrop ](meeting-backdrop-vincent-szolnoky.jpg)  |  [youtube thumbnail ](youtube-thumbnail-vincent-szolnoky.jpg)  |  STABP  |
-| <span style="color:grey"> 2023-02-09 </span> | <span style="color:grey"> Alec R. ? </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey"> ?~~TABP~~ </span> |
+|  2023-02-09  |  [Erik Ylipää and Joakim Nivre, Senior Researchers](2023-02-09.md)  |    |  [social media ](social-media-erik-ylipaa-and-joakim-nivre.jpg)  |  [meeting backdrop ](meeting-backdrop-erik-ylipaa-and-joakim-nivre.jpg)  |  [youtube thumbnail ](youtube-thumbnail-erik-ylipaa-and-joakim-nivre.jpg)  |  STA~~BP~~  |
 | <span style="color:red"> 2023-02-16 </span> | <span style="color:red"> Sportlov-GBG </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
 |  2023-02-23  |  [Alexander Ilin, Aalto University](2023-02-23.md)  |  [photo](photo-alexander-ilin.jpg)  |  [social media ](social-media-alexander-ilin.jpg)  |  [meeting backdrop ](meeting-backdrop-alexander-ilin.jpg)  |  [youtube thumbnail ](youtube-thumbnail-alexander-ilin.jpg)  |  S~~TAB~~P  |
 | <span style="color:red"> 2023-03-02 </span> | <span style="color:red"> Sportlov-STHLM </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
