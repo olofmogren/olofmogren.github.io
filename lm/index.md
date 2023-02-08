@@ -1,11 +1,14 @@
+---
+layout: default
+metatags: "<meta name=\"robots\" content=\"noindex,nofollow\" />"
+---
 <style type="text/css" scoped>
 td, th {border: 1px solid #ccc; padding: 0.6em;}
 table {border-collapse: collapse;}
-</style># Learning Machines Plan 2023-02-06
+</style># Learning Machines Plan 2023-02-08
 
 | date | speaker                                   | photo | shareable | meeting backdrop | youtube thumbnail | <a title="Speaker, Title, Abstract, Bio, Photo. Strikethrough means we don't have it yet.">comment</a>        |
 | ---- | ----------------------------------------- | ----- | ----- | ----- | ----- | -------------- |
-|  2023-01-19  |  [Giulia Fanti, Carnegie Mellon University](2023-01-19.md)  |  [photo](photo-giulia-fanti.jpg)  |  [social media ](social-media-giulia-fanti.jpg)  |  [meeting backdrop ](meeting-backdrop-giulia-fanti.jpg)  |  [youtube thumbnail ](youtube-thumbnail-giulia-fanti.jpg)  |  STABP  |
 |  2023-01-26  |  [Lena Voita, FAIR](2023-01-26.md)  |  [photo](photo-lena-voita.jpg)  |  [social media ](social-media-lena-voita.jpg)  |  [meeting backdrop ](meeting-backdrop-lena-voita.jpg)  |  [youtube thumbnail ](youtube-thumbnail-lena-voita.jpg)  |  STABP  |
 |  2023-02-02  |  [Vincent Szolnoky, Chalmers University of Technology](2023-02-02.md)  |  [photo](photo-vincent-szolnoky.png)  |  [social media ](social-media-vincent-szolnoky.jpg)  |  [meeting backdrop ](meeting-backdrop-vincent-szolnoky.jpg)  |  [youtube thumbnail ](youtube-thumbnail-vincent-szolnoky.jpg)  |  STABP  |
 |  2023-02-09  |  [Joakim Nivre, Erik Ylipää, and Olof Mogren, RISE](2023-02-09.md)  |  [photo](photo-joakim-nivre--erik-ylipaa--and-olof-mogren.jpg)  |  [social media ](social-media-joakim-nivre--erik-ylipaa--and-olof-mogren.jpg)  |  [meeting backdrop ](meeting-backdrop-joakim-nivre--erik-ylipaa--and-olof-mogren.jpg)  |  [youtube thumbnail ](youtube-thumbnail-joakim-nivre--erik-ylipaa--and-olof-mogren.jpg)  |  STABP  |
