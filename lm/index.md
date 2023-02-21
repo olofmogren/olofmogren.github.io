@@ -5,17 +5,16 @@ metatags: "<meta name=\"robots\" content=\"noindex,nofollow\" />"
 <style type="text/css" scoped>
 td, th {border: 1px solid #ccc; padding: 0.6em;}
 table {border-collapse: collapse;}
-</style># Learning Machines Plan 2023-02-08
+</style># Learning Machines Plan 2023-02-21
 
 | date | speaker                                   | photo | shareable | meeting backdrop | youtube thumbnail | <a title="Speaker, Title, Abstract, Bio, Photo. Strikethrough means we don't have it yet.">comment</a>        |
 | ---- | ----------------------------------------- | ----- | ----- | ----- | ----- | -------------- |
-|  2023-01-26  |  [Lena Voita, FAIR](2023-01-26.md)  |  [photo](photo-lena-voita.jpg)  |  [social media ](social-media-lena-voita.jpg)  |  [meeting backdrop ](meeting-backdrop-lena-voita.jpg)  |  [youtube thumbnail ](youtube-thumbnail-lena-voita.jpg)  |  STABP  |
 |  2023-02-02  |  [Vincent Szolnoky, Chalmers University of Technology](2023-02-02.md)  |  [photo](photo-vincent-szolnoky.png)  |  [social media ](social-media-vincent-szolnoky.jpg)  |  [meeting backdrop ](meeting-backdrop-vincent-szolnoky.jpg)  |  [youtube thumbnail ](youtube-thumbnail-vincent-szolnoky.jpg)  |  STABP  |
 |  2023-02-09  |  [Joakim Nivre, Erik Ylipää, and Olof Mogren, RISE](2023-02-09.md)  |  [photo](photo-joakim-nivre--erik-ylipaa--and-olof-mogren.jpg)  |  [social media ](social-media-joakim-nivre--erik-ylipaa--and-olof-mogren.jpg)  |  [meeting backdrop ](meeting-backdrop-joakim-nivre--erik-ylipaa--and-olof-mogren.jpg)  |  [youtube thumbnail ](youtube-thumbnail-joakim-nivre--erik-ylipaa--and-olof-mogren.jpg)  |  STABP  |
 | <span style="color:red"> 2023-02-16 </span> | <span style="color:red"> Sportlov-GBG </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
 |  2023-02-23  |  [Alexander Ilin, Aalto University](2023-02-23.md)  |  [photo](photo-alexander-ilin.jpg)  |  [social media ](social-media-alexander-ilin.jpg)  |  [meeting backdrop ](meeting-backdrop-alexander-ilin.jpg)  |  [youtube thumbnail ](youtube-thumbnail-alexander-ilin.jpg)  |  STABP  |
 | <span style="color:red"> 2023-03-02 </span> | <span style="color:red"> Sportlov-STHLM </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
-|  2023-03-09  |  [Shay Cohen, University of Edinburgh](2023-03-09.md)  |  [photo](photo-shay-cohen.jpg)  |  [social media ](social-media-shay-cohen.jpg)  |  [meeting backdrop ](meeting-backdrop-shay-cohen.jpg)  |  [youtube thumbnail ](youtube-thumbnail-shay-cohen.jpg)  |  S~~TAB~~P  |
+|  2023-03-09  |  [Shay Cohen, University of Edinburgh](2023-03-09.md)  |  [photo](photo-shay-cohen.jpg)  |  [social media ](social-media-shay-cohen.jpg)  |  [meeting backdrop ](meeting-backdrop-shay-cohen.jpg)  |  [youtube thumbnail ](youtube-thumbnail-shay-cohen.jpg)  |  STABP  |
 |  2023-03-16  |  [Stefanos Georganos, Karlstad University/KTH](2023-03-16.md)  |  [photo](photo-stefanos-georganos.jpg)  |  [social media ](social-media-stefanos-georganos.jpg)  |  [meeting backdrop ](meeting-backdrop-stefanos-georganos.jpg)  |  [youtube thumbnail ](youtube-thumbnail-stefanos-georganos.jpg)  |  STABP  |
 |  2023-03-23  |  [Gabrielle Flood, Lund University](2023-03-23.md)  |  [photo](photo-gabrielle-flood.jpg)  |  [social media ](social-media-gabrielle-flood.jpg)  |  [meeting backdrop ](meeting-backdrop-gabrielle-flood.jpg)  |  [youtube thumbnail ](youtube-thumbnail-gabrielle-flood.jpg)  |  ST~~AB~~P  |
 |  2023-03-30  |  [Puzhao Zhang, KTH](2023-03-30.md)  |  [photo](photo-puzhao-zhang.jpg)  |  [social media ](social-media-puzhao-zhang.jpg)  |  [meeting backdrop ](meeting-backdrop-puzhao-zhang.jpg)  |  [youtube thumbnail ](youtube-thumbnail-puzhao-zhang.jpg)  |  S~~TAB~~P  |
