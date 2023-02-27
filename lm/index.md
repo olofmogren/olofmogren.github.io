@@ -5,11 +5,10 @@ metatags: "<meta name=\"robots\" content=\"noindex,nofollow\" />"
 <style type="text/css" scoped>
 td, th {border: 1px solid #ccc; padding: 0.6em;}
 table {border-collapse: collapse;}
-</style># Learning Machines Plan 2023-02-21
+</style># Learning Machines Plan 2023-02-27
 
 | date | speaker                                   | photo | shareable | meeting backdrop | youtube thumbnail | <a title="Speaker, Title, Abstract, Bio, Photo. Strikethrough means we don't have it yet.">comment</a>        |
 | ---- | ----------------------------------------- | ----- | ----- | ----- | ----- | -------------- |
-|  2023-02-02  |  [Vincent Szolnoky, Chalmers University of Technology](2023-02-02.md)  |  [photo](photo-vincent-szolnoky.png)  |  [social media ](social-media-vincent-szolnoky.jpg)  |  [meeting backdrop ](meeting-backdrop-vincent-szolnoky.jpg)  |  [youtube thumbnail ](youtube-thumbnail-vincent-szolnoky.jpg)  |  STABP  |
 |  2023-02-09  |  [Joakim Nivre, Erik Ylipää, and Olof Mogren, RISE](2023-02-09.md)  |  [photo](photo-joakim-nivre--erik-ylipaa--and-olof-mogren.jpg)  |  [social media ](social-media-joakim-nivre--erik-ylipaa--and-olof-mogren.jpg)  |  [meeting backdrop ](meeting-backdrop-joakim-nivre--erik-ylipaa--and-olof-mogren.jpg)  |  [youtube thumbnail ](youtube-thumbnail-joakim-nivre--erik-ylipaa--and-olof-mogren.jpg)  |  STABP  |
 | <span style="color:red"> 2023-02-16 </span> | <span style="color:red"> Sportlov-GBG </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
 |  2023-02-23  |  [Alexander Ilin, Aalto University](2023-02-23.md)  |  [photo](photo-alexander-ilin.jpg)  |  [social media ](social-media-alexander-ilin.jpg)  |  [meeting backdrop ](meeting-backdrop-alexander-ilin.jpg)  |  [youtube thumbnail ](youtube-thumbnail-alexander-ilin.jpg)  |  STABP  |
@@ -21,7 +20,7 @@ table {border-collapse: collapse;}
 | <span style="color:red"> 2023-04-06 </span> | <span style="color:red"> Påsklov/Skärtorsdag </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
 |  2023-04-13  |  [Elijah Cole, Caltech](2023-04-13.md)  |  [photo](photo-elijah-cole.jpg)  |  [social media ](social-media-elijah-cole.jpg)  |  [meeting backdrop ](meeting-backdrop-elijah-cole.jpg)  |  [youtube thumbnail ](youtube-thumbnail-elijah-cole.jpg)  |  S~~TAB~~P  |
 |  2023-04-20  |  [Rico Sennrich, University of Zurich](2023-04-20.md)  |  [photo](photo-rico-sennrich.jpg)  |  [social media ](social-media-rico-sennrich.jpg)  |  [meeting backdrop ](meeting-backdrop-rico-sennrich.jpg)  |  [youtube thumbnail ](youtube-thumbnail-rico-sennrich.jpg)  |  S~~TAB~~P  |
-| <span style="color:purple"> 2023-04-27 </span> | <span style="color:purple"> *Up for grabs!!!* </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple"> ~~STABP~~ </span> |
+| <span style="color:grey"> 2023-04-27 </span> | <span style="color:grey"> Jonathan S. ? </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey"> ?~~TABP~~ </span> |
 |  2023-05-04  |  [Ida Arvidsson, Lund University](2023-05-04.md)  |    |  [social media ](social-media-ida-arvidsson.jpg)  |  [meeting backdrop ](meeting-backdrop-ida-arvidsson.jpg)  |  [youtube thumbnail ](youtube-thumbnail-ida-arvidsson.jpg)  |  S~~TABP~~  |
 | <span style="color:purple"> 2023-05-11 </span> | <span style="color:purple"> *Up for grabs!!!* </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple"> ~~STABP~~ </span> |
 | <span style="color:red"> 2023-05-18 </span> | <span style="color:red"> Kristi-himmelsfärd </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
