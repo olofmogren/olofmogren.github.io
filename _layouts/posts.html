@@ -24,7 +24,13 @@ layout: default
 <em><strong>{{ page.authors }}</strong></em>
 </p>
 <p>
+{% if page.venuelink %}
+<a href="{{ page.venuelink }}">
+{% endif %}
 <em>{{ page.venue }}</em><br />
+{% if page.venuelink %}
+</a>
+{% endif %}
 {% if page.pdf %}
 <a href="{{ page.pdf }}">PDF Fulltext</a><br />
 {% endif %}

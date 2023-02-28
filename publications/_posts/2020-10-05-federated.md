@@ -11,6 +11,7 @@ Federated learning has received attention for its efficiency and privacy benefit
 "
 venue: Arxiv Preprint 2020
 venueshort: Arxiv 2020
+venuelink: https://arxiv.org/abs/2010.02056
 authors: Edvin Listo Zec, Olof Mogren, John Martinsson, Leon René Sütfeld, Daniel Gillblad
 bibtex: '@misc{zec2020federated,
       title={Federated learning using a mixture of experts}, 
