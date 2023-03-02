@@ -5,11 +5,10 @@ metatags: "<meta name=\"robots\" content=\"noindex,nofollow\" />"
 <style type="text/css" scoped>
 td, th {border: 1px solid #ccc; padding: 0.6em;}
 table {border-collapse: collapse;}
-</style># Learning Machines Plan 2023-02-27
+</style># Learning Machines Plan 2023-03-02
 
 | date | speaker                                   | photo | shareable | meeting backdrop | youtube thumbnail | <a title="Speaker, Title, Abstract, Bio, Photo. Strikethrough means we don't have it yet.">comment</a>        |
 | ---- | ----------------------------------------- | ----- | ----- | ----- | ----- | -------------- |
-|  2023-02-09  |  [Joakim Nivre, Erik Ylipää, and Olof Mogren, RISE](2023-02-09.md)  |  [photo](photo-joakim-nivre--erik-ylipaa--and-olof-mogren.jpg)  |  [social media ](social-media-joakim-nivre--erik-ylipaa--and-olof-mogren.jpg)  |  [meeting backdrop ](meeting-backdrop-joakim-nivre--erik-ylipaa--and-olof-mogren.jpg)  |  [youtube thumbnail ](youtube-thumbnail-joakim-nivre--erik-ylipaa--and-olof-mogren.jpg)  |  STABP  |
 | <span style="color:red"> 2023-02-16 </span> | <span style="color:red"> Sportlov-GBG </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
 |  2023-02-23  |  [Alexander Ilin, Aalto University](2023-02-23.md)  |  [photo](photo-alexander-ilin.jpg)  |  [social media ](social-media-alexander-ilin.jpg)  |  [meeting backdrop ](meeting-backdrop-alexander-ilin.jpg)  |  [youtube thumbnail ](youtube-thumbnail-alexander-ilin.jpg)  |  STABP  |
 | <span style="color:red"> 2023-03-02 </span> | <span style="color:red"> Sportlov-STHLM </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
