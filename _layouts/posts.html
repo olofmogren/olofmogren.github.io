@@ -44,7 +44,15 @@ layout: default
 <a href="javascript:void(null);" onclick="showBibtex(event, '{{ page.bibtex }}')">bibtex</a>.<br />
 {% endif %}
 {% if page.generatebibtex %}
-<a href="javascript:void(null);" onclick="showBibtex(event, '@misc{ { {{page.title}} }, \nauthor={ {{page.authors}} }, \nbooktitle={ {{page.venue}} }, \nyear={ {{ page.date | date: "%Y" }} }, \neprint{ {{page.eprint}} }, \ndoi={ {{page.doi}} } \n}')">bibtex</a>.<br />
+{% assign allauthors = page.authors | split: ',' %}
+{% assign firstauthor = allauthors[0] | split: ' ' %}
+{% assign firstauthor = firstauthor.last %}
+{% assign titles = page.title | split: ' ' %}
+{% assign firsttitle = titles[0] }
+{% capture bibtex_id %}{{ firstauthor }}{{ page.year }}{{ firsttitle }}{% endcapture %}
+{% assign bibtex_id = bibtex_id | downcase %}
+
+<a href="javascript:void(null);" onclick="showBibtex(event, '@misc{ {{ bibtex_id }}, title={ {{page.title}} }, \nauthor={ {{page.authors}} }, \nbooktitle={ {{page.venue}} }, \nyear={ {{ page.date | date: "%Y" }} }, \neprint{ {{page.eprint}} }, \ndoi={ {{page.doi}} } \n}')">bibtex</a>.<br />
 {% endif %}
 {% if page.category == 'publications' %}
 This is a publication.
