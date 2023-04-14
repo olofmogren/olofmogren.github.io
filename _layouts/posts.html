@@ -49,8 +49,7 @@ layout: default
 {% assign firstauthor = firstauthor.last %}
 {% assign titles = page.title | split: ' ' %}
 {% assign firsttitle = titles[0] }
-{% capture bibtex_id %}{{ firstauthor }}{{ page.year }}{{ firsttitle }}{% endcapture %}
-{% assign bibtex_id = bibtex_id | downcase %}
+{% assign bibtex_id = firstauthor | append page.year | apend firsttitle | downcase %}
 
 <a href="javascript:void(null);" onclick="showBibtex(event, '@misc{ {{ bibtex_id }}, title={ {{page.title}} }, \nauthor={ {{page.authors}} }, \nbooktitle={ {{page.venue}} }, \nyear={ {{ page.date | date: "%Y" }} }, \neprint{ {{page.eprint}} }, \ndoi={ {{page.doi}} } \n}')">bibtex</a>.<br />
 {% endif %}
