@@ -6,6 +6,7 @@ layout: default
 <div class="inner">
 <div class="block block-copy">
 
+{% capture short_author_string %}{% include author_extras.html authors=p.authors %}{% endcapture %}
 
 <h1>{{ page.title }}</h1>
 
@@ -52,7 +53,7 @@ layout: default
 {% assign year = page.date | date: "%Y" %}
 {% assign bibtex_id = firstauthor | append: year | append: firsttitle | downcase %}
 
-<a href="javascript:void(null);" onclick="showBibtex(event, '@misc{ {{ bibtex_id }}, title={ {{page.title}} }, \nauthor={ {{page.authors}} }, \nbooktitle={ {{page.venue}} }, \nyear={ {{ page.date | date: "%Y" }} }, \neprint={ {{page.eprint}} }, \ndoi={ {{page.doi}} } \n}')">bibtex</a>.<br />
+<a href="javascript:void(null);" onclick="showBibtex(event, '@misc{ {{ bibtex_id }}, title={ {{page.title}} }, \nauthor={ {{short_author_string}} }, \nbooktitle={ {{page.venue}} }, \nyear={ {{ page.date | date: "%Y" }} }, \neprint={ {{page.eprint}} }, \ndoi={ {{page.doi}} } \n}')">bibtex</a>.<br />
 {% endif %}
 {% if page.category == 'publications' %}
 This is a publication.
