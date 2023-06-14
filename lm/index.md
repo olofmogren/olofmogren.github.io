@@ -5,11 +5,10 @@ metatags: "<meta name=\"robots\" content=\"noindex,nofollow\" />"
 <style type="text/css" scoped>
 td, th {border: 1px solid #ccc; padding: 0.6em;}
 table {border-collapse: collapse;}
-</style># Learning Machines Plan 2023-06-08
+</style># Learning Machines Plan 2023-06-14
 
 | date | speaker                                   | photo | shareable | meeting backdrop | youtube thumbnail | <a title="Speaker, Title, Abstract, Bio, Photo. Strikethrough means we don't have it yet.">comment</a>        |
 | ---- | ----------------------------------------- | ----- | ----- | ----- | ----- | -------------- |
-|  2023-05-25  |  [Puzhao Zhang, KTH](2023-05-25.md)  |  [photo](photo-puzhao-zhang.jpg)  |  [social media ](social-media-puzhao-zhang.jpg)  |  [meeting backdrop ](meeting-backdrop-puzhao-zhang.jpg)  |  [youtube thumbnail ](youtube-thumbnail-puzhao-zhang.jpg)  |  STABP  |
 | <span style="color:red"> 2023-06-01 </span> | <span style="color:red"> SUMMER-BREAK! </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
 | <span style="color:grey"> 2023-08-31 </span> | <span style="color:grey"> Serge B. ? </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey"> ?TAB~~P~~ </span> |
 | <span style="color:grey"> 2023-09-07 </span> | <span style="color:grey"> Zhirong Y. ? </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey"> ?TAB~~P~~ </span> |
