@@ -5,7 +5,7 @@ metatags: "<meta name=\"robots\" content=\"noindex,nofollow\" />"
 <style type="text/css" scoped>
 td, th {border: 1px solid #ccc; padding: 0.6em;}
 table {border-collapse: collapse;}
-</style># Learning Machines Plan 2023-06-16
+</style># Learning Machines Plan 2023-06-19
 
 | date | speaker                                   | photo | shareable | meeting backdrop | youtube thumbnail | <a title="Speaker, Title, Abstract, Bio, Photo. Strikethrough means we don't have it yet.">comment</a>        |
 | ---- | ----------------------------------------- | ----- | ----- | ----- | ----- | -------------- |
@@ -18,7 +18,7 @@ table {border-collapse: collapse;}
 | <span style="color:grey"> 2023-10-12 </span> | <span style="color:grey"> Giulio B. ? </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey"> ?TAB~~P~~ </span> |
 |  2023-10-19  |  [Valentin De Bortoli, ENS Ulm, Paris](2023-10-19.md)  |  [photo](photo-valentin-de-bortoli.jpg)  |  [social media ](social-media-valentin-de-bortoli.jpg)  |  [meeting backdrop ](meeting-backdrop-valentin-de-bortoli.jpg)  |  [youtube thumbnail ](youtube-thumbnail-valentin-de-bortoli.jpg)  |  STABP  |
 | <span style="color:grey"> 2023-10-26 </span> | <span style="color:grey"> Priya L. D. ? </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey"> STAB~~P~~ </span> |
-| <span style="color:grey"> 2023-11-02 </span> | <span style="color:grey"> Jonas H. ? </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey"> ?TAB~~P~~ </span> |
+|  2023-11-02  |  [Jonas Hellgren, RISE](2023-11-02.md)  |    |  [social media ](social-media-jonas-hellgren.jpg)  |  [meeting backdrop ](meeting-backdrop-jonas-hellgren.jpg)  |  [youtube thumbnail ](youtube-thumbnail-jonas-hellgren.jpg)  |  STAB~~P~~  |
 | <span style="color:grey"> 2023-11-09 </span> | <span style="color:grey"> Nataša S. o. J. L. (. ? </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey"> STAB~~P~~ </span> |
 | <span style="color:purple"> 2023-11-16 </span> | <span style="color:purple"> *Up for grabs!!!* </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple"> ~~S~~TAB~~P~~ </span> |
 | <span style="color:purple"> 2023-11-23 </span> | <span style="color:purple"> *Up for grabs!!!* </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple"> ~~S~~TAB~~P~~ </span> |
