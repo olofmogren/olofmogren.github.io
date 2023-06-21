@@ -5,11 +5,10 @@ metatags: "<meta name=\"robots\" content=\"noindex,nofollow\" />"
 <style type="text/css" scoped>
 td, th {border: 1px solid #ccc; padding: 0.6em;}
 table {border-collapse: collapse;}
-</style># Learning Machines Plan 2023-06-20
+</style># Learning Machines Plan 2023-06-21
 
 | date | speaker                                   | photo | shareable | meeting backdrop | youtube thumbnail | <a title="Speaker, Title, Abstract, Bio, Photo. Strikethrough means we don't have it yet.">comment</a>        |
 | ---- | ----------------------------------------- | ----- | ----- | ----- | ----- | -------------- |
-| <span style="color:red"> 2023-06-01 </span> | <span style="color:red"> SUMMER-BREAK! </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
 |  2023-08-31  |  [Zahra Taghiyar Renan, Halmstad University](2023-08-31.md)  |  [photo](photo-zahra-taghiyar-renan.jpg)  |  [social media ](social-media-zahra-taghiyar-renan.jpg)  |  [meeting backdrop ](meeting-backdrop-zahra-taghiyar-renan.jpg)  |  [youtube thumbnail ](youtube-thumbnail-zahra-taghiyar-renan.jpg)  |  STABP  |
 | <span style="color:grey"> 2023-09-07 </span> | <span style="color:grey"> Adam B. ? </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey"> ?TAB~~P~~ </span> |
 |  2023-09-21  |  [Nico Lang, University of Copenhagen](2023-09-21.md)  |  [photo](photo-nico-lang.jpg)  |  [social media ](social-media-nico-lang.jpg)  |  [meeting backdrop ](meeting-backdrop-nico-lang.jpg)  |  [youtube thumbnail ](youtube-thumbnail-nico-lang.jpg)  |  STABP  |
