@@ -5,12 +5,12 @@ metatags: "<meta name=\"robots\" content=\"noindex,nofollow\" />"
 <style type="text/css" scoped>
 td, th {border: 1px solid #ccc; padding: 0.6em;}
 table {border-collapse: collapse;}
-</style># Learning Machines Plan 2023-06-26
+</style># Learning Machines Plan 2023-06-27
 
 | date | speaker                                   | photo | shareable | meeting backdrop | youtube thumbnail | <a title="Speaker, Title, Abstract, Bio, Photo. Strikethrough means we don't have it yet.">comment</a>        |
 | ---- | ----------------------------------------- | ----- | ----- | ----- | ----- | -------------- |
 |  2023-08-31  |  [Zahra Taghiyar Renan, Halmstad University](2023-08-31.md)  |  [photo](photo-zahra-taghiyar-renan.jpg)  |  [social media ](social-media-zahra-taghiyar-renan.jpg)  |  [meeting backdrop ](meeting-backdrop-zahra-taghiyar-renan.jpg)  |  [youtube thumbnail ](youtube-thumbnail-zahra-taghiyar-renan.jpg)  |  S~~TAB~~P  |
-| <span style="color:grey"> 2023-09-07 </span> | <span style="color:grey"> Adam B. ? </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey"> ?~~TABP~~ </span> |
+| <span style="color:grey"> 2023-09-07 </span> | <span style="color:grey"> Adam B. ? or E. S. ? </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey"> ?~~TABP~~ </span> |
 |  2023-09-14  |  [Virginia Smith, CMU](2023-09-14.md)  |  [photo](photo-virginia-smith.jpg)  |  [social media ](social-media-virginia-smith.jpg)  |  [meeting backdrop ](meeting-backdrop-virginia-smith.jpg)  |  [youtube thumbnail ](youtube-thumbnail-virginia-smith.jpg)  |  S~~TAB~~P  |
 |  2023-09-21  |  [Nico Lang, University of Copenhagen](2023-09-21.md)  |  [photo](photo-nico-lang.jpg)  |  [social media ](social-media-nico-lang.jpg)  |  [meeting backdrop ](meeting-backdrop-nico-lang.jpg)  |  [youtube thumbnail ](youtube-thumbnail-nico-lang.jpg)  |  STABP  |
 | <span style="color:grey"> 2023-09-28 </span> | <span style="color:grey"> Jaakko P. ? </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey"> ?~~TABP~~ </span> |
