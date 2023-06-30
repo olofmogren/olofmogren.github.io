@@ -5,7 +5,7 @@ metatags: "<meta name=\"robots\" content=\"noindex,nofollow\" />"
 <style type="text/css" scoped>
 td, th {border: 1px solid #ccc; padding: 0.6em;}
 table {border-collapse: collapse;}
-</style># Learning Machines Plan 2023-06-28
+</style># Learning Machines Plan 2023-06-30
 
 | date | speaker                                   | photo | shareable | meeting backdrop | youtube thumbnail | <a title="Speaker, Title, Abstract, Bio, Photo. Strikethrough means we don't have it yet.">comment</a>        |
 | ---- | ----------------------------------------- | ----- | ----- | ----- | ----- | -------------- |
@@ -13,7 +13,7 @@ table {border-collapse: collapse;}
 | <span style="color:grey"> 2023-09-07 </span> | <span style="color:grey"> Adam B. ? or J. Ö. ? </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey"> ?~~TABP~~ </span> |
 |  2023-09-14  |  [Virginia Smith, CMU](2023-09-14.md)  |  [photo](photo-virginia-smith.jpg)  |  [social media ](social-media-virginia-smith.jpg)  |  [meeting backdrop ](meeting-backdrop-virginia-smith.jpg)  |  [youtube thumbnail ](youtube-thumbnail-virginia-smith.jpg)  |  S~~TAB~~P  |
 |  2023-09-21  |  [Nico Lang, University of Copenhagen](2023-09-21.md)  |  [photo](photo-nico-lang.jpg)  |  [social media ](social-media-nico-lang.jpg)  |  [meeting backdrop ](meeting-backdrop-nico-lang.jpg)  |  [youtube thumbnail ](youtube-thumbnail-nico-lang.jpg)  |  STABP  |
-| <span style="color:grey"> 2023-09-28 </span> | <span style="color:grey"> Jaakko P. ? </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey"> ?~~TABP~~ </span> |
+|  2023-09-28  |  [Johan Östman, AI Sweden](2023-09-28.md)  |    |  [social media ](social-media-johan-ostman.jpg)  |  [meeting backdrop ](meeting-backdrop-johan-ostman.jpg)  |  [youtube thumbnail ](youtube-thumbnail-johan-ostman.jpg)  |  S~~TABP~~  |
 |  2023-10-05  |  [Klaus-Robert Müller, TU Berlin](2023-10-05.md)  |  [photo](photo-klaus-robert-muller.jpg)  |  [social media ](social-media-klaus-robert-muller.jpg)  |  [meeting backdrop ](meeting-backdrop-klaus-robert-muller.jpg)  |  [youtube thumbnail ](youtube-thumbnail-klaus-robert-muller.jpg)  |  STABP  |
 | <span style="color:grey"> 2023-10-12 </span> | <span style="color:grey"> Giulio B. ? </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey"> ?~~TABP~~ </span> |
 |  2023-10-19  |  [Valentin De Bortoli, ENS Ulm, Paris](2023-10-19.md)  |  [photo](photo-valentin-de-bortoli.jpg)  |  [social media ](social-media-valentin-de-bortoli.jpg)  |  [meeting backdrop ](meeting-backdrop-valentin-de-bortoli.jpg)  |  [youtube thumbnail ](youtube-thumbnail-valentin-de-bortoli.jpg)  |  S~~TAB~~P  |
