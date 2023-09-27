@@ -157,7 +157,7 @@ Read more <a href="/about/">about me</a>, or <a href="/group/">about my research
 {% for p in site.categories.talks limit:3 %}
 
               <p>
-              {{ short_author_string | strip }}, <a href="{{ p.permalink }}">{{ p.title }}</a>, {{ p.venue }}, {{ p.venueshort }}</p>
+              <a href="{{ p.url }}">{{ p.title }}</a>, {{ p.venue }}, {{ p.venueshort }}</p>
 
 {% endfor %}
           </div>
