@@ -69,7 +69,7 @@ if True:
     os.makedirs('../{}/{}/'.format(year, first_word_in_title))
   except:
     pass
-  os.system('convert -background white -alpha remove /tmp/arxiv-temp.pdf[0] dude.png ../{}/{}/{}.png'.format(year, first_word_in_title, first_word_in_title))
+  os.system('convert -background white -alpha remove /tmp/arxiv-temp.pdf\[0\] dude.png ../{}/{}/{}.png'.format(year, first_word_in_title, first_word_in_title))
   data['imgsrc'] = '/publications/{}/{}/{}.png'.format(year, first_word_in_title, first_word_in_title)
   print('rm /tmp/arxiv-temp.pdf')
   #os.remove('/tmp/arxiv-temp.pdf')
