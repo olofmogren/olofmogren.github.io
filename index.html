@@ -61,42 +61,28 @@ Read more <a href="/about/">about me</a>, or <a href="/group/">about my research
       </section>
 {% endfor %}
 
-{%- if false -%}
 
-The following is the code for laying out publications in a grid.
-Lots of divs on top of each other.
-
-{%- endif -%}
-
-      <section class="features">
+      <section>
         <div class="inner">
-          <h3>Selected publications</h3>
-          <div class="feature-grid">
-            <div class="table-row">
+          <div class="block block-copy">
+            <h1>Publication list</h1>
+            <p>Also, visit my <a href="https://scholar.google.se/citations?user=m_n28oAAAAAJ">Scholar page</a>.</p>
 
-{% assign counter = 0 %}
 {% for p in site.categories.publications %}
   {% if p.tags contains "frontpage" %}
-    {% assign colno = counter | modulo: 3 %}
-    {% if colno == 0 %}
-      {% if counter != 0 %}
-            </div>
-            <div class="table-row">
-      {% endif %}
-    {% endif %}
+    {% if p.tags contains 'unlist' %}{% continue %}{% endif %}
 
-    {% include overlay-box.html p=p counter=counter category='publications' %}
+ <!--{{ p.authors | replace: "Olof Mogren", "<strong>Olof Mogren</strong>"}} //-->
 
-    {% capture counter %}{{ counter | plus:1 }}{% endcapture %}
+    {% capture short_author_string %}{% include author_extras.html authors=p.authors %}{% endcapture %}
+            <p>
+              {{ short_author_string | strip }}, <a href="{{ p.permalink }}">{{ p.title }}</a>, {{ p.venue }}, {{ p.venueshort }}</p>
+
   {% endif %}
 {% endfor %}
-            </div>
           </div>
-          <p><a href="/publications/">List all publications.</a></p>
         </div>
       </section>
-
-
 
 {% if false %}
 
@@ -165,25 +151,15 @@ Lots of divs on top of each other.
 
       <section>
         <div class="inner">
-          <div>
+          <div class="block block-copy">
             <a href="/talks/"><h3>Recent talks in selection</h3></a>
-          </div>
-
-          <div class="feature-grid">
-            <div class="table-row">
 
 {% for p in site.categories.talks limit:3 %}
-  {% assign colno = counter | modulo: 3 %}
-  {% if colno == 0 and counter != 0 %}
-            </div>
-            <div class="table-row">
-  {% endif %}
 
-  {% include overlay-box.html p=p counter=counter category='talks' %}
+              <p>
+              {{ short_author_string | strip }}, <a href="{{ p.permalink }}">{{ p.title }}</a>, {{ p.venue }}, {{ p.venueshort }}</p>
 
-  {% capture counter %}{{ counter | plus:1 }}{% endcapture %}
 {% endfor %}
-            </div>
           </div>
         </div>
       </section>
