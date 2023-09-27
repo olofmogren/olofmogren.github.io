@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
-import sys, os
-import urllib.request
+import sys, os, time, shutil
+import requests
 from bs4 import BeautifulSoup as bs
 import yaml
 
@@ -13,16 +13,16 @@ if os.path.exists(cache_file):
     html = f.read()
     #print('read cached file')
 else:
-  fp = urllib.request.urlopen("https://arxiv.org/abs/{}".format(sys.argv[1]))
-  mybytes = fp.read()
-  html = mybytes.decode("utf8")
-  fp.close()
+  response = requests.get("https://arxiv.org/abs/{}".format(sys.argv[1]))
+  #mybytes = fp.read()
+  #html = mybytes.decode("utf8")
+  #fp.close()
   #print(html)
   #with open(cache_file, 'w') as f:
   #  f.write(html)
   #  #print('wrote html to cache')
 
-soup = bs(html, 'lxml')
+soup = bs(response.content, 'lxml')
 
 data = {'layout': 'posts', 'tags': ['prio', 'frontpage'], 'box-bg-imgsrc': '', 'imrgsrc': ''}
 
@@ -36,7 +36,13 @@ authors = authors.get_text(strip=True, separator=' ').replace(' , ', ', ')[9:]
 #print('authors', authors)
 data['authors'] = authors
 
-abstract = soup.find('blockquote', attrs = {'class', 'abstract mathjax'}).get_text(strip=True, separator=' ')[10:]
+date = soup.find('meta', attrs={'name': 'citation_date'}).get('content')
+date = date.split('/')
+year = date[0]
+month = date[1]
+day = date[2]
+
+abstract = soup.find('meta', attrs = {'name': 'citation_abstract'}).get('content')
 #print('abstract', abstract)
 data['shortversion'] = abstract
 data['longversion'] = abstract
@@ -44,9 +50,38 @@ data['venue'] = 'arXiv preprint'
 data['venueshort'] = 'arXiv'
 data['eprint'] = sys.argv[1]
 data['generatebibtex'] = 'yes'
-data['pdf'] = 'https://arxiv.org/pdf/'+sys.argv[1]
+data['pdf'] = 'https://arxiv.org/pdf/'+sys.argv[1]+'.pdf'
+first_word_in_title = title.split(' ')[0].lower()
+
+print(data['pdf'])
+if True:
+  time.sleep(1.2)
+  r = requests.get(data['pdf'], auth=('usrname', 'password'), verify=False,stream=True)
+  r.raw.decode_content = True
+  with open('/tmp/arxiv-temp.pdf', 'wb') as f:
+    shutil.copyfileobj(r.raw, f)
+  #response = requests.get(data['pdf'])
+  #with open('/tmp/arxiv-temp.pdf', 'wb') as f:
+  #  f.write(response.content)
+
+  print('convert /tmp/arxiv-temp.pdf ../{}/{}/{}.png'.format(year, first_word_in_title, first_word_in_title))
+  try:
+    os.makedirs('../{}/{}/'.format(year, first_word_in_title))
+  except:
+    pass
+  os.system('convert -background white -alpha remove /tmp/arxiv-temp.pdf[0] dude.png ../{}/{}/{}.png'.format(year, first_word_in_title, first_word_in_title))
+  data['imgsrc'] = '/publications/{}/{}/{}.png'.format(year, first_word_in_title, first_word_in_title)
+  print('rm /tmp/arxiv-temp.pdf')
+  #os.remove('/tmp/arxiv-temp.pdf')
 
 print('---')
 print(yaml.dump(data))
 print('---')
 
+md_filename = '{}-{}-{}-{}.md'.format(year, month, day, first_word_in_title)
+if len(sys.argv) > 2 and sys.argv[2] == '-w':
+  print('writing file {}'.format(md_filename))
+  with open(md_filename, 'w') as f:
+    f.write('---\n')
+    f.write(yaml.dump(data))
+    f.write('\n---\n')
