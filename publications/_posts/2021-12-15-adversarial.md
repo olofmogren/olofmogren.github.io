@@ -3,7 +3,6 @@ title: "Adversarial representation learning for synthetic replacement of private
 layout: posts
 tags:
  - prio
- - frontpage
 box-bg-imgsrc: 
 imgsrc: /publications/2021/adversarial/anonymizedpeople.png
 imgalt: "Anonymized versions of images from CELEBA."

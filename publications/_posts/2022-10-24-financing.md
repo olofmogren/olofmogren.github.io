@@ -2,8 +2,7 @@
 title: "Financing Solutions for Circular Business Models: Exploring the Role of Business Ecosystems and Artificial Intelligence"
 layout: posts
 tags:
- - prio
- - frontpage
+- prio
 box-bg-imgsrc: 
 imgsrc: "/publications/2022/financing/fallahi2022financing.png"
 imgalt: ""

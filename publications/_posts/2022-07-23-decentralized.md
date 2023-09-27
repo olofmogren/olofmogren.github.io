@@ -3,7 +3,6 @@ title: "Decentralized adaptive clustering of deep nets is beneficial for client 
 layout: posts
 tags:
  - prio
- - frontpage
 box-bg-imgsrc: 
 imgsrc: /publications/2022/decentralized/listozec2022decentralized.png
 imgalt: Decentralized adaptive clustering automatically finds clusters of clients which benefits from collaboration.
