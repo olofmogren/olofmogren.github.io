@@ -3,7 +3,6 @@ title: "Adversarial representation learning for private speech generation"
 layout: posts
 tags:
  - prio
- - frontpage
 background-image: 
 box-bg-imgsrc: /publications/2020/privatespeech/ericsson2020privatespeech-bgbox.png
 imgsrc: /publications/2020/privatespeech/ericsson2020privatespeech.png
