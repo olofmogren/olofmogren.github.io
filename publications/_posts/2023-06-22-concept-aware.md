@@ -32,5 +32,5 @@ tags:
 title: Concept-aware clustering for decentralized deep learning under temporal shift
 venue: arXiv preprint
 venueshort: arXiv
-
+permalink: /publications/2023/concept-aware/
 ---
