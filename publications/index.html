@@ -31,8 +31,16 @@ title: Olof Mogren, PhD - Deep Learning Researcher.
  <!--{{ p.authors | replace: "Olof Mogren", "<strong>Olof Mogren</strong>"}} //-->
 
 {% capture short_author_string %}{% include author_extras.html authors=p.authors %}{% endcapture %}
+  {% if p.permalink %}
+    {% assign linkhref = p.permalink %}
+  {% else %}
+    {% assign linkhref = p.url %}
+  {% endif %}
             <p>
-              {{ short_author_string | strip }}, <a href="{{ p.permalink }}">{{ p.title }}</a>, {{ p.venue }}, {{ p.venueshort }}</p> 
+              {{ short_author_string | strip }},
+	      <a href="{{ linkhref }}">{{ p.title }}</a>,
+	      {{ p.venue }}, {{ p.venueshort }}
+	    </p> 
 
   {% capture globalcounter %}{{ globalcounter | plus:1 }}{% endcapture %}
   {% capture colcounter %}{{ colcounter | plus:1 }}{% endcapture %}
