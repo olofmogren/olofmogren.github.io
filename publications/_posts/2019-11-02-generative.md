@@ -27,9 +27,9 @@ the proposed method on a large dataset of fashion images
 and our experimental evaluation shows that the model produces samples that are coherent and plausible with semantic segmentation maps that closely match the semantics in
 the image.
 "
-venue: Second Workshop on Computer Vision for Fashion, Art and Design at ICCV 2019
+venue: Second Workshop on Computer Vision for Fashion, Art and Design at ICCV
 venuelink: https://sites.google.com/view/cvcreative/home
-venueshort: CVCREATIVE 2019
+venueshort: CVCREATIVE
 authors: Marie Korneliusson, John Martinsson, Olof Mogren
 bibtex: '@inproceedings{korneliusson2019generative, \n title={Generative modelling of semantic segmentation data in the fashion domain}, \n author={Marie Korneliusson and John Martinsson and Olof Mogren}, \n booktitle={Proceedings of Second Workshop on Computer Vision for Fashion, Art and Design at ICCV 2019}, \n year={2019}}'
 permalink: /publications/2019/generative/

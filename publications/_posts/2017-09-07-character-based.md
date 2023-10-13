@@ -26,9 +26,9 @@ of 94.7%. For Swedish, which has a more complex morphology with more inflectiona
 patterns for nouns and verbs, the accuracy is 89.3%. We also show that using
 the auxiliary task of learning the relation type speeds up convergence and improves
 the prediction accuracy for the word generation task.</p><h2>Source code</h2><p>The source code used for the experiments can be downloaded from <a href=\"https://github.com/olofmogren/char-rnn-wordrelations\">https://github.com/olofmogren/char-rnn-wordrelations</a>.</p>"
-venue: Subword & Character Level Models in NLP (SCLeM) workshop at EMNLP 2017 in Copenhagen, Denmark, September 7.
+venue: Subword & Character Level Models in NLP (SCLeM) workshop at EMNLP
 venuelink: https://sites.google.com/view/sclem2017/
-venueshort: SCLeM 2017
+venueshort: SCLeM
 authors: Olof Mogren, Richard Johansson
 bibtex: '@inproceedings{mogren2017character, \n title={Character-based recurrent neural networks for morphological relational reasoning}, \n author={Olof Mogren and Richard Johansson}, \n booktitle={Subword & Character Level Models in NLP (SCLeM) workshop at EMNLP 2017}, \n pages={1}, \n year={2017}}'
 permalink: /publications/2017/character-based/
