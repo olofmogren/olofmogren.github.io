@@ -14,9 +14,11 @@ tags:
 - prio
 - frontpage
 title: Federated learning for performance prediction in multi-operator environments
-venue: ITU Journal on Future and Evolving Technologies, Volume 4 (2023), Issue 1, Pages 166-177
+venue: ITU Journal on Future and Evolving Technologies
 venueshort: ITUJ
 venuelink: https://www.itu.int/en/publications/gs/pages/publications.aspx?parent=S-JNL-VOL4.ISSUE1-2023-A13&media=electronic
+vol: 4
+pages: 166-177
 doi: https://doi.org/10.52953/PFYZ9165
 permalink: /publications/2023/multi-operator/
 
