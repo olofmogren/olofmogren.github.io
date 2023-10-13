@@ -36,7 +36,7 @@ layout: default
 <a href="{{ page.pdf }}">PDF Fulltext</a><br />
 {% endif %}
 {% if page.doi %}
-<a href="{{ page.doi }}">DOI</a><br />
+DOI: <a href="{{ page.doi }}">{{ page.doi }}</a><br />
 {% endif %}
 {% if page.eprint != "" %}
 <a href="https://arxiv.org/abs/{{ page.eprint }}">arxiv: {{ page.eprint }}</a><br />
