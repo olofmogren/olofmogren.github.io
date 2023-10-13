@@ -21,5 +21,6 @@ eprint: 2304.01658
 generatebibtex: yes
 pdf: https://arxiv.org/pdf/2304.01658
 doi: https://doi.org/10.3384/ecp199002
+permalink_old: /publications/2023/dense-water-flow-intensity-prediction/
 
 ---
