@@ -38,7 +38,7 @@ layout: default
 {% if page.doi %}
 <a href="{{ page.doi }}">DOI</a><br />
 {% endif %}
-{% if page.eprint %}
+{% if page.eprint != "" %}
 <a href="https://arxiv.org/abs/{{ page.eprint }}">arxiv: {{ page.eprint }}</a><br />
 {% endif %}
 {% if page.bibtex %}
