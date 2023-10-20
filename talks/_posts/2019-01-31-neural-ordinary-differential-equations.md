@@ -28,7 +28,7 @@ venue: Learning machines seminars at Research institutes of Sweden
 authors: Olof Mogren
 bibtex: 
 permalink:
-pdf: /talks/slides/2019-01-31-mogren-neural-ordinary-differential-equations.pdf
+pdf: /talks/slides/mogren-2019-01-31-neural-ordinary-differential-equations.pdf
 overwriteurl: 
 externallink: 
 redirect_from: /talks/2019/01/31/neural-ordinary-differential-equations.html

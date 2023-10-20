@@ -32,7 +32,7 @@ venue: GAIA Meetup
 authors: Olof Mogren
 bibtex: 
 permalink:
-pdf: /talks/slides/2019-11-11-mogren-privacy-and-limited-data.pdf
+pdf: /talks/slides/mogren-2019-11-11-privacy-and-limited-data.pdf
 overwriteurl: 
 externallink: 
 redirect_from: 

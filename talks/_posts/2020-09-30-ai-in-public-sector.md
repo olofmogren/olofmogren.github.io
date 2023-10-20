@@ -24,7 +24,7 @@ venue: Socialchefsdagarna 2020
 authors: Olof Mogren
 bibtex: 
 permalink:
-pdf: /talks/slides/2020-09-30-mogren-ai-in-the-public-sector.pdf
+pdf: /talks/slides/mogren-2020-09-30-ai-in-the-public-sector.pdf
 overwriteurl: 
 externallink: 
 ---

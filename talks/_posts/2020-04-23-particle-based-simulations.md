@@ -17,7 +17,7 @@ venue: Learning Machines Seminars at RISE Research Institutes of Sweden
 authors: Olof Mogren
 bibtex: 
 permalink:
-pdf: /talks/slides/2020-04-23-mogren-ml-particle-simulations.pdf
+pdf: /talks/slides/mogren-2020-04-23-ml-particle-simulations.pdf
 overwriteurl: 
 externallink: https://ri.se/en/education/learning-machines-seminars/
 redirect_from:
