@@ -19,7 +19,7 @@ venue: RISE Learning Machines Seminars
 authors: Olof Mogren
 bibtex: 
 permalink:
-pdf: /files/2020-12-12-augmented-neural-odes.pdf
+pdf: /talks/slides/2020-12-12-mogren-augmented-neural-odes.pdf
 overwriteurl: 
 externallink: 
 ---

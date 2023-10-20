@@ -15,7 +15,7 @@ venue: RISE Learning Machines Seminars
 authors: Olof Mogren
 bibtex: 
 permalink:
-pdf: /files/2019-09-26-gans.pdf
+pdf: /talks/slides/2019-09-26-mogren-convergence-generalization-and-privacy-in-gans.pdf
 overwriteurl: 
 externallink: 
 redirect_from: 

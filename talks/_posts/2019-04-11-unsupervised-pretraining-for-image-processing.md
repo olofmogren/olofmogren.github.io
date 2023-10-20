@@ -18,7 +18,7 @@ venue: RISE Learning Machines Seminars
 authors: Olof Mogren
 bibtex: 
 permalink:
-pdf: /files/2019-04-11-unsupervised-pretraining.pdf
+pdf: /talks/slides/2019-04-11-mogren-unsupervised-pretraining.pdf
 overwriteurl: 
 externallink: 
 redirect_from: 

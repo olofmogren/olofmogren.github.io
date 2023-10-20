@@ -23,7 +23,7 @@ venue: RISE Learning Machines Seminars
 authors: Olof Mogren
 bibtex: 
 permalink:
-pdf: /files/2020-02-20-social-bias-in-nlp.pdf
+pdf: /talks/slides/2020-02-20-mogren-social-bias-in-nlp.pdf
 overwriteurl: 
 externallink: 
 ---
