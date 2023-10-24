@@ -5,7 +5,7 @@ metatags: "<meta name=\"robots\" content=\"noindex,nofollow\" />"
 <style type="text/css" scoped>
 td, th {border: 1px solid #ccc; padding: 0.6em;}
 table {border-collapse: collapse;}
-</style># Learning Machines Plan 2023-10-23
+</style># Learning Machines Plan 2023-10-24
 
 | date | speaker                                   | photo | shareable | meeting backdrop | youtube thumbnail | <a title="Speaker, Title, Abstract, Bio, Photo. Strikethrough means we don't have it yet.">comment</a>        |
 | ---- | ----------------------------------------- | ----- | ----- | ----- | ----- | -------------- |
@@ -17,7 +17,7 @@ table {border-collapse: collapse;}
 |  2023-11-09  |  [Nataša Sladoje, Uppsala University](2023-11-09.md)  |    |  [social media ](social-media-natasa-sladoje.jpg)  |  [meeting backdrop ](meeting-backdrop-natasa-sladoje.jpg)  |  [youtube thumbnail ](youtube-thumbnail-natasa-sladoje.jpg)  |  STAB~~P~~  |
 |  2023-11-16  |  [Jonas Hellgren, RISE](2023-11-16.md)  |    |  [social media ](social-media-jonas-hellgren.jpg)  |  [meeting backdrop ](meeting-backdrop-jonas-hellgren.jpg)  |  [youtube thumbnail ](youtube-thumbnail-jonas-hellgren.jpg)  |  ST~~ABP~~  |
 | <span style="color:red"> 2023-11-23 </span> | <span style="color:red"> Thanksgiving </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
-|  2023-11-30  |  [Ben Weinstein, University of Florida](2023-11-30.md)  |  [photo](photo-ben-weinstein.jpg)  |  [social media ](social-media-ben-weinstein.jpg)  |  [meeting backdrop ](meeting-backdrop-ben-weinstein.jpg)  |  [youtube thumbnail ](youtube-thumbnail-ben-weinstein.jpg)  |  S~~TAB~~P  |
+|  2023-11-30  |  [Ben Weinstein, University of Florida](2023-11-30.md)  |  [photo](photo-ben-weinstein.jpg)  |  [social media ](social-media-ben-weinstein.jpg)  |  [meeting backdrop ](meeting-backdrop-ben-weinstein.jpg)  |  [youtube thumbnail ](youtube-thumbnail-ben-weinstein.jpg)  |  STABP  |
 | <span style="color:grey"> 2023-12-07 </span> | <span style="color:grey"> Stefan B. ? </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey"> ?~~TABP~~ </span> |
 |  2023-12-14  |  [Fredrik Gustavsson, Karolinska Institutet](2023-12-14.md)  |    |  [social media ](social-media-fredrik-gustavsson.jpg)  |  [meeting backdrop ](meeting-backdrop-fredrik-gustavsson.jpg)  |  [youtube thumbnail ](youtube-thumbnail-fredrik-gustavsson.jpg)  |  S~~TABP~~  |
 | <span style="color:red"> 2023-12-21 </span> | <span style="color:red"> Christmas </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
