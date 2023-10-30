@@ -5,7 +5,7 @@ metatags: "<meta name=\"robots\" content=\"noindex,nofollow\" />"
 <style type="text/css" scoped>
 td, th {border: 1px solid #ccc; padding: 0.6em;}
 table {border-collapse: collapse;}
-</style># Learning Machines Plan 2023-10-26
+</style># Learning Machines Plan 2023-10-30
 
 | date | speaker                                   | photo | shareable | meeting backdrop | youtube thumbnail | <a title="Speaker, Title, Abstract, Bio, Photo. Strikethrough means we don't have it yet.">comment</a>        |
 | ---- | ----------------------------------------- | ----- | ----- | ----- | ----- | -------------- |
@@ -27,7 +27,7 @@ table {border-collapse: collapse;}
 | <span style="color:red"> 2024-02-15 </span> | <span style="color:red"> Sportlov </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
 |  2024-02-22  |  [Alexander Mathis, EPFL](2024-02-22.md)  |    |  [social media ](social-media-alexander-mathis.jpg)  |  [meeting backdrop ](meeting-backdrop-alexander-mathis.jpg)  |  [youtube thumbnail ](youtube-thumbnail-alexander-mathis.jpg)  |  STAB~~P~~  |
 | <span style="color:red"> 2024-02-29 </span> | <span style="color:red"> Sportlov </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
-| <span style="color:purple"> 2024-03-07 </span> | <span style="color:purple"> *Up for grabs!!!* </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple"> ~~STABP~~ </span> |
+|  2024-03-07  |  [Elise van der Pol, Microsoft Research](2024-03-07.md)  |    |  [social media ](social-media-elise-van-der-pol.jpg)  |  [meeting backdrop ](meeting-backdrop-elise-van-der-pol.jpg)  |  [youtube thumbnail ](youtube-thumbnail-elise-van-der-pol.jpg)  |  S~~TABP~~  |
 | <span style="color:purple"> 2024-03-14 </span> | <span style="color:purple"> *Up for grabs!!!* </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple"> ~~STABP~~ </span> |
 | <span style="color:purple"> 2024-03-21 </span> | <span style="color:purple"> *Up for grabs!!!* </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple"> ~~STABP~~ </span> |
 | <span style="color:purple"> 2024-03-28 </span> | <span style="color:purple"> *Up for grabs!!!* </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple"> ~~STABP~~ </span> |
