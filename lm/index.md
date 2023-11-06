@@ -5,11 +5,10 @@ metatags: "<meta name=\"robots\" content=\"noindex,nofollow\" />"
 <style type="text/css" scoped>
 td, th {border: 1px solid #ccc; padding: 0.6em;}
 table {border-collapse: collapse;}
-</style># Learning Machines Plan 2023-10-31
+</style># Learning Machines Plan 2023-11-06
 
 | date | speaker                                   | photo | shareable | meeting backdrop | youtube thumbnail | <a title="Speaker, Title, Abstract, Bio, Photo. Strikethrough means we don't have it yet.">comment</a>        |
 | ---- | ----------------------------------------- | ----- | ----- | ----- | ----- | -------------- |
-| <span style="color:grey"> 2023-10-12 </span> | <span style="color:grey"> Giulio B. ? </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey"> ?~~TABP~~ </span> |
 |  2023-10-19  |  [Valentin De Bortoli, Google Deepmind](2023-10-19.md)  |  [photo](photo-valentin-de-bortoli.jpg)  |  [social media ](social-media-valentin-de-bortoli.jpg)  |  [meeting backdrop ](meeting-backdrop-valentin-de-bortoli.jpg)  |  [youtube thumbnail ](youtube-thumbnail-valentin-de-bortoli.jpg)  |  STABP  |
 | <span style="color:purple"> 2023-10-26 </span> | <span style="color:purple"> *Up for grabs!!!* </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple"> ~~STABP~~ </span> |
 |  2023-11-02  |  [Priya Donti, MIT and Climate Change AI](2023-11-02.md)  |  [photo](photo-priya-donti.jpg)  |  [social media ](social-media-priya-donti.jpg)  |  [meeting backdrop ](meeting-backdrop-priya-donti.jpg)  |  [youtube thumbnail ](youtube-thumbnail-priya-donti.jpg)  |  STABP  |
@@ -18,7 +17,7 @@ table {border-collapse: collapse;}
 | <span style="color:red"> 2023-11-23 </span> | <span style="color:red"> Thanksgiving </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
 |  2023-11-30  |  [Ben Weinstein, University of Florida](2023-11-30.md)  |  [photo](photo-ben-weinstein.jpg)  |  [social media ](social-media-ben-weinstein.jpg)  |  [meeting backdrop ](meeting-backdrop-ben-weinstein.jpg)  |  [youtube thumbnail ](youtube-thumbnail-ben-weinstein.jpg)  |  STABP  |
 |  2023-12-07  |  [Stefan Bauer, TU Munich](2023-12-07.md)  |  [photo](photo-stefan-bauer.jpg)  |  [social media ](social-media-stefan-bauer.jpg)  |  [meeting backdrop ](meeting-backdrop-stefan-bauer.jpg)  |  [youtube thumbnail ](youtube-thumbnail-stefan-bauer.jpg)  |  STABP  |
-|  2023-12-14  |  [Fredrik Gustavsson, Karolinska Institutet](2023-12-14.md)  |    |  [social media ](social-media-fredrik-gustavsson.jpg)  |  [meeting backdrop ](meeting-backdrop-fredrik-gustavsson.jpg)  |  [youtube thumbnail ](youtube-thumbnail-fredrik-gustavsson.jpg)  |  S~~TABP~~  |
+|  2023-12-14  |  [Fredrik Gustavsson, Karolinska Institutet](2023-12-14.md)  |    |  [social media ](social-media-fredrik-gustavsson.jpg)  |  [meeting backdrop ](meeting-backdrop-fredrik-gustavsson.jpg)  |  [youtube thumbnail ](youtube-thumbnail-fredrik-gustavsson.jpg)  |  ST~~ABP~~  |
 | <span style="color:red"> 2023-12-21 </span> | <span style="color:red"> Christmas </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
 | <span style="color:red"> 2023-12-28 </span> | <span style="color:red"> Christmas-break </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
 |  2024-01-18  |  [Serge Belongie, University of Copenhagen](2024-01-18.md)  |  [photo](photo-serge-belongie.jpg)  |  [social media ](social-media-serge-belongie.jpg)  |  [meeting backdrop ](meeting-backdrop-serge-belongie.jpg)  |  [youtube thumbnail ](youtube-thumbnail-serge-belongie.jpg)  |  STABP  |
