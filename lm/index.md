@@ -5,11 +5,10 @@ metatags: "<meta name=\"robots\" content=\"noindex,nofollow\" />"
 <style type="text/css" scoped>
 td, th {border: 1px solid #ccc; padding: 0.6em;}
 table {border-collapse: collapse;}
-</style># Learning Machines Plan 2023-11-06
+</style># Learning Machines Plan 2023-11-08
 
 | date | speaker                                   | photo | shareable | meeting backdrop | youtube thumbnail | <a title="Speaker, Title, Abstract, Bio, Photo. Strikethrough means we don't have it yet.">comment</a>        |
 | ---- | ----------------------------------------- | ----- | ----- | ----- | ----- | -------------- |
-|  2023-10-19  |  [Valentin De Bortoli, Google Deepmind](2023-10-19.md)  |  [photo](photo-valentin-de-bortoli.jpg)  |  [social media ](social-media-valentin-de-bortoli.jpg)  |  [meeting backdrop ](meeting-backdrop-valentin-de-bortoli.jpg)  |  [youtube thumbnail ](youtube-thumbnail-valentin-de-bortoli.jpg)  |  STABP  |
 | <span style="color:purple"> 2023-10-26 </span> | <span style="color:purple"> *Up for grabs!!!* </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple"> ~~STABP~~ </span> |
 |  2023-11-02  |  [Priya Donti, MIT and Climate Change AI](2023-11-02.md)  |  [photo](photo-priya-donti.jpg)  |  [social media ](social-media-priya-donti.jpg)  |  [meeting backdrop ](meeting-backdrop-priya-donti.jpg)  |  [youtube thumbnail ](youtube-thumbnail-priya-donti.jpg)  |  STABP  |
 |  2023-11-09  |  [Nataša Sladoje, Uppsala University](2023-11-09.md)  |  [photo](photo-natasa-sladoje.jpg)  |  [social media ](social-media-natasa-sladoje.jpg)  |  [meeting backdrop ](meeting-backdrop-natasa-sladoje.jpg)  |  [youtube thumbnail ](youtube-thumbnail-natasa-sladoje.jpg)  |  STABP  |
