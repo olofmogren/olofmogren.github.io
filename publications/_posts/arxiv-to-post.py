@@ -36,6 +36,7 @@ data['imgalt'] = title
 authors = soup.find('div', attrs={'class': 'authors'})
 authors = authors.get_text(strip=True, separator=' ').replace(' , ', ', ')[9:]
 #print('authors', authors)
+authors = authors.replace('\xE6', 'Å').replace('\xE5', 'å').replace('\xC4', 'Ä').replace('\xE4', 'ä').replace('\xD6', 'Ö').replace('\xF6', 'ö')
 data['authors'] = authors
 
 date = soup.find('meta', attrs={'name': 'citation_date'}).get('content')
