@@ -1,0 +1,68 @@
+---
+layout: default
+---
+
+<section>
+<div class="inner">
+<div class="block block-copy">
+
+
+<h1>{{ page.title }}</h1>
+
+{% if page.imgsrc %}
+<img src="{{ page.imgsrc }}" alt="{{ page.imgalt }}" style="float: right; max-width: 40%;" />
+{% endif %}
+
+<p>
+{% if page.longversion %}
+{{ page.longversion }}
+{% else %}
+{{ page.shortversion }}
+{% endif %}
+</p>
+{% if page.pdf %}
+<p><a href="{{ page.pdf }}">Slides (PDF)</a></p>
+{% endif %}
+<p>
+{% if page.externallink %}
+<a href="{{ page.externallink }}">
+{% endif %}
+<em>{{ page.venue }}, {{ page.date | date: "%Y-%m-%d" }}</em>
+{% if page.externallink %}
+</a>
+{% endif %}
+<br />
+<em>{{ page.authors }}</em><br />
+</p>
+</div>
+</div>
+</section>
+
+<section>
+<div class="inner">
+<div id="disqus_thread"></div>
+<script>
+
+/**
+ *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
+  /*
+  var disqus_config = function () {
+  this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+  };
+  */
+  (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = '//mogren-one.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+
+<script id="dsq-count-scr" src="//mogren-one.disqus.com/count.js" async></script>
+
+
