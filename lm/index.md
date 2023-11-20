@@ -5,7 +5,7 @@ metatags: "<meta name=\"robots\" content=\"noindex,nofollow\" />"
 <style type="text/css" scoped>
 td, th {border: 1px solid #ccc; padding: 0.6em;}
 table {border-collapse: collapse;}
-</style># Learning Machines Plan 2023-11-15
+</style># Learning Machines Plan 2023-11-20
 
 | date | speaker                                   | photo | shareable | meeting backdrop | youtube thumbnail | <a title="Speaker, Title, Abstract, Bio, Photo. Strikethrough means we don't have it yet.">comment</a>        |
 | ---- | ----------------------------------------- | ----- | ----- | ----- | ----- | -------------- |
@@ -27,7 +27,7 @@ table {border-collapse: collapse;}
 |  2024-03-07  |  [Elise van der Pol, Microsoft Research](2024-03-07.md)  |  [photo](photo-elise-van-der-pol.jpg)  |  [social media ](social-media-elise-van-der-pol.jpg)  |  [meeting backdrop ](meeting-backdrop-elise-van-der-pol.jpg)  |  [youtube thumbnail ](youtube-thumbnail-elise-van-der-pol.jpg)  |  S~~TAB~~P  |
 |  2024-03-14  |  [Santiago Martinez Balvanera, University College London](2024-03-14.md)  |  [photo](photo-santiago-martinez-balvanera.jpg)  |  [social media ](social-media-santiago-martinez-balvanera.jpg)  |  [meeting backdrop ](meeting-backdrop-santiago-martinez-balvanera.jpg)  |  [youtube thumbnail ](youtube-thumbnail-santiago-martinez-balvanera.jpg)  |  S~~TAB~~P  |
 | <span style="color:grey"> 2024-03-21 </span> | <span style="color:grey"> Karsten K. ? </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey"> S~~TABP~~ </span> |
-| <span style="color:purple"> 2024-03-28 </span> | <span style="color:purple"> *Up for grabs!!!* </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple"> ~~STABP~~ </span> |
+|  2024-03-28  |  [Yonghao Xu, Linköping University](2024-03-28.md)  |    |  [social media ](social-media-yonghao-xu.jpg)  |  [meeting backdrop ](meeting-backdrop-yonghao-xu.jpg)  |  [youtube thumbnail ](youtube-thumbnail-yonghao-xu.jpg)  |  S~~TABP~~  |
 | <span style="color:purple"> 2024-04-18 </span> | <span style="color:purple"> *Up for grabs!!!* </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple"> ~~STABP~~ </span> |
 | <span style="color:purple"> 2024-04-25 </span> | <span style="color:purple"> *Up for grabs!!!* </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple"> ~~STABP~~ </span> |
 | <span style="color:purple"> 2024-05-02 </span> | <span style="color:purple"> *Up for grabs!!!* </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple"> ~~STABP~~ </span> |
