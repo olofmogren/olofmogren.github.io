@@ -5,11 +5,10 @@ metatags: "<meta name=\"robots\" content=\"noindex,nofollow\" />"
 <style type="text/css" scoped>
 td, th {border: 1px solid #ccc; padding: 0.6em;}
 table {border-collapse: collapse;}
-</style># Learning Machines Plan 2023-11-30
+</style># Learning Machines Plan 2023-12-07
 
 | date | speaker                                   | photo | shareable | meeting backdrop | youtube thumbnail | <a title="Speaker, Title, Abstract, Bio, Photo. Strikethrough means we don't have it yet.">comment</a>        |
 | ---- | ----------------------------------------- | ----- | ----- | ----- | ----- | -------------- |
-|  2023-11-16  |  [Jonas Hellgren, RISE](2023-11-16.md)  |  [photo](photo-jonas-hellgren.jpg)  |  [social media ](social-media-jonas-hellgren.jpg)  |  [meeting backdrop ](meeting-backdrop-jonas-hellgren.jpg)  |  [youtube thumbnail ](youtube-thumbnail-jonas-hellgren.jpg)  |  STABP  |
 |  2023-11-23  |  [Alisa Devlic, Sony AI](2023-11-23.md)  |  [photo](photo-alisa-devlic.jpg)  |  [social media ](social-media-alisa-devlic.jpg)  |  [meeting backdrop ](meeting-backdrop-alisa-devlic.jpg)  |  [youtube thumbnail ](youtube-thumbnail-alisa-devlic.jpg)  |  STABP  |
 |  2023-11-30  |  [Ben Weinstein, University of Florida](2023-11-30.md)  |  [photo](photo-ben-weinstein.jpg)  |  [social media ](social-media-ben-weinstein.jpg)  |  [meeting backdrop ](meeting-backdrop-ben-weinstein.jpg)  |  [youtube thumbnail ](youtube-thumbnail-ben-weinstein.jpg)  |  STABP  |
 |  2023-12-07  |  [Stefan Bauer, TU Munich](2023-12-07.md)  |  [photo](photo-stefan-bauer.jpg)  |  [social media ](social-media-stefan-bauer.jpg)  |  [meeting backdrop ](meeting-backdrop-stefan-bauer.jpg)  |  [youtube thumbnail ](youtube-thumbnail-stefan-bauer.jpg)  |  STABP  |
