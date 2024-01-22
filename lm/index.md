@@ -5,15 +5,13 @@ metatags: "<meta name=\"robots\" content=\"noindex,nofollow\" />"
 <style type="text/css" scoped>
 td, th {border: 1px solid #ccc; padding: 0.6em;}
 table {border-collapse: collapse;}
-</style># Learning Machines Plan 2024-01-08
+</style># Learning Machines Plan 2024-01-22
 
 | date | speaker                                   | photo | shareable | meeting backdrop | youtube thumbnail | <a title="Speaker, Title, Abstract, Bio, Photo. Strikethrough means we don't have it yet.">comment</a>        |
 | ---- | ----------------------------------------- | ----- | ----- | ----- | ----- | -------------- |
-| <span style="color:red"> 2023-12-21 </span> | <span style="color:red"> Christmas </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
-| <span style="color:red"> 2023-12-28 </span> | <span style="color:red"> Christmas-break </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
 |  2024-01-18  |  [Serge Belongie, University of Copenhagen](2024-01-18.md)  |  [photo](photo-serge-belongie.jpg)  |  [social media ](social-media-serge-belongie.jpg)  |  [meeting backdrop ](meeting-backdrop-serge-belongie.jpg)  |  [youtube thumbnail ](youtube-thumbnail-serge-belongie.jpg)  |  STABP  |
-|  2024-01-25  |  [Joakim Lindblad, Uppsala University](2024-01-25.md)  |  [photo](photo-joakim-lindblad.jpg)  |  [social media ](social-media-joakim-lindblad.jpg)  |  [meeting backdrop ](meeting-backdrop-joakim-lindblad.jpg)  |  [youtube thumbnail ](youtube-thumbnail-joakim-lindblad.jpg)  |  S~~TAB~~P  |
-|  2024-02-08  |  [Liane Guillou, RISE Research Institutes of Sweden](2024-02-08.md)  |  [photo](photo-liane-guillou.jpg)  |  [social media ](social-media-liane-guillou.jpg)  |  [meeting backdrop ](meeting-backdrop-liane-guillou.jpg)  |  [youtube thumbnail ](youtube-thumbnail-liane-guillou.jpg)  |  S~~TAB~~P  |
+|  2024-01-25  |  [Joakim Lindblad, Uppsala University](2024-01-25.md)  |  [photo](photo-joakim-lindblad.jpg)  |  [social media ](social-media-joakim-lindblad.jpg)  |  [meeting backdrop ](meeting-backdrop-joakim-lindblad.jpg)  |  [youtube thumbnail ](youtube-thumbnail-joakim-lindblad.jpg)  |  STABP  |
+| <span style="color:red"> 2024-02-08 </span> | <span style="color:red"> *Up for grabs!!!* </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
 | <span style="color:red"> 2024-02-15 </span> | <span style="color:red"> Sportlov </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
 |  2024-02-22  |  [Alexander Mathis, EPFL](2024-02-22.md)  |  [photo](photo-alexander-mathis.jpg)  |  [social media ](social-media-alexander-mathis.jpg)  |  [meeting backdrop ](meeting-backdrop-alexander-mathis.jpg)  |  [youtube thumbnail ](youtube-thumbnail-alexander-mathis.jpg)  |  STABP  |
 | <span style="color:red"> 2024-02-29 </span> | <span style="color:red"> Sportlov </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
