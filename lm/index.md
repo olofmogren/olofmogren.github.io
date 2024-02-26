@@ -5,7 +5,7 @@ metatags: "<meta name=\"robots\" content=\"noindex,nofollow\" />"
 <style type="text/css" scoped>
 td, th {border: 1px solid #ccc; padding: 0.6em;}
 table {border-collapse: collapse;}
-</style># Learning Machines Plan 2024-02-20
+</style># Learning Machines Plan 2024-02-26
 
 | date | speaker                                   | photo | shareable | meeting backdrop | youtube thumbnail | <a title="Speaker, Title, Abstract, Bio, Photo. Strikethrough means we don't have it yet.">comment</a>        |
 | ---- | ----------------------------------------- | ----- | ----- | ----- | ----- | -------------- |
@@ -14,7 +14,7 @@ table {border-collapse: collapse;}
 |  2024-02-22  |  [Alexander Mathis, EPFL](2024-02-22.md)  |  [photo](photo-alexander-mathis.jpg)  |  [social media ](social-media-alexander-mathis.jpg)  |  [meeting backdrop ](meeting-backdrop-alexander-mathis.jpg)  |  [youtube thumbnail ](youtube-thumbnail-alexander-mathis.jpg)  |  STABP  |
 | <span style="color:red"> 2024-02-29 </span> | <span style="color:red"> Sportlov </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
 |  2024-03-07  |  [Elise van der Pol, Microsoft Research](2024-03-07.md)  |  [photo](photo-elise-van-der-pol.jpg)  |  [social media ](social-media-elise-van-der-pol.jpg)  |  [meeting backdrop ](meeting-backdrop-elise-van-der-pol.jpg)  |  [youtube thumbnail ](youtube-thumbnail-elise-van-der-pol.jpg)  |  STABP  |
-|  2024-03-14  |  [Santiago Martinez Balvanera, University College London](2024-03-14.md)  |  [photo](photo-santiago-martinez-balvanera.jpg)  |  [social media ](social-media-santiago-martinez-balvanera.jpg)  |  [meeting backdrop ](meeting-backdrop-santiago-martinez-balvanera.jpg)  |  [youtube thumbnail ](youtube-thumbnail-santiago-martinez-balvanera.jpg)  |  S~~TAB~~P  |
+|  2024-03-14  |  [Santiago Martinez Balvanera, University College London](2024-03-14.md)  |  [photo](photo-santiago-martinez-balvanera.jpg)  |  [social media ](social-media-santiago-martinez-balvanera.jpg)  |  [meeting backdrop ](meeting-backdrop-santiago-martinez-balvanera.jpg)  |  [youtube thumbnail ](youtube-thumbnail-santiago-martinez-balvanera.jpg)  |  STABP  |
 |  2024-03-21  |  [Fredrik Gustafsson, Karolinska Institutet](2024-03-21.md)  |  [photo](photo-fredrik-gustafsson.jpg)  |  [social media ](social-media-fredrik-gustafsson.jpg)  |  [meeting backdrop ](meeting-backdrop-fredrik-gustafsson.jpg)  |  [youtube thumbnail ](youtube-thumbnail-fredrik-gustafsson.jpg)  |  STA~~B~~P  |
 |  2024-04-04  |  [Karsten Kreis, NVIDIA Toronto AI Lab](2024-04-04.md)  |  [photo](photo-karsten-kreis.jpg)  |  [social media ](social-media-karsten-kreis.jpg)  |  [meeting backdrop ](meeting-backdrop-karsten-kreis.jpg)  |  [youtube thumbnail ](youtube-thumbnail-karsten-kreis.jpg)  |  S~~TAB~~P  |
 |  2024-04-11  |  [Alouette van Hove, University of Oslo](2024-04-11.md)  |    |  [social media ](social-media-alouette-van-hove.jpg)  |  [meeting backdrop ](meeting-backdrop-alouette-van-hove.jpg)  |  [youtube thumbnail ](youtube-thumbnail-alouette-van-hove.jpg)  |  S~~TABP~~  |
