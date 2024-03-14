@@ -5,12 +5,10 @@ metatags: "<meta name=\"robots\" content=\"noindex,nofollow\" />"
 <style type="text/css" scoped>
 td, th {border: 1px solid #ccc; padding: 0.6em;}
 table {border-collapse: collapse;}
-</style># Learning Machines Plan 2024-03-04
+</style># Learning Machines Plan 2024-03-14
 
 | date | speaker                                   | photo | shareable | meeting backdrop | youtube thumbnail | <a title="Speaker, Title, Abstract, Bio, Photo. Strikethrough means we don't have it yet.">comment</a>        |
 | ---- | ----------------------------------------- | ----- | ----- | ----- | ----- | -------------- |
-| <span style="color:red"> 2024-02-15 </span> | <span style="color:red"> Sportlov </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
-|  2024-02-22  |  [Alexander Mathis, EPFL](2024-02-22.md)  |  [photo](photo-alexander-mathis.jpg)  |  [social media ](social-media-alexander-mathis.jpg)  |  [meeting backdrop ](meeting-backdrop-alexander-mathis.jpg)  |  [youtube thumbnail ](youtube-thumbnail-alexander-mathis.jpg)  |  STABP  |
 | <span style="color:red"> 2024-02-29 </span> | <span style="color:red"> Sportlov </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
 | <span style="color:red"> 2024-03-07 </span> | <span style="color:red"> *Up for grabs!!!* </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
 |  2024-03-14  |  [Santiago Martinez Balvanera, University College London](2024-03-14.md)  |  [photo](photo-santiago-martinez-balvanera.jpg)  |  [social media ](social-media-santiago-martinez-balvanera.jpg)  |  [meeting backdrop ](meeting-backdrop-santiago-martinez-balvanera.jpg)  |  [youtube thumbnail ](youtube-thumbnail-santiago-martinez-balvanera.jpg)  |  STABP  |
