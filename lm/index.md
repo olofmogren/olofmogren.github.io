@@ -5,7 +5,7 @@ metatags: "<meta name=\"robots\" content=\"noindex,nofollow\" />"
 <style type="text/css" scoped>
 td, th {border: 1px solid #ccc; padding: 0.6em;}
 table {border-collapse: collapse;}
-</style># Learning Machines Plan 2024-03-14
+</style># Learning Machines Plan 2024-03-15
 
 | date | speaker                                   | photo | shareable | meeting backdrop | youtube thumbnail | <a title="Speaker, Title, Abstract, Bio, Photo. Strikethrough means we don't have it yet.">comment</a>        |
 | ---- | ----------------------------------------- | ----- | ----- | ----- | ----- | -------------- |
@@ -23,4 +23,4 @@ table {border-collapse: collapse;}
 | <span style="color:purple"> 2024-05-16 </span> | <span style="color:purple"> *Up for grabs!!!* </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple"> ~~STABP~~ </span> |
 | <span style="color:purple"> 2024-05-23 </span> | <span style="color:purple"> *Up for grabs!!!* </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple"> ~~STABP~~ </span> |
 | <span style="color:purple"> 2024-05-30 </span> | <span style="color:purple"> *Up for grabs!!!* </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple"> ~~STABP~~ </span> |
-|  2024-06-06  |  [Elise van der Pol, Microsoft Research](2024-06-06.md)  |    |  [social media ](social-media-elise-van-der-pol.jpg)  |  [meeting backdrop ](meeting-backdrop-elise-van-der-pol.jpg)  |  [youtube thumbnail ](youtube-thumbnail-elise-van-der-pol.jpg)  |  STAB~~P~~  |
+| <span style="color:red"> 2024-06-06 </span> | <span style="color:red"> [Elise van der Pol, Microsoft Research](2024-06-06.md) </span> | <span style="color:red">  </span> | <span style="color:red"> [social media ](social-media-elise-van-der-pol.jpg) </span> | <span style="color:red"> [meeting backdrop ](meeting-backdrop-elise-van-der-pol.jpg) </span> | <span style="color:red"> [youtube thumbnail ](youtube-thumbnail-elise-van-der-pol.jpg) </span> | <span style="color:red"> CANCELLED </span> |
