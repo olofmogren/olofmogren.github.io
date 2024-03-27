@@ -26,7 +26,7 @@ else:
 
 soup = bs(html, 'lxml')
 
-data = {'layout': 'posts', 'tags': ['prio', 'frontpage'], 'box-bg-imgsrc': '', 'imrgsrc': ''}
+data = {'layout': 'posts', 'tags': ['prio', 'frontpage'], 'box-bg-imgsrc': '', 'imgsrc': ''}
 
 title = soup.find('meta', attrs={'property': 'og:title'}).get('content')
 #print('title',title)
