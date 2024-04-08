@@ -30,8 +30,8 @@ tags:
 - prio
 - frontpage
 title: Concept-aware clustering for decentralized deep learning under temporal shift
-venue: arXiv preprint
-venueshort: arXiv
+venue: Federated Learning and Analytics in Practice: Algorithms, Systems, Applications, and Opportunities workshop at ICML
+venueshort: FL-ICML
 permalink: /publications/2023/concept-aware/
 doi: https://doi.org/10.48550/arXiv.2306.12768
 ---
