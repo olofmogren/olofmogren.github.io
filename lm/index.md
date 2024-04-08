@@ -5,15 +5,14 @@ metatags: "<meta name=\"robots\" content=\"noindex,nofollow\" />"
 <style type="text/css" scoped>
 td, th {border: 1px solid #ccc; padding: 0.6em;}
 table {border-collapse: collapse;}
-</style># Learning Machines Plan 2024-03-27
+</style># Learning Machines Plan 2024-04-08
 
 | date | speaker                                   | photo | shareable | meeting backdrop | youtube thumbnail | <a title="Speaker, Title, Abstract, Bio, Photo. Strikethrough means we don't have it yet.">comment</a>        |
 | ---- | ----------------------------------------- | ----- | ----- | ----- | ----- | -------------- |
-|  2024-03-14  |  [Santiago Martinez Balvanera, University College London](2024-03-14.md)  |  [photo](photo-santiago-martinez-balvanera.jpg)  |  [social media ](social-media-santiago-martinez-balvanera.jpg)  |  [meeting backdrop ](meeting-backdrop-santiago-martinez-balvanera.jpg)  |  [youtube thumbnail ](youtube-thumbnail-santiago-martinez-balvanera.jpg)  |  STABP  |
 |  2024-03-21  |  [Fredrik Gustafsson, Karolinska Institutet](2024-03-21.md)  |  [photo](photo-fredrik-gustafsson.jpg)  |  [social media ](social-media-fredrik-gustafsson.jpg)  |  [meeting backdrop ](meeting-backdrop-fredrik-gustafsson.jpg)  |  [youtube thumbnail ](youtube-thumbnail-fredrik-gustafsson.jpg)  |  STABP  |
 |  2024-03-28  |  [Yonghao Xu, Linköping University](2024-03-28.md)  |  [photo](photo-yonghao-xu.jpg)  |  [social media ](social-media-yonghao-xu.jpg)  |  [meeting backdrop ](meeting-backdrop-yonghao-xu.jpg)  |  [youtube thumbnail ](youtube-thumbnail-yonghao-xu.jpg)  |  STABP  |
 |  2024-04-04  |  [Karsten Kreis, NVIDIA Research](2024-04-04.md)  |  [photo](photo-karsten-kreis.jpg)  |  [social media ](social-media-karsten-kreis.jpg)  |  [meeting backdrop ](meeting-backdrop-karsten-kreis.jpg)  |  [youtube thumbnail ](youtube-thumbnail-karsten-kreis.jpg)  |  STABP  |
-|  2024-04-11  |  [Alouette van Hove, University of Oslo](2024-04-11.md)  |  [photo](photo-alouette-van-hove.jpg)  |  [social media ](social-media-alouette-van-hove.jpg)  |  [meeting backdrop ](meeting-backdrop-alouette-van-hove.jpg)  |  [youtube thumbnail ](youtube-thumbnail-alouette-van-hove.jpg)  |  S~~TAB~~P  |
+|  2024-04-11  |  [Alouette van Hove, University of Oslo](2024-04-11.md)  |  [photo](photo-alouette-van-hove.jpg)  |  [social media ](social-media-alouette-van-hove.jpg)  |  [meeting backdrop ](meeting-backdrop-alouette-van-hove.jpg)  |  [youtube thumbnail ](youtube-thumbnail-alouette-van-hove.jpg)  |  STABP  |
 |  2024-04-18  |  [Tobias Andermann, Uppsala University](2024-04-18.md)  |  [photo](photo-tobias-andermann.png)  |  [social media ](social-media-tobias-andermann.jpg)  |  [meeting backdrop ](meeting-backdrop-tobias-andermann.jpg)  |  [youtube thumbnail ](youtube-thumbnail-tobias-andermann.jpg)  |  STABP  |
 | <span style="color:grey"> 2024-04-25 </span> | <span style="color:grey"> Milena P. ? </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey"> S~~TABP~~ </span> |
 | <span style="color:red"> 2024-05-02 </span> | <span style="color:red"> ICLR </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
