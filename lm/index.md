@@ -5,18 +5,17 @@ metatags: "<meta name=\"robots\" content=\"noindex,nofollow\" />"
 <style type="text/css" scoped>
 td, th {border: 1px solid #ccc; padding: 0.6em;}
 table {border-collapse: collapse;}
-</style># Learning Machines Plan 2024-04-21
+</style># Learning Machines Plan 2024-04-29
 
 | date | speaker                                   | photo | shareable | meeting backdrop | youtube thumbnail | <a title="Speaker, Title, Abstract, Bio, Photo. Strikethrough means we don't have it yet.">comment</a>        |
 | ---- | ----------------------------------------- | ----- | ----- | ----- | ----- | -------------- |
-|  2024-04-04  |  [Karsten Kreis, NVIDIA Research](2024-04-04.md)  |  [photo](photo-karsten-kreis.jpg)  |  [social media ](social-media-karsten-kreis.jpg)  |  [meeting backdrop ](meeting-backdrop-karsten-kreis.jpg)  |  [youtube thumbnail ](youtube-thumbnail-karsten-kreis.jpg)  |  STABP  |
 |  2024-04-11  |  [Alouette van Hove, University of Oslo](2024-04-11.md)  |  [photo](photo-alouette-van-hove.jpg)  |  [social media ](social-media-alouette-van-hove.jpg)  |  [meeting backdrop ](meeting-backdrop-alouette-van-hove.jpg)  |  [youtube thumbnail ](youtube-thumbnail-alouette-van-hove.jpg)  |  STABP  |
 |  2024-04-18  |  [Tobias Andermann, Uppsala University](2024-04-18.md)  |  [photo](photo-tobias-andermann.png)  |  [social media ](social-media-tobias-andermann.jpg)  |  [meeting backdrop ](meeting-backdrop-tobias-andermann.jpg)  |  [youtube thumbnail ](youtube-thumbnail-tobias-andermann.jpg)  |  STABP  |
 |  2024-04-25  |  [TBA](2024-04-25.md)  |    |  [social media ](social-media-tba.jpg)  |  [meeting backdrop ](meeting-backdrop-tba.jpg)  |  [youtube thumbnail ](youtube-thumbnail-tba.jpg)  |  S~~TABP~~  |
 | <span style="color:red"> 2024-05-02 </span> | <span style="color:red"> ICLR </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
 | <span style="color:red"> 2024-05-09 </span> | <span style="color:red"> ICLR </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
 |  2024-05-16  |  [Mikolaj Czerkawski, European Space Agency](2024-05-16.md)  |    |  [social media ](social-media-mikolaj-czerkawski.jpg)  |  [meeting backdrop ](meeting-backdrop-mikolaj-czerkawski.jpg)  |  [youtube thumbnail ](youtube-thumbnail-mikolaj-czerkawski.jpg)  |  S~~TABP~~  |
-| <span style="color:purple"> 2024-05-23 </span> | <span style="color:purple"> *Up for grabs!!!* </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple"> ~~STABP~~ </span> |
+| <span style="color:grey"> 2024-05-23 </span> | <span style="color:grey"> Shruti N. ? </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey"> S~~TABP~~ </span> |
 |  2024-05-30  |  [Jonas Hentati Sundberg, Swedish University of Agricultural Sciences](2024-05-30.md)  |    |  [social media ](social-media-jonas-hentati-sundberg.jpg)  |  [meeting backdrop ](meeting-backdrop-jonas-hentati-sundberg.jpg)  |  [youtube thumbnail ](youtube-thumbnail-jonas-hentati-sundberg.jpg)  |  S~~TABP~~  |
 | <span style="color:red"> 2024-06-06 </span> | <span style="color:red"> National d. ? </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
 |  2024-09-05  |  [Smita Chakraborty, RISE](2024-09-05.md)  |    |  [social media ](social-media-smita-chakraborty.jpg)  |  [meeting backdrop ](meeting-backdrop-smita-chakraborty.jpg)  |  [youtube thumbnail ](youtube-thumbnail-smita-chakraborty.jpg)  |  S~~TABP~~  |
