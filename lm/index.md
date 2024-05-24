@@ -5,15 +5,13 @@ metatags: "<meta name=\"robots\" content=\"noindex,nofollow\" />"
 <style type="text/css" scoped>
 td, th {border: 1px solid #ccc; padding: 0.6em;}
 table {border-collapse: collapse;}
-</style># Learning Machines Plan 2024-05-17
+</style># Learning Machines Plan 2024-05-24
 
 | date | speaker                                   | photo | shareable | meeting backdrop | youtube thumbnail | <a title="Speaker, Title, Abstract, Bio, Photo. Strikethrough means we don't have it yet.">comment</a>        |
 | ---- | ----------------------------------------- | ----- | ----- | ----- | ----- | -------------- |
-| <span style="color:red"> 2024-05-02 </span> | <span style="color:red"> ICLR </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
 | <span style="color:red"> 2024-05-09 </span> | <span style="color:red"> ICLR </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
 |  2024-05-16  |  [Mikolaj Czerkawski, European Space Agency](2024-05-16.md)  |  [photo](photo-mikolaj-czerkawski.jpg)  |  [social media ](social-media-mikolaj-czerkawski.jpg)  |  [meeting backdrop ](meeting-backdrop-mikolaj-czerkawski.jpg)  |  [youtube thumbnail ](youtube-thumbnail-mikolaj-czerkawski.jpg)  |  STABP  |
 |  2024-05-23  |  [Shruti Nath, University of Oxford and Climate Analytics](2024-05-23.md)  |  [photo](photo-shruti-nath.png)  |  [social media ](social-media-shruti-nath.jpg)  |  [meeting backdrop ](meeting-backdrop-shruti-nath.jpg)  |  [youtube thumbnail ](youtube-thumbnail-shruti-nath.jpg)  |  STABP  |
-|  2024-05-30  |  [Jonas Hentati Sundberg, Swedish University of Agricultural Sciences](2024-05-30.md)  |  [photo](photo-jonas-hentati-sundberg.jpg)  |  [social media ](social-media-jonas-hentati-sundberg.jpg)  |  [meeting backdrop ](meeting-backdrop-jonas-hentati-sundberg.jpg)  |  [youtube thumbnail ](youtube-thumbnail-jonas-hentati-sundberg.jpg)  |  S~~TAB~~P  |
 | <span style="color:red"> 2024-06-06 </span> | <span style="color:red"> National_day </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
 |  2024-09-05  |  [Smita Chakraborty, RISE](2024-09-05.md)  |  [photo](photo-smita-chakraborty.jpg)  |  [social media ](social-media-smita-chakraborty.jpg)  |  [meeting backdrop ](meeting-backdrop-smita-chakraborty.jpg)  |  [youtube thumbnail ](youtube-thumbnail-smita-chakraborty.jpg)  |  S~~TAB~~P  |
 |  2024-09-12  |  [Vésteinn Snæbjarnarson, Pioneer Centre for Artificial Intelligence](2024-09-12.md)  |  [photo](photo-vesteinn-snaebjarnarson.jpg)  |  [social media ](social-media-vesteinn-snaebjarnarson.jpg)  |  [meeting backdrop ](meeting-backdrop-vesteinn-snaebjarnarson.jpg)  |  [youtube thumbnail ](youtube-thumbnail-vesteinn-snaebjarnarson.jpg)  |  S~~TAB~~P  |
