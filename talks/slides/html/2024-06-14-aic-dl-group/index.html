@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<style>
+@font-face {
+  font-family: Code Pro Bold;
+  src: url('CodePro-Bold.woff2') format('woff2');
+}
+@font-face {
+  font-family: Lato Regular;
+  src: url('Lato-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: Roboto Mono Regular;
+  src: url('RobotoMono-Regular.woff2') format('woff2');
+}
+body {
+  overflow: hidden;
+  background-color: black;
+  font-family: Lato Regular, Arial, Sans-Serif;
+  font-weight: normal;
+}
+h1 {
+  font-family: Code Pro Bold, Arial, Sans-Serif;
+  /*font-size: 4cqw;*/
+  font-size: 4.800cqw;
+  font-weight: normal;
+}
+h2 {
+  font-family: Code Pro Bold, Arial, Sans-Serif;
+  /*font-size: 2.8cqw;*/
+  font-size: 2.667cqw;
+  font-weight: normal;
+}
+h3 {
+  font-family: Code Pro Bold, Arial, Sans-Serif;
+  /*font-size: 2cqw;*/
+  font-size: 1.905cqw;
+  font-weight: normal;
+}
+h4 {
+  font-family: Code Pro Bold, Arial, Sans-Serif;
+  /*font-size: 2cqw;*/
+  font-size: 1.905cqw;
+  font-weight: normal;
+}
+.page_visible {
+  visibility: visible;
+}
+.page_hidden {
+  visibility: hidden;
+}
+div.page_div {
+  background-color: #fff;
+}
+div.page_div {
+  background-color: #fff;
+  width: 100vw;
+  height: 56.25vw; /* height:width ratio = 9/16 = .5625  */
+  max-height: 100vh;
+  max-width: 177.78vh; /* 16/9 = 1.778 */
+  margin: auto;
+  position: absolute;
+  top:0;
+  bottom:0; /* vertical center */
+  left:0;
+  right:0; /* horizontal center */'
+  container-type: size;
+  overflow: hidden;
+  z-index: 2;
+}
+div.subcontainer {
+  container-type: size;
+  width: 100%;
+  height: 100%;
+  font-size: 2.267cqw;
+}
+div.black_div {
+  background-color: #000;
+  color: #fff;
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  visibility: hidden;
+  z-index: 8;
+}
+div.loading_div {
+  background-color: black;
+  color: white;
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  visibility: visible;
+  z-index: 1;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div.l4_box {
+  position: absolute;
+  border-radius: 1cqw;
+  overflow: hidden;
+}
+div.l4_box p {
+  margin: 1.2cqw;
+}
+div.footer {
+  font-family: Roboto Mono Regular, Arial, Sans-Serif;
+  /*font-size: 1cqw;*/
+  font-size: 0.933cqw;
+  font-weight: normal;
+}
+ul {
+  margin-top: 0;
+  border: 1px;
+}
+li {
+  margin-top: 0em;
+  margin-bottom: 0.3em;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 0.3em;
+}
+/*div {
+border: 1px #ccc solid;
+}
+p {
+border: 1px #ccc solid;
+}*/
+@page
+{
+    size: A4 landscape;
+    margin: 0;
+}
+@media print {
+  div.page_div {
+    position: relative;
+    visibility: visible;
+    page-break-after: always;
+  }
+.page_visible {
+  visibility: visible;
+}
+.page_hidden {
+  visibility: visible;
+}
+}
+</style>
+		<title>Deep Learning Research Group </title>
+		<script>
+var currentPageId = "page-1";
+var blackPageVar = false;
+function blackPage() {
+  if (blackPageVar) {
+    document.getElementById('black_div').style.visibility = 'hidden';
+    //alert('un-black page');
+  }
+  else {
+    document.getElementById('black_div').style.visibility = 'visible';
+    //alert('black page');
+  }
+  blackPageVar = !blackPageVar;
+}
+function mouseuphandler(e) {
+  e.pageX;
+  width = document.getElementById(currentPageId).offsetWidth;
+  //alert(width);
+  if (e.pageX < 0.25*width) {
+    prevPage();
+  }
+  else {
+    nextPage()
+  }
+}
+function pageLoad(){
+  var currentPageId = "page-1";
+  newPageId = window.location.hash.substring(1);
+  if (newPageId == "") {
+    newPageId = currentPageId;
+  }
+  goToPage(newPageId);
+}
+function prevPage(){
+  //alert('prevPage')
+  splits = currentPageId.split("-");
+  currentPageNumber = parseInt(splits[1]);
+  prevPageNumber = currentPageNumber-1;
+  pageId = "page-"+prevPageNumber;
+  element = document.getElementById(pageId);
+  if (element) {
+    document.getElementById(currentPageId).classList.remove('page_visible');
+    document.getElementById(currentPageId).classList.add('page_hidden');
+    document.getElementById(pageId).classList.remove('page_hidden');
+    document.getElementById(pageId).classList.add('page_visible');
+    //document.getElementById(currentPageId).style.visibility="hidden";
+    //document.getElementById(pageId).style.visibility="visible";
+    currentPageId = pageId;
+    window.location.hash = pageId;
+  }
+}
+function nextPage(){
+  //alert('nextPage')
+  splits = currentPageId.split("-");
+  currentPageNumber = parseInt(splits[1]);
+  nextPageNumber = currentPageNumber+1;
+  pageId = "page-"+nextPageNumber;
+  element = document.getElementById(pageId);
+  if (element) {
+    document.getElementById(currentPageId).classList.remove('page_visible');
+    document.getElementById(currentPageId).classList.add('page_hidden');
+    document.getElementById(pageId).classList.remove('page_hidden');
+    document.getElementById(pageId).classList.add('page_visible');
+    //document.getElementById(currentPageId).style.visibility="hidden";
+    //document.getElementById(pageId).style.visibility="visible";
+    currentPageId = pageId;
+    window.location.hash = pageId;
+  }
+}
+function goToPage(pageId){
+  //alert(pageId);
+  if (!document.getElementById(pageId)){
+    //alert(pageId+": page not found")
+    pageId = "page-1";
+  }
+  document.getElementById(currentPageId).classList.remove('page_visible');
+  document.getElementById(currentPageId).classList.add('page_hidden');
+  document.getElementById(pageId).classList.remove('page_hidden');
+  document.getElementById(pageId).classList.add('page_visible');
+  //document.getElementById(currentPageId).style.visibility="hidden";
+  //document.getElementById(pageId).style.visibility="visible";
+  currentPageId = pageId;
+  window.location.hash = pageId;
+}
+function localPageLink(pageId, event){
+  //alert(pageId);
+  event.stopPropagation(); // do not fire event on parent elements.
+  goToPage(pageId);
+}
+function stopProp(event){
+  event.stopPropagation();
+}
+document.onkeydown = function(event) {
+  switch (event.keyCode) {
+    case 33:
+      // page up
+      prevPage();
+    break;
+    case 34:
+      // page down
+      nextPage();
+    break;
+    case 37:
+      // left arrow
+      prevPage();
+    break;
+    case 38:
+      // up arrow
+      prevPage();
+    break;
+    case 32:
+      //space
+      nextPage();
+    break;
+    case 39:
+      // right arrow
+      nextPage();
+    break;
+    case 40:
+      // down arrow
+      nextPage();
+    break;
+    case 66:
+      // b - blank/black
+      blackPage();
+    break;
+    case 70:
+      // f - fulscreen
+      if (window.fullScreen) {
+        document.exitFullscreen();
+      }
+      else {
+        document.documentElement.requestFullscreen();
+      }
+    break;
+  }
+};
+</script>
+		<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+		<script id="MathJax-script" async="true" src="tex-mml-svg.js"> </script>
+		<meta generator='pymdslides, git commit: "c56f193e3942288b3c288eee2ed512606cc8eb14" https://github.com/olofmogren/pymdslides/'>
+		<meta generation-date="2024-06-13 17:47:49.857032+02:00">
+	</head>
+	<body onload="pageLoad();">
+		<div class="black_div" id="black_div"> </div>
+		<div class="loading_div">
+			<div>
+				<p>Loading.</p>
+				<p>PYMD slides requires a javascript-enabled browser.</p>
+				<p>Usage. Arrow buttons, page up/down, or space to navigate. F for fullscreen. B for blank. Click on leftmost quarter for previous slide, the rest for next.</p>
+			</div>
+		</div>
+		<div id="page-1" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
+				<img src="rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="20230713_152426-environment.jpg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
+				<div style="position: absolute; left: 6.250%; top: 36.667%; width: 87.500%; height: 11.481%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; ">Deep Learning Research Group</h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 44.074%; width: 87.500%; height: 7.778%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h2 style="margin: 0; padding: 0; font-size: 2.667cqw; ">Foundational and Applied ML for the Earth at RISE</h2>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<p> </p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #ffffffff;font-size: 0.933cqw; ">
+					<p>2024-06-13, dl-group.se <a href="https://dl-group.se/">dl-group.se</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-2" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
+				<img src="rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="active-learning-sed-2.png" style="position: absolute; left: 6.250%; top: 24.444%; width: 29.167%; height: 67.407%; object-fit: contain;">
+				<img src="dec-2024.png" style="position: absolute; left: 35.417%; top: 24.444%; width: 29.167%; height: 67.407%; object-fit: contain;">
+				<img src="eo-models-grayscale-and-pixelswap-1120-767.png" style="position: absolute; left: 64.583%; top: 24.444%; width: 29.167%; height: 67.407%; object-fit: contain;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; ">Cool progress</h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 63.704%; width: 87.500%; height: 28.148%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<p> </p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
+					<p>dl-group.se - Foundational and Applied ML for the Earth at RISE</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-3" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
+				<img src="rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="oscar-richard-840-441.png" style="position: absolute; left: 6.250%; top: 24.444%; width: 21.875%; height: 67.407%; object-fit: contain;">
+				<img src="agnes-malte-840-833.png" style="position: absolute; left: 28.125%; top: 24.444%; width: 21.875%; height: 67.407%; object-fit: contain;">
+				<img src="daniel-emma-1-840-468.png" style="position: absolute; left: 50.000%; top: 24.444%; width: 21.875%; height: 67.407%; object-fit: contain;">
+				<img src="daniel-emma-2.png" style="position: absolute; left: 71.875%; top: 24.444%; width: 21.875%; height: 67.407%; object-fit: contain;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; ">Cool master's theses</h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 63.704%; width: 87.500%; height: 28.148%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<p> </p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
+					<p>dl-group.se - Foundational and Applied ML for the Earth at RISE</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-4" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
+				<img src="rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="maria-1-617-608.png" style="position: absolute; left: 6.250%; top: 24.444%; width: 29.167%; height: 28.148%; object-fit: contain;">
+				<img src="maria-1.5-1102-608.png" style="position: absolute; left: 35.417%; top: 24.444%; width: 29.167%; height: 28.148%; object-fit: contain;">
+				<img src="maria-2-828-608.png" style="position: absolute; left: 64.583%; top: 24.444%; width: 29.167%; height: 28.148%; object-fit: contain;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; ">AI for chemistry (cool)</h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 63.704%; width: 87.500%; height: 28.148%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<p>
+						<strong>GeqShift</strong>: Accurate chemical shift prediction using a geometrically aware graph neural network.</p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
+					<p>Bånkestad, M., et al., (2023). Carbohydrate NMR chemical shift predictions using E (3) equivariant graph  neural networks. <a href="https://arxiv.org/abs/2311.12657">arXiv:2311.12657</a>.</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-5" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
+				<img src="rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="maria-3.gif" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: contain;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; ">SE2-Conv:</h1>
+				</div>
+				<div style="position: absolute; left: 9.583%; top: 15.556%; width: 87.500%; height: 7.778%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h2 style="margin: 0; padding: 0; font-size: 2.667cqw; ">a SE(2) GNN for creating accurate CFD surrogate models.</h2>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<p> </p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
+					<p>Bånkestad, M., Mogren, O., &amp; Pirinen, A. (2024). Flexible SE (2) graph neural networks with applications to PDE surrogates. <a href="https://arxiv.org/abs/2405.20287">arxiv:2405.20287</a>.</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-6" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
+				<img src="rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="scatter-scalar.gif" style="position: absolute; left: 0.000%; top: 0.000%; width: 50.000%; height: 100.000%; object-fit: contain;">
+				<img src="scatter-velocity.gif" style="position: absolute; left: 50.000%; top: 0.000%; width: 50.000%; height: 100.000%; object-fit: contain;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; "></h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<p> </p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
+					<p>dl-group.se - Foundational and Applied ML for the Earth at RISE</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-7" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 1.600cqw; ">
+				<img src="rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; ">Cool papers</h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 1.600cqw; ">
+					<ul>
+						<li>J. Martinsson, O. Mogren, M. Sandsten, T. Virtanen, From Weak to Strong Sound Event Labels using Adaptive Change-Point Detection and Active Learning, European Signal Processing Conference, EUSIPCO (2024)</li>
+						<li>M. Willbo, A. Pirinen, J. Martinsson, E. Listo Zec, O. Mogren, M. Nilsson, Impacts of Color and Texture Distortions on Earth Observation Data in Deep Learning, 2nd Machine Learning for Remote Sensing Workshop at ICLR, ML4RS (2024)</li>
+						<li>E. Listo Zec, J. Östman, O. Mogren, D. Gillblad, Efficient Node Selection in Private Personalized Decentralized Learning, Northern Lights Deep Learning Conference, NLDL (2024) </li>
+						<li>John Martinsson and Maria Sandsten. DMEL : The differentiable log-Mel spectrogram as a trainable layer in neural networks. In ICASSP 2024 - 2024 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2024.</li>
+						<li>A Sarkar, S Sastry, A Pirinen, C Zhang, N Jacobs, Y Vorobeychik, GOMAA-Geo: GOal Modality Agnostic Active Geo-localization</li>
+						<li>M Bånkestad, O Mogren, A Pirinen, Flexible SE (2) graph neural networks with applications to PDE surrogates</li>
+						<li>A Pirinen, et al., Creating and Leveraging a Synthetic Dataset of Cloud Optical Thickness Measures for Cloud Detection in MSI</li>
+						<li>M Bånkestad, et al., Ising on the Graph: Task-specific Graph Subsampling via the Ising Model</li>
+					</ul>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
+					<p>dl-group.se - Foundational and Applied ML for the Earth at RISE</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-8" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 1.600cqw; ">
+				<img src="rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; ">Cool projects</h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 1.600cqw; ">
+					<ul>
+						<li>Recently started projects
+<ul>
+								<li>Distribution shifts in federated learning (Vinnova)</li>
+								<li>Active learning for sound analysis (Vinnova)</li>
+								<li>Physically informed ML (Vinnova)</li>
+								<li>AI-based Power Production Models for Increased Wind Farm Efficiency (Energimyndigheten)</li>
+							</ul>
+						</li>
+						<li>Applied for ~56 MSEK since January.</li>
+						<li>So far: 1.8 MSEK granted.
+<ul>
+								<li>FERTITEC: FERTIliser product recovery from secondary raw materials using best available TEChniques (Horizon)</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
+					<p>dl-group.se - Foundational and Applied ML for the Earth at RISE</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-9" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
+				<img src="rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; ">Cool new collaborations</h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<ul>
+						<li>SLU</li>
+						<li>Tampere</li>
+						<li>Pioneer AI Center, Copenhagen</li>
+						<li>Vattenfall</li>
+						<li>Ericsson</li>
+					</ul>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
+					<p>dl-group.se - Foundational and Applied ML for the Earth at RISE</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-10" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
+				<img src="rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="larsson-240-360.jpg" style="position: absolute; left: 0.000%; top: 0.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="kratzert-360-360.jpg" style="position: absolute; left: 14.167%; top: 0.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="lidberg-358-360.jpg" style="position: absolute; left: 28.333%; top: 0.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="beery-360-360.jpg" style="position: absolute; left: 42.500%; top: 0.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="plumbley-541-360.jpg" style="position: absolute; left: 56.667%; top: 0.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="fanti-358-360.jpg" style="position: absolute; left: 70.833%; top: 0.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="qr-lm-seminars-360-360.png" style="position: absolute; left: 85.000%; top: 0.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="voita-317-360.png" style="position: absolute; left: 0.000%; top: 16.667%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="szolnoky-367-360.png" style="position: absolute; left: 14.167%; top: 16.667%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="nivre-361-360.jpg" style="position: absolute; left: 28.333%; top: 16.667%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="light-grey.png" style="position: absolute; left: 42.500%; top: 16.667%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="white.png" style="position: absolute; left: 56.667%; top: 16.667%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="ylipaa-361-360.jpg" style="position: absolute; left: 70.833%; top: 16.667%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="mogren-360-360.jpg" style="position: absolute; left: 85.000%; top: 16.667%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="ilin-240-360.jpg" style="position: absolute; left: 0.000%; top: 33.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="cohen-240-360.jpg" style="position: absolute; left: 14.167%; top: 33.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="light-grey.png" style="position: absolute; left: 28.333%; top: 33.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="white.png" style="position: absolute; left: 42.500%; top: 33.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="light-grey.png" style="position: absolute; left: 56.667%; top: 33.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="georganos-360-360.jpg" style="position: absolute; left: 70.833%; top: 33.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="flood-340-360.jpg" style="position: absolute; left: 85.000%; top: 33.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="cole-360-360.jpg" style="position: absolute; left: 0.000%; top: 50.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="sennrich-270-360.jpg" style="position: absolute; left: 14.167%; top: 50.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="light-grey.png" style="position: absolute; left: 28.333%; top: 50.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="white.png" style="position: absolute; left: 42.500%; top: 50.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="light-grey.png" style="position: absolute; left: 56.667%; top: 50.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="stenetorp.jpg" style="position: absolute; left: 70.833%; top: 50.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="arvidsson-360-360.jpg" style="position: absolute; left: 85.000%; top: 50.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="sauder-270-360.jpg" style="position: absolute; left: 0.000%; top: 66.667%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="zhang.jpg" style="position: absolute; left: 14.167%; top: 66.667%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="white.png" style="position: absolute; left: 28.333%; top: 66.667%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="light-grey.png" style="position: absolute; left: 42.500%; top: 66.667%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="photo-shruti-nath-360-360.png" style="position: absolute; left: 56.667%; top: 66.667%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="photo-mikolaj-czerkawski-360-360.jpg" style="position: absolute; left: 70.833%; top: 66.667%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="photo-jonas-hentati-sundberg-538-360.jpg" style="position: absolute; left: 85.000%; top: 66.667%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="photo-tobias-andermann-240-360.png" style="position: absolute; left: 0.000%; top: 83.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="photo-alouette-van-hove-272-360.jpg" style="position: absolute; left: 14.167%; top: 83.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="photo-karsten-kreis-360-360.jpg" style="position: absolute; left: 28.333%; top: 83.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="photo-yonghao-xu-361-360.jpg" style="position: absolute; left: 42.500%; top: 83.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="photo-fredrik-gustafsson-360-360.jpg" style="position: absolute; left: 56.667%; top: 83.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="photo-santiago-martinez-balvanera-360-360.jpg" style="position: absolute; left: 70.833%; top: 83.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="photo-alexander-mathis-381-360.jpg" style="position: absolute; left: 85.000%; top: 83.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; "></h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<p> </p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
+					<p>dl-group.se - Foundational and Applied ML for the Earth at RISE</p>
+				</div>
+				<div class="l4_box" style="left: 20.000%; top: 24.444%; width: 60.000%; text-align: start; z-index: 4; margin: 0; padding: -1cqw .5cqw .5cqw .5cqw; background-color: #e6f0ffbf; border: 1px #c8c8c8bf solid; color: #000000ff; ">
+					<p>
+						<strong>RISE Learning machines seminars</strong>
+					</p>
+					<p>
+						<strong>Every thursday at 15:00</strong>
+					</p>
+					<ul>
+						<li>Fredrik Gustavsson, Karolinska Institutet</li>
+						<li>Yonghao Xu, Linköping University</li>
+						<li>Karsten Kreis, NVIDIA Research</li>
+						<li>Alouette van Hove, University of Oslo</li>
+						<li>Tobias Andermann, Uppsala University</li>
+						<li>Mikolaj Czerkawski, European Space Agency</li>
+						<li>Shruti Nath, University of Oxford and Climate Analytics</li>
+						<li>Jonas Hentati Sundberg, Swedish University of Agricultural Sciences</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="page-11" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
+				<img src="rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="pirinen.png" style="position: absolute; left: 6.250%; top: 24.444%; width: 14.583%; height: 28.148%; object-fit: cover;">
+				<img src="martinsson.jpg" style="position: absolute; left: 20.833%; top: 24.444%; width: 14.583%; height: 28.148%; object-fit: cover;">
+				<img src="listozec.jpg" style="position: absolute; left: 35.417%; top: 24.444%; width: 14.583%; height: 28.148%; object-fit: cover;">
+				<img src="bankestad.png" style="position: absolute; left: 50.000%; top: 24.444%; width: 14.583%; height: 28.148%; object-fit: cover;">
+				<img src="willbo.png" style="position: absolute; left: 64.583%; top: 24.444%; width: 14.583%; height: 28.148%; object-fit: cover;">
+				<img src="mogren.png" style="position: absolute; left: 79.167%; top: 24.444%; width: 14.583%; height: 28.148%; object-fit: cover;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; ">Thank you</h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 63.704%; width: 87.500%; height: 28.148%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<p>Contact us to discuss your needs for AI and advanced analytics!</p>
+					<p>
+						<a href="https://dl-group.se" onmouseup="stopProp(event);">dl-group.se</a>
+					</p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
+					<p>dl-group.se - Foundational and Applied ML for the Earth at RISE</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-12" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
+				<img src="rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="dcase-sed.png" style="position: absolute; left: 56.250%; top: 24.444%; width: 37.500%; height: 67.407%; object-fit: contain;">
+				<img src="martinsson-104-104.jpg" style="position: absolute; left: 20.417%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+				<img src="willbo-104-90.png" style="position: absolute; left: 23.125%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+				<img src="pirinen-104-104.png" style="position: absolute; left: 25.833%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+				<img src="sandsten-79-104.png" style="position: absolute; left: 28.542%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+				<img src="mogren-104-103.png" style="position: absolute; left: 31.250%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; ">Sound event detection</h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<ul>
+						<li>Large amounts of data</li>
+						<li>Labour intensive annotation</li>
+						<li>Few-shot learning</li>
+					</ul>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
+					<p>dl-group.se - Foundational and Applied ML for the Earth at RISE</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-13" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
+				<img src="rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="capercaillie.png" style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 28.148%; object-fit: contain;">
+				<img src="vattenfall-60-104.png" style="position: absolute; left: 44.375%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+				<img src="white.png" style="position: absolute; left: 47.083%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+				<img src="martinsson-104-104.jpg" style="position: absolute; left: 49.792%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+				<img src="mogren-104-103.png" style="position: absolute; left: 52.500%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; ">Soundscape analysis</h1>
+				</div>
+				<div style="position: absolute; left: 9.583%; top: 15.556%; width: 87.500%; height: 7.778%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h2 style="margin: 0; padding: 0; font-size: 2.667cqw; ">for capercaillie health</h2>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 63.704%; width: 87.500%; height: 28.148%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<ul>
+						<li>Ongoing work with datascience team at Vattenfall</li>
+						<li>What effect does wind mill production have on capercaillies?</li>
+						<li>Data is currently being collected</li>
+						<li>Analysis: count individuals, detect categories of vocalizations</li>
+						<li>Projects: SLU and Naturvårdsv.</li>
+					</ul>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
+					<p>dl-group.se - Foundational and Applied ML for the Earth at RISE</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-14" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
+				<img src="rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="active-learning-sed.png" style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; object-fit: contain;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; ">Active learning</h1>
+				</div>
+				<div style="position: absolute; left: 9.583%; top: 15.556%; width: 87.500%; height: 7.778%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h2 style="margin: 0; padding: 0;font-size: 2.667cqw; ">for strong sound event labels</h2>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 63.704%; width: 87.500%; height: 28.148%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<p> </p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
+					<p>mogren.one, olof.mogren@ri.se --- Martinsson, et al., From Weak to Strong Sound Event Labels using Adaptive Change-Point Detection and Active Learning, 2024</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-15" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
+				<img src="rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="martinsson-bird-species.png" style="position: absolute; left: 56.250%; top: 24.444%; width: 37.500%; height: 67.407%; object-fit: cover;">
+				<img src="martinsson-104-104.jpg" style="position: absolute; left: 26.250%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; ">Bird species identification</h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<ul>
+						<li>Modelling sound using
+spectrograms and convolutional
+neural networks</li>
+						<li>Altitude information improved
+results</li>
+						<li>Location information future work</li>
+					</ul>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
+					<p>Martinsson, 2017</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-16" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
+				<img src="rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="krycklan.png" style="position: absolute; left: 56.250%; top: 24.444%; width: 37.500%; height: 67.407%; object-fit: contain;">
+				<img src="pirinen-104-104.png" style="position: absolute; left: 24.792%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+				<img src="mogren-104-103.png" style="position: absolute; left: 27.500%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; ">Stream flow forecasting</h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<ul>
+						<li>Collaboration with University of São Paulo</li>
+						<li>Dense predictions of water flow</li>
+					</ul>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
+					<p>Pirinen, Mogren, Västerdal, 2023</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-17" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
+				<img src="rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="active-vision-1.png" style="position: absolute; left: 56.250%; top: 24.444%; width: 37.500%; height: 67.407%; object-fit: contain;">
+				<img src="pirinen-104-104.png" style="position: absolute; left: 26.250%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; ">Active vision</h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<ul>
+						<li>UAVs in environmental applications</li>
+						<li>Constraints
+<ul>
+								<li>Flight time</li>
+								<li>Data storage</li>
+								<li>Cost and difficulty for humans</li>
+							</ul>
+						</li>
+						<li>Active collection
+<ul>
+								<li>Choose where to fly
+for optimal data collection</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
+					<p>Pirinen et al., 2023</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-18" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
+				<img src="rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="coffee-berry-disease-0.png" style="position: absolute; left: 56.250%; top: 24.444%; width: 37.500%; height: 33.704%; object-fit: contain;">
+				<img src="coffee-berry-disease-2.png" style="position: absolute; left: 56.250%; top: 58.148%; width: 37.500%; height: 33.704%; object-fit: contain;">
+				<img src="pirinen-104-104.png" style="position: absolute; left: 24.792%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+				<img src="mogren-104-103.png" style="position: absolute; left: 27.500%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; ">Coffee berry disease</h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<ul>
+						<li>Master project
+<ul>
+								<li>Help detect infected plants</li>
+								<li>Highly dependent on climate change
+and factors such as rainfall,
+humidity, and temperature</li>
+							</ul>
+						</li>
+						<li>Limited data
+<ul>
+								<li>Few raw images <strong>and</strong>
+few annotations</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
+					<p>dl-group.se - Foundational and Applied ML for the Earth at RISE</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-19" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
+				<img src="rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="wetlands.png" style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; object-fit: contain;">
+				<img src="pirinen-104-104.png" style="position: absolute; left: 48.750%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; ">Wetland estimation</h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<p> </p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
+					<p>Pirinen et al., 2023</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-20" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
+				<img src="rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="cloud-thickness.jpg" style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; object-fit: contain;">
+				<img src="pirinen-104-104.png" style="position: absolute; left: 48.750%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; ">Cloud thickness estimation</h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<p> </p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
+					<p>Pirinen et al., 2023</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-21" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
+				<img src="rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="federated-learning-hospitals.png" style="position: absolute; left: 56.250%; top: 24.444%; width: 37.500%; height: 31.852%; object-fit: cover;">
+				<img src="2022-dac-1107-688.png" style="position: absolute; left: 56.250%; top: 60.000%; width: 37.500%; height: 31.852%; object-fit: cover;">
+				<img src="listozec-104-104.jpg" style="position: absolute; left: 23.333%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+				<img src="willbo-104-90.png" style="position: absolute; left: 26.042%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+				<img src="mogren-104-103.png" style="position: absolute; left: 28.750%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0;font-size: 4.800cqw; ">Distributed learning (our work)</h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<ul>
+						<li>
+							<p>Privacy enh. of federated learning</p>
+							<ul>
+								<li>Passive acoustic devices</li>
+								<li>Camera traps</li>
+								<li>Satellite compute</li>
+							</ul>
+						</li>
+						<li>
+							<p>Efficiency, learning at premise</p>
+						</li>
+						<li>
+							<p>Decentralized: no central server!</p>
+						</li>
+						<li>
+							<p>Ongoing PhD project (with KTH):
+Edvin Listo Zec</p>
+						</li>
+					</ul>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
+					<p>E. Ekblom, E. Listo Zec, O. Mogren, IEEE International Conference on Big Data, 2022, E. Listo Zec, E. Ekblom, M. Willbo, O. Mogren, S. Girdzijauskas, FL-IJCAI'22 </p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
