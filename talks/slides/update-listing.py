@@ -19,7 +19,8 @@ title: Olof Mogren, PhD - Deep Learning Researcher.
   for d in ds:
     #print(d)
     page = os.path.join('html',d,'index.html')
-    f.write('<a href="{}">{}</a><br />\n'.format(page, d))
+    if os.path.exists(os.path.join(sys.argv[1], 'html', d, 'index.html')):
+      f.write('<a href="{}">{}</a><br />\n'.format(page, d))
   f.write('''</div>
           </div>
         </div>
