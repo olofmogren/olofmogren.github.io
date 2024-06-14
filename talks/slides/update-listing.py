@@ -18,7 +18,7 @@ title: Olof Mogren, PhD - Deep Learning Researcher.
   for d in ds:
     print(d)
     page = os.path.join(d,'html','index.html')
-    f.write('<a href="{}">{}</a><br />'.format(page))
+    f.write('<a href="{}">{}</a><br />'.format(page, page))
   f.write('''</div>
           </div>
         </div>
