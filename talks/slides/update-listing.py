@@ -1,5 +1,6 @@
 import os,sys
 
+print('update-listing.py pre-commit hook. updating listing.')
 with open(os.path.join(sys.argv[1], 'index.html'), 'w') as f:
   f.write('''---
 layout: default
@@ -16,9 +17,9 @@ title: Olof Mogren, PhD - Deep Learning Researcher.
             <div class="table-row">''')
   ds = os.listdir(os.path.join(sys.argv[1], 'html'))
   for d in ds:
-    print(d)
-    page = os.path.join(d,'html','index.html')
-    f.write('<a href="{}">{}</a><br />\n'.format(page, page))
+    #print(d)
+    page = os.path.join('html',d,'index.html')
+    f.write('<a href="{}">{}</a><br />\n'.format(page, d))
   f.write('''</div>
           </div>
         </div>
