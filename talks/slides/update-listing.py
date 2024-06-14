@@ -12,7 +12,7 @@ title: Olof Mogren, PhD - Deep Learning Researcher.
           <div class="feature-grid">
             <h1>Slides</h1>
 
-            <p>These are some selected presentations.</p>
+            <p>These are slides for some selected presentations. They were generated from markdown using <a href="https://github.com/olofmogren/pymdslides/">PYMD</a> and can be viewed in a modern javascript-enabled browser.</p>
 
             <div class="table-row">''')
   ds = os.listdir(os.path.join(sys.argv[1], 'html'))
