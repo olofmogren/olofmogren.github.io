@@ -6,24 +6,15 @@ title: Olof Mogren, PhD - Deep Learning Researcher.
       <section class="features">
         <div class="inner">
           <div class="feature-grid">
-            <h1>Talks</h1>
+            <h1>Slides</h1>
             
             <p>These are some selected presentations.</p>
 
             <div class="table-row">
-{% assign globalcounter = 0 %}
-{% assign colcounter = 0 %}
-{% for p in site.categories.talks %}
-  {% assign colno = colcounter | modulo: 3 %}
-  {% if colno == 0 and globalcounter != 0 %}
-            </div>
-            <div class="table-row">
-  {% endif %}
-
-  {% include overlay-box.html p=p counter=globalcounter category='talks' %} 
-  {% capture globalcounter %}{{ globalcounter | plus:1 }}{% endcapture %}
-  {% capture colcounter %}{{ colcounter | plus:1 }}{% endcapture %}
+{% for p in site.talks.slides.html %}
+  <a href="{{ p.url }}"> link to slides </a>
 {% endfor %}
+
             </div>
           </div>
         </div>
