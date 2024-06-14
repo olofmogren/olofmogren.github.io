@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<style>
+@font-face {
+  font-family: Code Pro Bold;
+  src: url('CodePro-Bold.woff2') format('woff2');
+}
+@font-face {
+  font-family: Lato Regular;
+  src: url('Lato-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: Roboto Mono Regular;
+  src: url('RobotoMono-Regular.woff2') format('woff2');
+}
+body {
+  overflow: hidden;
+  background-color: black;
+  font-family: Lato Regular, Arial, Sans-Serif;
+  font-weight: normal;
+}
+h1 {
+  font-family: Code Pro Bold, Arial, Sans-Serif;
+  /*font-size: 4cqw;*/
+  font-size: 4.800cqw;
+  font-weight: normal;
+}
+h2 {
+  font-family: Code Pro Bold, Arial, Sans-Serif;
+  /*font-size: 2.8cqw;*/
+  font-size: 2.667cqw;
+  font-weight: normal;
+}
+h3 {
+  font-family: Code Pro Bold, Arial, Sans-Serif;
+  /*font-size: 2cqw;*/
+  font-size: 1.905cqw;
+  font-weight: normal;
+}
+h4 {
+  font-family: Code Pro Bold, Arial, Sans-Serif;
+  /*font-size: 2cqw;*/
+  font-size: 1.905cqw;
+  font-weight: normal;
+}
+.page_visible {
+  visibility: visible;
+}
+.page_hidden {
+  visibility: hidden;
+}
+div.page_div {
+  background-color: #fff;
+}
+div.page_div {
+  background-color: #fff;
+  width: 100vw;
+  height: 56.25vw; /* height:width ratio = 9/16 = .5625  */
+  max-height: 100vh;
+  max-width: 177.78vh; /* 16/9 = 1.778 */
+  margin: auto;
+  position: absolute;
+  top:0;
+  bottom:0; /* vertical center */
+  left:0;
+  right:0; /* horizontal center */'
+  container-type: size;
+  overflow: hidden;
+  z-index: 2;
+}
+div.subcontainer {
+  container-type: size;
+  width: 100%;
+  height: 100%;
+  font-size: 2.267cqw;
+}
+div.black_div {
+  background-color: #000;
+  color: #fff;
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  visibility: hidden;
+  z-index: 8;
+}
+div.loading_div {
+  background-color: black;
+  color: white;
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  visibility: visible;
+  z-index: 1;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div.l4_box {
+  position: absolute;
+  border-radius: 1cqw;
+  overflow: hidden;
+}
+div.l4_box p {
+  margin: 1.2cqw;
+}
+div.footer {
+  font-family: Roboto Mono Regular, Arial, Sans-Serif;
+  /*font-size: 1cqw;*/
+  font-size: 0.933cqw;
+  font-weight: normal;
+}
+ul {
+  margin-top: 0;
+  border: 1px;
+}
+li {
+  margin-top: 0em;
+  margin-bottom: 0.3em;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 0.3em;
+}
+/*div {
+border: 1px #ccc solid;
+}
+p {
+border: 1px #ccc solid;
+}*/
+@page
+{
+    size: A4 landscape;
+    margin: 0;
+}
+@media print {
+  div.page_div {
+    position: relative;
+    visibility: visible;
+    page-break-after: always;
+  }
+.page_visible {
+  visibility: visible;
+}
+.page_hidden {
+  visibility: visible;
+}
+}
+</style>
+		<title>Business development </title>
+		<script>
+var currentPageId = "page-1";
+var blackPageVar = false;
+function blackPage() {
+  if (blackPageVar) {
+    document.getElementById('black_div').style.visibility = 'hidden';
+    //alert('un-black page');
+  }
+  else {
+    document.getElementById('black_div').style.visibility = 'visible';
+    //alert('black page');
+  }
+  blackPageVar = !blackPageVar;
+}
+function mouseuphandler(e) {
+  e.pageX;
+  width = document.getElementById(currentPageId).offsetWidth;
+  //alert(width);
+  if (e.pageX < 0.25*width) {
+    prevPage();
+  }
+  else {
+    nextPage()
+  }
+}
+function pageLoad(){
+  var currentPageId = "page-1";
+  newPageId = window.location.hash.substring(1);
+  if (newPageId == "") {
+    newPageId = currentPageId;
+  }
+  goToPage(newPageId);
+}
+function prevPage(){
+  //alert('prevPage')
+  splits = currentPageId.split("-");
+  currentPageNumber = parseInt(splits[1]);
+  prevPageNumber = currentPageNumber-1;
+  pageId = "page-"+prevPageNumber;
+  element = document.getElementById(pageId);
+  if (element) {
+    document.getElementById(currentPageId).classList.remove('page_visible');
+    document.getElementById(currentPageId).classList.add('page_hidden');
+    document.getElementById(pageId).classList.remove('page_hidden');
+    document.getElementById(pageId).classList.add('page_visible');
+    //document.getElementById(currentPageId).style.visibility="hidden";
+    //document.getElementById(pageId).style.visibility="visible";
+    currentPageId = pageId;
+    window.location.hash = pageId;
+  }
+}
+function nextPage(){
+  //alert('nextPage')
+  splits = currentPageId.split("-");
+  currentPageNumber = parseInt(splits[1]);
+  nextPageNumber = currentPageNumber+1;
+  pageId = "page-"+nextPageNumber;
+  element = document.getElementById(pageId);
+  if (element) {
+    document.getElementById(currentPageId).classList.remove('page_visible');
+    document.getElementById(currentPageId).classList.add('page_hidden');
+    document.getElementById(pageId).classList.remove('page_hidden');
+    document.getElementById(pageId).classList.add('page_visible');
+    //document.getElementById(currentPageId).style.visibility="hidden";
+    //document.getElementById(pageId).style.visibility="visible";
+    currentPageId = pageId;
+    window.location.hash = pageId;
+  }
+}
+function goToPage(pageId){
+  //alert(pageId);
+  if (!document.getElementById(pageId)){
+    //alert(pageId+": page not found")
+    pageId = "page-1";
+  }
+  document.getElementById(currentPageId).classList.remove('page_visible');
+  document.getElementById(currentPageId).classList.add('page_hidden');
+  document.getElementById(pageId).classList.remove('page_hidden');
+  document.getElementById(pageId).classList.add('page_visible');
+  //document.getElementById(currentPageId).style.visibility="hidden";
+  //document.getElementById(pageId).style.visibility="visible";
+  currentPageId = pageId;
+  window.location.hash = pageId;
+}
+function localPageLink(pageId, event){
+  //alert(pageId);
+  event.stopPropagation(); // do not fire event on parent elements.
+  goToPage(pageId);
+}
+function stopProp(event){
+  event.stopPropagation();
+}
+document.onkeydown = function(event) {
+  switch (event.keyCode) {
+    case 33:
+      // page up
+      prevPage();
+    break;
+    case 34:
+      // page down
+      nextPage();
+    break;
+    case 37:
+      // left arrow
+      prevPage();
+    break;
+    case 38:
+      // up arrow
+      prevPage();
+    break;
+    case 32:
+      //space
+      nextPage();
+    break;
+    case 39:
+      // right arrow
+      nextPage();
+    break;
+    case 40:
+      // down arrow
+      nextPage();
+    break;
+    case 66:
+      // b - blank/black
+      blackPage();
+    break;
+    case 70:
+      // f - fulscreen
+      if (window.fullScreen) {
+        document.exitFullscreen();
+      }
+      else {
+        document.documentElement.requestFullscreen();
+      }
+    break;
+  }
+};
+</script>
+		<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+		<script id="MathJax-script" async="true" src="tex-mml-svg.js"> </script>
+		<meta generator='pymdslides, git commit: "c56f193e3942288b3c288eee2ed512606cc8eb14" https://github.com/olofmogren/pymdslides/'>
+		<meta generation-date="2024-06-14 09:36:03.401738+02:00">
+	</head>
+	<body onload="pageLoad();">
+		<div class="black_div" id="black_div"> </div>
+		<div class="loading_div">
+			<div>
+				<p>Loading.</p>
+				<p>PYMD slides requires a javascript-enabled browser.</p>
+				<p>Usage. Arrow buttons, page up/down, or space to navigate. F for fullscreen. B for blank. Click on leftmost quarter for previous slide, the rest for next.</p>
+			</div>
+		</div>
+		<div id="page-1" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
+				<img src="rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="dall-e-3-transition.jpg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
+				<div style="position: absolute; left: 6.250%; top: 36.667%; width: 87.500%; height: 11.481%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; ">Business development</h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 44.074%; width: 87.500%; height: 7.778%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; ">
+					<h2 style="margin: 0; padding: 0; font-size: 2.667cqw; ">AI for climate change</h2>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; font-size: 2.267cqw; ">
+					<p> </p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #ffffffff;font-size: 0.933cqw; ">
+					<p>2024-06-13, dl-group.se <a href="https://dl-group.se/">dl-group.se</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-2" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
+				<img src="rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="ipcc-chart-2021.png" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: contain;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; "></h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<p> </p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
+					<p>Business development, AI for climate change --- dl-group.se</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-3" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
+				<img src="rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="eu-green-deal.jpg" style="position: absolute; left: 6.250%; top: 24.444%; width: 21.875%; height: 28.148%; object-fit: cover;">
+				<img src="eu-green-deal-2.jpg" style="position: absolute; left: 28.125%; top: 24.444%; width: 21.875%; height: 28.148%; object-fit: cover;">
+				<img src="fit-for-55-654-608.png" style="position: absolute; left: 50.000%; top: 24.444%; width: 21.875%; height: 28.148%; object-fit: cover;">
+				<img src="protected-land-share.svg" style="position: absolute; left: 71.875%; top: 24.444%; width: 21.875%; height: 28.148%; object-fit: cover;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; ">New legislation</h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 63.704%; width: 87.500%; height: 28.148%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<ul>
+						<li>EU Green deal</li>
+						<li>30 in 30 (EU) - 30% of land protected for biodiversity</li>
+						<li>Fit for 55 (EU) - Reducing EU emissions by at least 55% by 2030</li>
+						<li>Climate neutral by 2050 (EU)</li>
+					</ul>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
+					<p>Business development, AI for climate change --- dl-group.se</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-4" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
+				<img src="rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="icebug-plan.png" style="position: absolute; left: 0.000%; top: 0.000%; width: 33.333%; height: 50.000%; object-fit: contain;">
+				<img src="ikea.png" style="position: absolute; left: 33.333%; top: 0.000%; width: 33.333%; height: 50.000%; object-fit: contain;">
+				<img src="apple-plan.jpg" style="position: absolute; left: 66.667%; top: 0.000%; width: 33.333%; height: 50.000%; object-fit: contain;">
+				<img src="google-green-energy-1280-981.png" style="position: absolute; left: 0.000%; top: 50.000%; width: 33.333%; height: 50.000%; object-fit: contain;">
+				<img src="volvo.png" style="position: absolute; left: 33.333%; top: 50.000%; width: 33.333%; height: 50.000%; object-fit: contain;">
+				<img src="carlsberg.jpg" style="position: absolute; left: 66.667%; top: 50.000%; width: 33.333%; height: 50.000%; object-fit: contain;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; "></h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<p> </p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
+					<p>Business development, AI for climate change --- dl-group.se</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-5" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: 2.267cqw; ">
+				<img src="rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="dall-e-3-green-infrastructure-608-608.jpg" style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 28.148%; object-fit: cover;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; ">We can support</h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 63.704%; width: 41.667%; height: 28.148%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<ul>
+						<li>Decision support systems</li>
+						<li>AI-based optimization
+<ul>
+								<li>Energy, transport</li>
+							</ul>
+						</li>
+						<li>Quantify and follow progress</li>
+					</ul>
+				</div>
+				<div style="position: absolute; left: 50.000%; top: 63.704%; width: 41.667%; height: 28.148%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<ul>
+						<li>Construction, Transport</li>
+						<li>Public sector</li>
+						<li>Green infrastructure</li>
+						<li>Nature based solutions</li>
+					</ul>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
+					<p>Business development, AI for climate change --- dl-group.se</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-6" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
+				<img src="rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; ">Transition needed</h1>
+				</div>
+				<div style="position: absolute; left: 9.583%; top: 15.556%; width: 87.500%; height: 7.778%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h2 style="margin: 0; padding: 0; font-size: 2.667cqw; ">in society and industry</h2>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<p> </p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
+					<p>Business development, AI for climate change --- dl-group.se</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-7" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #000000ff;font-size: 2.267cqw; ">
+				<img src="rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<div style="position: absolute; left: 6.250%; top: 36.667%; width: 87.500%; height: 11.481%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; ">Activities</h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 44.074%; width: 87.500%; height: 7.778%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; ">
+					<h2 style="margin: 0; padding: 0; font-size: 2.667cqw; ">Business devlopment AI for climate 2024</h2>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; font-size: 2.267cqw; ">
+					<p> </p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
+					<p>Business development, AI for climate change --- dl-group.se</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-8" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
+				<img src="rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="mogren-tedx.png" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; "></h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<p> </p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
+					<p>Business development, AI for climate change --- dl-group.se</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-9" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
+				<img src="rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="mogren-iclr.png" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; "></h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<p> </p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
+					<p>Business development, AI for climate change --- dl-group.se</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-10" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
+				<img src="rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="lansstyrelsen-vg.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; "></h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<p> </p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
+					<p>Business development, AI for climate change --- dl-group.se</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-11" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
+				<img src="rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="elu.png" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; "></h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<p> </p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
+					<p>Business development, AI for climate change --- dl-group.se</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-12" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
+				<img src="rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="pioneer-centre.png" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; "></h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<p> </p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
+					<p>Business development, AI for climate change --- dl-group.se</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-13" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
+				<img src="rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="apple.png" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; "></h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<p> </p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
+					<p>Business development, AI for climate change --- dl-group.se</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-14" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
+				<img src="rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="capercaillie.png" style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 28.148%; object-fit: contain;">
+				<img src="vattenfall.png" style="position: absolute; left: 51.042%; top: 24.444%; width: 42.708%; height: 28.148%; object-fit: contain;">
+				<img src="white.png" style="position: absolute; left: 45.833%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+				<img src="martinsson-104-104.jpg" style="position: absolute; left: 48.542%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+				<img src="mogren-104-103.png" style="position: absolute; left: 51.250%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; ">Soundscape analysis</h1>
+				</div>
+				<div style="position: absolute; left: 9.583%; top: 15.556%; width: 87.500%; height: 7.778%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h2 style="margin: 0; padding: 0;font-size: 2.667cqw; ">for capercaillie health</h2>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 63.704%; width: 87.500%; height: 28.148%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<ul>
+						<li>Ongoing work with datascience team at Vattenfall</li>
+						<li>What effect does wind mill production have on capercaillies?</li>
+						<li>Data is currently being collected</li>
+						<li>Analysis: count individuals, detect categories of vocalizations</li>
+						<li>Projects: SLU and Naturvårdsv.</li>
+					</ul>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
+					<p>Business development, AI for climate change --- dl-group.se</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-15" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
+				<img src="rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; ">Proposals</h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<ul>
+						<li>Green infrastructure/urban tree coverage, 4MSEK, Formas</li>
+						<li>NutrAImodel: Artificial intelligence and mechanistic models for nutrient and carbon retention in agroecosystems, 25MSEK, Formas</li>
+						<li>FERTITEC: FERTIliser product recovery from secondary raw materials using best available TEChniques. ~20MSEK (~1.7MSEK for Intelligent Systems) Horizon, <strong>GRANTED</strong>
+						</li>
+						<li>ECOREG: Demonstrating how regions can operate within safe ecological and regional nitrogen and phosphorus boundaries ~2.8MSEK for Intelligent Systems.</li>
+						<li>Pollinators2Farming: POLLINATORS moniToring and prOmotion for more sustainable FARMING: ~6.5MSEK for Intelligent Systems</li>
+						<li>Visualizing Arctic Futures: Enhancing Governance of Sustainable Development and Resilience through AI-Interpreted Big Data ~20MSEK (Nordforsk)</li>
+						<li>Privil-EO. PhD project Earth Observation, 5MSEK, Rymdstyrelsen</li>
+					</ul>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
+					<p>Business development, AI for climate change --- dl-group.se</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-16" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 1.600cqw; ">
+				<img src="rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; ">Projects</h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 1.600cqw; ">
+					<ul>
+						<li>Recently started projects
+<ul>
+								<li>Distribution shifts in federated learning (Vinnova)</li>
+								<li>Active learning for sound analysis (Vinnova)</li>
+								<li>Physically informed ML (Vinnova)</li>
+								<li>AI-based Power Production Models for Increased Wind Farm Efficiency (Energimyndigheten)</li>
+							</ul>
+						</li>
+						<li>Applied for <strong>~56</strong> MSEK since January.</li>
+						<li>2024 (so far): <strong>5.0</strong> MSEK granted.
+<ul>
+								<li>FERTITEC: FERTIliser product recovery from secondary raw materials using best available TEChniques (Horizon; Mogren)</li>
+								<li>AI-based Power Production Models for Increased Wind Farm Efficiency (Energimyndigheten; Pirinen, Bånkestad)</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
+					<p>Business development, AI for climate change --- dl-group.se</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-17" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
+				<img src="rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="tampere.png" style="position: absolute; left: 6.250%; top: 24.444%; width: 14.583%; height: 28.148%; object-fit: contain;">
+				<img src="slu.png" style="position: absolute; left: 20.833%; top: 24.444%; width: 14.583%; height: 28.148%; object-fit: contain;">
+				<img src="pioneer-centre-560-539.png" style="position: absolute; left: 35.417%; top: 24.444%; width: 14.583%; height: 28.148%; object-fit: contain;">
+				<img src="vattenfall.png" style="position: absolute; left: 50.000%; top: 24.444%; width: 14.583%; height: 28.148%; object-fit: contain;">
+				<img src="ericsson.svg" style="position: absolute; left: 64.583%; top: 24.444%; width: 14.583%; height: 28.148%; object-fit: contain;">
+				<img src="apple-560-315.png" style="position: absolute; left: 79.167%; top: 24.444%; width: 14.583%; height: 28.148%; object-fit: contain;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; ">Cool new collaborations</h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 63.704%; width: 87.500%; height: 28.148%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<p>Swedish University of Agricultural Sciences,
+Tampere University,
+Pioneer AI Center, Copenhagen University,
+Vattenfall,
+Ericsson,
+Apple</p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
+					<p>Business development, AI for climate change --- dl-group.se</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-18" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
+				<img src="rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="larsson-240-360.jpg" style="position: absolute; left: 0.000%; top: 0.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="kratzert-360-360.jpg" style="position: absolute; left: 14.167%; top: 0.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="lidberg-358-360.jpg" style="position: absolute; left: 28.333%; top: 0.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="beery-360-360.jpg" style="position: absolute; left: 42.500%; top: 0.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="plumbley-541-360.jpg" style="position: absolute; left: 56.667%; top: 0.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="fanti-358-360.jpg" style="position: absolute; left: 70.833%; top: 0.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="qr-lm-seminars-360-360.png" style="position: absolute; left: 85.000%; top: 0.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="voita-317-360.png" style="position: absolute; left: 0.000%; top: 16.667%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="szolnoky-367-360.png" style="position: absolute; left: 14.167%; top: 16.667%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="nivre-361-360.jpg" style="position: absolute; left: 28.333%; top: 16.667%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="light-grey.png" style="position: absolute; left: 42.500%; top: 16.667%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="white.png" style="position: absolute; left: 56.667%; top: 16.667%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="ylipaa-361-360.jpg" style="position: absolute; left: 70.833%; top: 16.667%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="mogren-360-360.jpg" style="position: absolute; left: 85.000%; top: 16.667%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="ilin-240-360.jpg" style="position: absolute; left: 0.000%; top: 33.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="cohen-240-360.jpg" style="position: absolute; left: 14.167%; top: 33.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="light-grey.png" style="position: absolute; left: 28.333%; top: 33.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="white.png" style="position: absolute; left: 42.500%; top: 33.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="light-grey.png" style="position: absolute; left: 56.667%; top: 33.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="georganos-360-360.jpg" style="position: absolute; left: 70.833%; top: 33.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="flood-340-360.jpg" style="position: absolute; left: 85.000%; top: 33.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="cole-360-360.jpg" style="position: absolute; left: 0.000%; top: 50.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="sennrich-270-360.jpg" style="position: absolute; left: 14.167%; top: 50.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="light-grey.png" style="position: absolute; left: 28.333%; top: 50.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="white.png" style="position: absolute; left: 42.500%; top: 50.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="light-grey.png" style="position: absolute; left: 56.667%; top: 50.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="stenetorp.jpg" style="position: absolute; left: 70.833%; top: 50.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="arvidsson-360-360.jpg" style="position: absolute; left: 85.000%; top: 50.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="sauder-270-360.jpg" style="position: absolute; left: 0.000%; top: 66.667%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="zhang.jpg" style="position: absolute; left: 14.167%; top: 66.667%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="white.png" style="position: absolute; left: 28.333%; top: 66.667%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="light-grey.png" style="position: absolute; left: 42.500%; top: 66.667%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="photo-shruti-nath-360-360.png" style="position: absolute; left: 56.667%; top: 66.667%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="photo-mikolaj-czerkawski-360-360.jpg" style="position: absolute; left: 70.833%; top: 66.667%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="photo-jonas-hentati-sundberg-538-360.jpg" style="position: absolute; left: 85.000%; top: 66.667%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="photo-tobias-andermann-240-360.png" style="position: absolute; left: 0.000%; top: 83.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="photo-alouette-van-hove-272-360.jpg" style="position: absolute; left: 14.167%; top: 83.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="photo-karsten-kreis-360-360.jpg" style="position: absolute; left: 28.333%; top: 83.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="photo-yonghao-xu-361-360.jpg" style="position: absolute; left: 42.500%; top: 83.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="photo-fredrik-gustafsson-360-360.jpg" style="position: absolute; left: 56.667%; top: 83.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="photo-santiago-martinez-balvanera-360-360.jpg" style="position: absolute; left: 70.833%; top: 83.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="photo-alexander-mathis-381-360.jpg" style="position: absolute; left: 85.000%; top: 83.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; "></h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<p> </p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
+					<p>Business development, AI for climate change --- dl-group.se</p>
+				</div>
+				<div class="l4_box" style="left: 20.000%; top: 24.444%; width: 60.000%; text-align: start; z-index: 4; margin: 0; padding: -1cqw .5cqw .5cqw .5cqw; background-color: #e6f0ffbf; border: 1px #c8c8c8bf solid; color: #000000ff; ">
+					<p>
+						<strong>RISE Learning machines seminars</strong>
+					</p>
+					<p>
+						<strong>Every thursday at 15:00</strong>
+					</p>
+					<ul>
+						<li>Fredrik Gustavsson, Karolinska Institutet</li>
+						<li>Yonghao Xu, Linköping University</li>
+						<li>Karsten Kreis, NVIDIA Research</li>
+						<li>Alouette van Hove, University of Oslo</li>
+						<li>Tobias Andermann, Uppsala University</li>
+						<li>Mikolaj Czerkawski, European Space Agency</li>
+						<li>Shruti Nath, University of Oxford and Climate Analytics</li>
+						<li>Jonas Hentati Sundberg, Swedish University of Agricultural Sciences</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="page-19" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
+				<img src="rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="pirinen.png" style="position: absolute; left: 6.250%; top: 24.444%; width: 14.583%; height: 28.148%; object-fit: cover;">
+				<img src="martinsson.jpg" style="position: absolute; left: 20.833%; top: 24.444%; width: 14.583%; height: 28.148%; object-fit: cover;">
+				<img src="listozec.jpg" style="position: absolute; left: 35.417%; top: 24.444%; width: 14.583%; height: 28.148%; object-fit: cover;">
+				<img src="bankestad.png" style="position: absolute; left: 50.000%; top: 24.444%; width: 14.583%; height: 28.148%; object-fit: cover;">
+				<img src="willbo.png" style="position: absolute; left: 64.583%; top: 24.444%; width: 14.583%; height: 28.148%; object-fit: cover;">
+				<img src="mogren.png" style="position: absolute; left: 79.167%; top: 24.444%; width: 14.583%; height: 28.148%; object-fit: cover;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0;font-size: 4.800cqw; ">Thank you</h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 63.704%; width: 87.500%; height: 28.148%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<p>Read more about our work on <a href="https://dl-group.se" onmouseup="stopProp(event);">dl-group.se</a>!</p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
+					<p>Business development, AI for climate change --- dl-group.se</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
