@@ -1,6 +1,6 @@
-import os
+import os,sys
 
-with open(os.path.join(argv[1], 'index.html'), 'w') as f:
+with open(os.path.join(sys.argv[1], 'index.html'), 'w') as f:
   f.write('''---
 layout: default
 title: Olof Mogren, PhD - Deep Learning Researcher.
@@ -14,8 +14,9 @@ title: Olof Mogren, PhD - Deep Learning Researcher.
             <p>These are some selected presentations.</p>
 
             <div class="table-row">''')
-  ds = os.listdir(argv[1])
+  ds = os.listdir(os.path.join(sys.argv[1], 'html'))
   for d in ds:
+    print(d)
     page = os.path.join(d,'html','index.html')
     f.write('<a href="{}">{}</a><br />'.format(page))
   f.write('''</div>
