@@ -16,7 +16,7 @@ title: Olof Mogren, PhD - Deep Learning Researcher.
             <div class="table-row">''')
   ds = os.listdir(argv[1])
   for d in ds:
-    page = os.path.join(d,'index.html')
+    page = os.path.join(d,'html','index.html')
     f.write('<a href="{}">{}</a><br />'.format(page))
   f.write('''</div>
           </div>
