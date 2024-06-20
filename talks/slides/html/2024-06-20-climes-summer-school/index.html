@@ -180,7 +180,7 @@ function mouseuphandler(e) {
     nextPage()
   }
 }
-function pageLoad(){
+function gotoHash(){
   var currentPageId = "page-1";
   newPageId = window.location.hash.substring(1);
   if (newPageId == "") {
@@ -305,9 +305,9 @@ MathJax = {
 </script>
 		<script id="MathJax-script" async="true" src="resources/tex-mml-svg.js"> </script>
 		<meta generator='pymdslides, git commit: "c56f193e3942288b3c288eee2ed512606cc8eb14" https://github.com/olofmogren/pymdslides/'>
-		<meta generation-date="2024-06-19 22:23:32.037901+02:00">
+		<meta generation-date="2024-06-20 17:17:04.368701+02:00">
 	</head>
-	<body onload="pageLoad();">
+	<body onload="gotoHash();" onhashchange="gotoHash();">
 		<div class="black_div" id="black_div"> </div>
 		<div class="loading_div">
 			<div>
@@ -342,6 +342,24 @@ MathJax = {
 		<div id="page-2" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="graphics/climate-trace-1804x1080.png" style="position: absolute; left: 0.000%; top: 0.000%; width: 50.000%; height: 50.000%; object-fit: cover;">
+				<img src="graphics/ice-bergs-1920x1069.png" style="position: absolute; left: 50.000%; top: 0.000%; width: 50.000%; height: 50.000%; object-fit: cover;">
+				<img src="graphics/space-intelligence.png" style="position: absolute; left: 0.000%; top: 50.000%; width: 50.000%; height: 50.000%; object-fit: cover;">
+				<img src="graphics/ai-recycling.png" style="position: absolute; left: 50.000%; top: 50.000%; width: 50.000%; height: 50.000%; object-fit: cover;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.000cqw; "></h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<p> </p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>2   mogren.one, olof.mogren@ri.se</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-3" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
+				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<img src="graphics/mercury.jpg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
 				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
 					<h1 style="margin: 0; padding: 0; font-size: 4.000cqw; ">AI</h1>
@@ -349,12 +367,12 @@ MathJax = {
 				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
 					<p> </p>
 				</div>
-				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
-					<p>2   mogren.one, olof.mogren@ri.se</p>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>3   mogren.one, olof.mogren@ri.se</p>
 				</div>
 			</div>
 		</div>
-		<div id="page-3" class="page_div page_hidden" style="background-color: white; ">
+		<div id="page-4" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #000000ff; font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; ">
@@ -370,21 +388,6 @@ MathJax = {
 					<p>$\mathbf{o} = \sigma(\mathbf{a})$</p>
 				</div>
 				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #ffffffff;font-size: 0.933cqw; ">
-					<p>3   mogren.one, olof.mogren@ri.se</p>
-				</div>
-			</div>
-		</div>
-		<div id="page-4" class="page_div page_hidden" style="background-color: white; ">
-			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
-				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
-				<img src="graphics/brief-ai-history-0.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
-				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
-					<h1 style="margin: 0; padding: 0; font-size: 4.000cqw; "> </h1>
-				</div>
-				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
-					<p> </p>
-				</div>
-				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
 					<p>4   mogren.one, olof.mogren@ri.se</p>
 				</div>
 			</div>
@@ -392,14 +395,14 @@ MathJax = {
 		<div id="page-5" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
-				<img src="graphics/brief-ai-history-1.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
+				<img src="graphics/ai-timeline-2024-1.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: contain;">
 				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
-					<h1 style="margin: 0; padding: 0; font-size: 4.000cqw; "> </h1>
+					<h1 style="margin: 0; padding: 0; font-size: 4.000cqw; "></h1>
 				</div>
 				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
 					<p> </p>
 				</div>
-				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
 					<p>5   mogren.one, olof.mogren@ri.se</p>
 				</div>
 			</div>
@@ -407,14 +410,14 @@ MathJax = {
 		<div id="page-6" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
-				<img src="graphics/brief-ai-history-2.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
+				<img src="graphics/ai-timeline-2024-2.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: contain;">
 				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
-					<h1 style="margin: 0; padding: 0; font-size: 4.000cqw; "> </h1>
+					<h1 style="margin: 0; padding: 0; font-size: 4.000cqw; "></h1>
 				</div>
 				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
 					<p> </p>
 				</div>
-				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
 					<p>6   mogren.one, olof.mogren@ri.se</p>
 				</div>
 			</div>
@@ -422,14 +425,14 @@ MathJax = {
 		<div id="page-7" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
-				<img src="graphics/brief-ai-history-3.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
+				<img src="graphics/ai-timeline-2024-3.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: contain;">
 				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
-					<h1 style="margin: 0; padding: 0; font-size: 4.000cqw; "> </h1>
+					<h1 style="margin: 0; padding: 0; font-size: 4.000cqw; "></h1>
 				</div>
 				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
 					<p> </p>
 				</div>
-				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
 					<p>7   mogren.one, olof.mogren@ri.se</p>
 				</div>
 			</div>
@@ -437,19 +440,79 @@ MathJax = {
 		<div id="page-8" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
-				<img src="graphics/brief-ai-history-4.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
+				<img src="graphics/ai-timeline-2024-4.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: contain;">
 				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
 					<h1 style="margin: 0; padding: 0; font-size: 4.000cqw; "></h1>
 				</div>
 				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
 					<p> </p>
 				</div>
-				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
 					<p>8   mogren.one, olof.mogren@ri.se</p>
 				</div>
 			</div>
 		</div>
 		<div id="page-9" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
+				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="graphics/ai-timeline-2024-5.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: contain;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.000cqw; "></h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<p> </p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>9   mogren.one, olof.mogren@ri.se</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-10" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
+				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="graphics/ai-timeline-2024-6.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: contain;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.000cqw; "></h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<p> </p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>10   mogren.one, olof.mogren@ri.se</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-11" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
+				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="graphics/ai-timeline-2024-7.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: contain;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.000cqw; "></h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<p> </p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>11   mogren.one, olof.mogren@ri.se</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-12" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
+				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="graphics/dl-subset-ml-subset-ai.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: contain;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.000cqw; "></h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<p> </p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>12   mogren.one, olof.mogren@ri.se</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-13" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<img src="graphics/generalization_process_using_trees.svg" style="position: absolute; left: 56.250%; top: 24.444%; width: 37.500%; height: 67.407%; object-fit: contain;">
@@ -464,12 +527,12 @@ MathJax = {
 						<li>Allows to transfer knowledge to new situations</li>
 					</ul>
 				</div>
-				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
-					<p>9   mogren.one, olof.mogren@ri.se</p>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>13   mogren.one, olof.mogren@ri.se</p>
 				</div>
 			</div>
 		</div>
-		<div id="page-10" class="page_div page_hidden" style="background-color: white; ">
+		<div id="page-14" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<img src="graphics/data-cats-guinea-pigs.png" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
@@ -479,12 +542,12 @@ MathJax = {
 				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
 					<p> </p>
 				</div>
-				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
-					<p>10   mogren.one, olof.mogren@ri.se</p>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>14   mogren.one, olof.mogren@ri.se</p>
 				</div>
 			</div>
 		</div>
-		<div id="page-11" class="page_div page_hidden" style="background-color: white; ">
+		<div id="page-15" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<img src="graphics/data-cats-guinea-pigs-horizontal-decision.png" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
@@ -494,12 +557,12 @@ MathJax = {
 				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
 					<p> </p>
 				</div>
-				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
-					<p>11   mogren.one, olof.mogren@ri.se</p>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>15   mogren.one, olof.mogren@ri.se</p>
 				</div>
 			</div>
 		</div>
-		<div id="page-12" class="page_div page_hidden" style="background-color: white; ">
+		<div id="page-16" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<img src="graphics/data-cats-guinea-pigs-vertical-decision.png" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
@@ -509,12 +572,12 @@ MathJax = {
 				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
 					<p> </p>
 				</div>
-				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
-					<p>12   mogren.one, olof.mogren@ri.se</p>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>16   mogren.one, olof.mogren@ri.se</p>
 				</div>
 			</div>
 		</div>
-		<div id="page-13" class="page_div page_hidden" style="background-color: white; ">
+		<div id="page-17" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<img src="graphics/data-cats-guinea-pigs-overfit-decision.png" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
@@ -524,12 +587,12 @@ MathJax = {
 				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
 					<p> </p>
 				</div>
-				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
-					<p>13   mogren.one, olof.mogren@ri.se</p>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>17   mogren.one, olof.mogren@ri.se</p>
 				</div>
 			</div>
 		</div>
-		<div id="page-14" class="page_div page_hidden" style="background-color: white; ">
+		<div id="page-18" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<img src="graphics/data-cats-guinea-pigs-linear-decision.png" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
@@ -539,15 +602,15 @@ MathJax = {
 				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
 					<p> </p>
 				</div>
-				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
-					<p>14   mogren.one, olof.mogren@ri.se</p>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>18   mogren.one, olof.mogren@ri.se</p>
 				</div>
 			</div>
 		</div>
-		<div id="page-15" class="page_div page_hidden" style="background-color: white; ">
+		<div id="page-19" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
-				<img src="graphics/feedforward-modelbox-bottomup-982-1456.png" style="position: absolute; left: 56.250%; top: 24.444%; width: 37.500%; height: 67.407%; object-fit: contain;">
+				<img src="graphics/feedforward-modelbox-bottomup-982x1456.png" style="position: absolute; left: 56.250%; top: 24.444%; width: 37.500%; height: 67.407%; object-fit: contain;">
 				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
 					<h1 style="margin: 0; padding: 0; font-size: 4.000cqw; ">AI: Machine Learning</h1>
 				</div>
@@ -562,12 +625,12 @@ MathJax = {
 						<li>Generalize to unseen data</li>
 					</ul>
 				</div>
-				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
-					<p>15   mogren.one, olof.mogren@ri.se</p>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>19   mogren.one, olof.mogren@ri.se</p>
 				</div>
 			</div>
 		</div>
-		<div id="page-16" class="page_div page_hidden" style="background-color: white; ">
+		<div id="page-20" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<img src="graphics/feedforward-layerboxes-bottomup.svg" style="position: absolute; left: 56.250%; top: 24.444%; width: 37.500%; height: 67.407%; object-fit: contain;">
@@ -584,12 +647,12 @@ MathJax = {
 						<li>Transformations are gradually changed</li>
 					</ul>
 				</div>
-				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
-					<p>16   mogren.one, olof.mogren@ri.se</p>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>20   mogren.one, olof.mogren@ri.se</p>
 				</div>
 			</div>
 		</div>
-		<div id="page-17" class="page_div page_hidden" style="background-color: white; ">
+		<div id="page-21" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<img src="graphics/feedforward-layerboxes-bottomup-highlight-neuron.svg" style="position: absolute; left: 56.250%; top: 24.444%; width: 37.500%; height: 67.407%; object-fit: contain;">
@@ -610,12 +673,12 @@ MathJax = {
 						<li>A value (scalar) as output</li>
 					</ul>
 				</div>
-				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
-					<p>17   McCulloch and Pitts (1943)</p>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>21   McCulloch and Pitts (1943)</p>
 				</div>
 			</div>
 		</div>
-		<div id="page-18" class="page_div page_hidden" style="background-color: white; ">
+		<div id="page-22" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<img src="graphics/feature-hierarchy-hubel-wiesel-2.png" style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; object-fit: contain;">
@@ -626,12 +689,12 @@ MathJax = {
 				<div style="position: absolute; left: 6.250%; top: 63.704%; width: 87.500%; height: 28.148%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
 					<p> </p>
 				</div>
-				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
-					<p>18   Hubel &amp; Wiesel (1962), Manassi, et al (2013), Zeiler &amp; Fergus (2013)</p>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>22   Hubel &amp; Wiesel (1962), Manassi, et al (2013), Zeiler &amp; Fergus (2013) (<a href="#" onclick='localPageLink("page-53", event); return false;' onmouseup="stopProp(event);">Convnets</a>)</p>
 				</div>
 			</div>
 		</div>
-		<div id="page-19" class="page_div page_hidden" style="background-color: white; ">
+		<div id="page-23" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<div style="position: absolute; left: 6.250%; top: 36.667%; width: 87.500%; height: 11.481%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
@@ -643,12 +706,12 @@ MathJax = {
 				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
 					<p> </p>
 				</div>
-				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
-					<p>19   Universal approximation theorem (Cybenko, 1989)</p>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>23   Universal approximation theorem (Cybenko, 1989)</p>
 				</div>
 			</div>
 		</div>
-		<div id="page-20" class="page_div page_hidden" style="background-color: white; ">
+		<div id="page-24" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #000000ff; font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; ">
@@ -686,17 +749,17 @@ MathJax = {
 						</li>
 					</ul>
 				</div>
-				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
-					<p>20   mogren.one, olof.mogren@ri.se</p>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>24   mogren.one, olof.mogren@ri.se</p>
 				</div>
 			</div>
 		</div>
-		<div id="page-21" class="page_div page_hidden" style="background-color: white; ">
+		<div id="page-25" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<img src="graphics/wwf-camera-trap.jpg" style="position: absolute; left: 56.250%; top: 24.444%; width: 18.750%; height: 33.704%; object-fit: cover;">
-				<img src="graphics/rtsys-hydrophone-720-450.png" style="position: absolute; left: 75.000%; top: 24.444%; width: 18.750%; height: 33.704%; object-fit: cover;">
-				<img src="graphics/usgs-pam-720-540.jpg" style="position: absolute; left: 56.250%; top: 58.148%; width: 18.750%; height: 33.704%; object-fit: cover;">
+				<img src="graphics/rtsys-hydrophone-720x450.png" style="position: absolute; left: 75.000%; top: 24.444%; width: 18.750%; height: 33.704%; object-fit: cover;">
+				<img src="graphics/usgs-pam-720x540.jpg" style="position: absolute; left: 56.250%; top: 58.148%; width: 18.750%; height: 33.704%; object-fit: cover;">
 				<img src="graphics/unity-college-environmental-analysis.jpg" style="position: absolute; left: 75.000%; top: 58.148%; width: 18.750%; height: 33.704%; object-fit: cover;">
 				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
 					<h1 style="margin: 0; padding: 0; font-size: 4.000cqw; ">Environment data</h1>
@@ -727,16 +790,16 @@ MathJax = {
 						</li>
 					</ul>
 				</div>
-				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
-					<p>21   mogren.one, olof.mogren@ri.se</p>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>25   mogren.one, olof.mogren@ri.se</p>
 				</div>
 			</div>
 		</div>
-		<div id="page-22" class="page_div page_hidden" style="background-color: white; ">
+		<div id="page-26" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<img src="graphics/martinsson-bird-species.png" style="position: absolute; left: 56.250%; top: 24.444%; width: 37.500%; height: 67.407%; object-fit: cover;">
-				<img src="graphics/martinsson-104-104.jpg" style="position: absolute; left: 26.250%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+				<img src="graphics/martinsson-104x104.jpg" style="position: absolute; left: 26.250%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
 				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
 					<h1 style="margin: 0; padding: 0; font-size: 4.000cqw; ">Bird species identification</h1>
 				</div>
@@ -750,21 +813,21 @@ results</li>
 						<li>Location information future work</li>
 					</ul>
 				</div>
-				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
-					<p>22   Martinsson, 2017</p>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>26   Martinsson, 2017</p>
 				</div>
 			</div>
 		</div>
-		<div id="page-23" class="page_div page_hidden" style="background-color: white; ">
+		<div id="page-27" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<img src="graphics/tree.png" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
 				<img src="graphics/dcase-sed.png" style="position: absolute; left: 56.250%; top: 24.444%; width: 37.500%; height: 67.407%; object-fit: contain;">
-				<img src="graphics/martinsson-104-104.jpg" style="position: absolute; left: 20.417%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
-				<img src="graphics/willbo-104-90.png" style="position: absolute; left: 23.125%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
-				<img src="graphics/pirinen-104-104.png" style="position: absolute; left: 25.833%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
-				<img src="graphics/sandsten-79-104.png" style="position: absolute; left: 28.542%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
-				<img src="graphics/mogren-104-103.png" style="position: absolute; left: 31.250%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+				<img src="graphics/martinsson-104x104.jpg" style="position: absolute; left: 20.417%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+				<img src="graphics/willbo-104x90.png" style="position: absolute; left: 23.125%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+				<img src="graphics/pirinen-104x104.png" style="position: absolute; left: 25.833%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+				<img src="graphics/sandsten-79x104.png" style="position: absolute; left: 28.542%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+				<img src="graphics/mogren-104x103.png" style="position: absolute; left: 31.250%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
 				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
 					<h1 style="margin: 0; padding: 0; font-size: 4.000cqw; ">Sound event detection</h1>
 				</div>
@@ -775,12 +838,12 @@ results</li>
 						<li>Few-shot learning</li>
 					</ul>
 				</div>
-				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
-					<p>23   Martinsson, Willbo, Pirinen, Sandsten, <strong>Mogren</strong>. DCASE (2022)</p>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>27   Martinsson, Willbo, Pirinen, Sandsten, <strong>Mogren</strong>. DCASE (2022)</p>
 				</div>
 			</div>
 		</div>
-		<div id="page-24" class="page_div page_hidden" style="background-color: white; ">
+		<div id="page-28" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<img src="graphics/active-learning-sed-2.png" style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; object-fit: contain;">
@@ -790,12 +853,12 @@ results</li>
 				<div style="position: absolute; left: 6.250%; top: 63.704%; width: 87.500%; height: 28.148%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
 					<p> </p>
 				</div>
-				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
-					<p>24   Martinsson, <strong>Mogren</strong>, Sandsten, Virtanen. EUSIPCO (2024)</p>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>28   Martinsson, <strong>Mogren</strong>, Sandsten, Virtanen. EUSIPCO (2024)</p>
 				</div>
 			</div>
 		</div>
-		<div id="page-25" class="page_div page_hidden" style="background-color: white; ">
+		<div id="page-29" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<img src="graphics/wetlands-elena-elisseeva.jpg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
@@ -806,11 +869,11 @@ results</li>
 					<p> </p>
 				</div>
 				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #ffffffff;font-size: 0.933cqw; ">
-					<p>25   mogren.one, olof.mogren@ri.se --- Foto: Elena Elisseeva</p>
+					<p>29   mogren.one, olof.mogren@ri.se --- Foto: Elena Elisseeva</p>
 				</div>
 			</div>
 		</div>
-		<div id="page-26" class="page_div page_hidden" style="background-color: white; ">
+		<div id="page-30" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #000000ff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<img src="graphics/stable-diffusion-sattelite-in-earth-orbit.jpg" style="position: absolute; left: 0.000%; top: 0.000%; width: 50.000%; height: 100.000%; object-fit: cover;">
@@ -829,12 +892,12 @@ results</li>
 						</li>
 					</ul>
 				</div>
-				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #ffffffff;font-size: 0.933cqw; ">
-					<p>26   Stable Diffusion 2.1: Sattelite in earth orbit.</p>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>30   Stable Diffusion 2.1: Sattelite in earth orbit.</p>
 				</div>
 			</div>
 		</div>
-		<div id="page-27" class="page_div page_hidden" style="background-color: white; ">
+		<div id="page-31" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #440154ff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<img src="graphics/wetlands-merged.png" style="position: absolute; left: 0.000%; top: 0.000%; width: 50.000%; height: 100.000%; object-fit: contain;">
@@ -859,11 +922,11 @@ results</li>
 					</ul>
 				</div>
 				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #ffffffff;font-size: 0.933cqw; ">
-					<p>27   mogren.one, olof.mogren@ri.se --- Pirinen, Mogren, Västerdal, 2023</p>
+					<p>31   mogren.one, olof.mogren@ri.se --- Pirinen. (2023) (<a href="#" onclick='localPageLink("page-53", event); return false;' onmouseup="stopProp(event);">Convnets</a>)</p>
 				</div>
 			</div>
 		</div>
-		<div id="page-28" class="page_div page_hidden" style="background-color: white; ">
+		<div id="page-32" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<img src="graphics/open-earth-map-land-cover-chiba-1.png" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
@@ -873,12 +936,12 @@ results</li>
 				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
 					<p> </p>
 				</div>
-				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
-					<p>28   mogren.one, olof.mogren@ri.se --- OpenEarthMap</p>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #ffffffff;font-size: 0.933cqw; ">
+					<p>32   mogren.one, olof.mogren@ri.se --- OpenEarthMap</p>
 				</div>
 			</div>
 		</div>
-		<div id="page-29" class="page_div page_hidden" style="background-color: white; ">
+		<div id="page-33" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<img src="graphics/open-earth-map-land-cover-chiba-2.png" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
@@ -888,12 +951,12 @@ results</li>
 				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
 					<p> </p>
 				</div>
-				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
-					<p>29   mogren.one, olof.mogren@ri.se --- OpenEarthMap</p>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #ffffffff;font-size: 0.933cqw; ">
+					<p>33   mogren.one, olof.mogren@ri.se --- OpenEarthMap</p>
 				</div>
 			</div>
 		</div>
-		<div id="page-30" class="page_div page_hidden" style="background-color: white; ">
+		<div id="page-34" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<img src="graphics/eo-models-grayscale-and-pixelswap.png" style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; object-fit: contain;">
@@ -903,12 +966,12 @@ results</li>
 				<div style="position: absolute; left: 6.250%; top: 63.704%; width: 87.500%; height: 28.148%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
 					<p> </p>
 				</div>
-				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
-					<p>30   Willbo, et al., Impacts of Color and Texture Distortions on Earth Observation Data in Deep Learning, ML4RS at ICLR (2024) </p>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>34   Willbo, et al., Impacts of Color and Texture Distortions on Earth Observation Data in Deep Learning, ML4RS at ICLR (2024) </p>
 				</div>
 			</div>
 		</div>
-		<div id="page-31" class="page_div page_hidden" style="background-color: white; ">
+		<div id="page-35" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<img src="graphics/eo-models-robustness.png" style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; object-fit: contain;">
@@ -918,28 +981,28 @@ results</li>
 				<div style="position: absolute; left: 6.250%; top: 63.704%; width: 87.500%; height: 28.148%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
 					<p> </p>
 				</div>
-				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
-					<p>31   Willbo, et al., Impacts of Color and Texture Distortions on Earth Observation Data in Deep Learning, ML4RS at ICLR (2024) </p>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>35   Willbo, et al., Impacts of Color and Texture Distortions on Earth Observation Data in Deep Learning, ML4RS at ICLR (2024) </p>
 				</div>
 			</div>
 		</div>
-		<div id="page-32" class="page_div page_hidden" style="background-color: white; ">
+		<div id="page-36" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<img src="graphics/cloud-thickness.jpg" style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; object-fit: contain;">
-				<img src="graphics/pirinen-104-104.png" style="position: absolute; left: 48.750%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+				<img src="graphics/pirinen-104x104.png" style="position: absolute; left: 48.750%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
 				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
 					<h1 style="margin: 0; padding: 0; font-size: 4.000cqw; ">Cloud thickness estimation</h1>
 				</div>
 				<div style="position: absolute; left: 6.250%; top: 63.704%; width: 87.500%; height: 28.148%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
 					<p> </p>
 				</div>
-				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
-					<p>32   Pirinen et al., 2023</p>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>36   Pirinen et al., 2023</p>
 				</div>
 			</div>
 		</div>
-		<div id="page-33" class="page_div page_hidden" style="background-color: white; ">
+		<div id="page-37" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<img src="graphics/esa-envisat.jpg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
@@ -950,11 +1013,11 @@ results</li>
 					<p> </p>
 				</div>
 				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
-					<p>33   mogren.one, olof.mogren@ri.se --- Pirinen, et al., 2023</p>
+					<p>37   mogren.one, olof.mogren@ri.se --- Pirinen, et al., 2023</p>
 				</div>
 			</div>
 		</div>
-		<div id="page-34" class="page_div page_hidden" style="background-color: white; ">
+		<div id="page-38" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<img src="graphics/melisande-mila-paper.png" style="position: absolute; left: 6.250%; top: 24.444%; width: 43.750%; height: 67.407%; object-fit: contain;">
@@ -965,12 +1028,12 @@ results</li>
 				<div style="position: absolute; left: 6.250%; top: 63.704%; width: 87.500%; height: 28.148%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
 					<p> </p>
 				</div>
-				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
-					<p>34   Melisande Teng, Mila, 2023</p>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>38   Melisande Teng, Mila, 2023</p>
 				</div>
 			</div>
 		</div>
-		<div id="page-35" class="page_div page_hidden" style="background-color: white; ">
+		<div id="page-39" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<img src="graphics/flooding-brazil-2024.png" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
@@ -980,17 +1043,17 @@ results</li>
 				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
 					<p> </p>
 				</div>
-				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
-					<p>35   mogren.one, olof.mogren@ri.se --- Brazil, 2024-05-08 (<a href="#" onclick='localPageLink("page-54", event); return false;' onmouseup="stopProp(event);">Bonus material</a>)</p>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #ffffffff;font-size: 0.933cqw; ">
+					<p>39   mogren.one, olof.mogren@ri.se --- Brazil, 2024-05-08 (<a href="#" onclick='localPageLink("page-60", event); return false;' onmouseup="stopProp(event);">Bonus: Active vision</a>)</p>
 				</div>
 			</div>
 		</div>
-		<div id="page-36" class="page_div page_hidden" style="background-color: white; ">
+		<div id="page-40" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<img src="graphics/krycklan.png" style="position: absolute; left: 56.250%; top: 24.444%; width: 37.500%; height: 67.407%; object-fit: contain;">
-				<img src="graphics/pirinen-104-104.png" style="position: absolute; left: 24.792%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
-				<img src="graphics/mogren-104-103.png" style="position: absolute; left: 27.500%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+				<img src="graphics/pirinen-104x104.png" style="position: absolute; left: 24.792%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+				<img src="graphics/mogren-104x103.png" style="position: absolute; left: 27.500%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
 				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
 					<h1 style="margin: 0; padding: 0; font-size: 4.000cqw; ">Stream flow forecasting</h1>
 				</div>
@@ -1000,12 +1063,12 @@ results</li>
 						<li>Dense predictions of water flow</li>
 					</ul>
 				</div>
-				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
-					<p>36   Pirinen, Mogren, Västerdal. SAIS (2023)</p>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>40   Pirinen, Mogren, Västerdal. SAIS (2023)</p>
 				</div>
 			</div>
 		</div>
-		<div id="page-37" class="page_div page_hidden" style="background-color: white; ">
+		<div id="page-41" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #000000ff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<img src="graphics/flow-prediction-layers.png" style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; object-fit: contain;">
@@ -1016,11 +1079,11 @@ results</li>
 					<p> </p>
 				</div>
 				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #ffffffff;font-size: 0.933cqw; ">
-					<p>37   mogren.one, olof.mogren@ri.se --- Pirinen, Mogren, Västerdal, 2023</p>
+					<p>41   mogren.one, olof.mogren@ri.se --- Pirinen, Mogren, Västerdal, 2023</p>
 				</div>
 			</div>
 		</div>
-		<div id="page-38" class="page_div page_hidden" style="background-color: white; ">
+		<div id="page-42" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<img src="graphics/scatter-scalar.gif" style="position: absolute; left: 0.000%; top: 0.000%; width: 48.958%; height: 100.000%; object-fit: contain;">
@@ -1031,12 +1094,12 @@ results</li>
 				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
 					<p> </p>
 				</div>
-				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
-					<p>38   mogren.one, olof.mogren@ri.se --- Bånkestad, Pirinen, Mogren, 2024</p>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>42   mogren.one, olof.mogren@ri.se --- Bånkestad, Pirinen, Mogren, 2024</p>
 				</div>
 			</div>
 		</div>
-		<div id="page-39" class="page_div page_hidden" style="background-color: white; ">
+		<div id="page-43" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<img src="graphics/graphcast.gif" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: contain;">
@@ -1046,34 +1109,34 @@ results</li>
 				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
 					<p> </p>
 				</div>
-				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
-					<p>39   mogren.one, olof.mogren@ri.se --- Google DeepMind GraphCast</p>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>43   mogren.one, olof.mogren@ri.se --- Google DeepMind GraphCast</p>
 				</div>
 			</div>
 		</div>
-		<div id="page-40" class="page_div page_hidden" style="background-color: white; ">
+		<div id="page-44" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<img src="graphics/hentati-sundberg-common-guillemot.png" style="position: absolute; left: 6.250%; top: 24.444%; width: 43.750%; height: 67.407%; object-fit: contain;">
-				<img src="graphics/hentati-sundberg-photo-957-1456.jpg" style="position: absolute; left: 50.000%; top: 24.444%; width: 43.750%; height: 67.407%; object-fit: contain;">
+				<img src="graphics/hentati-sundberg-photo-957x1456.jpg" style="position: absolute; left: 50.000%; top: 24.444%; width: 43.750%; height: 67.407%; object-fit: contain;">
 				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
 					<h1 style="margin: 0; padding: 0; font-size: 4.000cqw; ">Baltic seabird analytics</h1>
 				</div>
 				<div style="position: absolute; left: 6.250%; top: 63.704%; width: 87.500%; height: 28.148%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
 					<p> </p>
 				</div>
-				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
-					<p>40   Jonas Hentati-Sundberg, et al. (2023). Common guillemot.</p>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>44   Jonas Hentati-Sundberg, et al. (2023). Common guillemot.</p>
 				</div>
 			</div>
 		</div>
-		<div id="page-41" class="page_div page_hidden" style="background-color: white; ">
+		<div id="page-45" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<img src="graphics/coffee-berry-disease-0.png" style="position: absolute; left: 56.250%; top: 24.444%; width: 37.500%; height: 33.704%; object-fit: contain;">
 				<img src="graphics/coffee-berry-disease-2.png" style="position: absolute; left: 56.250%; top: 58.148%; width: 37.500%; height: 33.704%; object-fit: contain;">
-				<img src="graphics/pirinen-104-104.png" style="position: absolute; left: 24.792%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
-				<img src="graphics/mogren-104-103.png" style="position: absolute; left: 27.500%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+				<img src="graphics/pirinen-104x104.png" style="position: absolute; left: 24.792%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+				<img src="graphics/mogren-104x103.png" style="position: absolute; left: 27.500%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
 				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
 					<h1 style="margin: 0; padding: 0; font-size: 4.000cqw; ">Coffee berry disease</h1>
 				</div>
@@ -1091,12 +1154,67 @@ few annotations</li>
 						</li>
 					</ul>
 				</div>
-				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
-					<p>41   mogren.one, olof.mogren@ri.se</p>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>45   mogren.one, olof.mogren@ri.se</p>
 				</div>
 			</div>
 		</div>
-		<div id="page-42" class="page_div page_hidden" style="background-color: white; ">
+		<div id="page-46" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #000000ff;font-size: 2.267cqw; ">
+				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<div style="position: absolute; left: 6.250%; top: 36.667%; width: 87.500%; height: 11.481%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.000cqw; ">Not a silver bullet</h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; font-size: 2.267cqw; ">
+					<p> </p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>46   mogren.one, olof.mogren@ri.se</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-47" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
+				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="graphics/dall-e-3-computer-lab.jpg" style="position: absolute; left: 50.000%; top: 0.000%; width: 50.000%; height: 100.000%; object-fit: cover;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 37.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.000cqw; ">High tech</h1>
+				</div>
+				<div style="position: absolute; left: 9.583%; top: 15.556%; width: 37.500%; height: 7.778%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h2 style="margin: 0; padding: 0;font-size: 2.667cqw; ">for low tech</h2>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<ul>
+						<li>Make data accessible
+<ul>
+								<li>Decision support, policy making</li>
+							</ul>
+						</li>
+						<li>Predictions
+<ul>
+								<li>Energy, transportation, extreme events</li>
+							</ul>
+						</li>
+						<li>Optimization
+<ul>
+								<li>Energy, transportation</li>
+								<li>Circ. econ, green infr.</li>
+								<li>Nature-based solutions</li>
+							</ul>
+						</li>
+						<li>Replace heavy computation
+<ul>
+								<li>Weather sim., hydrology</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>47   Dall-E 3: A computer lab with many big computer screens, showing charts, tables, and images of forests and wetlands</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-48" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<div style="position: absolute; left: 6.250%; top: 36.667%; width: 87.500%; height: 11.481%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
@@ -1105,18 +1223,19 @@ few annotations</li>
 				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
 					<p> </p>
 				</div>
-				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
-					<p>42   mogren.one, olof.mogren@ri.se</p>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>48   mogren.one, olof.mogren@ri.se</p>
 				</div>
 			</div>
 		</div>
-		<div id="page-43" class="page_div page_hidden" style="background-color: white; ">
+		<div id="page-49" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="graphics/dall-e-3-coding-in-python.jpg" style="position: absolute; left: 6.250%; top: 24.444%; width: 37.500%; height: 67.407%; object-fit: cover;">
 				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
 					<h1 style="margin: 0; padding: 0; font-size: 4.000cqw; ">How to: environmental monitoring with AI</h1>
 				</div>
-				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+				<div style="position: absolute; left: 51.042%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
 					<ul>
 						<li>Study your data</li>
 						<li>Identify target test set</li>
@@ -1125,64 +1244,64 @@ few annotations</li>
 						<li>Evaluate on test set; compare to baseline</li>
 					</ul>
 				</div>
-				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
-					<p>43   mogren.one, olof.mogren@ri.se</p>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>49   Dall-E 3: A female student coding in Python, with a laptop in lap sitting on a rock in a forest</p>
 				</div>
 			</div>
 		</div>
-		<div id="page-44" class="page_div page_hidden" style="background-color: white; ">
+		<div id="page-50" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
-				<img src="graphics/larsson-240-360.jpg" style="position: absolute; left: 0.000%; top: 0.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
-				<img src="graphics/kratzert-360-360.jpg" style="position: absolute; left: 14.167%; top: 0.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
-				<img src="graphics/lidberg-358-360.jpg" style="position: absolute; left: 28.333%; top: 0.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
-				<img src="graphics/beery-360-360.jpg" style="position: absolute; left: 42.500%; top: 0.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
-				<img src="graphics/plumbley-541-360.jpg" style="position: absolute; left: 56.667%; top: 0.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
-				<img src="graphics/fanti-358-360.jpg" style="position: absolute; left: 70.833%; top: 0.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
-				<img src="graphics/qr-lm-seminars-360-360.png" style="position: absolute; left: 85.000%; top: 0.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
-				<img src="graphics/voita-317-360.png" style="position: absolute; left: 0.000%; top: 16.667%; width: 14.167%; height: 16.667%; object-fit: cover;">
-				<img src="graphics/szolnoky-367-360.png" style="position: absolute; left: 14.167%; top: 16.667%; width: 14.167%; height: 16.667%; object-fit: cover;">
-				<img src="graphics/nivre-361-360.jpg" style="position: absolute; left: 28.333%; top: 16.667%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="graphics/larsson-240x360.jpg" style="position: absolute; left: 0.000%; top: 0.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="graphics/kratzert-360x360.jpg" style="position: absolute; left: 14.167%; top: 0.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="graphics/lidberg-358x360.jpg" style="position: absolute; left: 28.333%; top: 0.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="graphics/beery-360x360.jpg" style="position: absolute; left: 42.500%; top: 0.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="graphics/plumbley-541x360.jpg" style="position: absolute; left: 56.667%; top: 0.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="graphics/fanti-358x360.jpg" style="position: absolute; left: 70.833%; top: 0.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="graphics/qr-lm-seminars-360x360.png" style="position: absolute; left: 85.000%; top: 0.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="graphics/voita-317x360.png" style="position: absolute; left: 0.000%; top: 16.667%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="graphics/szolnoky-367x360.png" style="position: absolute; left: 14.167%; top: 16.667%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="graphics/nivre-361x360.jpg" style="position: absolute; left: 28.333%; top: 16.667%; width: 14.167%; height: 16.667%; object-fit: cover;">
 				<img src="graphics/light-grey.png" style="position: absolute; left: 42.500%; top: 16.667%; width: 14.167%; height: 16.667%; object-fit: cover;">
 				<img src="graphics/white.png" style="position: absolute; left: 56.667%; top: 16.667%; width: 14.167%; height: 16.667%; object-fit: cover;">
-				<img src="graphics/ylipaa-361-360.jpg" style="position: absolute; left: 70.833%; top: 16.667%; width: 14.167%; height: 16.667%; object-fit: cover;">
-				<img src="graphics/mogren-360-360.jpg" style="position: absolute; left: 85.000%; top: 16.667%; width: 14.167%; height: 16.667%; object-fit: cover;">
-				<img src="graphics/ilin-240-360.jpg" style="position: absolute; left: 0.000%; top: 33.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
-				<img src="graphics/cohen-240-360.jpg" style="position: absolute; left: 14.167%; top: 33.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="graphics/ylipaa-361x360.jpg" style="position: absolute; left: 70.833%; top: 16.667%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="graphics/mogren-360x360.jpg" style="position: absolute; left: 85.000%; top: 16.667%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="graphics/ilin-240x360.jpg" style="position: absolute; left: 0.000%; top: 33.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="graphics/cohen-240x360.jpg" style="position: absolute; left: 14.167%; top: 33.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
 				<img src="graphics/light-grey.png" style="position: absolute; left: 28.333%; top: 33.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
 				<img src="graphics/white.png" style="position: absolute; left: 42.500%; top: 33.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
 				<img src="graphics/light-grey.png" style="position: absolute; left: 56.667%; top: 33.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
-				<img src="graphics/georganos-360-360.jpg" style="position: absolute; left: 70.833%; top: 33.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
-				<img src="graphics/flood-340-360.jpg" style="position: absolute; left: 85.000%; top: 33.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
-				<img src="graphics/cole-360-360.jpg" style="position: absolute; left: 0.000%; top: 50.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
-				<img src="graphics/sennrich-270-360.jpg" style="position: absolute; left: 14.167%; top: 50.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="graphics/georganos-360x360.jpg" style="position: absolute; left: 70.833%; top: 33.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="graphics/flood-340x360.jpg" style="position: absolute; left: 85.000%; top: 33.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="graphics/cole-360x360.jpg" style="position: absolute; left: 0.000%; top: 50.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="graphics/sennrich-270x360.jpg" style="position: absolute; left: 14.167%; top: 50.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
 				<img src="graphics/light-grey.png" style="position: absolute; left: 28.333%; top: 50.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
 				<img src="graphics/white.png" style="position: absolute; left: 42.500%; top: 50.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
 				<img src="graphics/light-grey.png" style="position: absolute; left: 56.667%; top: 50.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
 				<img src="graphics/stenetorp.jpg" style="position: absolute; left: 70.833%; top: 50.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
-				<img src="graphics/arvidsson-360-360.jpg" style="position: absolute; left: 85.000%; top: 50.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
-				<img src="graphics/sauder-270-360.jpg" style="position: absolute; left: 0.000%; top: 66.667%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="graphics/arvidsson-360x360.jpg" style="position: absolute; left: 85.000%; top: 50.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="graphics/sauder-270x360.jpg" style="position: absolute; left: 0.000%; top: 66.667%; width: 14.167%; height: 16.667%; object-fit: cover;">
 				<img src="graphics/zhang.jpg" style="position: absolute; left: 14.167%; top: 66.667%; width: 14.167%; height: 16.667%; object-fit: cover;">
 				<img src="graphics/white.png" style="position: absolute; left: 28.333%; top: 66.667%; width: 14.167%; height: 16.667%; object-fit: cover;">
 				<img src="graphics/light-grey.png" style="position: absolute; left: 42.500%; top: 66.667%; width: 14.167%; height: 16.667%; object-fit: cover;">
-				<img src="graphics/photo-shruti-nath-360-360.png" style="position: absolute; left: 56.667%; top: 66.667%; width: 14.167%; height: 16.667%; object-fit: cover;">
-				<img src="graphics/photo-mikolaj-czerkawski-360-360.jpg" style="position: absolute; left: 70.833%; top: 66.667%; width: 14.167%; height: 16.667%; object-fit: cover;">
-				<img src="graphics/photo-jonas-hentati-sundberg-538-360.jpg" style="position: absolute; left: 85.000%; top: 66.667%; width: 14.167%; height: 16.667%; object-fit: cover;">
-				<img src="graphics/photo-tobias-andermann-240-360.png" style="position: absolute; left: 0.000%; top: 83.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
-				<img src="graphics/photo-alouette-van-hove-272-360.jpg" style="position: absolute; left: 14.167%; top: 83.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
-				<img src="graphics/photo-karsten-kreis-360-360.jpg" style="position: absolute; left: 28.333%; top: 83.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
-				<img src="graphics/photo-yonghao-xu-361-360.jpg" style="position: absolute; left: 42.500%; top: 83.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
-				<img src="graphics/photo-fredrik-gustafsson-360-360.jpg" style="position: absolute; left: 56.667%; top: 83.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
-				<img src="graphics/photo-santiago-martinez-balvanera-360-360.jpg" style="position: absolute; left: 70.833%; top: 83.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
-				<img src="graphics/photo-alexander-mathis-381-360.jpg" style="position: absolute; left: 85.000%; top: 83.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="graphics/photo-shruti-nath-360x360.png" style="position: absolute; left: 56.667%; top: 66.667%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="graphics/photo-mikolaj-czerkawski-360x360.jpg" style="position: absolute; left: 70.833%; top: 66.667%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="graphics/photo-jonas-hentati-sundberg-538x360.jpg" style="position: absolute; left: 85.000%; top: 66.667%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="graphics/photo-tobias-andermann-240x360.png" style="position: absolute; left: 0.000%; top: 83.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="graphics/photo-alouette-van-hove-272x360.jpg" style="position: absolute; left: 14.167%; top: 83.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="graphics/photo-karsten-kreis-360x360.jpg" style="position: absolute; left: 28.333%; top: 83.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="graphics/photo-yonghao-xu-361x360.jpg" style="position: absolute; left: 42.500%; top: 83.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="graphics/photo-fredrik-gustafsson-360x360.jpg" style="position: absolute; left: 56.667%; top: 83.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="graphics/photo-santiago-martinez-balvanera-360x360.jpg" style="position: absolute; left: 70.833%; top: 83.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
+				<img src="graphics/photo-alexander-mathis-381x360.jpg" style="position: absolute; left: 85.000%; top: 83.333%; width: 14.167%; height: 16.667%; object-fit: cover;">
 				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
 					<h1 style="margin: 0; padding: 0; font-size: 4.000cqw; "></h1>
 				</div>
 				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
 					<p> </p>
 				</div>
-				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
-					<p>44   mogren.one, olof.mogren@ri.se</p>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>50   mogren.one, olof.mogren@ri.se</p>
 				</div>
 				<div class="l4_box" style="left: 20.000%; top: 24.444%; width: 60.000%; text-align: start; z-index: 4; margin: 0; padding: -1cqw .5cqw .5cqw .5cqw; background-color: #e6f0ffbf; border: 1px #c8c8c8bf solid; color: #000000ff; ">
 					<p>
@@ -1204,7 +1323,7 @@ few annotations</li>
 				</div>
 			</div>
 		</div>
-		<div id="page-45" class="page_div page_hidden" style="background-color: white; ">
+		<div id="page-51" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<img src="graphics/pirinen.png" style="position: absolute; left: 6.250%; top: 24.444%; width: 14.583%; height: 28.148%; object-fit: cover;">
@@ -1219,12 +1338,12 @@ few annotations</li>
 				<div style="position: absolute; left: 6.250%; top: 63.704%; width: 87.500%; height: 28.148%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
 					<p>Read more about our work on <a href="https://dl-group.se" onmouseup="stopProp(event);">dl-group.se</a>!</p>
 				</div>
-				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
-					<p>45   mogren.one, olof.mogren@ri.se --- All work was a team effort</p>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>51   mogren.one, olof.mogren@ri.se --- All work was a team effort</p>
 				</div>
 			</div>
 		</div>
-		<div id="page-46" class="page_div page_hidden" style="background-color: white; ">
+		<div id="page-52" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<div style="position: absolute; left: 6.250%; top: 36.667%; width: 87.500%; height: 11.481%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
@@ -1233,20 +1352,17 @@ few annotations</li>
 				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
 					<p> </p>
 				</div>
-				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
-					<p>46   mogren.one, olof.mogren@ri.se</p>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>52   mogren.one, olof.mogren@ri.se</p>
 				</div>
 			</div>
 		</div>
-		<div id="page-47" class="page_div page_hidden" style="background-color: white; ">
+		<div id="page-53" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<img src="graphics/convnets-images-0.svg" style="position: absolute; left: 6.250%; top: 24.444%; width: 37.500%; height: 67.407%; object-fit: contain;">
 				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
-					<h1 style="margin: 0; padding: 0; font-size: 4.000cqw; ">Deep learning</h1>
-				</div>
-				<div style="position: absolute; left: 9.583%; top: 15.556%; width: 87.500%; height: 7.778%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
-					<h2 style="margin: 0; padding: 0; font-size: 2.667cqw; ">for images</h2>
+					<h1 style="margin: 0; padding: 0; font-size: 4.000cqw; ">Deep learning for images</h1>
 				</div>
 				<div style="position: absolute; left: 51.042%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
 					<ul>
@@ -1255,20 +1371,17 @@ few annotations</li>
 						<li>Retains spatial dimensions</li>
 					</ul>
 				</div>
-				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
-					<p>47   mogren.one, olof.mogren@ri.se</p>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>53   mogren.one, olof.mogren@ri.se</p>
 				</div>
 			</div>
 		</div>
-		<div id="page-48" class="page_div page_hidden" style="background-color: white; ">
+		<div id="page-54" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<img src="graphics/convnets-images-1.svg" style="position: absolute; left: 6.250%; top: 24.444%; width: 37.500%; height: 67.407%; object-fit: contain;">
 				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
-					<h1 style="margin: 0; padding: 0; font-size: 4.000cqw; ">Deep learning</h1>
-				</div>
-				<div style="position: absolute; left: 9.583%; top: 15.556%; width: 87.500%; height: 7.778%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
-					<h2 style="margin: 0; padding: 0; font-size: 2.667cqw; ">for images</h2>
+					<h1 style="margin: 0; padding: 0; font-size: 4.000cqw; ">Deep learning for images</h1>
 				</div>
 				<div style="position: absolute; left: 51.042%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
 					<ul>
@@ -1277,20 +1390,17 @@ few annotations</li>
 						<li>Retains spatial dimensions</li>
 					</ul>
 				</div>
-				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
-					<p>48   mogren.one, olof.mogren@ri.se</p>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>54   mogren.one, olof.mogren@ri.se</p>
 				</div>
 			</div>
 		</div>
-		<div id="page-49" class="page_div page_hidden" style="background-color: white; ">
+		<div id="page-55" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<img src="graphics/convnets-images-2.svg" style="position: absolute; left: 6.250%; top: 24.444%; width: 37.500%; height: 67.407%; object-fit: contain;">
 				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
-					<h1 style="margin: 0; padding: 0; font-size: 4.000cqw; ">Deep learning</h1>
-				</div>
-				<div style="position: absolute; left: 9.583%; top: 15.556%; width: 87.500%; height: 7.778%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
-					<h2 style="margin: 0; padding: 0; font-size: 2.667cqw; ">for images</h2>
+					<h1 style="margin: 0; padding: 0; font-size: 4.000cqw; ">Deep learning for images</h1>
 				</div>
 				<div style="position: absolute; left: 51.042%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
 					<ul>
@@ -1299,20 +1409,17 @@ few annotations</li>
 						<li>Retains spatial dimensions</li>
 					</ul>
 				</div>
-				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
-					<p>49   mogren.one, olof.mogren@ri.se</p>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>55   mogren.one, olof.mogren@ri.se</p>
 				</div>
 			</div>
 		</div>
-		<div id="page-50" class="page_div page_hidden" style="background-color: white; ">
+		<div id="page-56" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<img src="graphics/convnets-images-3.svg" style="position: absolute; left: 6.250%; top: 24.444%; width: 37.500%; height: 67.407%; object-fit: contain;">
 				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
-					<h1 style="margin: 0; padding: 0; font-size: 4.000cqw; ">Deep learning</h1>
-				</div>
-				<div style="position: absolute; left: 9.583%; top: 15.556%; width: 87.500%; height: 7.778%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
-					<h2 style="margin: 0; padding: 0;font-size: 2.667cqw; ">for images</h2>
+					<h1 style="margin: 0; padding: 0; font-size: 4.000cqw; ">Deep learning for images</h1>
 				</div>
 				<div style="position: absolute; left: 51.042%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
 					<ul>
@@ -1321,12 +1428,12 @@ few annotations</li>
 						<li>Retains spatial dimensions</li>
 					</ul>
 				</div>
-				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
-					<p>50   mogren.one, olof.mogren@ri.se</p>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>56   mogren.one, olof.mogren@ri.se</p>
 				</div>
 			</div>
 		</div>
-		<div id="page-51" class="page_div page_hidden" style="background-color: white; ">
+		<div id="page-57" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<img src="graphics/image-classification-karpathy.jpg" style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; object-fit: contain;">
@@ -1336,12 +1443,12 @@ few annotations</li>
 				<div style="position: absolute; left: 6.250%; top: 63.704%; width: 87.500%; height: 28.148%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
 					<p> </p>
 				</div>
-				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
-					<p>51   mogren.one, olof.mogren@ri.se</p>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>57   mogren.one, olof.mogren@ri.se</p>
 				</div>
 			</div>
 		</div>
-		<div id="page-52" class="page_div page_hidden" style="background-color: white; ">
+		<div id="page-58" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<img src="graphics/semantic-segmentation.jpg" style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; object-fit: contain;">
@@ -1351,12 +1458,12 @@ few annotations</li>
 				<div style="position: absolute; left: 6.250%; top: 63.704%; width: 87.500%; height: 28.148%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
 					<p> </p>
 				</div>
-				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
-					<p>52   mogren.one, olof.mogren@ri.se</p>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>58   mogren.one, olof.mogren@ri.se</p>
 				</div>
 			</div>
 		</div>
-		<div id="page-53" class="page_div page_hidden" style="background-color: white; ">
+		<div id="page-59" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<img src="graphics/nvidia-stylegan-teaser.png" style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; object-fit: contain;">
@@ -1366,16 +1473,16 @@ few annotations</li>
 				<div style="position: absolute; left: 6.250%; top: 63.704%; width: 87.500%; height: 28.148%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
 					<p> </p>
 				</div>
-				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
-					<p>53   mogren.one, olof.mogren@ri.se</p>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>59   mogren.one, olof.mogren@ri.se</p>
 				</div>
 			</div>
 		</div>
-		<div id="page-54" class="page_div page_hidden" style="background-color: white; ">
+		<div id="page-60" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<img src="graphics/active-vision-1.png" style="position: absolute; left: 56.250%; top: 24.444%; width: 37.500%; height: 67.407%; object-fit: contain;">
-				<img src="graphics/pirinen-104-104.png" style="position: absolute; left: 26.250%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+				<img src="graphics/pirinen-104x104.png" style="position: absolute; left: 26.250%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
 				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
 					<h1 style="margin: 0; padding: 0; font-size: 4.000cqw; ">Active vision</h1>
 				</div>
@@ -1397,43 +1504,118 @@ for optimal data collection</li>
 						</li>
 					</ul>
 				</div>
-				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
-					<p>54   Pirinen et al., 2023 (<a href="#" onclick='localPageLink("page-36", event); return false;' onmouseup="stopProp(event);">Back</a>)</p>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>60   Pirinen et al., 2023 (<a href="#" onclick='localPageLink("page-40", event); return false;' onmouseup="stopProp(event);">Back</a>)</p>
 				</div>
 			</div>
 		</div>
-		<div id="page-55" class="page_div page_hidden" style="background-color: white; ">
+		<div id="page-61" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<img src="graphics/active-vision-grid-1.png" style="position: absolute; left: 6.250%; top: 24.444%; width: 21.875%; height: 67.407%; object-fit: contain;">
 				<img src="graphics/active-vision-grid-2.png" style="position: absolute; left: 28.125%; top: 24.444%; width: 21.875%; height: 67.407%; object-fit: contain;">
 				<img src="graphics/active-vision-grid-3.png" style="position: absolute; left: 50.000%; top: 24.444%; width: 21.875%; height: 67.407%; object-fit: contain;">
 				<img src="graphics/active-vision-grid-4.png" style="position: absolute; left: 71.875%; top: 24.444%; width: 21.875%; height: 67.407%; object-fit: contain;">
-				<img src="graphics/pirinen-104-104.png" style="position: absolute; left: 48.750%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+				<img src="graphics/pirinen-104x104.png" style="position: absolute; left: 48.750%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
 				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
 					<h1 style="margin: 0; padding: 0; font-size: 4.000cqw; ">Active vision</h1>
 				</div>
 				<div style="position: absolute; left: 6.250%; top: 63.704%; width: 87.500%; height: 28.148%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
 					<p> </p>
 				</div>
-				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
-					<p>55   Pirinen et al., 2023 (<a href="#" onclick='localPageLink("page-36", event); return false;' onmouseup="stopProp(event);">Back</a>)</p>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>61   Pirinen et al., 2023 (<a href="#" onclick='localPageLink("page-40", event); return false;' onmouseup="stopProp(event);">Back</a>)</p>
 				</div>
 			</div>
 		</div>
-		<div id="page-56" class="page_div page_hidden" style="background-color: white; ">
+		<div id="page-62" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<img src="graphics/airloc-architecture.png" style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; object-fit: contain;">
-				<img src="graphics/pirinen-104-104.png" style="position: absolute; left: 48.750%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+				<img src="graphics/pirinen-104x104.png" style="position: absolute; left: 48.750%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
 				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
-					<h1 style="margin: 0; padding: 0;font-size: 4.000cqw; ">Active vision</h1>
+					<h1 style="margin: 0; padding: 0; font-size: 4.000cqw; ">Active vision</h1>
 				</div>
 				<div style="position: absolute; left: 6.250%; top: 63.704%; width: 87.500%; height: 28.148%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
 					<p> </p>
 				</div>
-				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
-					<p>56   Pirinen et al., 2023 (<a href="#" onclick='localPageLink("page-36", event); return false;' onmouseup="stopProp(event);">Back</a>)</p>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>62   Pirinen et al., 2023 (<a href="#" onclick='localPageLink("page-40", event); return false;' onmouseup="stopProp(event);">Back</a>)</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-63" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
+				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.000cqw; "> </h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<p> </p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>63   mogren.one, olof.mogren@ri.se</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-64" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
+				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.000cqw; "> </h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<p> </p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>64   mogren.one, olof.mogren@ri.se</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-65" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
+				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.000cqw; "> </h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<p> </p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>65   mogren.one, olof.mogren@ri.se</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-66" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
+				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.000cqw; "> </h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<p> </p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>66   mogren.one, olof.mogren@ri.se</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-67" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;font-size: 2.267cqw; ">
+				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0;font-size: 4.000cqw; "></h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<p> </p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>67   mogren.one, olof.mogren@ri.se</p>
 				</div>
 			</div>
 		</div>
