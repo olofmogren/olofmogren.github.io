@@ -176,14 +176,14 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:4.93889px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="105.21742"
+       x="94.634094"
        y="142.11746"
        id="text18414-9-3"><tspan
          sodipodi:role="line"
          id="tspan18412-9-6"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:arial;-inkscape-font-specification:arial;stroke-width:0.264583"
-         x="105.21742"
-         y="142.11746">2012: Imagenet moment (Krizhevsky, et al.)</tspan></text>
+         x="94.634094"
+         y="142.11746">2012: Imagenet classification (Krizhevsky, et al.)</tspan></text>
     <path
        style="fill:#0000ff;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 160.64256,119.76686 -27.3543,15.1814"
