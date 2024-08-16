@@ -5,7 +5,7 @@ metatags: "<meta name=\"robots\" content=\"noindex,nofollow\" />"
 <style type="text/css" scoped>
 td, th {border: 1px solid #ccc; padding: 0.6em;}
 table {border-collapse: collapse;}
-</style># Learning Machines Plan 2024-08-12
+</style># Learning Machines Plan 2024-08-16
 
 | date | speaker                                   | photo | shareable | meeting backdrop | youtube thumbnail | <a title="Speaker, Title, Abstract, Bio, Photo. Strikethrough means we don't have it yet.">comment</a>        |
 | ---- | ----------------------------------------- | ----- | ----- | ----- | ----- | -------------- |
@@ -15,8 +15,8 @@ table {border-collapse: collapse;}
 |  2024-09-26  |  [Charlie Fieseler, University of Vienna](2024-09-26.md)  |    |  [social media ](social-media-charlie-fieseler.jpg)  |  [meeting backdrop ](meeting-backdrop-charlie-fieseler.jpg)  |  [youtube thumbnail ](youtube-thumbnail-charlie-fieseler.jpg)  |  S~~TABP~~  |
 | <span style="color:purple"> 2024-10-03 </span> | <span style="color:purple"> *Up for grabs!!!* </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple"> ~~STABP~~ </span> |
 | <span style="color:grey"> 2024-10-10 </span> | <span style="color:grey"> Alp K. ? </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey"> S~~TABP~~ </span> |
-| <span style="color:grey"> 2024-10-17 </span> | <span style="color:grey"> Matthias O. ? </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey"> S~~TABP~~ </span> |
-| <span style="color:grey"> 2024-10-24 </span> | <span style="color:grey"> Ekaterina S. ? </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey"> S~~TABP~~ </span> |
+|  2024-10-17  |  [Matthias Obst, University of Gothenburg](2024-10-17.md)  |    |  [social media ](social-media-matthias-obst.jpg)  |  [meeting backdrop ](meeting-backdrop-matthias-obst.jpg)  |  [youtube thumbnail ](youtube-thumbnail-matthias-obst.jpg)  |  S~~TABP~~  |
+| <span style="color:purple"> 2024-10-24 </span> | <span style="color:purple"> *Up for grabs!!!* </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple"> ~~STABP~~ </span> |
 | <span style="color:red"> 2024-10-31 </span> | <span style="color:red"> Höstlov </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
 |  2024-11-07  |  [Joel Oskarsson, Linköping University](2024-11-07.md)  |    |  [social media ](social-media-joel-oskarsson.jpg)  |  [meeting backdrop ](meeting-backdrop-joel-oskarsson.jpg)  |  [youtube thumbnail ](youtube-thumbnail-joel-oskarsson.jpg)  |  S~~TABP~~  |
 |  2024-11-14  |  [Abdulhakim Abdi, Lund University](2024-11-14.md)  |    |  [social media ](social-media-abdulhakim-abdi.jpg)  |  [meeting backdrop ](meeting-backdrop-abdulhakim-abdi.jpg)  |  [youtube thumbnail ](youtube-thumbnail-abdulhakim-abdi.jpg)  |  S~~TABP~~  |
