@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<style>
+@font-face {
+  font-family: Code Pro Bold;
+  src: url('resources/CodePro-Bold.woff2') format('woff2');
+}
+@font-face {
+  font-family: Lato Regular;
+  src: url('resources/Lato-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: Roboto Mono Regular;
+  src: url('resources/RobotoMono-Regular.woff2') format('woff2');
+}
+body {
+  overflow: hidden;
+  background-color: black;
+  font-family: Lato Regular, Arial, Sans-Serif;
+  font-weight: normal;
+}
+h1 {
+  font-family: Code Pro Bold, Arial, Sans-Serif;
+  /*font-size: 4cqw;*/
+  font-size: 4.800cqw;
+  font-weight: normal;
+}
+h2 {
+  font-family: Code Pro Bold, Arial, Sans-Serif;
+  /*font-size: 2.8cqw;*/
+  font-size: 2.667cqw;
+  font-weight: normal;
+}
+h3 {
+  font-family: Code Pro Bold, Arial, Sans-Serif;
+  /*font-size: 2cqw;*/
+  font-size: 1.905cqw;
+  font-weight: normal;
+}
+h4 {
+  font-family: Code Pro Bold, Arial, Sans-Serif;
+  /*font-size: 2cqw;*/
+  font-size: 1.905cqw;
+  font-weight: normal;
+}
+.page_visible {
+  visibility: visible;
+}
+.page_hidden {
+  visibility: hidden;
+}
+div.page_div {
+  background-color: #fff;
+}
+div.page_div {
+  background-color: #fff;
+  width: 100vw;
+  height: 56.25vw; /* height:width ratio = 9/16 = .5625  */
+  max-height: 100vh;
+  max-width: 177.78vh; /* 16/9 = 1.778 */
+  margin: auto;
+  position: absolute;
+  top:0;
+  bottom:0; /* vertical center */
+  left:0;
+  right:0; /* horizontal center */'
+  container-type: size;
+  overflow: hidden;
+  z-index: 2;
+}
+div.subcontainer {
+  container-type: size;
+  width: 100%;
+  height: 100%;
+  font-size: 2.267cqw;
+}
+div.black_div {
+  background-color: #000;
+  color: #fff;
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  visibility: hidden;
+  z-index: 8;
+}
+div.loading_div {
+  background-color: black;
+  color: white;
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  visibility: visible;
+  z-index: 1;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div.l4_box {
+  position: absolute;
+  border-radius: 1cqw;
+  overflow: hidden;
+}
+div.l4_box p {
+  margin: 1.2cqw;
+}
+div.footer {
+  font-family: Roboto Mono Regular, Arial, Sans-Serif;
+  /*font-size: 1cqw;*/
+  font-size: 0.933cqw;
+  font-weight: normal;
+}
+ul {
+  margin-top: 0;
+  border: 1px;
+}
+li {
+  margin-top: 0em;
+  margin-bottom: 0.3em;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 0.3em;
+}
+/*div {
+border: 1px #ccc solid;
+/* for debugging: borders for all divs */
+}
+p {
+border: 1px #ccc solid;
+}*/
+@page
+{
+    size: A4 landscape;
+    margin: 0;
+}
+@media print {
+  div.page_div {
+    position: relative;
+    visibility: visible;
+    page-break-after: always;
+  }
+.page_visible {
+  visibility: visible;
+}
+.page_hidden {
+  visibility: visible;
+}
+}
+</style>
+		<title>Foundations of AI </title>
+		<script>
+var currentPageId = "page-1";
+var blackPageVar = false;
+var lastPage = 19;
+
+function blackPage() {
+  if (blackPageVar) {
+    document.getElementById('black_div').style.visibility = 'hidden';
+    //alert('un-black page');
+  }
+  else {
+    document.getElementById('black_div').style.visibility = 'visible';
+    //alert('black page');
+  }
+  blackPageVar = !blackPageVar;
+}
+function mouseuphandler(e) {
+  e.pageX;
+  width = document.getElementById(currentPageId).offsetWidth;
+  //alert(width);
+  if (e.pageX < 0.25*width) {
+    prevPage();
+  }
+  else {
+    nextPage()
+  }
+}
+function gotoHash(){
+  var currentPageId = "page-1";
+  newPageId = window.location.hash.substring(1);
+  if (newPageId == "") {
+    newPageId = currentPageId;
+  }
+  goToPage(newPageId);
+}
+function prevPage(){
+  //alert('prevPage')
+  splits = currentPageId.split("-");
+  currentPageNumber = parseInt(splits[1]);
+  prevPageNumber = currentPageNumber-1;
+  pageId = "page-"+prevPageNumber;
+  element = document.getElementById(pageId);
+  if (element) {
+    document.getElementById(currentPageId).classList.remove('page_visible');
+    document.getElementById(currentPageId).classList.add('page_hidden');
+    document.getElementById(pageId).classList.remove('page_hidden');
+    document.getElementById(pageId).classList.add('page_visible');
+    //document.getElementById(currentPageId).style.visibility="hidden";
+    //document.getElementById(pageId).style.visibility="visible";
+    currentPageId = pageId;
+    window.location.hash = pageId;
+  }
+}
+function nextPage(){
+  //alert('nextPage')
+  splits = currentPageId.split("-");
+  currentPageNumber = parseInt(splits[1]);
+  nextPageNumber = currentPageNumber+1;
+  pageId = "page-"+nextPageNumber;
+  element = document.getElementById(pageId);
+  if (element) {
+    document.getElementById(currentPageId).classList.remove('page_visible');
+    document.getElementById(currentPageId).classList.add('page_hidden');
+    document.getElementById(pageId).classList.remove('page_hidden');
+    document.getElementById(pageId).classList.add('page_visible');
+    //document.getElementById(currentPageId).style.visibility="hidden";
+    //document.getElementById(pageId).style.visibility="visible";
+    currentPageId = pageId;
+    window.location.hash = pageId;
+  }
+}
+function goToPage(pageId){
+  //alert(pageId);
+  if (!document.getElementById(pageId)){
+    //alert(pageId+": page not found")
+    pageId = "page-1";
+  }
+  document.getElementById(currentPageId).classList.remove('page_visible');
+  document.getElementById(currentPageId).classList.add('page_hidden');
+  document.getElementById(pageId).classList.remove('page_hidden');
+  document.getElementById(pageId).classList.add('page_visible');
+  //document.getElementById(currentPageId).style.visibility="hidden";
+  //document.getElementById(pageId).style.visibility="visible";
+  currentPageId = pageId;
+  window.location.hash = pageId;
+}
+function localPageLink(pageId, event){
+  //alert(pageId);
+  event.stopPropagation(); // do not fire event on parent elements.
+  goToPage(pageId);
+}
+function stopProp(event){
+  event.stopPropagation();
+}
+document.onkeydown = function(event) {
+  switch (event.keyCode) {
+    case 33:
+      // page up
+      prevPage();
+    break;
+    case 34:
+      // page down
+      nextPage();
+    break;
+    case 35:
+      // end
+      goToPage('page-'+lastPage);
+    break;
+    case 36:
+      // home
+      goToPage('page-0');
+    break;
+    case 37:
+      // left arrow
+      prevPage();
+    break;
+    case 38:
+      // up arrow
+      prevPage();
+    break;
+    case 32:
+      //space
+      nextPage();
+    break;
+    case 39:
+      // right arrow
+      nextPage();
+    break;
+    case 40:
+      // down arrow
+      nextPage();
+    break;
+    case 66:
+      // b - blank/black
+      blackPage();
+    break;
+    case 70:
+      // f - fulscreen
+      if (window.fullScreen) {
+        document.exitFullscreen();
+      }
+      else {
+        document.documentElement.requestFullscreen();
+      }
+    break;
+  }
+};
+</script>
+		<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+		<script id="MathJax-script" async="true" src="resources/tex-mml-svg.js"> </script>
+		<meta generator='pymdslides, git commit: "fc20242f41fe47e2e7f112f4123d9911ccd703c0" https://github.com/olofmogren/pymdslides/'>
+		<meta generation-date="2024-09-20 14:08:10.357096+02:00">
+	</head>
+	<body onhashchange="gotoHash();">
+		<div class="black_div" id="black_div"> </div>
+		<div class="loading_div">
+			<div>
+				<p>Loading.</p>
+				<p>PYMD slides requires a javascript-enabled browser.</p>
+				<p>Usage. Arrow buttons, page up/down, or space to navigate. F for fullscreen. B for blank. Click on leftmost quarter for previous slide, the rest for next.</p>
+			</div>
+		</div>
+		<div id="page-1" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: 2.267cqw; ">
+				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="graphics/dall-e-3-foundations-of-state-of-the-art-ai.jpg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
+				<div style="position: absolute; left: 6.250%; top: 36.667%; width: 87.500%; height: 11.481%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; ">Foundations of AI</h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 44.074%; width: 87.500%; height: 7.778%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; ">
+					<h2 style="margin: 0; padding: 0; font-size: 2.667cqw; ">Olof Mogren, AI at RISE, 2024-09-20</h2>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; font-size: 2.267cqw; ">
+					<p> </p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>1   mogren.one, olof.mogren@ri.se</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-2" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: 2.267cqw; ">
+				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="graphics/active-learning-sed-2-608x438.webp" style="position: absolute; left: 6.250%; top: 24.444%; width: 15.833%; height: 67.407%; object-fit: contain;">
+				<img src="graphics/wetlands-merged-608x584.webp" style="position: absolute; left: 24.167%; top: 24.444%; width: 15.833%; height: 67.407%; object-fit: contain;">
+				<img src="graphics/eo-models-grayscale-and-pixelswap-608x417.webp" style="position: absolute; left: 42.083%; top: 24.444%; width: 15.833%; height: 67.407%; object-fit: contain;">
+				<img src="graphics/cloud-thickness-lefthalf.jpg" style="position: absolute; left: 60.000%; top: 24.444%; width: 15.833%; height: 67.407%; object-fit: contain;">
+				<img src="graphics/cloud-thickness-righthalf.jpg" style="position: absolute; left: 77.917%; top: 24.444%; width: 15.833%; height: 67.407%; object-fit: contain;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; ">My group and I</h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 63.704%; width: 87.500%; height: 28.148%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<p> </p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>2   mogren.one, olof.mogren@ri.se</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-3" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: 2.267cqw; ">
+				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="graphics/dall-e-3-ai-101-course.jpg" style="position: absolute; left: 50.000%; top: 0.000%; width: 50.000%; height: 100.000%; object-fit: contain;">
+				<div style="position: absolute; left: 6.250%; top: 36.667%; width: 37.500%; height: 11.481%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; ">AI 101</h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<p> </p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>3   mogren.one, olof.mogren@ri.se</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-4" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: 2.267cqw; ">
+				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="graphics/dall-e-3-ai-101-course.jpg" style="position: absolute; left: 50.000%; top: 0.000%; width: 50.000%; height: 100.000%; object-fit: contain;">
+				<div style="position: absolute; left: 6.250%; top: 36.667%; width: 37.500%; height: 11.481%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; ">AI 101</h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 44.074%; width: 37.500%; height: 7.778%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h2 style="margin: 0; padding: 0; font-size: 2.667cqw; ">So, not really for you guys</h2>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<p> </p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>4   mogren.one, olof.mogren@ri.se</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-5" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: 2.267cqw; ">
+				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<div style="position: absolute; left: 6.250%; top: 36.667%; width: 87.500%; height: 11.481%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; ">But I'll give it a try anyway</h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<p> </p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>5   mogren.one, olof.mogren@ri.se</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-6" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: 2.267cqw; ">
+				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; ">As research director</h1>
+				</div>
+				<div style="position: absolute; left: 9.583%; top: 15.556%; width: 87.500%; height: 7.778%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h2 style="margin: 0; padding: 0; font-size: 2.667cqw; ">at the Department of Computer Science</h2>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<ul>
+						<li>I get contacted by people with vastly differing backgrounds</li>
+					</ul>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>6   mogren.one, olof.mogren@ri.se</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-7" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: 2.267cqw; ">
+				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="graphics/lego-pile.webp" style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; object-fit: contain;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; ">AI is easy!</h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 63.704%; width: 87.500%; height: 28.148%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<p> </p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>7   mogren.one, olof.mogren@ri.se</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-8" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: 2.267cqw; ">
+				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="graphics/lego-pile-nn-terms.webp" style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; object-fit: contain;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; ">AI is easy!</h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 63.704%; width: 87.500%; height: 28.148%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<p> </p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>8   mogren.one, olof.mogren@ri.se</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-9" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #000000ff; font-size: 2.267cqw; ">
+				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<div style="position: absolute; left: 6.250%; top: 36.667%; width: 87.500%; height: 11.481%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; ">AI is tech that performs intelligently</h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; font-size: 2.267cqw; ">
+					<p> </p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>9   mogren.one, olof.mogren@ri.se</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-10" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: 2.267cqw; ">
+				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="graphics/data-flow.jpg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; "></h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<p> </p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #ffffffff;font-size: 0.933cqw; ">
+					<p>10   AI is today based on machine learning</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-11" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #000000ff; font-size: 2.267cqw; ">
+				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="graphics/shrdlu-original.jpg" style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; object-fit: contain;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; "></h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 63.704%; width: 87.500%; height: 28.148%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<p> </p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>11   mogren.one, olof.mogren@ri.se</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-12" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;   font-size: 2.267cqw; ">
+				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; ">Result: some impressive tools</h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 27.083%; height: 67.407%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<p>ChatGPT</p>
+				</div>
+				<div style="position: absolute; left: 35.417%; top: 24.444%; width: 27.083%; height: 67.407%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<p>Dall-E</p>
+				</div>
+				<div style="position: absolute; left: 64.583%; top: 24.444%; width: 27.083%; height: 67.407%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<p>Segment Anything</p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>12   mogren.one, olof.mogren@ri.se</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-13" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: 2.267cqw; ">
+				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="graphics/dall-e-3-model-training-diagram-highlight-3.jpg" style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; object-fit: contain;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; ">These are all ready trained models.</h1>
+				</div>
+				<div style="position: absolute; left: 9.583%; top: 15.556%; width: 87.500%; height: 7.778%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h2 style="margin: 0; padding: 0; font-size: 2.667cqw; ">No further improvement takes place when you use them.</h2>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 63.704%; width: 87.500%; height: 28.148%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<p> </p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>13   mogren.one, olof.mogren@ri.se</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-14" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: 2.267cqw; ">
+				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="graphics/dataset-split-everton-gomede.webp" style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; object-fit: contain;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; ">ML needs to generalize</h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 63.704%; width: 87.500%; height: 28.148%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<p> </p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>14   mogren.one, olof.mogren@ri.se</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-15" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: 2.267cqw; ">
+				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="graphics/dall-e-3-model-training-cats-dogs.jpg" style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; object-fit: contain;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; ">Generalization</h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 63.704%; width: 87.500%; height: 28.148%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<p> </p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>15   Generate a diagram showing a box with cats inside, a box with dogs inside, and a computer in between that makes predictions about cats and dogs breeds.</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-16" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: 2.267cqw; ">
+				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; ">Take aways</h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<ul>
+						<li>Generalization is crucial</li>
+						<li>ML models generally don't automatically improve over time</li>
+						<li>Beware of what's needed for a task</li>
+						<li>Beware what you can (and cannot) do with a tool</li>
+						<li>AI is powerful, but only when used right</li>
+						<li>Do you need a custom model, or can you reuse an existing one?</li>
+						<li>Talk to people in the center if you are unsure</li>
+					</ul>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>16   mogren.one, olof.mogren@ri.se</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-17" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: 2.267cqw; ">
+				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="graphics/mogren.webp" style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 28.148%; object-fit: contain;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; ">Thank you</h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 63.704%; width: 87.500%; height: 28.148%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<p>Read more about our work on <a href="https://dl-group.se" onmouseup="stopProp(event);">dl-group.se</a>!</p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>17   mogren.one, olof.mogren@ri.se --- All work was a team effort</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-18" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: 2.267cqw; ">
+				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<img src="graphics/pirinen.webp" style="position: absolute; left: 6.250%; top: 24.444%; width: 14.583%; height: 28.148%; object-fit: cover;">
+				<img src="graphics/martinsson.jpg" style="position: absolute; left: 20.833%; top: 24.444%; width: 14.583%; height: 28.148%; object-fit: cover;">
+				<img src="graphics/listozec.jpg" style="position: absolute; left: 35.417%; top: 24.444%; width: 14.583%; height: 28.148%; object-fit: cover;">
+				<img src="graphics/bankestad.webp" style="position: absolute; left: 50.000%; top: 24.444%; width: 14.583%; height: 28.148%; object-fit: cover;">
+				<img src="graphics/willbo.webp" style="position: absolute; left: 64.583%; top: 24.444%; width: 14.583%; height: 28.148%; object-fit: cover;">
+				<img src="graphics/mogren.webp" style="position: absolute; left: 79.167%; top: 24.444%; width: 14.583%; height: 28.148%; object-fit: cover;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.800cqw; ">Team</h1>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 63.704%; width: 87.500%; height: 28.148%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<p>Read more about our work on <a href="https://dl-group.se" onmouseup="stopProp(event);">dl-group.se</a>!</p>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>18   mogren.one, olof.mogren@ri.se --- All work was a team effort</p>
+				</div>
+			</div>
+		</div>
+		<div id="page-19" class="page_div page_hidden" style="background-color: white; ">
+			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: 2.267cqw; ">
+				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0;font-size: 4.800cqw; ">10 misconceptions about ML</h1>
+				</div>
+				<div style="position: absolute; left: 9.583%; top: 15.556%; width: 87.500%; height: 7.778%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h2 style="margin: 0; padding: 0;font-size: 2.667cqw; ">European Data Protection Supervisor</h2>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<ul>
+						<li>Correlation implies causality.</li>
+						<li>The greater the variety of data, the better</li>
+						<li>ML needs completely error-free training datasets.</li>
+						<li>The development of ML systems requires large repositories of data or the sharing of datasets from different sources.</li>
+						<li>ML models automatically improve over time.</li>
+						<li>Automatic decisions taken by ML algorithms cannot be explained.</li>
+						<li>Transparency in ML violates intellectual property and is not understood by the user.</li>
+						<li>ML systems are less subject to human biases.</li>
+						<li>ML can accurately predict the future.</li>
+						<li>Individuals are able to anticipate the possible outcomes that ML systems can make of their data.</li>
+					</ul>
+				</div>
+				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: 0.933cqw; ">
+					<p>19   mogren.one, olof.mogren@ri.se</p>
+				</div>
+			</div>
+		</div>
+		<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z/C/HgAGgwJ/lK3Q6wAAAABJRU5ErkJggg==" style="visibility: hidden;" onload="gotoHash()">
+	</body>
+</html>
