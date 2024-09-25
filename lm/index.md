@@ -5,15 +5,14 @@ metatags: "<meta name=\"robots\" content=\"noindex,nofollow\" />"
 <style type="text/css" scoped>
 td, th {border: 1px solid #ccc; padding: 0.6em;}
 table {border-collapse: collapse;}
-</style># Learning Machines Plan 2024-09-24
+</style># Learning Machines Plan 2024-09-25
 
 | date | speaker                                   | photo | shareable | meeting backdrop | youtube thumbnail | <a title="Speaker, Title, Abstract, Bio, Photo. Strikethrough means we don't have it yet.">comment</a>        |
 | ---- | ----------------------------------------- | ----- | ----- | ----- | ----- | -------------- |
-|  2024-09-05  |  [Smita Chakraborty, RISE](2024-09-05.md)  |  [photo](photo-smita-chakraborty.jpg)  |  [social media ](social-media-smita-chakraborty.jpg)  |  [meeting backdrop ](meeting-backdrop-smita-chakraborty.jpg)  |  [youtube thumbnail ](youtube-thumbnail-smita-chakraborty.jpg)  |  STABP  |
 | <span style="color:red"> 2024-09-12 </span> | <span style="color:red"> CANCELLED </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
 |  2024-09-19  |  [Mélisande Teng, MILA and Universite de Montreal](2024-09-19.md)  |  [photo](photo-melisande-teng.jpg)  |  [social media ](social-media-melisande-teng.jpg)  |  [meeting backdrop ](meeting-backdrop-melisande-teng.jpg)  |  [youtube thumbnail ](youtube-thumbnail-melisande-teng.jpg)  |  STABP  |
 |  2024-09-26  |  [Charlie Fieseler, University of Vienna](2024-09-26.md)  |  [photo](photo-charlie-fieseler.jpg)  |  [social media ](social-media-charlie-fieseler.jpg)  |  [meeting backdrop ](meeting-backdrop-charlie-fieseler.jpg)  |  [youtube thumbnail ](youtube-thumbnail-charlie-fieseler.jpg)  |  STABP  |
-|  2024-10-03  |  [Jakob Ambsdorf, University of Copenhagen](2024-10-03.md)  |    |  [social media ](social-media-jakob-ambsdorf.jpg)  |  [meeting backdrop ](meeting-backdrop-jakob-ambsdorf.jpg)  |  [youtube thumbnail ](youtube-thumbnail-jakob-ambsdorf.jpg)  |  S~~TABP~~  |
+|  2024-10-03  |  [Jakob Ambsdorf, University of Copenhagen & Pioneer Centre for AI](2024-10-03.md)  |    |  [social media ](social-media-jakob-ambsdorf.jpg)  |  [meeting backdrop ](meeting-backdrop-jakob-ambsdorf.jpg)  |  [youtube thumbnail ](youtube-thumbnail-jakob-ambsdorf.jpg)  |  STA~~BP~~  |
 | <span style="color:purple"> 2024-10-10 </span> | <span style="color:purple"> *Up for grabs!!!* </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple"> ~~STABP~~ </span> |
 |  2024-10-17  |  [Matthias Obst, University of Gothenburg](2024-10-17.md)  |  [photo](photo-matthias-obst.jpg)  |  [social media ](social-media-matthias-obst.jpg)  |  [meeting backdrop ](meeting-backdrop-matthias-obst.jpg)  |  [youtube thumbnail ](youtube-thumbnail-matthias-obst.jpg)  |  S~~TAB~~P  |
 |  2024-10-24  |  [Ankit Kariryaa, University of Copenhagen](2024-10-24.md)  |    |  [social media ](social-media-ankit-kariryaa.jpg)  |  [meeting backdrop ](meeting-backdrop-ankit-kariryaa.jpg)  |  [youtube thumbnail ](youtube-thumbnail-ankit-kariryaa.jpg)  |  S~~TABP~~  |
