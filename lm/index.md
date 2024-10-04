@@ -5,16 +5,15 @@ metatags: "<meta name=\"robots\" content=\"noindex,nofollow\" />"
 <style type="text/css" scoped>
 td, th {border: 1px solid #ccc; padding: 0.6em;}
 table {border-collapse: collapse;}
-</style># Learning Machines Plan 2024-10-01
+</style># Learning Machines Plan 2024-10-04
 
 | date | speaker                                   | photo | shareable | meeting backdrop | youtube thumbnail | <a title="Speaker, Title, Abstract, Bio, Photo. Strikethrough means we don't have it yet.">comment</a>        |
 | ---- | ----------------------------------------- | ----- | ----- | ----- | ----- | -------------- |
-| <span style="color:red"> 2024-09-12 </span> | <span style="color:red"> CANCELLED </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
 |  2024-09-19  |  [Mélisande Teng, MILA and Universite de Montreal](2024-09-19.md)  |  [photo](photo-melisande-teng.jpg)  |  [social media ](social-media-melisande-teng.jpg)  |  [meeting backdrop ](meeting-backdrop-melisande-teng.jpg)  |  [youtube thumbnail ](youtube-thumbnail-melisande-teng.jpg)  |  STABP  |
 |  2024-09-26  |  [Charlie Fieseler, University of Vienna](2024-09-26.md)  |  [photo](photo-charlie-fieseler.jpg)  |  [social media ](social-media-charlie-fieseler.jpg)  |  [meeting backdrop ](meeting-backdrop-charlie-fieseler.jpg)  |  [youtube thumbnail ](youtube-thumbnail-charlie-fieseler.jpg)  |  STABP  |
 |  2024-10-03  |  [Jakob Ambsdorf, University of Copenhagen & Pioneer Centre for AI](2024-10-03.md)  |  [photo](photo-jakob-ambsdorf.jpg)  |  [social media ](social-media-jakob-ambsdorf.jpg)  |  [meeting backdrop ](meeting-backdrop-jakob-ambsdorf.jpg)  |  [youtube thumbnail ](youtube-thumbnail-jakob-ambsdorf.jpg)  |  STABP  |
 | <span style="color:red"> 2024-10-10 </span> | <span style="color:red"> CANCELLED </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
-|  2024-10-17  |  [Matthias Obst, University of Gothenburg](2024-10-17.md)  |  [photo](photo-matthias-obst.jpg)  |  [social media ](social-media-matthias-obst.jpg)  |  [meeting backdrop ](meeting-backdrop-matthias-obst.jpg)  |  [youtube thumbnail ](youtube-thumbnail-matthias-obst.jpg)  |  S~~TAB~~P  |
+|  2024-10-17  |  [Matthias Obst, University of Gothenburg](2024-10-17.md)  |  [photo](photo-matthias-obst.jpg)  |  [social media ](social-media-matthias-obst.jpg)  |  [meeting backdrop ](meeting-backdrop-matthias-obst.jpg)  |  [youtube thumbnail ](youtube-thumbnail-matthias-obst.jpg)  |  ST~~AB~~P  |
 |  2024-10-24  |  [Ankit Kariryaa, University of Copenhagen](2024-10-24.md)  |    |  [social media ](social-media-ankit-kariryaa.jpg)  |  [meeting backdrop ](meeting-backdrop-ankit-kariryaa.jpg)  |  [youtube thumbnail ](youtube-thumbnail-ankit-kariryaa.jpg)  |  S~~TABP~~  |
 | <span style="color:red"> 2024-10-31 </span> | <span style="color:red"> Höstlov </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
 |  2024-11-07  |  [Joel Oskarsson, Linköping University](2024-11-07.md)  |    |  [social media ](social-media-joel-oskarsson.jpg)  |  [meeting backdrop ](meeting-backdrop-joel-oskarsson.jpg)  |  [youtube thumbnail ](youtube-thumbnail-joel-oskarsson.jpg)  |  S~~TABP~~  |
