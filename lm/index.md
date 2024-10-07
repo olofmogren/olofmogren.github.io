@@ -5,7 +5,7 @@ metatags: "<meta name=\"robots\" content=\"noindex,nofollow\" />"
 <style type="text/css" scoped>
 td, th {border: 1px solid #ccc; padding: 0.6em;}
 table {border-collapse: collapse;}
-</style># Learning Machines Plan 2024-10-04
+</style># Learning Machines Plan 2024-10-07
 
 | date | speaker                                   | photo | shareable | meeting backdrop | youtube thumbnail | <a title="Speaker, Title, Abstract, Bio, Photo. Strikethrough means we don't have it yet.">comment</a>        |
 | ---- | ----------------------------------------- | ----- | ----- | ----- | ----- | -------------- |
@@ -20,7 +20,7 @@ table {border-collapse: collapse;}
 |  2024-11-14  |  [Abdulhakim Abdi, Lund University](2024-11-14.md)  |  [photo](photo-abdulhakim-abdi.jpg)  |  [social media ](social-media-abdulhakim-abdi.jpg)  |  [meeting backdrop ](meeting-backdrop-abdulhakim-abdi.jpg)  |  [youtube thumbnail ](youtube-thumbnail-abdulhakim-abdi.jpg)  |  S~~TAB~~P  |
 |  2024-11-21  |  [Alp Kucukelbir, Columbia University](2024-11-21.md)  |    |  [social media ](social-media-alp-kucukelbir.jpg)  |  [meeting backdrop ](meeting-backdrop-alp-kucukelbir.jpg)  |  [youtube thumbnail ](youtube-thumbnail-alp-kucukelbir.jpg)  |  S~~TABP~~  |
 |  2024-11-28  |  [Alireza Taheri Dehkordi, Lund University](2024-11-28.md)  |    |  [social media ](social-media-alireza-taheri-dehkordi.jpg)  |  [meeting backdrop ](meeting-backdrop-alireza-taheri-dehkordi.jpg)  |  [youtube thumbnail ](youtube-thumbnail-alireza-taheri-dehkordi.jpg)  |  S~~TABP~~  |
-|  2024-12-05  |  [Amal Nammouchi, Karlstad University and AfriClimate AI](2024-12-05.md)  |    |  [social media ](social-media-amal-nammouchi.jpg)  |  [meeting backdrop ](meeting-backdrop-amal-nammouchi.jpg)  |  [youtube thumbnail ](youtube-thumbnail-amal-nammouchi.jpg)  |  S~~TABP~~  |
-| <span style="color:purple"> 2024-12-12 </span> | <span style="color:purple"> *Up for grabs!!!* </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple"> ~~STABP~~ </span> |
+| <span style="color:purple"> 2024-12-05 </span> | <span style="color:purple"> *Up for grabs!!!* </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple"> ~~STABP~~ </span> |
+|  2024-12-12  |  [Amal Nammouchi, Karlstad University and AfriClimate AI](2024-12-12.md)  |    |  [social media ](social-media-amal-nammouchi.jpg)  |  [meeting backdrop ](meeting-backdrop-amal-nammouchi.jpg)  |  [youtube thumbnail ](youtube-thumbnail-amal-nammouchi.jpg)  |  S~~TABP~~  |
 | <span style="color:red"> 2024-12-19 </span> | <span style="color:red"> Jullov </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
 | <span style="color:red"> 2024-12-26 </span> | <span style="color:red"> Jullov </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
