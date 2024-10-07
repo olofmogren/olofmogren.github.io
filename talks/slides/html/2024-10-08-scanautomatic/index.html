@@ -141,24 +141,32 @@ border: 1px #ccc solid;
     margin: 0;
 }
 @media print {
+  @page {
+    size: 160mm 90mm;
+  }
+  body { margin:0px; }
   div.page_div {
     position: relative;
     visibility: visible;
-    page-break-after: always;
+    break-after: always;
+    break-inside: avoid;
+    display: table;
+    width: 200mm;
+    height: 112.5mm;
   }
-.page_visible {
-  visibility: visible;
-}
-.page_hidden {
-  visibility: visible;
-}
+  .page_visible {
+    visibility: visible;
+  }
+  .page_hidden {
+    visibility: visible;
+  }
 }
 </style>
-		<title>Tackling climate change using AI </title>
+		<title>AI för klimatet </title>
 		<script>
 var currentPageId = "page-1";
 var blackPageVar = false;
-var lastPage = 28;
+var lastPage = 27;
 
 function blackPage() {
   if (blackPageVar) {
@@ -314,8 +322,8 @@ MathJax = {
 };
 </script>
 		<script id="MathJax-script" async="true" src="resources/tex-mml-svg.js"> </script>
-		<meta generator='pymdslides, git commit: "fb9ed99c5dd74462d279973b1cc370fbe592f7cf" https://github.com/olofmogren/pymdslides/'>
-		<meta generation-date="2024-10-04 17:15:21.130753+02:00">
+		<meta generator='pymdslides, git commit: "fa7075de85da5090e241585259cd8c955ba2e847" https://github.com/olofmogren/pymdslides/'>
+		<meta generation-date="2024-10-07 16:17:11.986352+02:00">
 	</head>
 	<body onhashchange="gotoHash();">
 		<div class="black_div" id="black_div"> </div>
@@ -331,7 +339,7 @@ MathJax = {
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<img src="graphics/20230713_152426-environment.jpg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
 				<div style="position: absolute; left: 6.250%; top: 36.667%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
-					<h1 style="margin: 0; padding: 0; font-size: 4.133cqw; ">Tackling climate change using AI</h1>
+					<h1 style="margin: 0; padding: 0; font-size: 4.133cqw; ">AI för klimatet</h1>
 				</div>
 				<div style="position: absolute; left: 9.583%; top: 44.074%; width: 87.500%; height: 7.778%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
 					<h2 style="margin: 0; padding: 0; font-size: 2.667cqw; ">Scanautomatic 2024-10-08</h2>
@@ -422,7 +430,7 @@ MathJax = {
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #000000ff; font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<div style="position: absolute; left: 6.250%; top: 36.667%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; ">
-					<h1 style="margin: 0; padding: 0; font-size: 4.133cqw; ">Climate change</h1>
+					<h1 style="margin: 0; padding: 0; font-size: 4.133cqw; ">Människan och klimatförändringar</h1>
 				</div>
 				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; font-size: 2.267cqw; ">
 					<p> </p>
@@ -430,7 +438,7 @@ MathJax = {
 					<p> </p>
 					<p> </p>
 					<ul>
-						<li>Droughts, floods, extreme weather events, conflicts, general disruptions</li>
+						<li>Torka, översvämningar, extremväder, konflikter, störningar i samhällsfunktioner</li>
 					</ul>
 				</div>
 				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
@@ -449,7 +457,7 @@ MathJax = {
 					<p> </p>
 				</div>
 				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
-					<p>mogren.one, olof.mogren@ri.se --- Image generated with DALL-E 3</p>
+					<p>mogren.one, olof.mogren@ri.se --- Bild genererad med DALL-E 3</p>
 				</div>
 			</div>
 		</div>
@@ -461,17 +469,15 @@ MathJax = {
 				<img src="graphics/pirinen-104x104.webp" style="position: absolute; left: 24.792%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
 				<img src="graphics/mogren-104x103.webp" style="position: absolute; left: 27.500%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
 				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
-					<h1 style="margin: 0; padding: 0; font-size: 4.133cqw; ">Smart agriculture</h1>
+					<h1 style="margin: 0; padding: 0; font-size: 4.133cqw; ">Smart jordbruk</h1>
 				</div>
 				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
 					<ul>
-						<li>Smart assitance in agriculture</li>
-						<li>Detect weeds, disease</li>
-						<li>Manage irrigation, soil, fertilization</li>
-						<li>Highly dependent on climate change
-and factors such as rainfall,
-humidity, and temperature</li>
-						<li>Current collaboration with
+						<li>Smarta assistenter i jordbruk</li>
+						<li>Upptäcka ogräs och sjukdomar</li>
+						<li>Hantera och optimera bevattning, gödning</li>
+						<li>Stärka tålighet, hållbarhet, effektivitet</li>
+						<li>Samarbete med 
 Mpendakazi Agrobusiness, Tanzania</li>
 					</ul>
 				</div>
@@ -485,7 +491,7 @@ Mpendakazi Agrobusiness, Tanzania</li>
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<img src="graphics/ecogardens.com-green-roof-peak-performance.webp" style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; object-fit: cover;">
 				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
-					<h1 style="margin: 0; padding: 0; font-size: 4.267cqw; ">Green infrastructure planning</h1>
+					<h1 style="margin: 0; padding: 0; font-size: 4.267cqw; ">Grön infrastruktur</h1>
 				</div>
 				<div style="position: absolute; left: 6.250%; top: 63.704%; width: 87.500%; height: 28.148%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
 					<p> </p>
@@ -500,21 +506,22 @@ Mpendakazi Agrobusiness, Tanzania</li>
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<img src="graphics/wetlands-merged.webp" style="position: absolute; left: 0.000%; top: 0.000%; width: 50.000%; height: 100.000%; object-fit: cover;">
 				<div style="position: absolute; left: 56.250%; top: 8.148%; width: 37.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; ">
-					<h1 style="margin: 0; padding: 0; font-size: 4.133cqw; ">Earth observation</h1>
+					<h1 style="margin: 0; padding: 0; font-size: 4.133cqw; ">Jordobservation</h1>
 				</div>
 				<div style="position: absolute; left: 59.583%; top: 15.556%; width: 37.500%; height: 7.778%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; ">
-					<h2 style="margin: 0; padding: 0; font-size: 2.667cqw; ">for wetland estimation</h2>
+					<h2 style="margin: 0; padding: 0; font-size: 2.667cqw; ">för våtmarker</h2>
 				</div>
 				<div style="position: absolute; left: 51.042%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; font-size: 2.267cqw; ">
 					<p> 
  
  </p>
 					<ul>
-						<li>Generated map, crucial for
+						<li>Beräknad fördelning av våtmarker
 <ul>
-								<li>Wetland restoration</li>
-								<li>Biodiversity</li>
-								<li>Climate adaptation</li>
+								<li>Återskapande</li>
+								<li>Biologisk mångfald</li>
+								<li>Klimatanpassning</li>
+								<li>Kolbindning</li>
 							</ul>
 						</li>
 					</ul>
@@ -572,7 +579,7 @@ Mpendakazi Agrobusiness, Tanzania</li>
 		<div id="page-14" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
-				<img src="graphics/flooding-brazil-2024.webp" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
+				<img src="graphics/flooding-poland-2024-09-19-dn.se.webp" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
 				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
 					<h1 style="margin: 0; padding: 0; font-size: 4.133cqw; "></h1>
 				</div>
@@ -589,7 +596,7 @@ Mpendakazi Agrobusiness, Tanzania</li>
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<img src="graphics/flow-prediction-layers.webp" style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; object-fit: contain;">
 				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; ">
-					<h1 style="margin: 0; padding: 0; font-size: 4.133cqw; ">Stream flow forecasting</h1>
+					<h1 style="margin: 0; padding: 0; font-size: 4.133cqw; ">Estimering av flöde i vattendrag</h1>
 				</div>
 				<div style="position: absolute; left: 6.250%; top: 63.704%; width: 87.500%; height: 28.148%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; font-size: 2.267cqw; ">
 					<p> </p>
@@ -643,17 +650,17 @@ Mpendakazi Agrobusiness, Tanzania</li>
 				<img src="graphics/naturvardsverket-92x104.webp" style="position: absolute; left: 31.250%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
 				<img src="graphics/lund-university-82x104.webp" style="position: absolute; left: 33.958%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
 				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
-					<h1 style="margin: 0; padding: 0; font-size: 4.133cqw; ">Biodiversity monitoring</h1>
+					<h1 style="margin: 0; padding: 0; font-size: 4.133cqw; ">Biologisk mångfald</h1>
 				</div>
 				<div style="position: absolute; left: 9.583%; top: 15.556%; width: 87.500%; height: 7.778%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
-					<h2 style="margin: 0; padding: 0; font-size: 2.667cqw; ">using AI</h2>
+					<h2 style="margin: 0; padding: 0; font-size: 2.667cqw; ">spårning med AI</h2>
 				</div>
 				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
 					<p> 
  </p>
 					<ul>
-						<li>Passive acoustic devices</li>
-						<li>Smart AI analysis</li>
+						<li>Ljudupptagningsboxar</li>
+						<li>Smart AI-analys</li>
 					</ul>
 				</div>
 				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
@@ -664,7 +671,7 @@ Mpendakazi Agrobusiness, Tanzania</li>
 		<div id="page-19" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
-				<img src="graphics/wind-turbine-construction-windsystemsmag.com.jpg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
+				<img src="graphics/a-modern-wind-turbine-with-birds-on-the-ground-and-a-construction-crane-on-the-side.jpg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
 				<img src="graphics/dcase-sed.webp" style="position: absolute; left: 56.250%; top: 24.444%; width: 37.500%; height: 67.407%; object-fit: contain;">
 				<img src="graphics/martinsson-104x104.jpg" style="position: absolute; left: 14.792%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
 				<img src="graphics/willbo-104x90.webp" style="position: absolute; left: 17.500%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
@@ -675,17 +682,14 @@ Mpendakazi Agrobusiness, Tanzania</li>
 				<img src="graphics/slu-104x78.webp" style="position: absolute; left: 31.042%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
 				<img src="graphics/naturvardsverket-92x104.webp" style="position: absolute; left: 33.750%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
 				<img src="graphics/lund-university-82x104.webp" style="position: absolute; left: 36.458%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
-				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
-					<h1 style="margin: 0; padding: 0; font-size: 4.133cqw; ">Detecting vocalizations</h1>
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.133cqw; ">Analysera påverkan på djurliv</h1>
 				</div>
-				<div style="position: absolute; left: 9.583%; top: 15.556%; width: 87.500%; height: 7.778%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
-					<h2 style="margin: 0; padding: 0; font-size: 2.667cqw; ">Tracking species</h2>
-				</div>
-				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; font-size: 2.267cqw; ">
 					<p> </p>
 				</div>
 				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
-					<p>mogren.one, olof.mogren@ri.se --- Martinsson, 2017, 2023, windsystemsmag.com</p>
+					<p>mogren.one, olof.mogren@ri.se --- Martinsson, 2017, 2023</p>
 				</div>
 			</div>
 		</div>
@@ -694,7 +698,7 @@ Mpendakazi Agrobusiness, Tanzania</li>
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<img src="graphics/svenning-sdm.jpg" style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; object-fit: contain;">
 				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
-					<h1 style="margin: 0; padding: 0; font-size: 4.133cqw; ">Species distribution modeling</h1>
+					<h1 style="margin: 0; padding: 0; font-size: 4.133cqw; ">Modellera utbredning av arter</h1>
 				</div>
 				<div style="position: absolute; left: 6.250%; top: 63.704%; width: 87.500%; height: 28.148%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
 					<p> </p>
@@ -710,13 +714,13 @@ Mpendakazi Agrobusiness, Tanzania</li>
 				<img src="graphics/hentati-sundberg-common-guillemot.webp" style="position: absolute; left: 6.250%; top: 24.444%; width: 43.750%; height: 67.407%; object-fit: contain;">
 				<img src="graphics/hentati-sundberg-photo-957x1456.jpg" style="position: absolute; left: 50.000%; top: 24.444%; width: 43.750%; height: 67.407%; object-fit: contain;">
 				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
-					<h1 style="margin: 0; padding: 0; font-size: 4.133cqw; ">Baltic seabird analytics</h1>
+					<h1 style="margin: 0; padding: 0; font-size: 4.133cqw; ">Analyser av sjöfåglar i Östersjön</h1>
 				</div>
 				<div style="position: absolute; left: 6.250%; top: 63.704%; width: 87.500%; height: 28.148%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
 					<p> </p>
 				</div>
 				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
-					<p>Jonas Hentati-Sundberg, et al. (2023). Common guillemot.</p>
+					<p>Jonas Hentati-Sundberg, et al. (2023). Sillgrisslor.</p>
 				</div>
 			</div>
 		</div>
@@ -724,7 +728,7 @@ Mpendakazi Agrobusiness, Tanzania</li>
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #000000ff; font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<div style="position: absolute; left: 6.250%; top: 36.667%; width: 87.500%; height: 11.481%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; ">
-					<h1 style="margin: 0; padding: 0; font-size: 4.133cqw; ">Not a silver bullet</h1>
+					<h1 style="margin: 0; padding: 0; font-size: 4.133cqw; ">AI löser inte allt</h1>
 				</div>
 				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; font-size: 2.267cqw; ">
 					<p> </p>
@@ -739,33 +743,33 @@ Mpendakazi Agrobusiness, Tanzania</li>
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<img src="graphics/dall-e-3-computer-lab.jpg" style="position: absolute; left: 50.000%; top: 0.000%; width: 50.000%; height: 100.000%; object-fit: cover;">
 				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 37.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
-					<h1 style="margin: 0; padding: 0; font-size: 4.133cqw; ">High tech</h1>
+					<h1 style="margin: 0; padding: 0; font-size: 4.133cqw; ">Tech-lösningar</h1>
 				</div>
 				<div style="position: absolute; left: 9.583%; top: 15.556%; width: 37.500%; height: 7.778%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
-					<h2 style="margin: 0; padding: 0; font-size: 2.667cqw; ">for low tech</h2>
+					<h2 style="margin: 0; padding: 0; font-size: 2.667cqw; ">för low-tech</h2>
 				</div>
 				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
 					<ul>
-						<li>Make data accessible
+						<li>Gör data tillgänglig
 <ul>
-								<li>Decision support, policy making</li>
+								<li>För beslutsfattare</li>
 							</ul>
 						</li>
-						<li>Predictions
+						<li>Prognoser
 <ul>
-								<li>Energy, transportation, extreme events</li>
+								<li>Energi, transportsystem, extremhändelser</li>
 							</ul>
 						</li>
-						<li>Optimization
+						<li>Optimeringar
 <ul>
-								<li>Energy, transportation</li>
-								<li>Circ. econ, green infr.</li>
-								<li>Nature-based solutions</li>
+								<li>Energi, transport</li>
+								<li>Cirkulär ekonomi, grön infr.</li>
+								<li>Naturbaserade lösningar</li>
 							</ul>
 						</li>
-						<li>Replace heavy computation
+						<li>Ersätta tunga beräkningar
 <ul>
-								<li>Weather sim., hydrology</li>
+								<li>Vädersimulering, hydrologi</li>
 							</ul>
 						</li>
 					</ul>
@@ -778,42 +782,36 @@ Mpendakazi Agrobusiness, Tanzania</li>
 		<div id="page-24" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
-				<div style="position: absolute; left: 6.250%; top: 36.667%; width: 87.500%; height: 11.481%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
-					<h1 style="margin: 0; padding: 0; font-size: 4.133cqw; ">So, how do I start?</h1>
+				<img src="graphics/dall-e-3-ai-devices-optimizing-environmental-impact-of-built-environment.jpg" style="position: absolute; left: 56.250%; top: 24.444%; width: 37.500%; height: 67.407%; object-fit: cover;">
+				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h1 style="margin: 0; padding: 0; font-size: 4.133cqw; ">Prata med oss om</h1>
 				</div>
-				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
-					<p> </p>
+				<div style="position: absolute; left: 9.583%; top: 15.556%; width: 87.500%; height: 7.778%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<h2 style="margin: 0; padding: 0;font-size: 2.667cqw; ">projekt kring hållbarhet och miljö</h2>
+				</div>
+				<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
+					<p> </p>
+					<p> </p>
+					<ul>
+						<li>Optimera era lösningar med
+hänseende till effektivitet
+och miljöpåverkan</li>
+						<li>Anslysera aspekter av miljön
+vid etablering och drift</li>
+						<li>Fjärranalys, bildanalys, ljudanalys,
+dokumentanalys, analys av annan data, mm</li>
+					</ul>
+					<p> </p>
+					<p>
+						<em>olof.mogren@ri.se</em>
+					</p>
 				</div>
 				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
-					<p>mogren.one, olof.mogren@ri.se</p>
+					<p>Dall-E 3: AI devices optimizing environmental impact of built environment</p>
 				</div>
 			</div>
 		</div>
 		<div id="page-25" class="page_div page_hidden" style="background-color: white; ">
-			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: 2.267cqw; ">
-				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
-				<img src="graphics/dall-e-3-coding-in-python.jpg" style="position: absolute; left: 6.250%; top: 24.444%; width: 37.500%; height: 67.407%; object-fit: cover;">
-				<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
-					<h1 style="margin: 0; padding: 0; font-size: 4.133cqw; ">How to: environmental monitoring</h1>
-				</div>
-				<div style="position: absolute; left: 9.583%; top: 15.556%; width: 87.500%; height: 7.778%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
-					<h2 style="margin: 0; padding: 0;font-size: 2.667cqw; ">with AI</h2>
-				</div>
-				<div style="position: absolute; left: 51.042%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: 2.267cqw; ">
-					<ul>
-						<li>Study your data</li>
-						<li>Identify target test set</li>
-						<li>Investigate what kind of model would fit</li>
-						<li>Find existing model or develop custom</li>
-						<li>Evaluate on test set; compare to baseline</li>
-					</ul>
-				</div>
-				<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #646464ff;font-size: 0.933cqw; ">
-					<p>Dall-E 3: A female student coding in Python, with a laptop in lap sitting on a rock in a forest</p>
-				</div>
-			</div>
-		</div>
-		<div id="page-26" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<img src="graphics/larsson-240x360.jpg" style="position: absolute; left: 0.000%; top: 0.000%; width: 14.167%; height: 16.667%; object-fit: cover;">
@@ -872,7 +870,7 @@ Mpendakazi Agrobusiness, Tanzania</li>
 						<strong>RISE Learning machines seminars</strong>
 					</p>
 					<p>
-						<strong>Every thursday at 15:00. This fall:</strong>
+						<strong>Varje torsdag 15:00. Kommande:</strong>
 					</p>
 					<ul>
 						<li>Matthias Obst, University of Gothenburg</li>
@@ -886,7 +884,7 @@ Mpendakazi Agrobusiness, Tanzania</li>
 				</div>
 			</div>
 		</div>
-		<div id="page-27" class="page_div page_hidden" style="background-color: white; ">
+		<div id="page-26" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<img src="graphics/pirinen.webp" style="position: absolute; left: 6.250%; top: 24.444%; width: 14.583%; height: 28.148%; object-fit: cover;">
@@ -906,7 +904,7 @@ Mpendakazi Agrobusiness, Tanzania</li>
 				</div>
 			</div>
 		</div>
-		<div id="page-28" class="page_div page_hidden" style="background-color: white; ">
+		<div id="page-27" class="page_div page_hidden" style="background-color: white; ">
 			<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: 2.267cqw; ">
 				<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 				<img src="graphics/wetlands-elena-elisseeva.jpg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
