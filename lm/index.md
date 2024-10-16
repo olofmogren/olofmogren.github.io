@@ -5,11 +5,10 @@ metatags: "<meta name=\"robots\" content=\"noindex,nofollow\" />"
 <style type="text/css" scoped>
 td, th {border: 1px solid #ccc; padding: 0.6em;}
 table {border-collapse: collapse;}
-</style># Learning Machines Plan 2024-10-14
+</style># Learning Machines Plan 2024-10-16
 
 | date | speaker                                   | photo | shareable | meeting backdrop | youtube thumbnail | <a title="Speaker, Title, Abstract, Bio, Photo. Strikethrough means we don't have it yet.">comment</a>        |
 | ---- | ----------------------------------------- | ----- | ----- | ----- | ----- | -------------- |
-|  2024-09-26  |  [Charlie Fieseler, University of Vienna](2024-09-26.md)  |  [photo](photo-charlie-fieseler.jpg)  |  [social media ](social-media-charlie-fieseler.jpg)  |  [meeting backdrop ](meeting-backdrop-charlie-fieseler.jpg)  |  [youtube thumbnail ](youtube-thumbnail-charlie-fieseler.jpg)  |  STABP  |
 |  2024-10-03  |  [Jakob Ambsdorf, University of Copenhagen & Pioneer Centre for AI](2024-10-03.md)  |  [photo](photo-jakob-ambsdorf.jpg)  |  [social media ](social-media-jakob-ambsdorf.jpg)  |  [meeting backdrop ](meeting-backdrop-jakob-ambsdorf.jpg)  |  [youtube thumbnail ](youtube-thumbnail-jakob-ambsdorf.jpg)  |  STABP  |
 | <span style="color:red"> 2024-10-10 </span> | <span style="color:red"> CANCELLED </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
 |  2024-10-17  |  [Matthias Obst, University of Gothenburg](2024-10-17.md)  |  [photo](photo-matthias-obst.jpg)  |  [social media ](social-media-matthias-obst.jpg)  |  [meeting backdrop ](meeting-backdrop-matthias-obst.jpg)  |  [youtube thumbnail ](youtube-thumbnail-matthias-obst.jpg)  |  STABP  |
@@ -23,3 +22,10 @@ table {border-collapse: collapse;}
 |  2024-12-12  |  [Amal Nammouchi, Karlstad University and AfriClimate AI](2024-12-12.md)  |    |  [social media ](social-media-amal-nammouchi.jpg)  |  [meeting backdrop ](meeting-backdrop-amal-nammouchi.jpg)  |  [youtube thumbnail ](youtube-thumbnail-amal-nammouchi.jpg)  |  S~~TABP~~  |
 | <span style="color:red"> 2024-12-19 </span> | <span style="color:red"> Jullov </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
 | <span style="color:red"> 2024-12-26 </span> | <span style="color:red"> Jullov </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
+| <span style="color:red"> 2025-01-16 </span> | <span style="color:red"> cancelled? </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
+| <span style="color:red"> 2025-01-23 </span> | <span style="color:red"> cancelled? </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
+| <span style="color:red"> 2025-01-30 </span> | <span style="color:red"> cancelled? </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
+| <span style="color:red"> 2025-02-06 </span> | <span style="color:red"> cancelled? </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
+| <span style="color:red"> 2025-02-13 </span> | <span style="color:red"> cancelled? </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
+| <span style="color:red"> 2025-02-20 </span> | <span style="color:red"> cancelled? </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
+| <span style="color:red"> 2025-02-27 </span> | <span style="color:red"> cancelled? </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
