@@ -5,14 +5,14 @@ metatags: "<meta name=\"robots\" content=\"noindex,nofollow\" />"
 <style type="text/css" scoped>
 td, th {border: 1px solid #ccc; padding: 0.6em;}
 table {border-collapse: collapse;}
-</style># Learning Machines Plan 2024-10-16
+</style># Learning Machines Plan 2024-10-18
 
 | date | speaker                                   | photo | shareable | meeting backdrop | youtube thumbnail | <a title="Speaker, Title, Abstract, Bio, Photo. Strikethrough means we don't have it yet.">comment</a>        |
 | ---- | ----------------------------------------- | ----- | ----- | ----- | ----- | -------------- |
 |  2024-10-03  |  [Jakob Ambsdorf, University of Copenhagen & Pioneer Centre for AI](2024-10-03.md)  |  [photo](photo-jakob-ambsdorf.jpg)  |  [social media ](social-media-jakob-ambsdorf.jpg)  |  [meeting backdrop ](meeting-backdrop-jakob-ambsdorf.jpg)  |  [youtube thumbnail ](youtube-thumbnail-jakob-ambsdorf.jpg)  |  STABP  |
 | <span style="color:red"> 2024-10-10 </span> | <span style="color:red"> CANCELLED </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
 |  2024-10-17  |  [Matthias Obst, University of Gothenburg](2024-10-17.md)  |  [photo](photo-matthias-obst.jpg)  |  [social media ](social-media-matthias-obst.jpg)  |  [meeting backdrop ](meeting-backdrop-matthias-obst.jpg)  |  [youtube thumbnail ](youtube-thumbnail-matthias-obst.jpg)  |  STABP  |
-|  2024-10-24  |  [Ankit Kariryaa, University of Copenhagen](2024-10-24.md)  |    |  [social media ](social-media-ankit-kariryaa.jpg)  |  [meeting backdrop ](meeting-backdrop-ankit-kariryaa.jpg)  |  [youtube thumbnail ](youtube-thumbnail-ankit-kariryaa.jpg)  |  STAB~~P~~  |
+|  2024-10-24  |  [Ankit Kariryaa, University of Copenhagen](2024-10-24.md)  |  [photo](photo-ankit-kariryaa.jpg)  |  [social media ](social-media-ankit-kariryaa.jpg)  |  [meeting backdrop ](meeting-backdrop-ankit-kariryaa.jpg)  |  [youtube thumbnail ](youtube-thumbnail-ankit-kariryaa.jpg)  |  STABP  |
 | <span style="color:red"> 2024-10-31 </span> | <span style="color:red"> Höstlov </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
 |  2024-11-07  |  [Joel Oskarsson, Linköping University](2024-11-07.md)  |  [photo](photo-joel-oskarsson.jpg)  |  [social media ](social-media-joel-oskarsson.jpg)  |  [meeting backdrop ](meeting-backdrop-joel-oskarsson.jpg)  |  [youtube thumbnail ](youtube-thumbnail-joel-oskarsson.jpg)  |  STABP  |
 |  2024-11-14  |  [Abdulhakim Abdi, Lund University](2024-11-14.md)  |  [photo](photo-abdulhakim-abdi.jpg)  |  [social media ](social-media-abdulhakim-abdi.jpg)  |  [meeting backdrop ](meeting-backdrop-abdulhakim-abdi.jpg)  |  [youtube thumbnail ](youtube-thumbnail-abdulhakim-abdi.jpg)  |  S~~TAB~~P  |
