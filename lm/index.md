@@ -5,11 +5,10 @@ metatags: "<meta name=\"robots\" content=\"noindex,nofollow\" />"
 <style type="text/css" scoped>
 td, th {border: 1px solid #ccc; padding: 0.6em;}
 table {border-collapse: collapse;}
-</style># Learning Machines Plan 2024-10-22
+</style># Learning Machines Plan 2024-10-28
 
 | date | speaker                                   | photo | shareable | meeting backdrop | youtube thumbnail | <a title="Speaker, Title, Abstract, Bio, Photo. Strikethrough means we don't have it yet.">comment</a>        |
 | ---- | ----------------------------------------- | ----- | ----- | ----- | ----- | -------------- |
-|  2024-10-03  |  [Jakob Ambsdorf, University of Copenhagen & Pioneer Centre for AI](2024-10-03.md)  |  [photo](photo-jakob-ambsdorf.jpg)  |  [social media ](social-media-jakob-ambsdorf.jpg)  |  [meeting backdrop ](meeting-backdrop-jakob-ambsdorf.jpg)  |  [youtube thumbnail ](youtube-thumbnail-jakob-ambsdorf.jpg)  |  STABP  |
 | <span style="color:red"> 2024-10-10 </span> | <span style="color:red"> CANCELLED </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
 |  2024-10-17  |  [Matthias Obst, University of Gothenburg](2024-10-17.md)  |  [photo](photo-matthias-obst.jpg)  |  [social media ](social-media-matthias-obst.jpg)  |  [meeting backdrop ](meeting-backdrop-matthias-obst.jpg)  |  [youtube thumbnail ](youtube-thumbnail-matthias-obst.jpg)  |  STABP  |
 |  2024-10-24  |  [Ankit Kariryaa, University of Copenhagen](2024-10-24.md)  |  [photo](photo-ankit-kariryaa.jpg)  |  [social media ](social-media-ankit-kariryaa.jpg)  |  [meeting backdrop ](meeting-backdrop-ankit-kariryaa.jpg)  |  [youtube thumbnail ](youtube-thumbnail-ankit-kariryaa.jpg)  |  STABP  |
@@ -22,7 +21,7 @@ table {border-collapse: collapse;}
 |  2024-12-12  |  [Amal Nammouchi, Karlstad University and AfriClimate AI](2024-12-12.md)  |    |  [social media ](social-media-amal-nammouchi.jpg)  |  [meeting backdrop ](meeting-backdrop-amal-nammouchi.jpg)  |  [youtube thumbnail ](youtube-thumbnail-amal-nammouchi.jpg)  |  S~~TABP~~  |
 | <span style="color:red"> 2024-12-19 </span> | <span style="color:red"> Jullov </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
 | <span style="color:red"> 2024-12-26 </span> | <span style="color:red"> Jullov </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
-| <span style="color:grey"> 2025-01-16 </span> | <span style="color:grey"> Oscar T. ? </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey"> S~~TABP~~ </span> |
+|  2025-01-16  |  [Oscar Täckström, Sana Labs](2025-01-16.md)  |    |  [social media ](social-media-oscar-tackstrom.jpg)  |  [meeting backdrop ](meeting-backdrop-oscar-tackstrom.jpg)  |  [youtube thumbnail ](youtube-thumbnail-oscar-tackstrom.jpg)  |  S~~TABP~~  |
 |  2025-01-23  |  [Newton Mwai Kinyanjui, Chalmers University of Technology](2025-01-23.md)  |    |  [social media ](social-media-newton-mwai-kinyanjui.jpg)  |  [meeting backdrop ](meeting-backdrop-newton-mwai-kinyanjui.jpg)  |  [youtube thumbnail ](youtube-thumbnail-newton-mwai-kinyanjui.jpg)  |  S~~TABP~~  |
 | <span style="color:purple"> 2025-01-30 </span> | <span style="color:purple"> *Up for grabs!!!* </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple"> ~~STABP~~ </span> |
 | <span style="color:purple"> 2025-02-06 </span> | <span style="color:purple"> *Up for grabs!!!* </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple"> ~~STABP~~ </span> |
