@@ -5,11 +5,10 @@ metatags: "<meta name=\"robots\" content=\"noindex,nofollow\" />"
 <style type="text/css" scoped>
 td, th {border: 1px solid #ccc; padding: 0.6em;}
 table {border-collapse: collapse;}
-</style># Learning Machines Plan 2024-11-14
+</style># Learning Machines Plan 2024-11-21
 
 | date | speaker                                   | photo | shareable | meeting backdrop | youtube thumbnail | <a title="Speaker, Title, Abstract, Bio, Photo. Strikethrough means we don't have it yet.">comment</a>        |
 | ---- | ----------------------------------------- | ----- | ----- | ----- | ----- | -------------- |
-| <span style="color:red"> 2024-10-31 </span> | <span style="color:red"> Höstlov </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
 |  2024-11-07  |  [Joel Oskarsson, Linköping University](2024-11-07.md)  |  [photo](photo-joel-oskarsson.jpg)  |  [social media ](social-media-joel-oskarsson.jpg)  |  [meeting backdrop ](meeting-backdrop-joel-oskarsson.jpg)  |  [youtube thumbnail ](youtube-thumbnail-joel-oskarsson.jpg)  |  STABP  |
 | <span style="color:red"> 2024-11-14 </span> | <span style="color:red"> *Up for grabs!!!* </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
 |  2024-11-21  |  [Alp Kucukelbir, Columbia University](2024-11-21.md)  |  [photo](photo-alp-kucukelbir.jpg)  |  [social media ](social-media-alp-kucukelbir.jpg)  |  [meeting backdrop ](meeting-backdrop-alp-kucukelbir.jpg)  |  [youtube thumbnail ](youtube-thumbnail-alp-kucukelbir.jpg)  |  STABP  |
