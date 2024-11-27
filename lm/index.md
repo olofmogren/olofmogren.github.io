@@ -5,11 +5,10 @@ metatags: "<meta name=\"robots\" content=\"noindex,nofollow\" />"
 <style type="text/css" scoped>
 td, th {border: 1px solid #ccc; padding: 0.6em;}
 table {border-collapse: collapse;}
-</style># Learning Machines Plan 2024-11-25
+</style># Learning Machines Plan 2024-11-27
 
 | date | speaker                                   | photo | shareable | meeting backdrop | youtube thumbnail | <a title="Speaker, Title, Abstract, Bio, Photo. Strikethrough means we don't have it yet.">comment</a>        |
 | ---- | ----------------------------------------- | ----- | ----- | ----- | ----- | -------------- |
-|  2024-11-07  |  [Joel Oskarsson, Linköping University](2024-11-07.md)  |  [photo](photo-joel-oskarsson.jpg)  |  [social media ](social-media-joel-oskarsson.jpg)  |  [meeting backdrop ](meeting-backdrop-joel-oskarsson.jpg)  |  [youtube thumbnail ](youtube-thumbnail-joel-oskarsson.jpg)  |  STABP  |
 | <span style="color:red"> 2024-11-14 </span> | <span style="color:red"> *Up for grabs!!!* </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
 |  2024-11-21  |  [Alp Kucukelbir, Columbia University](2024-11-21.md)  |  [photo](photo-alp-kucukelbir.jpg)  |  [social media ](social-media-alp-kucukelbir.jpg)  |  [meeting backdrop ](meeting-backdrop-alp-kucukelbir.jpg)  |  [youtube thumbnail ](youtube-thumbnail-alp-kucukelbir.jpg)  |  STABP  |
 |  2024-11-28  |  [Alireza Taheri Dehkordi, Lund University](2024-11-28.md)  |  [photo](photo-alireza-taheri-dehkordi.jpg)  |  [social media ](social-media-alireza-taheri-dehkordi.jpg)  |  [meeting backdrop ](meeting-backdrop-alireza-taheri-dehkordi.jpg)  |  [youtube thumbnail ](youtube-thumbnail-alireza-taheri-dehkordi.jpg)  |  STABP  |
