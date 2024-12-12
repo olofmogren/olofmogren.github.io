@@ -5,7 +5,7 @@ metatags: "<meta name=\"robots\" content=\"noindex,nofollow\" />"
 <style type="text/css" scoped>
 td, th {border: 1px solid #ccc; padding: 0.6em;}
 table {border-collapse: collapse;}
-</style># Learning Machines Plan 2024-12-11
+</style># Learning Machines Plan 2024-12-12
 
 | date | speaker                                   | photo | shareable | meeting backdrop | youtube thumbnail | <a title="Speaker, Title, Abstract, Bio, Photo. Strikethrough means we don't have it yet.">comment</a>        |
 | ---- | ----------------------------------------- | ----- | ----- | ----- | ----- | -------------- |
@@ -24,7 +24,7 @@ table {border-collapse: collapse;}
 | <span style="color:grey"> 2025-03-06 </span> | <span style="color:grey"> Atakan A. ? </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey"> S~~TABP~~ </span> |
 | <span style="color:grey"> 2025-03-13 </span> | <span style="color:grey"> Sherrie W. ? </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey"> S~~TA~~B~~P~~ </span> |
 | <span style="color:grey"> 2025-03-20 </span> | <span style="color:grey"> Sasha L. ? </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey"> S~~TABP~~ </span> |
-| <span style="color:grey"> 2025-03-27 </span> | <span style="color:grey"> María J. M. ? </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey"> S~~TABP~~ </span> |
+|  2025-03-27  |  [María J. Molina, University of Maryland](2025-03-27.md)  |    |  [social media ](social-media-maria-j.-molina.jpg)  |  [meeting backdrop ](meeting-backdrop-maria-j.-molina.jpg)  |  [youtube thumbnail ](youtube-thumbnail-maria-j.-molina.jpg)  |  S~~TABP~~  |
 | <span style="color:purple"> 2025-04-03 </span> | <span style="color:purple"> *Up for grabs!!!* </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple"> ~~STABP~~ </span> |
 | <span style="color:purple"> 2025-04-10 </span> | <span style="color:purple"> *Up for grabs!!!* </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple"> ~~STABP~~ </span> |
 | <span style="color:red"> 2025-04-17 </span> | <span style="color:red"> Holy Thursday </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
