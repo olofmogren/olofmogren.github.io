@@ -5,18 +5,15 @@ metatags: "<meta name=\"robots\" content=\"noindex,nofollow\" />"
 <style type="text/css" scoped>
 td, th {border: 1px solid #ccc; padding: 0.6em;}
 table {border-collapse: collapse;}
-</style># Learning Machines Plan 2024-12-20
+</style># Learning Machines Plan 2025-01-08
 
 | date | speaker                                   | photo | shareable | meeting backdrop | youtube thumbnail | <a title="Speaker, Title, Abstract, Bio, Photo. Strikethrough means we don't have it yet.">comment</a>        |
 | ---- | ----------------------------------------- | ----- | ----- | ----- | ----- | -------------- |
-| <span style="color:grey"> 2024-12-05 </span> | <span style="color:grey"> Jonas A. ? </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey"> S~~TABP~~ </span> |
-| <span style="color:red"> 2024-12-12 </span> | <span style="color:red"> *Up for grabs!!!* </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
-| <span style="color:red"> 2024-12-19 </span> | <span style="color:red"> Jullov </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
 | <span style="color:red"> 2024-12-26 </span> | <span style="color:red"> Jullov </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
 |  2025-01-16  |  [Oscar Täckström, Sana Labs](2025-01-16.md)  |  [photo](photo-oscar-tackstrom.jpg)  |  [social media ](social-media-oscar-tackstrom.jpg)  |  [meeting backdrop ](meeting-backdrop-oscar-tackstrom.jpg)  |  [youtube thumbnail ](youtube-thumbnail-oscar-tackstrom.jpg)  |  STABP  |
 |  2025-01-23  |  [Newton Mwai Kinyanjui, Chalmers University of Technology](2025-01-23.md)  |  [photo](photo-newton-mwai-kinyanjui.jpg)  |  [social media ](social-media-newton-mwai-kinyanjui.jpg)  |  [meeting backdrop ](meeting-backdrop-newton-mwai-kinyanjui.jpg)  |  [youtube thumbnail ](youtube-thumbnail-newton-mwai-kinyanjui.jpg)  |  S~~TA~~BP  |
 |  2025-01-30  |  [Amal Nammouchi, Karlstad University and AfriClimate AI](2025-01-30.md)  |  [photo](photo-amal-nammouchi.jpg)  |  [social media ](social-media-amal-nammouchi.jpg)  |  [meeting backdrop ](meeting-backdrop-amal-nammouchi.jpg)  |  [youtube thumbnail ](youtube-thumbnail-amal-nammouchi.jpg)  |  STABP  |
-| <span style="color:grey"> 2025-02-06 </span> | <span style="color:grey"> Sara H. ? </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey"> S~~TABP~~ </span> |
+| <span style="color:grey"> 2025-02-06 </span> | <span style="color:grey"> Benjamin C. ? </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey"> S~~TABP~~ </span> |
 | <span style="color:red"> 2025-02-13 </span> | <span style="color:red"> Sportlov GBG </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
 |  2025-02-20  |  [Abdulhakim Abdi, Lund University](2025-02-20.md)  |  [photo](photo-abdulhakim-abdi.jpg)  |  [social media ](social-media-abdulhakim-abdi.jpg)  |  [meeting backdrop ](meeting-backdrop-abdulhakim-abdi.jpg)  |  [youtube thumbnail ](youtube-thumbnail-abdulhakim-abdi.jpg)  |  S~~TAB~~P  |
 | <span style="color:red"> 2025-02-27 </span> | <span style="color:red"> Sportlov STHLM </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
