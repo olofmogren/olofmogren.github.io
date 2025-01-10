@@ -35,11 +35,11 @@ table {border-collapse: collapse;}
 ## History 
 
 
-[2020](2020) [2021](2021) [2022](2022) [2023](2023) [2024](2024) [2025](2025)
+[2020](/lm/2020) [2021](/lm/2021) [2022](/lm/2022) [2023](/lm/2023) [2024](/lm/2024) [2025](/lm/2025)
 
 
 ## Statistics
 
 
-[2020](statistics-2020) [2021](statistics-2021) [2022](statistics-2022) [2023](statistics-2023) [2024](statistics-2024) [2025](statistics-2025)
+[2020](/lm/statistics-2020) [2021](/lm/statistics-2021) [2022](/lm/statistics-2022) [2023](/lm/statistics-2023) [2024](/lm/statistics-2024) [2025](/lm/statistics-2025)
 
