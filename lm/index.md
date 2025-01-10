@@ -5,7 +5,7 @@ metatags: "<meta name=\"robots\" content=\"noindex,nofollow\" />"
 <style type="text/css" scoped>
 td, th {border: 1px solid #ccc; padding: 0.6em;}
 table {border-collapse: collapse;}
-</style># Learning Machines Plan 2025-01-10
+</style># Learning Machines Plan 2025
 
 | date | speaker                                   | photo | shareable | meeting backdrop | youtube thumbnail | <a title="Speaker, Title, Abstract, Bio, Photo. Strikethrough means we don't have it yet.">comment</a>        |
 | ---- | ----------------------------------------- | ----- | ----- | ----- | ----- | -------------- |
@@ -35,7 +35,7 @@ table {border-collapse: collapse;}
 ## History 
 
 
-[2020](2020.html) [2021](2021) [2022](2022) [2023](2023) [2024](2024) [2025](2025)
+[2020](2020) [2021](2021) [2022](2022) [2023](2023) [2024](2024) [2025](2025)
 
 
 ## Statistics
