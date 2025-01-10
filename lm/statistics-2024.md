@@ -12,7 +12,7 @@ title: Learning Machines Statistics 2024
 
 ## 24 speakers
 
- Ankit Kariryaa Santiago Martinez Balvanera Yonghao Xu Jonas Hentati Sundberg Alexander Mathis Fredrik Gustafsson Charlie Fieseler Serge Belongie Mikolaj Czerkawski Smita Chakraborty Joel Oskarsson Jakob Ambsdorf Tobias Andermann Shruti Nath Liane Guillou Alireza Taheri Dehkordi Karsten Kreis Alouette van Hove Alp Kucukelbir Matthias Obst TBA Mélisande Teng Joakim Lindblad
+, Alexander Mathis, Alireza Taheri Dehkordi, Alouette van Hove, Alp Kucukelbir, Ankit Kariryaa, Charlie Fieseler, Fredrik Gustafsson, Jakob Ambsdorf, Joakim Lindblad, Joel Oskarsson, Jonas Hentati Sundberg, Karsten Kreis, Liane Guillou, Matthias Obst, Mikolaj Czerkawski, Mélisande Teng, Santiago Martinez Balvanera, Serge Belongie, Shruti Nath, Smita Chakraborty, TBA, Tobias Andermann, Yonghao Xu
 ## 20 affiliations
 
- RISE Columbia University University of Oslo RISE Research Institutes of Sweden Lund University University of Vienna Karolinska Institutet Swedish University of Agricultural Sciences NVIDIA Research University of Oxford and Climate Analytics European Space Agency EPFL University of Copenhagen MILA and Universite de Montreal University College London Uppsala University University of Copenhagen & Pioneer Centre for AI University of Gothenburg Linköping University
+, Columbia University, EPFL, European Space Agency, Karolinska Institutet, Linköping University, Lund University, MILA and Universite de Montreal, NVIDIA Research, RISE, RISE Research Institutes of Sweden, Swedish University of Agricultural Sciences, University College London, University of Copenhagen, University of Copenhagen & Pioneer Centre for AI, University of Gothenburg, University of Oslo, University of Oxford and Climate Analytics, University of Vienna, Uppsala University
