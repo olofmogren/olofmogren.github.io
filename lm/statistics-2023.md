@@ -16,5 +16,5 @@ Adam Breitholtz, Alexander Ilin, Alisa Devlic, Ben Weinstein, Elijah Cole, Gabri
 
 ## 25 affiliations
 
-AI Sweden, Aalto University, CMU, Caltech, Carnegie Mellon University, Chalmers University of Technology, FAIR, Google Deepmind, Halmstad University, KTH, Karlstad University/KTH, Lund University, MIT and Climate Change AI, RISE, Sony AI, TU Berlin, TU Munich, University College London (UCL), University of Copenhagen, University of Edinburgh, University of Florida, University of Surrey, University of Zurich, Uppsala University, École polytechnique fédérale de Lausanne (EPFL)
+AI Sweden, Aalto University, CMU, Caltech, Carnegie Mellon University, Chalmers University of Technology, FAIR, Google Deepmind, Halmstad University, KTH, Karlstad University/KTH, Lund University, MIT and Climate Change AI, RISE Research Institutes of Sweden, Sony AI, TU Berlin, TU Munich, University College London (UCL), University of Copenhagen, University of Edinburgh, University of Florida, University of Surrey, University of Zurich, Uppsala University, École polytechnique fédérale de Lausanne (EPFL)
 
