@@ -10,9 +10,9 @@ title: Learning Machines Statistics 2024
 
 
 
-## 23 speakers
+## 22 speakers
 
-Alexander Mathis, Alireza Taheri Dehkordi, Alouette van Hove, Alp Kucukelbir, Ankit Kariryaa, Charlie Fieseler, Fredrik Gustafsson, Jakob Ambsdorf, Joakim Lindblad, Joel Oskarsson, Jonas Hentati Sundberg, Karsten Kreis, Liane Guillou, Matthias Obst, Mikolaj Czerkawski, Mélisande Teng, Santiago Martinez Balvanera, Serge Belongie, Shruti Nath, Smita Chakraborty, TBA, Tobias Andermann, Yonghao Xu
+Alexander Mathis, Alireza Taheri Dehkordi, Alouette van Hove, Alp Kucukelbir, Ankit Kariryaa, Charlie Fieseler, Fredrik Gustafsson, Jakob Ambsdorf, Joakim Lindblad, Joel Oskarsson, Jonas Hentati Sundberg, Karsten Kreis, Liane Guillou, Matthias Obst, Mikolaj Czerkawski, Mélisande Teng, Santiago Martinez Balvanera, Serge Belongie, Shruti Nath, Smita Chakraborty, Tobias Andermann, Yonghao Xu
 
 ## 19 affiliations
 
