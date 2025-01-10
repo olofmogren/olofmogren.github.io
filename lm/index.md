@@ -9,7 +9,6 @@ table {border-collapse: collapse;}
 
 | date | speaker                                   | photo | shareable | meeting backdrop | youtube thumbnail | <a title="Speaker, Title, Abstract, Bio, Photo. Strikethrough means we don't have it yet.">comment</a>        |
 | ---- | ----------------------------------------- | ----- | ----- | ----- | ----- | -------------- |
-|  2020-10-15  |  [Leon Suetfeld](2020-10-15.md)  |    |  [social media ](2020-10-15-social-media-leon-suetfeld.jpg)  |  [meeting backdrop ](2020-10-15-meeting-backdrop-leon-suetfeld.jpg)  |  [youtube thumbnail ](2020-10-15-youtube-thumbnail-leon-suetfeld.jpg)  |  ST~~ABP~~  |
 |  2020-10-22  |  [Fredrik Carlsson](2020-10-22.md)  |  [photo](photo-fredrik-carlsson.png)  |  [social media ](2020-10-22-social-media-fredrik-carlsson.jpg)  |  [meeting backdrop ](2020-10-22-meeting-backdrop-fredrik-carlsson.jpg)  |  [youtube thumbnail ](2020-10-22-youtube-thumbnail-fredrik-carlsson.jpg)  |  S~~TAB~~P  |
 | <span style="color:red"> 2020-10-29 </span> | <span style="color:red"> höstlov,v44? </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
 |  2020-11-05  |  [Olof Mogren](2020-11-05.md)  |    |  [social media ](2020-11-05-social-media-olof-mogren.jpg)  |  [meeting backdrop ](2020-11-05-meeting-backdrop-olof-mogren.jpg)  |  [youtube thumbnail ](2020-11-05-youtube-thumbnail-olof-mogren.jpg)  |  ST~~ABP~~  |
