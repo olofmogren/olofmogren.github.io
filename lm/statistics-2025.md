@@ -16,5 +16,5 @@ Abdul Shaamala, Abdulhakim Abdi, Amal Nammouchi, Atakan Aral, Beici Liang, Benja
 
 ## 21 affiliations
 
-Adobe, Chalmers University of Technology, Columbia University, Conservatoire National des Arts et Métiers, ETH Zurich, Epidemic sound, European Centre for Medium-Range Weather Forecasts, Friedrich-Alexander-Universität Erlangen-Nürnberg (FAU), Karlstad University and AfriClimate AI, Lund University, MIT, NORCE Norwegian Research Centre, Norwegian Institute for Nature Research, Queensland University of Technology, RISE Research Institutes of Sweden, RISE and Lund University, SINTEF, Sana Labs, TU Munich, University of Maryland, University of Vienna
+Adobe, CNAM, Chalmers University of Technology, Columbia University, ETH Zurich, Epidemic sound, European Centre for Medium-Range Weather Forecasts, Friedrich-Alexander-Universität Erlangen-Nürnberg (FAU), Karlstad University and AfriClimate AI, Lund University, MIT, NORCE Norwegian Research Centre, Norwegian Institute for Nature Research, Queensland University of Technology, RISE Research Institutes of Sweden, RISE and Lund University, SINTEF, Sana Labs, TU Munich, University of Maryland, University of Vienna
 
