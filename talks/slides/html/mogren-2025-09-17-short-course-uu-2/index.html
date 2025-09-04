@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<style>
+:root {
+  /* 16:9 slide box derived from viewport */
+  --slide-w: min(100vw, 177.78vh);
+  --slide-h: calc(var(--slide-w) * 0.5625); /* 9/16 */
+
+  /* 1% of the slide’s width/height */
+  --cqw: calc(var(--slide-w) / 100);
+  --cqh: calc(var(--slide-h) / 100);
+}
+@font-face {
+  font-family: "Code Pro Bold";
+  src: url('resources/CodePro-Bold.woff2') format('woff2');
+}
+@font-face {
+  font-family: "Lato Regular";
+  src: url('resources/Lato-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: "Roboto Mono Regular";
+  src: url('resources/RobotoMono-Regular.woff2') format('woff2');
+}
+body {
+  overflow: hidden;
+  background-color: black;
+  font-family: "Lato Regular", Arial, Sans-Serif;
+  font-weight: normal;
+}
+h1 {
+  font-family: "Code Pro Bold", Arial, Sans-Serif;
+  /*font-size: 4cqw;*/
+  font-size: "calc(4.000 * var(--cqw))";
+  font-weight: normal;
+}
+h2 {
+  font-family: "Code Pro Bold", Arial, Sans-Serif;
+  /*font-size: 2.8cqw;*/
+  font-size: "calc(2.667 * var(--cqw))";
+  font-weight: normal;
+}
+h3 {
+  font-family: "Code Pro Bold", Arial, Sans-Serif;
+  /*font-size: 2cqw;*/
+  font-size: calc(1.905 * var(--cqw));
+  font-weight: normal;
+}
+h4 {
+  font-family: "Code Pro Bold", Arial, Sans-Serif;
+  /*font-size: 2cqw;*/
+  font-size: calc(1.905 * var(--cqw));
+  font-weight: normal;
+}
+.page_visible {
+  visibility: visible;
+}
+.page_hidden {
+  visibility: hidden;
+}
+div.page_div {
+  background-color: #fff;
+}
+div.page_div {
+  background-color: #fff;
+  width: 100vw;
+  height: 56.25vw; /* height:width ratio = 9/16 = .5625  */
+  max-height: 100vh;
+  max-width: 177.78vh; /* 16/9 = 1.778 */
+  margin: auto;
+  position: absolute;
+  top:0;
+  bottom:0; /* vertical center */
+  left:0;
+  right:0; /* horizontal center */
+  /* container-type: size; */
+  overflow: hidden;
+  z-index: 2;
+}
+div.subcontainer {
+  container-type: size;
+  width: 100%;
+  height: 100%;
+  font-size: calc(2.267 * var(--cqw));
+}
+div.black_div {
+  background-color: #000;
+  color: #fff;
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  visibility: hidden;
+  z-index: 8;
+}
+/* Floating instructions panel (reuses .loading_div element) */
+div.loading_div {
+  position: fixed;
+  bottom: calc(1vw + 4vw + 0.75vw); /* sit above the circle */
+  right: 1vw;
+  max-width: 36vw;
+  background-color: rgba(0,0,0,0.85);
+  color: white;
+  visibility: hidden;   /* hidden by default */
+  opacity: 0;
+  z-index: 20;
+  text-align: left;
+  display: block;
+  align-items: start;
+  justify-content: start;
+  font-size: 1vw;
+  padding: 1vw 1.2vw;
+  border-radius: 0.8vw;
+  box-shadow: 0 0.6vw 1.6vw rgba(0,0,0,0.4);
+  transition: opacity .25s ease, visibility .25s ease;
+  pointer-events: none; /* no clicks when hidden */
+}
+div.loading_div.visible {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto; /* clickable when shown */
+}
+div.loading_div.as-help .splash-only {
+  display: none;
+}
+
+/* Floating question mark button */
+#help_btn {
+  position: fixed;
+  bottom: 1vw;
+  right: 1vw;
+  width: 4vw;                /* 4% of screen width */
+  height: 4vw;
+  min-width: 28px;           /* sensible floor for tiny screens */
+  min-height: 28px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.65);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2vw;
+  line-height: 1;
+  cursor: pointer;
+  user-select: none;
+  z-index: 21;
+  box-shadow: 0 0.5vw 1.2vw rgba(0,0,0,0.35);
+  transition: opacity .35s ease;
+  opacity: 1;
+}
+#help_btn.hidden { opacity: 0; pointer-events: none; }
+
+/* Always show the button in overview */
+body.overview #help_btn {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+div.l4_box {
+  position: absolute;
+  border-radius: 1cqw;
+  overflow: hidden;
+}
+div.l4_box p {
+  margin: 1.2cqw;
+}
+div.footer {
+  font-family: "Roboto Mono Regular", Arial, Sans-Serif;
+  /*font-size: 1cqw;*/
+  font-size: calc(0.933 * var(--cqw));
+  font-weight: normal;
+}
+ul {
+  margin-top: 0;
+  border: 1px;
+}
+li {
+  margin-top: 0em;
+  margin-bottom: 0.3em;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 0.3em;
+}
+/*div {
+border: 1px #ccc solid;
+/* for debugging: borders for all divs */
+}
+p {
+border: 1px #ccc solid;
+}*/
+
+/* --- Overview mode (toggle with 'O') --- */
+#slides {
+  position: relative;
+  z-index: 2;
+}
+body.overview {
+  overflow: auto; /* allow scroll if >25 slides */
+}
+body.overview #slides {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.75vw;
+  padding: 0.75vw;
+  place-items: center;
+}
+
+/* Force every page visible and sized as thumbnails */
+body.overview .page_div {
+  position: relative !important;
+  visibility: visible !important;
+  width: calc(100vw / 5 - 1.2vw);
+  height: calc((100vw / 5 - 1.2vw) * 0.5625); /* keep 16:9 */
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  box-shadow: 0 0.25vw 0.75vw rgba(0,0,0,0.35);
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* Prevent inner content from capturing clicks during overview */
+body.overview .page_div .subcontainer {
+  pointer-events: none;
+}
+
+/* Dim the current slide a bit to indicate selection */
+body.overview .page_div.is-current {
+  outline: 0.25vw solid #888;
+  outline-offset: 0.25vw;
+}
+
+/* Scale inner content so text shrinks in overview */
+:root {
+  /* 5 columns => ~20% scale. Tweak if you change columns/gaps. */
+  --thumb-scale: 0.2;
+}
+
+body.overview .page_div .subcontainer {
+  /* Make the visual content 20% of normal size */
+  transform: scale(var(--thumb-scale));
+  transform-origin: top left;
+
+  /* Expand the layout box inversely so the scaled content still fills the thumbnail */
+  width: calc(100% / var(--thumb-scale));
+  height: calc(100% / var(--thumb-scale));
+
+  /* Keep thumbnails click-through (handled on the slide box) */
+  pointer-events: none;
+}
+
+@page
+{
+    size: A4 landscape;
+    margin: 0;
+}
+@media print {
+  @page {
+    size: 160mm 90mm;
+    margin: 0;
+    -webkit-print-color-adjust: exact !important;   /* Chrome, Safari 6 – 15.3, Edge */
+    color-adjust: exact !important;                 /* Firefox 48 – 96 */
+    print-color-adjust: exact !important;           /* Firefox 97+, Safari 15.4+ */
+
+  }
+
+  :root {
+    --slide-w: 160mm;
+    --slide-h: 90mm;
+    --cqw: calc(var(--slide-w) / 100);
+    --cqh: calc(var(--slide-h) / 100);
+  }
+
+  body {
+    margin:0px;
+  }
+  div.page_div {
+    position: relative;
+    visibility: visible;
+    break-after: always;
+    break-inside: avoid;
+    display: table;
+    /* width: 160mm;
+    height: 90mm;*/
+    width: var(--slide-w);
+    height: var(--slide-h);
+  }
+  .page_visible {
+    visibility: visible;
+  }
+  .page_hidden {
+    visibility: visible;
+  }
+}
+</style>
+		<title>AI for climate adaptation and mitigation </title>
+		<script>
+var currentPageId = "page-1";
+var blackPageVar = false;
+var lastPage = 19;
+
+var overviewMode = false; // if you already declared this earlier, keep only one
+var helpBtnTimer = null;
+
+var initialHelpShown = false;
+
+function onloadHandler() {
+  gotoHash();          // make sure we still go to the right slide
+  wireHelpUI();        // attach the click handlers (idempotent)
+  if (!initialHelpShown) {
+    var b = document.getElementById('help_btn');
+    if (b) {
+      b.classList.remove('hidden'); // show immediately
+      if (helpBtnTimer) clearTimeout(helpBtnTimer);
+      helpBtnTimer = setTimeout(function() {
+        b.classList.add('hidden');  // hide after 5s
+      }, 5000);
+    }
+    initialHelpShown = true;
+  }
+}
+function showHelpBtn() {
+  var b = document.getElementById('help_btn');
+  if (b) b.classList.remove('hidden');
+}
+function hideHelpBtn() {
+  var b = document.getElementById('help_btn');
+  if (b) b.classList.add('hidden');
+}
+
+
+function getHelpPanel() {
+  return document.getElementsByClassName('loading_div')[0];
+}
+function showHelpPanel() {
+  var p = getHelpPanel();
+  if (!p) return;
+  p.classList.add('as-help');     // ← mark as help (hides splash-only)
+  p.classList.add('visible');  // CSS transitions handle fade in
+}
+function hideHelpPanel() {
+  var p = getHelpPanel();
+  if (!p) return;
+  p.classList.remove('visible'); // fade out
+  p.classList.remove('as-help');     // ← mark as help (hides splash-only)
+}
+
+/* ensure the button works and clicks don't immediately close the panel */
+function wireHelpUI() {
+  var btn = document.getElementById('help_btn');
+  if (btn && !btn._wired) {
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      showHelpPanel();
+    });
+    btn._wired = true;
+  }
+  var panel = getHelpPanel();
+  if (panel && !panel._wired) {
+    panel.addEventListener('click', function(e){ e.stopPropagation(); });
+    panel._wired = true;
+  }
+  // Any click outside closes the panel
+  if (!document._help_global_click) {
+    document.addEventListener('click', function(){ hideHelpPanel(); });
+    document._help_global_click = true;
+  }
+}
+
+var overviewMode = false;
+
+function setCurrentMarker() {
+  // mark current slide for subtle outline in overview
+  for (var i = 1; i <= lastPage; i++) {
+    var pid = 'page-' + i;
+    var el = document.getElementById(pid);
+    if (!el) continue;
+    if (pid === currentPageId) el.classList.add('is-current');
+    else el.classList.remove('is-current');
+  }
+}
+
+function enterOverview() {
+  if (overviewMode) return;
+  overviewMode = true;
+  document.body.classList.add('overview');
+
+  showHelpBtn();           // <— keep button visible in overview
+  hideHelpPanel();         // <— close panel when mode changes
+
+  // make all slides visible and clickable
+  for (var i = 1; i <= lastPage; i++) {
+    var pid = 'page-' + i;
+    var el = document.getElementById(pid);
+    if (!el) continue;
+
+    // Ensure visibility regardless of page_visible/page_hidden
+    el.classList.remove('page_hidden');
+    el.classList.add('page_visible');
+
+    // Attach a one-off click handler that exits overview and navigates
+    el.addEventListener('click', overviewClickHandler);
+  }
+  setCurrentMarker();
+}
+
+function exitOverview() {
+  if (!overviewMode) return;
+  overviewMode = false;
+  document.body.classList.remove('overview');
+
+  hideHelpPanel();
+  hideHelpBtn();           // <— fade if not within 5s
+
+  // Remove click handlers
+  for (var i = 1; i <= lastPage; i++) {
+    var pid = 'page-' + i;
+    var el = document.getElementById(pid);
+    if (!el) continue;
+    el.removeEventListener('click', overviewClickHandler);
+    el.classList.remove('is-current');
+  }
+
+  // Restore single-slide view based on currentPageId
+  for (var i = 1; i <= lastPage; i++) {
+    var pid = 'page-' + i;
+    var el = document.getElementById(pid);
+    if (!el) continue;
+    if (pid === currentPageId) {
+      el.classList.remove('page_hidden');
+      el.classList.add('page_visible');
+    } else {
+      el.classList.remove('page_visible');
+      el.classList.add('page_hidden');
+    }
+  }
+}
+
+function toggleOverview() {
+  if (overviewMode) exitOverview();
+  else enterOverview();
+}
+
+function overviewClickHandler(e) {
+  // During overview, clicking a slide selects it and exits
+  var parent = e.currentTarget; // .page_div
+  var pid = parent.id;
+  currentPageId = pid;
+  window.location.hash = pid;
+  exitOverview();
+  e.stopPropagation();
+}
+
+function blackPage() {
+  if (blackPageVar) {
+    document.getElementById('black_div').style.visibility = 'hidden';
+    //alert('un-black page');
+  }
+  else {
+    document.getElementById('black_div').style.visibility = 'visible';
+    //alert('black page');
+  }
+  blackPageVar = !blackPageVar;
+}
+function mouseuphandler(e) {
+  var selection = window.getSelection();
+  if(selection.toString().length > 0) {
+    //alert('there was something selected'+selection.toString().length);
+    return;
+  }
+  e.pageX;
+  width = document.getElementById(currentPageId).offsetWidth;
+  //alert(width);
+  if (e.pageX < 0.25*width) {
+    prevPage();
+  }
+  else {
+    nextPage()
+  }
+}
+function gotoHash(){
+  var currentPageId = "page-1";
+  newPageId = window.location.hash.substring(1);
+  if (newPageId == "") {
+    newPageId = currentPageId;
+  }
+  goToPage(newPageId);
+}
+function prevPage(){
+  //alert('prevPage')
+  if (overviewMode) return;  // do nothing in overview
+  hideHelpPanel();
+  splits = currentPageId.split("-");
+  currentPageNumber = parseInt(splits[1]);
+  prevPageNumber = currentPageNumber-1;
+  pageId = "page-"+prevPageNumber;
+  element = document.getElementById(pageId);
+  if (element) {
+    document.getElementById(currentPageId).classList.remove('page_visible');
+    document.getElementById(currentPageId).classList.add('page_hidden');
+    document.getElementById(pageId).classList.remove('page_hidden');
+    document.getElementById(pageId).classList.add('page_visible');
+    //document.getElementById(currentPageId).style.visibility="hidden";
+    //document.getElementById(pageId).style.visibility="visible";
+    currentPageId = pageId;
+    window.location.hash = pageId;
+  }
+}
+function nextPage(){
+  //alert('nextPage')
+  if (overviewMode) return;  // do nothing in overview
+  hideHelpPanel();
+  splits = currentPageId.split("-");
+  currentPageNumber = parseInt(splits[1]);
+  nextPageNumber = currentPageNumber+1;
+  pageId = "page-"+nextPageNumber;
+  element = document.getElementById(pageId);
+  if (element) {
+    document.getElementById(currentPageId).classList.remove('page_visible');
+    document.getElementById(currentPageId).classList.add('page_hidden');
+    document.getElementById(pageId).classList.remove('page_hidden');
+    document.getElementById(pageId).classList.add('page_visible');
+    //document.getElementById(currentPageId).style.visibility="hidden";
+    //document.getElementById(pageId).style.visibility="visible";
+    currentPageId = pageId;
+    window.location.hash = pageId;
+  }
+}
+function goToPage(pageId){
+  //alert(pageId);
+  hideHelpPanel();
+  if (!document.getElementById(pageId)){
+    //alert(pageId+": page not found")
+    pageId = "page-1";
+  }
+  document.getElementById(currentPageId).classList.remove('page_visible');
+  document.getElementById(currentPageId).classList.add('page_hidden');
+  document.getElementById(pageId).classList.remove('page_hidden');
+  document.getElementById(pageId).classList.add('page_visible');
+  //document.getElementById(currentPageId).style.visibility="hidden";
+  //document.getElementById(pageId).style.visibility="visible";
+  currentPageId = pageId;
+  window.location.hash = pageId;
+  setCurrentMarker();
+}
+function localPageLink(pageId, event){
+  //alert(pageId);
+  event.stopPropagation(); // do not fire event on parent elements.
+  goToPage(pageId);
+}
+function stopProp(event){
+  event.stopPropagation();
+}
+document.onkeydown = function(event) {
+  hideHelpPanel();
+  switch (event.keyCode) {
+    case 33:
+      // page up
+      prevPage();
+    break;
+    case 34:
+      // page down
+      nextPage();
+    break;
+    case 35:
+      // end
+      goToPage('page-'+lastPage);
+    break;
+    case 36:
+      // home
+      goToPage('page-0');
+    break;
+    case 37:
+      // left arrow
+      prevPage();
+    break;
+    case 38:
+      // up arrow
+      prevPage();
+    break;
+    case 32:
+      //space
+      nextPage();
+    break;
+    case 39:
+      // right arrow
+      nextPage();
+    break;
+    case 40:
+      // down arrow
+      nextPage();
+    break;
+    case 66:
+      // b - blank/black
+      blackPage();
+    break;
+    case 70:
+      // f - fulscreen
+      if (window.fullScreen) {
+        document.exitFullscreen();
+      }
+      else {
+        document.documentElement.requestFullscreen();
+      }
+    case 79:
+      // o - overview
+      toggleOverview();
+    break;
+    break;
+  }
+};
+</script>
+		<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+		<script id="MathJax-script" async="true" src="resources/tex-mml-svg.js"> </script>
+		<meta generator='pymdslides, git commit: "ffbcb9edebc0c6f35754efe250af4be53af8e696" https://github.com/olofmogren/pymdslides/'>
+		<meta generation-date="2025-09-04 15:51:36.569821+02:00">
+	</head>
+	<body onload="onloadHandler();">
+		<div id="slides">
+			<div id="page-1" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+					<img src="graphics/20230713_152426-environment.jpg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
+					<div style="position: absolute; left: 6.250%; top: 36.667%; width: 87.500%; height: 11.481%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">AI for climate adaptation and mitigation</h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 44.074%; width: 87.500%; height: 7.778%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+						<h2 style="margin: 0; padding: 0; font-size: calc(2.667 * var(--cqw)); ">AI for environmental data, Uppsala University</h2>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+						<p> </p>
+						<p> </p>
+						<p> </p>
+						<p> </p>
+						<p> </p>
+						<p>Olof Mogren, RISE Research Institutes of Sweden</p>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #ffffffff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>1   mogren.ml, olof.mogren@ri.se, 2025-09-17</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-2" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+					<img src="graphics/chatgpt-monitoring-mitigation-adaptation-prediction.webp" style="position: absolute; left: 56.250%; top: 24.444%; width: 37.500%; height: 67.407%; object-fit: cover;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">Climate change</h1>
+					</div>
+					<div style="position: absolute; left: 9.583%; top: 15.556%; width: 87.500%; height: 7.778%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+						<h2 style="margin: 0; padding: 0; font-size: calc(2.667 * var(--cqw)); ">A multifaceted challenge benefiting from AI at every level</h2>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+						<ul>
+							<li>Monitoring
+<ul>
+									<li>remote sensing, sensor networks, bioacoustics</li>
+								</ul>
+							</li>
+							<li>Mitigation
+<ul>
+									<li>Emission reduction and carbon sequestration</li>
+								</ul>
+							</li>
+							<li>Adaptation
+<ul>
+									<li>Resilience planning</li>
+								</ul>
+							</li>
+							<li>Prediction
+<ul>
+									<li>Weather systems and extreme events</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>2   mogren.ml, olof.mogren@ri.se</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-3" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">Why climate adaptation and mitigation?</h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+						<ul>
+							<li>Urgency of climate action: adaptation vs mitigation</li>
+							<li>Role of data and AI in accelerating solutions</li>
+						</ul>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>3   mogren.ml, olof.mogren@ri.se</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-4" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">The AI toolbox for climate solutions</h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+						<ul>
+							<li>Machine learning, optimization, deep learning, reinforcement learning</li>
+							<li>Distinction between prediction, decision support, and control</li>
+						</ul>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>4   mogren.ml, olof.mogren@ri.se</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-5" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">Framework: where AI can help</h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+						<ul>
+							<li>Adaptation: managing risks, resilience, local solutions</li>
+							<li>Mitigation: reducing emissions, improving efficiency, accelerating transitions</li>
+						</ul>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>5   mogren.ml, olof.mogren@ri.se</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-6" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">AI in climate finance and policy (Alp Kucukelbir)</h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+						<ul>
+							<li>Equity and fairness in AI-driven climate decisions</li>
+							<li>Risk assessment and trustworthy ML for climate policy</li>
+							<li>Example: modeling insurance/financial risk for vulnerable communities</li>
+							<li>(CHECK ALP's TALK)!</li>
+						</ul>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>6   mogren.ml, olof.mogren@ri.se</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-7" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">AI and power systems (Priya Donti)</h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+						<ul>
+							<li>Grid optimization and renewable integration</li>
+							<li>Forecasting demand and generation for clean energy</li>
+							<li>Democratizing access to climate-relevant AI tools</li>
+							<li>CHECK PRIYA's TALK!</li>
+						</ul>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>7   mogren.ml, olof.mogren@ri.se</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-8" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">AI for optimizing urban green spaces</h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+						<ul>
+							<li>Turning “grey” into “green”: Malmö &amp; Uppsala examples</li>
+							<li>Satellite data + machine learning for site selection</li>
+							<li>Optimization of cooling, biodiversity, and carbon benefits</li>
+						</ul>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>8   mogren.ml, olof.mogren@ri.se</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-9" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">AI for climate-smart agriculture</h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+						<ul>
+							<li>Precision irrigation and yield prediction</li>
+							<li>Pest/disease detection under climate stress</li>
+							<li>Example: ML-based decision support for smallholder farmers</li>
+						</ul>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>9   mogren.ml, olof.mogren@ri.se</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-10" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">AI for transportation and emissions reduction</h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+						<ul>
+							<li>Route optimization and electric vehicle charging</li>
+							<li>Reducing congestion and fuel use</li>
+							<li>Example: ML in logistics and shipping</li>
+							<li>Example: buildings, heating</li>
+						</ul>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>10   mogren.ml, olof.mogren@ri.se</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-11" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">AI for decision support and progress analysis</h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+						<ul>
+							<li>See next lecture!</li>
+							<li>But also add stuff here.</li>
+						</ul>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>11   mogren.ml, olof.mogren@ri.se</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-12" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">AI for carbon capture and materials discovery</h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+						<ul>
+							<li>Discovering new materials for batteries, carbon capture</li>
+							<li>Accelerating climate solutions through generative models</li>
+						</ul>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>12   mogren.ml, olof.mogren@ri.se</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-13" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">Common challenges</h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+						<ul>
+							<li>Data availability and bias (e.g. Global North vs Global South)</li>
+							<li>Energy use of AI systems themselves</li>
+							<li>Interpretability, trust, and ethics in deployment</li>
+						</ul>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>13   mogren.ml, olof.mogren@ri.se</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-14" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">Climate Change AI and Climate AI Nordics</h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+						<p> </p>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>14   mogren.ml, olof.mogren@ri.se</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-15" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">Merge slides below in right place!</h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+						<p> </p>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>15   mogren.ml, olof.mogren@ri.se</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-16" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+					<img src="graphics/dall-e-3-computer-lab.jpg" style="position: absolute; left: 50.000%; top: 0.000%; width: 50.000%; height: 100.000%; object-fit: cover;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 37.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">High tech</h1>
+					</div>
+					<div style="position: absolute; left: 9.583%; top: 15.556%; width: 37.500%; height: 7.778%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+						<h2 style="margin: 0; padding: 0; font-size: calc(2.667 * var(--cqw)); ">for low tech</h2>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+						<ul>
+							<li>Make data accessible
+<ul>
+									<li>Decision support, policy making</li>
+								</ul>
+							</li>
+							<li>Predictions
+<ul>
+									<li>Energy, transportation, extreme events</li>
+								</ul>
+							</li>
+							<li>Optimization
+<ul>
+									<li>Energy, transportation</li>
+									<li>Circ. econ, green infr.</li>
+									<li>Nature-based solutions</li>
+								</ul>
+							</li>
+							<li>Replace heavy computation
+<ul>
+									<li>Weather sim., hydrology</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>16   Dall-E 3: A computer lab with many big computer screens, showing charts, tables, and images of forests and wetlands</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-17" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+					<img src="graphics/wwf-camera-trap.jpg" style="position: absolute; left: 56.250%; top: 24.444%; width: 18.750%; height: 33.704%; object-fit: cover;">
+					<img src="graphics/rtsys-hydrophone-720x450.webp" style="position: absolute; left: 75.000%; top: 24.444%; width: 18.750%; height: 33.704%; object-fit: cover;">
+					<img src="graphics/usgs-pam-720x540.jpg" style="position: absolute; left: 56.250%; top: 58.148%; width: 18.750%; height: 33.704%; object-fit: cover;">
+					<img src="graphics/unity-college-environmental-analysis.jpg" style="position: absolute; left: 75.000%; top: 58.148%; width: 18.750%; height: 33.704%; object-fit: cover;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">In conclusion:</h1>
+					</div>
+					<div style="position: absolute; left: 9.583%; top: 15.556%; width: 87.500%; height: 7.778%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+						<h2 style="margin: 0; padding: 0;font-size: calc(2.667 * var(--cqw)); ">Environment data</h2>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+						<ul>
+							<li>Remote sensing
+<ul>
+									<li>Satellite imagery</li>
+									<li>Drone footage</li>
+								</ul>
+							</li>
+							<li>Sound recordings
+<ul>
+									<li>Passive acoustic devices</li>
+								</ul>
+							</li>
+							<li>Video data
+<ul>
+									<li>Camera traps</li>
+								</ul>
+							</li>
+							<li>Other sensors
+<ul>
+									<li>Water flow sensors</li>
+									<li>Atmospheric measurements</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>17   mogren.ml, olof.mogren@ri.se</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-18" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">Collaborative networks</h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+						<p> </p>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>18   mogren.ml, olof.mogren@ri.se</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-19" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+					<div style="position: absolute; left: 6.250%; top: 36.667%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; ">
+						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); ">Thank you!</h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+						<p> </p>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>19   mogren.ml, olof.mogren@ri.se</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="black_div" id="black_div"> </div>
+		<div id="help_btn" class="hidden">?</div>
+		<div class="loading_div">
+			<div>
+				<p class="splash-only">Loading.</p>
+				<p class="splash-only">PYMD slides requires a javascript-enabled browser.</p>
+				<p>Usage: Arrow buttons, page up/down, or space to navigate.</p>
+				<p>F for fullscreen. B for blank. Click on leftmost quarter for previous slide, the rest for next.</p>
+				<p>O for overview grid. Click a slide to jump.</p>
+				<p>More info: see https://github.com/olofmogren/pymdslides/ .</p>
+			</div>
+		</div>
+		<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z/C/HgAGgwJ/lK3Q6wAAAABJRU5ErkJggg==" style="visibility: hidden;" onload="gotoHash()">
+	</body>
+</html>
