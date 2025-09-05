@@ -252,11 +252,6 @@ body.overview .page_div .subcontainer {
   pointer-events: none;
 }
 
-@page
-{
-    size: A4 landscape;
-    margin: 0;
-}
 @media print {
   @page {
     size: 160mm 90mm;
@@ -292,15 +287,16 @@ body.overview .page_div .subcontainer {
     visibility: visible;
   }
   .page_hidden {
-    visibility: visible;
+        visibility: visible;
   }
+  #help_btn { opacity: 0; }
 }
 </style>
-		<title>AI for prediction and Earth system modelling </title>
+		<title>AI for prediction &amp; Earth system modelling </title>
 		<script>
 var currentPageId = "page-1";
 var blackPageVar = false;
-var lastPage = 25;
+var lastPage = 26;
 
 var overviewMode = false; // if you already declared this earlier, keep only one
 var helpBtnTimer = null;
@@ -625,7 +621,7 @@ MathJax = {
 </script>
 		<script id="MathJax-script" async="true" src="resources/tex-mml-svg.js"> </script>
 		<meta generator='pymdslides, git commit: "ffbcb9edebc0c6f35754efe250af4be53af8e696" https://github.com/olofmogren/pymdslides/'>
-		<meta generation-date="2025-09-04 15:51:37.873812+02:00">
+		<meta generation-date="2025-09-05 12:56:36.859368+02:00">
 	</head>
 	<body onload="onloadHandler();">
 		<div id="slides">
@@ -633,13 +629,13 @@ MathJax = {
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 					<img src="graphics/20230713_152426-environment.jpg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
-					<div style="position: absolute; left: 6.250%; top: 36.667%; width: 87.500%; height: 11.481%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
-						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">AI for prediction and Earth system modelling</h1>
+					<div style="position: absolute; left: 6.250%; top: 36.667%; width: 87.500%; height: 11.481%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">AI for prediction &amp; Earth system modelling</h1>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 44.074%; width: 87.500%; height: 7.778%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<div style="position: absolute; left: 6.250%; top: 44.074%; width: 87.500%; height: 7.778%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h2 style="margin: 0; padding: 0; font-size: calc(2.667 * var(--cqw)); ">AI for environmental data, Uppsala University</h2>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
 						<p> </p>
 						<p> </p>
 						<p> </p>
@@ -656,13 +652,13 @@ MathJax = {
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 					<img src="graphics/chatgpt-monitoring-mitigation-adaptation-prediction.webp" style="position: absolute; left: 56.250%; top: 24.444%; width: 37.500%; height: 67.407%; object-fit: cover;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">Climate Change</h1>
 					</div>
-					<div style="position: absolute; left: 9.583%; top: 15.556%; width: 87.500%; height: 7.778%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<div style="position: absolute; left: 9.583%; top: 15.556%; width: 87.500%; height: 7.778%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h2 style="margin: 0; padding: 0; font-size: calc(2.667 * var(--cqw)); ">A multifaceted challenge benefiting from AI at every level</h2>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
 						<ul>
 							<li>Monitoring
 <ul>
@@ -695,10 +691,10 @@ MathJax = {
 			<div id="page-3" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">Why prediction matters for adaptation &amp; mitigation</h1>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
 						<ul>
 							<li>(disaster preparedness, agriculture, energy systems, water resources).</li>
 						</ul>
@@ -711,10 +707,10 @@ MathJax = {
 			<div id="page-4" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">A schematic of prediction timescales</h1>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
 						<ul>
 							<li>(weather → seasonal → decadal → climate).</li>
 						</ul>
@@ -727,10 +723,10 @@ MathJax = {
 			<div id="page-5" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">why accurate hydrology prediction matters</h1>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
 						<ul>
 							<li>(flood risk, water management, drought adaptation).</li>
 						</ul>
@@ -743,10 +739,10 @@ MathJax = {
 			<div id="page-6" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">Flood risk estimation</h1>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
 						<ul>
 							<li>Google</li>
 						</ul>
@@ -760,10 +756,10 @@ MathJax = {
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 					<img src="graphics/krycklan.webp" style="position: absolute; left: 56.250%; top: 24.444%; width: 37.500%; height: 67.407%; object-fit: contain;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">Stream flow forecasting</h1>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
 						<ul>
 							<li>Collaboration with University of São Paulo
 <ul>
@@ -782,10 +778,10 @@ MathJax = {
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 					<img src="graphics/pirinen-2023-flow-prediction-layers.webp" style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; object-fit: contain;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; ">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;">
 						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">Dense stream flow prediction</h1>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 63.704%; width: 87.500%; height: 28.148%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 63.704%; width: 87.500%; height: 28.148%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;font-size: calc(2.267 * var(--cqw)); ">
 						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #ffffffff;font-size: calc(0.933 * var(--cqw)); ">
@@ -796,10 +792,10 @@ MathJax = {
 			<div id="page-9" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">AI for weather extreme estimation</h1>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
 						<ul>
 							<li>e.g. heatwaves, hurricanes — how AI can help anticipate impacts.</li>
 						</ul>
@@ -812,10 +808,10 @@ MathJax = {
 			<div id="page-10" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">Climate model downscaling</h1>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
 						<ul>
 							<li>example (using ML to improve local-scale projections).</li>
 						</ul>
@@ -828,10 +824,10 @@ MathJax = {
 			<div id="page-11" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
-					<div style="position: absolute; left: 6.250%; top: 36.667%; width: 87.500%; height: 11.481%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; ">
+					<div style="position: absolute; left: 6.250%; top: 36.667%; width: 87.500%; height: 11.481%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;">
 						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">Earth system modeling</h1>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;font-size: calc(2.267 * var(--cqw)); ">
 						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
@@ -844,10 +840,10 @@ MathJax = {
 					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 					<img src="graphics/navier-stokes.webp" style="position: absolute; left: 56.250%; top: 24.444%; width: 37.500%; height: 33.704%; object-fit: contain;">
 					<img src="graphics/flow_velocity.webp" style="position: absolute; left: 56.250%; top: 58.148%; width: 37.500%; height: 33.704%; object-fit: contain;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">Process-based physical modeling</h1>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
 						<ul>
 							<li>Navier-Stokes equations</li>
 							<li>Particle-based or mesh-based</li>
@@ -863,13 +859,13 @@ MathJax = {
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 					<img src="graphics/gnn.jpg" style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; object-fit: contain;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">Graph neural networks</h1>
 					</div>
-					<div style="position: absolute; left: 9.583%; top: 15.556%; width: 87.500%; height: 7.778%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<div style="position: absolute; left: 9.583%; top: 15.556%; width: 87.500%; height: 7.778%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h2 style="margin: 0; padding: 0; font-size: calc(2.667 * var(--cqw)); ">for physical modeling</h2>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 63.704%; width: 87.500%; height: 28.148%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 63.704%; width: 87.500%; height: 28.148%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
 						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
@@ -881,10 +877,10 @@ MathJax = {
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 					<img src="graphics/ifs-vs-aifs.webp" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); "></h1>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
 						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
@@ -896,10 +892,10 @@ MathJax = {
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 					<img src="graphics/graphcast.webp" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: contain;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); "></h1>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
 						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
@@ -911,10 +907,10 @@ MathJax = {
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 					<img src="graphics/ecmwf-aifs.webp" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">ECMWF AI Forecasting System</h1>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
 						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
@@ -926,10 +922,10 @@ MathJax = {
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 					<img src="graphics/ecmwf-aifs-components.webp" style="position: absolute; left: 6.250%; top: 24.444%; width: 37.500%; height: 67.407%; object-fit: cover;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">Solutions build on years of progress</h1>
 					</div>
-					<div style="position: absolute; left: 51.042%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 51.042%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
 						<p> </p>
 						<p> </p>
 						<p> </p>
@@ -951,13 +947,13 @@ MathJax = {
 					<img src="graphics/mogren-104x103.webp" style="position: absolute; left: 68.125%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
 					<img src="graphics/pirinen-104x104.webp" style="position: absolute; left: 70.833%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
 					<img src="graphics/bankestad-104x98.webp" style="position: absolute; left: 73.542%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
-					<div style="position: absolute; left: 56.250%; top: 8.148%; width: 37.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<div style="position: absolute; left: 56.250%; top: 8.148%; width: 37.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">Equivariant</h1>
 					</div>
-					<div style="position: absolute; left: 59.583%; top: 15.556%; width: 37.500%; height: 7.778%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<div style="position: absolute; left: 59.583%; top: 15.556%; width: 37.500%; height: 7.778%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h2 style="margin: 0; padding: 0; font-size: calc(2.667 * var(--cqw)); ">graph neural networks</h2>
 					</div>
-					<div style="position: absolute; left: 51.042%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 51.042%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
 						<ul>
 							<li>GNN respecting rotations and translations in 2D space</li>
 							<li>Resulting equivariant model that learn more efficiently</li>
@@ -973,10 +969,10 @@ MathJax = {
 					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 					<img src="graphics/scatter-scalar.webp" style="position: absolute; left: 0.000%; top: 0.000%; width: 48.958%; height: 100.000%; object-fit: contain;">
 					<img src="graphics/scatter-velocity.webp" style="position: absolute; left: 51.042%; top: 0.000%; width: 48.958%; height: 100.000%; object-fit: contain;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); "></h1>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
 						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
@@ -987,10 +983,10 @@ MathJax = {
 			<div id="page-20" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">Why symmetries matter in physics-based ML</h1>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
 						<ul>
 							<li>(translation, rotation, conservation laws).</li>
 						</ul>
@@ -1003,10 +999,10 @@ MathJax = {
 			<div id="page-21" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">A short comparison of AI vs physics-based models (speed, accuracy, interpretability).</h1>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
 						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
@@ -1017,10 +1013,10 @@ MathJax = {
 			<div id="page-22" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">A timeline of major breakthroughs (FourCastNet → GraphCast → AIFS).</h1>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
 						<ul>
 							<li>Maybe include limitations (generalization, long-term drift, training cost).</li>
 						</ul>
@@ -1037,13 +1033,13 @@ MathJax = {
 					<img src="graphics/rtsys-hydrophone-720x450.webp" style="position: absolute; left: 75.000%; top: 24.444%; width: 18.750%; height: 33.704%; object-fit: cover;">
 					<img src="graphics/usgs-pam-720x540.jpg" style="position: absolute; left: 56.250%; top: 58.148%; width: 18.750%; height: 33.704%; object-fit: cover;">
 					<img src="graphics/unity-college-environmental-analysis.jpg" style="position: absolute; left: 75.000%; top: 58.148%; width: 18.750%; height: 33.704%; object-fit: cover;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">In conclusion:</h1>
 					</div>
-					<div style="position: absolute; left: 9.583%; top: 15.556%; width: 87.500%; height: 7.778%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<div style="position: absolute; left: 9.583%; top: 15.556%; width: 87.500%; height: 7.778%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h2 style="margin: 0; padding: 0;font-size: calc(2.667 * var(--cqw)); ">Environment data</h2>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
 						<ul>
 							<li>Remote sensing
 <ul>
@@ -1077,10 +1073,10 @@ MathJax = {
 			<div id="page-24" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">Collaborative networks</h1>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
 						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
@@ -1091,14 +1087,72 @@ MathJax = {
 			<div id="page-25" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
-					<div style="position: absolute; left: 6.250%; top: 36.667%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; ">
-						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); ">Thank you!</h1>
+					<div style="position: absolute; left: 6.250%; top: 36.667%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">Thank you!</h1>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;font-size: calc(2.267 * var(--cqw)); ">
 						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
 						<p>25   mogren.ml, olof.mogren@ri.se</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-26" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;  font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); ">Schedule</h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 41.667%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
+						<p>
+							<strong>Today:</strong>
+						</p>
+						<ul>
+							<li>10: Introduction to AI and Machine Learning
+<ul>
+									<li>Olof Mogren</li>
+								</ul>
+							</li>
+							<li>11: Introduction and Brief History of Natural Language Processing (NLP)
+<ul>
+									<li>Murathan Kurfalı</li>
+								</ul>
+							</li>
+							<li>13: AI for Climate Adaptation and Mitigation
+<ul>
+									<li>Olof Mogren</li>
+								</ul>
+							</li>
+							<li>14: Exercises</li>
+						</ul>
+					</div>
+					<div style="position: absolute; left: 50.000%; top: 24.444%; width: 41.667%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
+						<p>
+							<strong>Tomorrow:</strong>
+						</p>
+						<ul>
+							<li>10: AI for Environmental Monitoring
+<ul>
+									<li>Olof Mogren</li>
+								</ul>
+							</li>
+							<li>11: AI for Prediction and Earth System Modelling
+<ul>
+									<li>Olof Mogren</li>
+								</ul>
+							</li>
+							<li>
+								<strong>13: Using NLP and Large Language Models: General Concepts and Climate Applications</strong>
+								<ul>
+									<li>Murathan Kurfalı</li>
+								</ul>
+							</li>
+							<li>14: Exercises</li>
+						</ul>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>26   mogren.ml, olof.mogren@ri.se</p>
 					</div>
 				</div>
 			</div>
@@ -1110,11 +1164,13 @@ MathJax = {
 				<p class="splash-only">Loading.</p>
 				<p class="splash-only">PYMD slides requires a javascript-enabled browser.</p>
 				<p>Usage: Arrow buttons, page up/down, or space to navigate.</p>
-				<p>F for fullscreen. B for blank. Click on leftmost quarter for previous slide, the rest for next.</p>
+				<p>F for fullscreen.</p>
+				<p>B for blank.</p>
 				<p>O for overview grid. Click a slide to jump.</p>
+				<p>Click on leftmost quarter for previous slide, the rest for next.</p>
 				<p>More info: see https://github.com/olofmogren/pymdslides/ .</p>
 			</div>
 		</div>
-		<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z/C/HgAGgwJ/lK3Q6wAAAABJRU5ErkJggg==" style="visibility: hidden;" onload="gotoHash()">
+		<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z/C/HgAGgwJ/lK3Q6wAAAABJRU5ErkJggg==" style="visibility: hidden;" onload="onloadHandler()">
 	</body>
 </html>

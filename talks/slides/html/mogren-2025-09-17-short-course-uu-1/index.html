@@ -252,11 +252,6 @@ body.overview .page_div .subcontainer {
   pointer-events: none;
 }
 
-@page
-{
-    size: A4 landscape;
-    margin: 0;
-}
 @media print {
   @page {
     size: 160mm 90mm;
@@ -292,15 +287,16 @@ body.overview .page_div .subcontainer {
     visibility: visible;
   }
   .page_hidden {
-    visibility: visible;
+        visibility: visible;
   }
+  #help_btn { opacity: 0; }
 }
 </style>
 		<title>Introduction to AI and machine learning </title>
 		<script>
 var currentPageId = "page-1";
 var blackPageVar = false;
-var lastPage = 31;
+var lastPage = 40;
 
 var overviewMode = false; // if you already declared this earlier, keep only one
 var helpBtnTimer = null;
@@ -625,7 +621,7 @@ MathJax = {
 </script>
 		<script id="MathJax-script" async="true" src="resources/tex-mml-svg.js"> </script>
 		<meta generator='pymdslides, git commit: "ffbcb9edebc0c6f35754efe250af4be53af8e696" https://github.com/olofmogren/pymdslides/'>
-		<meta generation-date="2025-09-04 15:51:36.053498+02:00">
+		<meta generation-date="2025-09-05 13:15:19.839802+02:00">
 	</head>
 	<body onload="onloadHandler();">
 		<div id="slides">
@@ -633,13 +629,13 @@ MathJax = {
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 					<img src="graphics/20230713_152426-environment.jpg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
-					<div style="position: absolute; left: 6.250%; top: 36.667%; width: 87.500%; height: 11.481%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<div style="position: absolute; left: 6.250%; top: 36.667%; width: 87.500%; height: 11.481%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">Introduction to AI and machine learning</h1>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 44.074%; width: 87.500%; height: 7.778%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<div style="position: absolute; left: 6.250%; top: 44.074%; width: 87.500%; height: 7.778%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h2 style="margin: 0; padding: 0; font-size: calc(2.667 * var(--cqw)); ">AI for environmental data, Uppsala University</h2>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
 						<p> </p>
 						<p> </p>
 						<p> </p>
@@ -656,10 +652,10 @@ MathJax = {
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 					<img src="graphics/coral-01.jpg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; ">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;">
 						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); "></h1>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;font-size: calc(2.267 * var(--cqw)); ">
 						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
@@ -671,10 +667,10 @@ MathJax = {
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 					<img src="graphics/coral-02.jpg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; ">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;">
 						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">+1.5°</h1>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;font-size: calc(2.267 * var(--cqw)); ">
 						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
@@ -686,10 +682,10 @@ MathJax = {
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 					<img src="graphics/coral-03.jpg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; ">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;">
 						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">+2°</h1>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;font-size: calc(2.267 * var(--cqw)); ">
 						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
@@ -701,10 +697,10 @@ MathJax = {
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 					<img src="graphics/en_mammals_unfcc.jpg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); "></h1>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
 						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
@@ -716,10 +712,10 @@ MathJax = {
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 					<img src="graphics/digital-brain.jpg" style="position: absolute; left: 50.000%; top: 0.000%; width: 50.000%; height: 100.000%; object-fit: contain;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 37.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; ">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 37.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;">
 						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">AI can assist in</h1>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;font-size: calc(2.267 * var(--cqw)); ">
 						<p>Tracking and quantifying the environment</p>
 						<p> </p>
 						<p>Optimizing prodiction and transport</p>
@@ -729,7 +725,7 @@ materials and chemicals</p>
 						<p> </p>
 						<p>Help make decisions for climate adaptation</p>
 						<p> </p>
-						<p>Make predictions</p>
+						<p>Forecasting</p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
 						<p>6   mogren.one, olof.mogren@ri.se --- Image generated with DALL-E 3</p>
@@ -743,10 +739,10 @@ materials and chemicals</p>
 					<img src="graphics/ice-bergs-1920x1069.webp" style="position: absolute; left: 50.000%; top: 0.000%; width: 50.000%; height: 50.000%; object-fit: cover;">
 					<img src="graphics/space-intelligence.webp" style="position: absolute; left: 0.000%; top: 50.000%; width: 50.000%; height: 50.000%; object-fit: cover;">
 					<img src="graphics/ai-recycling.webp" style="position: absolute; left: 50.000%; top: 50.000%; width: 50.000%; height: 50.000%; object-fit: cover;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); "></h1>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
 						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
@@ -758,10 +754,10 @@ materials and chemicals</p>
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 					<img src="graphics/mercury.jpg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">AI</h1>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
 						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
@@ -772,13 +768,13 @@ materials and chemicals</p>
 			<div id="page-9" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #000000ff;  font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; ">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;">
 						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">Also AI</h1>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 41.667%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 41.667%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;font-size: calc(2.267 * var(--cqw)); ">
 						<p> </p>
 					</div>
-					<div style="position: absolute; left: 50.000%; top: 24.444%; width: 41.667%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 50.000%; top: 24.444%; width: 41.667%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;font-size: calc(2.267 * var(--cqw)); ">
 						<p> </p>
 						<p> </p>
 						<p>$\mathbf{a} = W\mathbf{x}+\mathbf{b}$</p>
@@ -793,10 +789,10 @@ materials and chemicals</p>
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 					<img src="graphics/ai-timeline-2025-1.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: contain;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); "></h1>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
 						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
@@ -808,10 +804,10 @@ materials and chemicals</p>
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 					<img src="graphics/ai-timeline-2025-2.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: contain;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); "></h1>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
 						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
@@ -823,10 +819,10 @@ materials and chemicals</p>
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 					<img src="graphics/ai-timeline-2025-3.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: contain;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); "></h1>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
 						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
@@ -838,10 +834,10 @@ materials and chemicals</p>
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 					<img src="graphics/ai-timeline-2025-4.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: contain;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); "></h1>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
 						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
@@ -853,10 +849,10 @@ materials and chemicals</p>
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 					<img src="graphics/ai-timeline-2025-5.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: contain;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); "></h1>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
 						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
@@ -868,10 +864,10 @@ materials and chemicals</p>
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 					<img src="graphics/ai-timeline-2025-6.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: contain;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); "></h1>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
 						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
@@ -883,10 +879,10 @@ materials and chemicals</p>
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 					<img src="graphics/ai-timeline-2025-7.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: contain;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); "></h1>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
 						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
@@ -897,30 +893,27 @@ materials and chemicals</p>
 			<div id="page-17" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
-					<img src="graphics/dl-subset-ml-subset-ai.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: contain;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
-						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); "></h1>
+					<img src="graphics/shrdlu-original.jpg" style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; object-fit: contain;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">What is AI?</h1>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 63.704%; width: 87.500%; height: 28.148%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
 						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>17   mogren.ml, olof.mogren@ri.se</p>
+						<p>17   mogren.ml, olof.mogren@ri.se --- SHRDLU (Winograd 1970)</p>
 					</div>
 				</div>
 			</div>
 			<div id="page-18" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
-						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">AI ⊃ machine learning ⊃ deep learning</h1>
+					<img src="graphics/dl-subset-ml-subset-ai.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: contain;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); "></h1>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
-						<ul>
-							<li>TODO</li>
-							<li>What does it mean?</li>
-							<li>Definition and scope</li>
-						</ul>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
+						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
 						<p>18   mogren.ml, olof.mogren@ri.se</p>
@@ -931,15 +924,14 @@ materials and chemicals</p>
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 					<img src="graphics/generalization.svg" style="position: absolute; left: 50.000%; top: 0.000%; width: 50.000%; height: 100.000%; object-fit: contain;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 37.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 37.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">Generalization</h1>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
 						<p> 
  </p>
 						<ul>
-							<li>Crucial to learning</li>
-							<li>Allows to transfer knowledge to new situations</li>
+							<li>Crucial to learning and reasoning</li>
 						</ul>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
@@ -950,34 +942,37 @@ materials and chemicals</p>
 			<div id="page-20" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
-					<img src="graphics/shrdlu-original.jpg" style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; object-fit: contain;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
-						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">What is AI?</h1>
+					<img src="graphics/generalization.svg" style="position: absolute; left: 50.000%; top: 0.000%; width: 50.000%; height: 100.000%; object-fit: contain;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 37.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">Generalization</h1>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 63.704%; width: 87.500%; height: 28.148%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
-						<p> </p>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
+						<p> 
+ </p>
+						<ul>
+							<li>Crucial to learning and reasoning</li>
+							<li>Allows transfer of knowledge to new situations</li>
+						</ul>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>20   mogren.ml, olof.mogren@ri.se --- SHRDLU (Winograd 1970)</p>
+						<p>20   mogren.ml, olof.mogren@ri.se</p>
 					</div>
 				</div>
 			</div>
 			<div id="page-21" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
-					<img src="graphics/feedforward-modelbox-bottomup-982x1456.webp" style="position: absolute; left: 56.250%; top: 24.444%; width: 37.500%; height: 67.407%; object-fit: contain;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
-						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">Machine learning</h1>
+					<img src="graphics/generalization.svg" style="position: absolute; left: 50.000%; top: 0.000%; width: 50.000%; height: 100.000%; object-fit: contain;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 37.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">Generalization</h1>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
+						<p> 
+ </p>
 						<ul>
-							<li>Learn from data
-<ul>
-									<li>Inputs</li>
-									<li>Outputs</li>
-								</ul>
-							</li>
-							<li>Generalize to unseen data</li>
+							<li>Crucial to learning and reasoning</li>
+							<li>Allows transfer of knowledge to new situations</li>
+							<li>True generalization error can not be known</li>
 						</ul>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
@@ -988,18 +983,18 @@ materials and chemicals</p>
 			<div id="page-22" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
-					<img src="graphics/feedforward-layerboxes-bottomup.svg" style="position: absolute; left: 56.250%; top: 24.444%; width: 37.500%; height: 67.407%; object-fit: contain;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
-						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">Deep learning</h1>
+					<img src="graphics/generalization.svg" style="position: absolute; left: 50.000%; top: 0.000%; width: 50.000%; height: 100.000%; object-fit: contain;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 37.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">Generalization</h1>
 					</div>
-					<div style="position: absolute; left: 9.583%; top: 15.556%; width: 87.500%; height: 7.778%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
-						<h2 style="margin: 0; padding: 0; font-size: calc(2.667 * var(--cqw)); ">Deep artificial neural networks</h2>
-					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
+						<p> 
+ </p>
 						<ul>
-							<li>Sequential transformations of data</li>
-							<li>Trained together (backpropagation)</li>
-							<li>Transformations are gradually changed</li>
+							<li>Crucial to learning and reasoning</li>
+							<li>Allows transfer of knowledge to new situations</li>
+							<li>True generalization error can not be known</li>
+							<li>Use held-out test set</li>
 						</ul>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
@@ -1010,11 +1005,69 @@ materials and chemicals</p>
 			<div id="page-23" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+					<img src="graphics/feedforward-modelbox-bottomup-982x1456.webp" style="position: absolute; left: 56.250%; top: 24.444%; width: 37.500%; height: 67.407%; object-fit: contain;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">Machine learning</h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
+						<ul>
+							<li>Learn from data
+<ul>
+									<li>Inputs</li>
+									<li>Outputs</li>
+								</ul>
+							</li>
+							<li>Generalize to unseen data</li>
+							<li>Common classical machine learning
+<ul>
+									<li>Support vector machines</li>
+									<li>Logistic regression</li>
+									<li>Linear regression</li>
+									<li>Decision trees</li>
+								</ul>
+							</li>
+							<li>Deep learning
+<ul>
+									<li>Artificial neural networks</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>23   mogren.ml, olof.mogren@ri.se</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-24" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+					<img src="graphics/feedforward-layerboxes-bottomup.svg" style="position: absolute; left: 56.250%; top: 24.444%; width: 37.500%; height: 67.407%; object-fit: contain;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">Deep learning</h1>
+					</div>
+					<div style="position: absolute; left: 9.583%; top: 15.556%; width: 87.500%; height: 7.778%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h2 style="margin: 0; padding: 0; font-size: calc(2.667 * var(--cqw)); ">Deep artificial neural networks</h2>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;display: flex; align-items: center;font-size: calc(2.267 * var(--cqw)); ">
+						<ul>
+							<li>Sequential transformations of data</li>
+							<li>Trained together (backpropagation)</li>
+							<li>Transformations are gradually changed</li>
+						</ul>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>24   mogren.ml, olof.mogren@ri.se</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-25" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 					<img src="graphics/feedforward-layerboxes-bottomup-highlight-neuron.svg" style="position: absolute; left: 56.250%; top: 24.444%; width: 37.500%; height: 67.407%; object-fit: contain;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">The artificial neuron</h1>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;display: flex; align-items: center;font-size: calc(2.267 * var(--cqw)); ">
 						<ul>
 							<li>Inspired by biological neurons</li>
 							<li>Each layer in network:
@@ -1029,18 +1082,18 @@ materials and chemicals</p>
 						</ul>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>23   McCulloch and Pitts (1943)</p>
+						<p>25   McCulloch and Pitts (1943)</p>
 					</div>
 				</div>
 			</div>
-			<div id="page-24" class="page_div page_hidden" style="background-color: white; ">
+			<div id="page-26" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
 					<img src="graphics/feedforward-layerboxes-bottomup.svg" style="position: absolute; left: 56.250%; top: 24.444%; width: 37.500%; height: 67.407%; object-fit: contain;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0; font-size: calc(3.467 * var(--cqw)); ">Hierarchical representations</h1>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;display: flex; align-items: center;font-size: calc(2.267 * var(--cqw)); ">
 						<ul>
 							<li>Each layer outputs a vector</li>
 							<li>Deeper into network:
@@ -1051,84 +1104,113 @@ materials and chemicals</p>
 						</ul>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>24   mogren.ml, olof.mogren@ri.se</p>
-					</div>
-				</div>
-			</div>
-			<div id="page-25" class="page_div page_hidden" style="background-color: white; ">
-				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
-					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
-					<img src="graphics/feature-hierarchy-hubel-wiesel-2.webp" style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; object-fit: contain;">
-					<img src="graphics/conv-feature-visualization.webp" style="position: absolute; left: 51.042%; top: 24.444%; width: 42.708%; height: 67.407%; object-fit: contain;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
-						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">Levels of abstractions</h1>
-					</div>
-					<div style="position: absolute; left: 6.250%; top: 63.704%; width: 87.500%; height: 28.148%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
-						<p> </p>
-					</div>
-					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>25   Hubel &amp; Wiesel (1962), Manassi, et al (2013), Zeiler &amp; Fergus (2013)</p>
-					</div>
-				</div>
-			</div>
-			<div id="page-26" class="page_div page_hidden" style="background-color: white; ">
-				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
-					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
-					<div style="position: absolute; left: 6.250%; top: 36.667%; width: 87.500%; height: 11.481%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
-						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); "></h1>
-					</div>
-					<div style="position: absolute; left: 6.250%; top: 44.074%; width: 87.500%; height: 7.778%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
-						<h2 style="margin: 0; padding: 0; font-size: calc(2.667 * var(--cqw)); ">Enough units -&gt; universal approximation</h2>
-					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
-						<p> </p>
-					</div>
-					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>26   Universal approximation theorem (Cybenko, 1989)</p>
+						<p>26   mogren.ml, olof.mogren@ri.se</p>
 					</div>
 				</div>
 			</div>
 			<div id="page-27" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
-						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">Types of Learning</h1>
+					<img src="graphics/feature-hierarchy-hubel-wiesel-2.webp" style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; object-fit: contain;">
+					<img src="graphics/conv-feature-visualization.webp" style="position: absolute; left: 51.042%; top: 24.444%; width: 42.708%; height: 67.407%; object-fit: contain;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">Levels of abstractions</h1>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
-						<ul>
-							<li>Supervised learning</li>
-							<li>Unsupervised learning</li>
-							<li>Reinforcement learning</li>
-						</ul>
+					<div style="position: absolute; left: 6.250%; top: 63.704%; width: 87.500%; height: 28.148%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
+						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>27   mogren.ml, olof.mogren@ri.se</p>
+						<p>27   Hubel &amp; Wiesel (1962), Manassi, et al (2013), Zeiler &amp; Fergus (2013)</p>
 					</div>
 				</div>
 			</div>
 			<div id="page-28" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
-						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">The ML workflow</h1>
+					<div style="position: absolute; left: 6.250%; top: 36.667%; width: 87.500%; height: 11.481%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); "></h1>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
-						<p>Data → preprocessing → model → training → evaluation → deployment.</p>
+					<div style="position: absolute; left: 6.250%; top: 44.074%; width: 87.500%; height: 7.778%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h2 style="margin: 0; padding: 0; font-size: calc(2.667 * var(--cqw)); ">Enough units -&gt; universal approximation</h2>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
+						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>28   mogren.ml, olof.mogren@ri.se</p>
+						<p>28   Universal approximation theorem (Cybenko, 1989)</p>
 					</div>
 				</div>
 			</div>
 			<div id="page-29" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; ">
-						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">Limitations and risks</h1>
+					<img src="graphics/supervised-learning.jpg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">Supervised learning</h1>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
+						<p> </p>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>29   mogren.ml, olof.mogren@ri.se</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-30" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+					<img src="graphics/unsupervised-learning.jpg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">Unsupervised learning</h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
+						<p> </p>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>30   mogren.ml, olof.mogren@ri.se</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-31" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+					<img src="graphics/reinforcement-learning.jpg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">Reinforcement learning</h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
+						<p> </p>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>31   mogren.ml, olof.mogren@ri.se</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-32" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+					<img src="graphics/ml-workflow.jpg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">The ML workflow</h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
+						<p> </p>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>32   mogren.ml, olof.mogren@ri.se</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-33" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #eff0eaff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+					<img src="graphics/bias-in-ai.jpg" style="position: absolute; left: 56.250%; top: 24.444%; width: 37.500%; height: 67.407%; object-fit: contain;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">Challenges, limitations, and risks</h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;display: flex; align-items: center;font-size: calc(2.267 * var(--cqw)); ">
 						<ul>
-							<li>Bias</li>
+							<li>Bias, "hallucinations"</li>
 							<li>Interpretability</li>
 							<li>Explainability/trust</li>
 							<li>Energy use of AI</li>
@@ -1137,63 +1219,175 @@ materials and chemicals</p>
 						</ul>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>29   mogren.ml, olof.mogren@ri.se</p>
+						<p>33   mogren.ml, olof.mogren@ri.se</p>
 					</div>
 				</div>
 			</div>
-			<div id="page-30" class="page_div page_hidden" style="background-color: white; ">
-				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #000000ff;  font-size: calc(2.267 * var(--cqw)); ">
+			<div id="page-34" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; ">
-						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">Example AI applications</h1>
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">Data modalities</h1>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 41.667%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
 						<ul>
-							<li>
-								<p>Computer vision</p>
-								<ul>
-									<li>Classification</li>
-									<li>Segmentation</li>
-									<li>Object detection</li>
-									<li>Generating images</li>
-								</ul>
-							</li>
-							<li>
-								<p>Machine listening</p>
-							</li>
-							<li>
-								<p>Sensor modelling</p>
-							</li>
-						</ul>
-					</div>
-					<div style="position: absolute; left: 50.000%; top: 24.444%; width: 41.667%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
-						<ul>
-							<li>Natural language processing
-<ul>
-									<li>Translation</li>
-									<li>Summarization</li>
-									<li>Generating text</li>
-									<li>Information extraction</li>
-									<li>Conversational AI</li>
-								</ul>
-							</li>
+							<li>Images</li>
+							<li>Sound</li>
+							<li>Other sensors</li>
+							<li>Language</li>
 						</ul>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>30   mogren.ml, olof.mogren@ri.se</p>
+						<p>34   mogren.ml, olof.mogren@ri.se</p>
 					</div>
 				</div>
 			</div>
-			<div id="page-31" class="page_div page_hidden" style="background-color: white; ">
+			<div id="page-35" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+					<img src="graphics/percieving-the-world-with-ai.jpg" style="position: absolute; left: 56.250%; top: 24.444%; width: 37.500%; height: 67.407%; object-fit: cover;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">Percieving the world with AI</h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
+						<ul>
+							<li>Computer Vision: Classification, segmentation, object detection, generating images.</li>
+							<li>Machine Listening: Analyzing audio data.</li>
+							<li>Sensor Modelling: Making sense of diverse sensor inputs.</li>
+						</ul>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>35   mogren.ml, olof.mogren@ri.se</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-36" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+					<img src="graphics/prediction-and-knowledge-discovery-with-ai.jpg" style="position: absolute; left: 56.250%; top: 24.444%; width: 37.500%; height: 67.407%; object-fit: cover;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">Prediction and knowledge discovery with AI</h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
+						<ul>
+							<li>Prediction: Short-term forecasting like flood risk and long-term projections such as climate model downscaling.</li>
+							<li>Knowledge / Search: Mining scientific literature and aggregating heterogeneous environmental data.</li>
+							<li>Natural Language Processing: Focusing on translation, summarization, and information extraction.</li>
+						</ul>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>36   mogren.ml, olof.mogren@ri.se</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-37" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">AI as a partner in decision-making and optimization</h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
+						<ul>
+							<li>Decision Support: Aiding in urban planning, optimizing locations for restoration and renewable energy.</li>
+							<li>Estimating and Optimizing: Calculating emissions and improving the efficiency of transportation and industry to reduce their carbon footprint.</li>
+						</ul>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>37   mogren.ml, olof.mogren@ri.se</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-38" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #000000ff;  font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; ">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">Natural language processing</h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 41.667%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;font-size: calc(2.267 * var(--cqw)); ">
+						<ul>
+							<li>Translation</li>
+							<li>Summarization</li>
+							<li>Generating text</li>
+							<li>Information extraction</li>
+							<li>Conversational AI</li>
+						</ul>
+					</div>
+					<div style="position: absolute; left: 50.000%; top: 24.444%; width: 41.667%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;font-size: calc(2.267 * var(--cqw)); ">
+						<p> </p>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>38   mogren.ml, olof.mogren@ri.se</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-39" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff;  font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.000 * var(--cqw)); ">Schedule</h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 41.667%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
+						<p>
+							<strong>Today:</strong>
+						</p>
+						<ul>
+							<li>10: Introduction to AI and Machine Learning
+<ul>
+									<li>Olof Mogren</li>
+								</ul>
+							</li>
+							<li>
+								<strong>11: Introduction and Brief History of Natural Language Processing (NLP)</strong>
+								<ul>
+									<li>Murathan Kurfalı</li>
+								</ul>
+							</li>
+							<li>13: AI for Climate Adaptation and Mitigation
+<ul>
+									<li>Olof Mogren</li>
+								</ul>
+							</li>
+							<li>14: Exercises</li>
+						</ul>
+					</div>
+					<div style="position: absolute; left: 50.000%; top: 24.444%; width: 41.667%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
+						<p>
+							<strong>Tomorrow:</strong>
+						</p>
+						<ul>
+							<li>10: AI for Environmental Monitoring
+<ul>
+									<li>Olof Mogren</li>
+								</ul>
+							</li>
+							<li>11: AI for Prediction and Earth System Modelling
+<ul>
+									<li>Olof Mogren</li>
+								</ul>
+							</li>
+							<li>13: Using NLP and Large Language Models: General Concepts and Climate Applications
+<ul>
+									<li>Murathan Kurfalı</li>
+								</ul>
+							</li>
+							<li>14: Exercises</li>
+						</ul>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>39   mogren.ml, olof.mogren@ri.se</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-40" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #000000ff;  font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.000%; top: 88.889%; width: 4.167%; height: 9.630%; z-index: 5;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;">
 						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); ">Example AI tasks</h1>
 					</div>
-					<div style="position: absolute; left: 9.583%; top: 15.556%; width: 87.500%; height: 7.778%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; ">
+					<div style="position: absolute; left: 9.583%; top: 15.556%; width: 87.500%; height: 7.778%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;">
 						<h2 style="margin: 0; padding: 0;font-size: calc(2.667 * var(--cqw)); ">for environmental data</h2>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 41.667%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 41.667%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;font-size: calc(2.267 * var(--cqw)); ">
 						<ul>
 							<li>Environmental monitoring
 <ul>
@@ -1216,7 +1410,7 @@ materials and chemicals</p>
 							</li>
 						</ul>
 					</div>
-					<div style="position: absolute; left: 50.000%; top: 24.444%; width: 41.667%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 50.000%; top: 24.444%; width: 41.667%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;font-size: calc(2.267 * var(--cqw)); ">
 						<ul>
 							<li>Decision support
 <ul>
@@ -1231,7 +1425,7 @@ materials and chemicals</p>
 						</ul>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>31   mogren.ml, olof.mogren@ri.se</p>
+						<p>40   mogren.ml, olof.mogren@ri.se</p>
 					</div>
 				</div>
 			</div>
@@ -1243,11 +1437,13 @@ materials and chemicals</p>
 				<p class="splash-only">Loading.</p>
 				<p class="splash-only">PYMD slides requires a javascript-enabled browser.</p>
 				<p>Usage: Arrow buttons, page up/down, or space to navigate.</p>
-				<p>F for fullscreen. B for blank. Click on leftmost quarter for previous slide, the rest for next.</p>
+				<p>F for fullscreen.</p>
+				<p>B for blank.</p>
 				<p>O for overview grid. Click a slide to jump.</p>
+				<p>Click on leftmost quarter for previous slide, the rest for next.</p>
 				<p>More info: see https://github.com/olofmogren/pymdslides/ .</p>
 			</div>
 		</div>
-		<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z/C/HgAGgwJ/lK3Q6wAAAABJRU5ErkJggg==" style="visibility: hidden;" onload="gotoHash()">
+		<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z/C/HgAGgwJ/lK3Q6wAAAABJRU5ErkJggg==" style="visibility: hidden;" onload="onloadHandler()">
 	</body>
 </html>
