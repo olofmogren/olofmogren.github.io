@@ -4,7 +4,7 @@ box-bg-imgsrc: ''
 doi: https://doi.org/10.48550/arXiv.2502.09363
 eprint: '2502.09363'
 generatebibtex: 'yes'
-imgalt: The Accuracy Cost of Weakness: A Theoretical Analysis of Fixed-Segment Weak Labeling for Events in Time
+imgalt: "The Accuracy Cost of Weakness: A Theoretical Analysis of Fixed-Segment Weak Labeling for Events in Time"
 imgsrc: /publications/2025/accuracy-cost/weak-labeling.png
 imrgsrc: ''
 layout: posts
