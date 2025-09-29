@@ -50,7 +50,7 @@ tags:
 - frontpage
 title: Aggregation Strategies for Efficient Annotation of Bioacoustic Sound Events
   Using Active Learning
-venue: EUSIPCO 2025
+venue: European Signal Processing Conference
 venuelink: https://arxiv.org/abs/2503.02422
 venueshort: EUSIPCO
 
