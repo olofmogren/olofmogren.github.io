@@ -3,7 +3,7 @@
 {% for auth in author_array %}
   {% assign last_names = auth | split: ' ' | shift | join ' ' %}
   {% assign first_char = auth | slice: 0, 1 %}
-  {% capture short_author_string %}{{ short_author_string }},  {{ first_char }}. {{ last_names }}{% endcapture %}
+  {% capture short_author_string %}{{ short_author_string }}, {{ last_names }}, {{ first_char }}.{% endcapture %}
 {% endfor %}
-{% assign short_author_string = short_author_string | remove_first: ', ' | replace: "O. Mogren", "<strong>O. Mogren</strong>" %}
+{% assign short_author_string = short_author_string | remove_first: ', ' | replace: "Mogren, O.", "<strong>Mogren, O.</strong>" %}
 {{ short_author_string }}
