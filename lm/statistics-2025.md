@@ -12,7 +12,7 @@ title: Learning Machines Statistics 2025
 
 ## 24 speakers
 
-Abdul Shaamala, Abdulhakim Abdi, Amal Nammouchi, Atakan Aral, Beici Liang, Benjamin Cretois, Felix Koehler, Georges Le Bellier, Ghjulia Sialelli, John Martinsson, Katarzyna Michalowska, Lena Stempfle, Lily Xu, Markus Pettersson, María J. Molina, Newton Mwai Kinyanjui, Nora Gourmelon, Oriol Nieto, Oscar Täckström, Peter Dueben, Sebastian Hafner, Sherrie Wang, Sigrid Passano Hellan, Zhengpeng Feng
+Abdul Shaamala, Abdulhakim Abdi, Amal Nammouchi, Atakan Aral, Beici Liang, Benjamin Cretois, Felix Köhler, Georges Le Bellier, Ghjulia Sialelli, John Martinsson, Katarzyna Michalowska, Lena Stempfle, Lily Xu, Markus Pettersson, María J. Molina, Newton Mwai Kinyanjui, Nora Gourmelon, Oriol Nieto, Oscar Täckström, Peter Dueben, Sebastian Hafner, Sherrie Wang, Sigrid Passano Hellan, Zhengpeng Feng
 
 ## 22 affiliations
 
