@@ -10,11 +10,11 @@ title: Learning Machines Statistics 2026
 
 
 
-## 0 speakers
+## 1 speakers
 
+Karl Åström
 
+## 1 affiliations
 
-## 0 affiliations
-
-
+LTH, Lund University
 
