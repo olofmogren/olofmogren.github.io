@@ -12,7 +12,7 @@ title: Learning Machines Statistics 2026
 
 ## 1 speakers
 
-Karl Åström
+Kalle Åström
 
 ## 1 affiliations
 
