@@ -10,11 +10,11 @@ title: Learning Machines Statistics 2026
 
 
 
-## 1 speakers
+## 2 speakers
 
-Kalle Åström
+Kalle Åström, Pablo Villanueva Perez
 
-## 1 affiliations
+## 2 affiliations
 
-LTH, Lund University
+LTH, Lund University, Lund University
 
