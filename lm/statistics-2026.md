@@ -10,9 +10,9 @@ title: Learning Machines Statistics 2026
 
 
 
-## 2 speakers
+## 3 speakers
 
-Kalle Åström, Pablo Villanueva Perez
+Kalle Åström, Pablo Villanueva Perez, Purnendu Sardar
 
 ## 2 affiliations
 
