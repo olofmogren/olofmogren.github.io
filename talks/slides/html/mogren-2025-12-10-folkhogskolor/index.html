@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<style>
+:root {
+  /* 16:9 slide box derived from viewport */
+  --slide-w: min(100vw, 177.78vh);
+  --slide-h: calc(var(--slide-w) * 0.5625); /* 9/16 */
+
+  /* 1% of the slide’s width/height */
+  --cqw: calc(var(--slide-w) / 100);
+  --cqh: calc(var(--slide-h) / 100);
+}
+@font-face {
+  font-family: "Code Pro Bold";
+  src: url('resources/CodePro-Bold.woff2') format('woff2');
+}
+@font-face {
+  font-family: "Lato Regular";
+  src: url('resources/Lato-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: "Roboto Mono Regular";
+  src: url('resources/RobotoMono-Regular.woff2') format('woff2');
+}
+body {
+  overflow: hidden;
+  background-color: black;
+  font-family: "Lato Regular", Arial, Sans-Serif;
+  font-weight: normal;
+}
+h1 {
+  font-family: "Code Pro Bold", Arial, Sans-Serif;
+  /*font-size: 4cqw;*/
+  font-size: "calc(4.800 * var(--cqw))";
+  font-weight: normal;
+}
+h2 {
+  font-family: "Code Pro Bold", Arial, Sans-Serif;
+  /*font-size: 2.8cqw;*/
+  font-size: "calc(2.667 * var(--cqw))";
+  font-weight: normal;
+}
+h3 {
+  font-family: "Code Pro Bold", Arial, Sans-Serif;
+  /*font-size: 2cqw;*/
+  font-size: calc(1.905 * var(--cqw));
+  font-weight: normal;
+}
+h4 {
+  font-family: "Code Pro Bold", Arial, Sans-Serif;
+  /*font-size: 2cqw;*/
+  font-size: calc(1.905 * var(--cqw));
+  font-weight: normal;
+}
+.page_visible {
+  visibility: visible;
+}
+.page_hidden {
+  visibility: hidden;
+}
+div.page_div {
+  background-color: #fff;
+}
+div.page_div {
+  background-color: #fff;
+  width: 100vw;
+  height: 56.25vw; /* height:width ratio = 9/16 = .5625  */
+  max-height: 100vh;
+  max-width: 177.78vh; /* 16/9 = 1.778 */
+  margin: auto;
+  position: absolute;
+  top:0;
+  bottom:0; /* vertical center */
+  left:0;
+  right:0; /* horizontal center */
+  /* container-type: size; */
+  overflow: hidden;
+  z-index: 2;
+}
+div.subcontainer {
+  container-type: size;
+  width: 100%;
+  height: 100%;
+  font-size: calc(2.267 * var(--cqw));
+}
+div.black_div {
+  background-color: #000;
+  color: #fff;
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  visibility: hidden;
+  z-index: 8;
+}
+/* Floating instructions panel (reuses .loading_div element) */
+div.loading_div {
+  position: fixed;
+  bottom: calc(1vw + 4vw + 0.75vw); /* sit above the circle */
+  right: 1vw;
+  max-width: 36vw;
+  background-color: rgba(0,0,0,0.85);
+  color: white;
+  visibility: hidden;   /* hidden by default */
+  opacity: 0;
+  z-index: 20;
+  text-align: left;
+  display: block;
+  align-items: start;
+  justify-content: start;
+  font-size: 1vw;
+  padding: 1vw 1.2vw;
+  border-radius: 0.8vw;
+  box-shadow: 0 0.6vw 1.6vw rgba(0,0,0,0.4);
+  transition: opacity .25s ease, visibility .25s ease;
+  pointer-events: none; /* no clicks when hidden */
+}
+div.loading_div.visible {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto; /* clickable when shown */
+}
+div.loading_div.as-help .splash-only {
+  display: none;
+}
+
+/* Floating question mark button */
+#help_btn {
+  position: fixed;
+  bottom: 1vw;
+  right: 1vw;
+  width: 4vw;                /* 4% of screen width */
+  height: 4vw;
+  min-width: 28px;           /* sensible floor for tiny screens */
+  min-height: 28px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.65);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2vw;
+  line-height: 1;
+  cursor: pointer;
+  user-select: none;
+  z-index: 21;
+  box-shadow: 0 0.5vw 1.2vw rgba(0,0,0,0.35);
+  transition: opacity .35s ease;
+  opacity: 1;
+}
+#help_btn.hidden { opacity: 0; pointer-events: none; }
+
+/* Always show the button in overview */
+body.overview #help_btn {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+div.l4_box {
+  position: absolute;
+  border-radius: 1cqw;
+  overflow: hidden;
+}
+div.l4_box p {
+  margin: 1.2cqw;
+}
+div.footer {
+  font-family: "Roboto Mono Regular", Arial, Sans-Serif;
+  /*font-size: 1cqw;*/
+  font-size: calc(0.933 * var(--cqw));
+  font-weight: normal;
+}
+ul {
+  margin-top: 0;
+  border: 1px;
+}
+li {
+  margin-top: 0em;
+  margin-bottom: 0.3em;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 0.3em;
+}
+/*div {
+border: 1px #ccc solid;
+/* for debugging: borders for all divs */
+}
+p {
+border: 1px #ccc solid;
+}*/
+
+/* --- Overview mode (toggle with 'O') --- */
+#slides {
+  position: relative;
+  z-index: 2;
+}
+body.overview {
+  overflow: auto; /* allow scroll if >25 slides */
+}
+body.overview #slides {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.75vw;
+  padding: 0.75vw;
+  place-items: center;
+}
+
+/* Force every page visible and sized as thumbnails */
+body.overview .page_div {
+  position: relative !important;
+  visibility: visible !important;
+  width: calc(100vw / 5 - 1.2vw);
+  height: calc((100vw / 5 - 1.2vw) * 0.5625); /* keep 16:9 */
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  box-shadow: 0 0.25vw 0.75vw rgba(0,0,0,0.35);
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* Prevent inner content from capturing clicks during overview */
+body.overview .page_div .subcontainer {
+  pointer-events: none;
+}
+
+/* Dim the current slide a bit to indicate selection */
+body.overview .page_div.is-current {
+  outline: 0.25vw solid #888;
+  outline-offset: 0.25vw;
+}
+
+/* Scale inner content so text shrinks in overview */
+:root {
+  /* 5 columns => ~20% scale. Tweak if you change columns/gaps. */
+  --thumb-scale: 0.2;
+}
+
+body.overview .page_div .subcontainer {
+  /* Make the visual content 20% of normal size */
+  transform: scale(var(--thumb-scale));
+  transform-origin: top left;
+
+  /* Expand the layout box inversely so the scaled content still fills the thumbnail */
+  width: calc(100% / var(--thumb-scale));
+  height: calc(100% / var(--thumb-scale));
+
+  /* Keep thumbnails click-through (handled on the slide box) */
+  pointer-events: none;
+}
+
+@media print {
+  @page {
+    size: 160mm 90mm;
+    margin: 0;
+    -webkit-print-color-adjust: exact !important;   /* Chrome, Safari 6 – 15.3, Edge */
+    color-adjust: exact !important;                 /* Firefox 48 – 96 */
+    print-color-adjust: exact !important;           /* Firefox 97+, Safari 15.4+ */
+
+  }
+
+  :root {
+    --slide-w: 160mm;
+    --slide-h: 90mm;
+    --cqw: calc(var(--slide-w) / 100);
+    --cqh: calc(var(--slide-h) / 100);
+  }
+
+  body {
+    margin:0px;
+  }
+  div.page_div {
+    position: relative;
+    visibility: visible;
+    break-after: always;
+    break-inside: avoid;
+    display: table;
+    /* width: 160mm;
+    height: 90mm;*/
+    width: var(--slide-w);
+    height: var(--slide-h);
+  }
+  .page_visible {
+    visibility: visible;
+  }
+  .page_hidden {
+        visibility: visible;
+  }
+  #help_btn { opacity: 0; }
+}
+</style>
+		<title>AI:s dubbla roll i klimatfrågan </title>
+		<script>
+var currentPageId = "page-1";
+var blackPageVar = false;
+var lastPage = 30;
+
+var overviewMode = false; // if you already declared this earlier, keep only one
+var helpBtnTimer = null;
+
+var initialHelpShown = false;
+
+function onloadHandler() {
+  gotoHash();          // make sure we still go to the right slide
+  wireHelpUI();        // attach the click handlers (idempotent)
+  if (!initialHelpShown) {
+    var b = document.getElementById('help_btn');
+    if (b) {
+      b.classList.remove('hidden'); // show immediately
+      if (helpBtnTimer) clearTimeout(helpBtnTimer);
+      helpBtnTimer = setTimeout(function() {
+        b.classList.add('hidden');  // hide after 5s
+      }, 5000);
+    }
+    initialHelpShown = true;
+  }
+}
+function showHelpBtn() {
+  var b = document.getElementById('help_btn');
+  if (b) b.classList.remove('hidden');
+}
+function hideHelpBtn() {
+  var b = document.getElementById('help_btn');
+  if (b) b.classList.add('hidden');
+}
+
+
+function getHelpPanel() {
+  return document.getElementsByClassName('loading_div')[0];
+}
+function showHelpPanel() {
+  var p = getHelpPanel();
+  if (!p) return;
+  p.classList.add('as-help');     // ← mark as help (hides splash-only)
+  p.classList.add('visible');  // CSS transitions handle fade in
+}
+function hideHelpPanel() {
+  var p = getHelpPanel();
+  if (!p) return;
+  p.classList.remove('visible'); // fade out
+  p.classList.remove('as-help');     // ← mark as help (hides splash-only)
+}
+
+/* ensure the button works and clicks don't immediately close the panel */
+function wireHelpUI() {
+  var btn = document.getElementById('help_btn');
+  if (btn && !btn._wired) {
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      showHelpPanel();
+    });
+    btn._wired = true;
+  }
+  var panel = getHelpPanel();
+  if (panel && !panel._wired) {
+    panel.addEventListener('click', function(e){ e.stopPropagation(); });
+    panel._wired = true;
+  }
+  // Any click outside closes the panel
+  if (!document._help_global_click) {
+    document.addEventListener('click', function(){ hideHelpPanel(); });
+    document._help_global_click = true;
+  }
+}
+
+var overviewMode = false;
+
+function setCurrentMarker() {
+  // mark current slide for subtle outline in overview
+  for (var i = 1; i <= lastPage; i++) {
+    var pid = 'page-' + i;
+    var el = document.getElementById(pid);
+    if (!el) continue;
+    if (pid === currentPageId) el.classList.add('is-current');
+    else el.classList.remove('is-current');
+  }
+}
+
+function enterOverview() {
+  if (overviewMode) return;
+  overviewMode = true;
+  document.body.classList.add('overview');
+
+  showHelpBtn();           // <— keep button visible in overview
+  hideHelpPanel();         // <— close panel when mode changes
+
+  // make all slides visible and clickable
+  for (var i = 1; i <= lastPage; i++) {
+    var pid = 'page-' + i;
+    var el = document.getElementById(pid);
+    if (!el) continue;
+
+    // Ensure visibility regardless of page_visible/page_hidden
+    el.classList.remove('page_hidden');
+    el.classList.add('page_visible');
+
+    // Attach a one-off click handler that exits overview and navigates
+    el.addEventListener('click', overviewClickHandler);
+  }
+  setCurrentMarker();
+}
+
+function exitOverview() {
+  if (!overviewMode) return;
+  overviewMode = false;
+  document.body.classList.remove('overview');
+
+  hideHelpPanel();
+  hideHelpBtn();           // <— fade if not within 5s
+
+  // Remove click handlers
+  for (var i = 1; i <= lastPage; i++) {
+    var pid = 'page-' + i;
+    var el = document.getElementById(pid);
+    if (!el) continue;
+    el.removeEventListener('click', overviewClickHandler);
+    el.classList.remove('is-current');
+  }
+
+  // Restore single-slide view based on currentPageId
+  for (var i = 1; i <= lastPage; i++) {
+    var pid = 'page-' + i;
+    var el = document.getElementById(pid);
+    if (!el) continue;
+    if (pid === currentPageId) {
+      el.classList.remove('page_hidden');
+      el.classList.add('page_visible');
+    } else {
+      el.classList.remove('page_visible');
+      el.classList.add('page_hidden');
+    }
+  }
+}
+
+function toggleOverview() {
+  if (overviewMode) exitOverview();
+  else enterOverview();
+}
+
+function overviewClickHandler(e) {
+  // During overview, clicking a slide selects it and exits
+  var parent = e.currentTarget; // .page_div
+  var pid = parent.id;
+  currentPageId = pid;
+  window.location.hash = pid;
+  exitOverview();
+  e.stopPropagation();
+}
+
+function blackPage() {
+  if (blackPageVar) {
+    document.getElementById('black_div').style.visibility = 'hidden';
+    //alert('un-black page');
+  }
+  else {
+    document.getElementById('black_div').style.visibility = 'visible';
+    //alert('black page');
+  }
+  blackPageVar = !blackPageVar;
+}
+function mouseuphandler(e) {
+  var selection = window.getSelection();
+  if(selection.toString().length > 0) {
+    //alert('there was something selected'+selection.toString().length);
+    return;
+  }
+  e.pageX;
+  width = document.getElementById(currentPageId).offsetWidth;
+  //alert(width);
+  if (e.pageX < 0.25*width) {
+    prevPage();
+  }
+  else {
+    nextPage()
+  }
+}
+function gotoHash(){
+  var currentPageId = "page-1";
+  newPageId = window.location.hash.substring(1);
+  if (newPageId == "") {
+    newPageId = currentPageId;
+  }
+  goToPage(newPageId);
+}
+function prevPage(){
+  //alert('prevPage')
+  if (overviewMode) return;  // do nothing in overview
+  hideHelpPanel();
+  splits = currentPageId.split("-");
+  currentPageNumber = parseInt(splits[1]);
+  prevPageNumber = currentPageNumber-1;
+  pageId = "page-"+prevPageNumber;
+  element = document.getElementById(pageId);
+  if (element) {
+    document.getElementById(currentPageId).classList.remove('page_visible');
+    document.getElementById(currentPageId).classList.add('page_hidden');
+    document.getElementById(pageId).classList.remove('page_hidden');
+    document.getElementById(pageId).classList.add('page_visible');
+    //document.getElementById(currentPageId).style.visibility="hidden";
+    //document.getElementById(pageId).style.visibility="visible";
+    currentPageId = pageId;
+    window.location.hash = pageId;
+  }
+}
+function nextPage(){
+  //alert('nextPage')
+  if (overviewMode) return;  // do nothing in overview
+  hideHelpPanel();
+  splits = currentPageId.split("-");
+  currentPageNumber = parseInt(splits[1]);
+  nextPageNumber = currentPageNumber+1;
+  pageId = "page-"+nextPageNumber;
+  element = document.getElementById(pageId);
+  if (element) {
+    document.getElementById(currentPageId).classList.remove('page_visible');
+    document.getElementById(currentPageId).classList.add('page_hidden');
+    document.getElementById(pageId).classList.remove('page_hidden');
+    document.getElementById(pageId).classList.add('page_visible');
+    //document.getElementById(currentPageId).style.visibility="hidden";
+    //document.getElementById(pageId).style.visibility="visible";
+    currentPageId = pageId;
+    window.location.hash = pageId;
+  }
+}
+function goToPage(pageId){
+  //alert(pageId);
+  hideHelpPanel();
+  if (!document.getElementById(pageId)){
+    //alert(pageId+": page not found")
+    pageId = "page-1";
+  }
+  document.getElementById(currentPageId).classList.remove('page_visible');
+  document.getElementById(currentPageId).classList.add('page_hidden');
+  document.getElementById(pageId).classList.remove('page_hidden');
+  document.getElementById(pageId).classList.add('page_visible');
+  //document.getElementById(currentPageId).style.visibility="hidden";
+  //document.getElementById(pageId).style.visibility="visible";
+  currentPageId = pageId;
+  window.location.hash = pageId;
+  setCurrentMarker();
+}
+function localPageLink(pageId, event){
+  //alert(pageId);
+  event.stopPropagation(); // do not fire event on parent elements.
+  goToPage(pageId);
+}
+function stopProp(event){
+  event.stopPropagation();
+}
+document.onkeydown = function(event) {
+  hideHelpPanel();
+  switch (event.keyCode) {
+    case 33:
+      // page up
+      prevPage();
+    break;
+    case 34:
+      // page down
+      nextPage();
+    break;
+    case 35:
+      // end
+      goToPage('page-'+lastPage);
+    break;
+    case 36:
+      // home
+      goToPage('page-0');
+    break;
+    case 37:
+      // left arrow
+      prevPage();
+    break;
+    case 38:
+      // up arrow
+      prevPage();
+    break;
+    case 32:
+      //space
+      nextPage();
+    break;
+    case 39:
+      // right arrow
+      nextPage();
+    break;
+    case 40:
+      // down arrow
+      nextPage();
+    break;
+    case 66:
+      // b - blank/black
+      blackPage();
+    break;
+    case 70:
+      // f - fulscreen
+      if (window.fullScreen) {
+        document.exitFullscreen();
+      }
+      else {
+        document.documentElement.requestFullscreen();
+      }
+    break;
+    case 79:
+      // o - overview
+      toggleOverview();
+    break;
+  }
+};
+</script>
+		<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+		<script id="MathJax-script" async="true" src="resources/tex-mml-svg.js"> </script>
+		<meta generator='pymdslides, git commit: "c1ef370739c40d01ae03b6269fcb63806a39d950" https://github.com/olofmogren/pymdslides/'>
+		<meta generation-date="2025-12-10 12:28:35.555636+01:00">
+	</head>
+	<body onload="onloadHandler();">
+		<div id="slides">
+			<div id="page-1" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
+					<img src="graphics/20230713_152426-environment.jpg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
+					<div style="position: absolute; left: 6.250%; top: 36.667%; width: 87.500%; height: 11.481%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.800 * var(--cqw)); ">AI:s dubbla roll i klimatfrågan</h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 43.778%; width: 87.500%; height: 7.778%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h2 style="margin: 0; padding: 0; font-size: calc(2.667 * var(--cqw)); ">Utmaningar och möjligheter för miljön</h2>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
+						<p> </p>
+						<p> </p>
+						<p> </p>
+						<p> </p>
+						<p> </p>
+						<p>Olof Mogren, Forskningsledare AI, RISE</p>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #ffffffff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>1   mogren.ml, olof.mogren@ri.se, 2025-12-10</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-2" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
+					<img src="graphics/mogren.webp" style="position: absolute; left: 50.000%; top: 0.000%; width: 50.000%; height: 100.000%; object-fit: cover;">
+					<img src="graphics/pirinen-104x104.webp" style="position: absolute; left: 20.417%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+					<img src="graphics/martinsson-104x104.jpg" style="position: absolute; left: 23.125%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+					<img src="graphics/mogren-104x103.webp" style="position: absolute; left: 25.833%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+					<img src="graphics/listozec-104x104.jpg" style="position: absolute; left: 28.542%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+					<img src="graphics/willbo-104x90.webp" style="position: absolute; left: 31.250%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 37.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.800 * var(--cqw)); ">Vem är jag?</h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;font-size: calc(2.267 * var(--cqw)); ">
+						<ul>
+							<li>Forskningsledare inom AI på RISE</li>
+							<li>Magister i datavetenskap,
+Göteborgs Universitet 2007</li>
+							<li>Doktor i datavetenskap,
+Chalmers 2018</li>
+						</ul>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>2   mogren.ml, olof.mogren@ri.se, 2025-12-10</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-3" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
+					<img src="graphics/rise-bg.webp" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.800 * var(--cqw)); ">RISE</h1>
+					</div>
+					<div style="position: absolute; left: 9.583%; top: 15.259%; width: 87.500%; height: 7.778%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;">
+						<h2 style="margin: 0; padding: 0; font-size: calc(2.667 * var(--cqw)); ">Research Institutes of Sweden</h2>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;font-size: calc(2.267 * var(--cqw)); ">
+						<ul>
+							<li>Sveriges forskningsinstitut</li>
+							<li>Stödjer näringsliv och offentlig sektor</li>
+							<li>~3000 medarbetare på 35 orter</li>
+							<li>Extrem bredd av expertis</li>
+						</ul>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>3   mogren.ml, olof.mogren@ri.se, 2025-12-10</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-4" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
+					<img src="graphics/stable-diff-swirl.webp" style="position: absolute; left: 50.000%; top: 0.000%; width: 50.000%; height: 100.000%; object-fit: cover;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 37.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.800 * var(--cqw)); ">AI 2025</h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
+						<ul>
+							<li>Generativ AI (skapande)
+<ul>
+									<li>ChatGPT, Gemini</li>
+									<li>DALL-E, Midjourney, Stable Diffusion</li>
+									<li>Kräver resurser</li>
+								</ul>
+							</li>
+							<li>Avancerad analys (tänkande/mätande)
+<ul>
+									<li>Miljöövervakning</li>
+									<li>Energioptimering</li>
+									<li>Medicin</li>
+									<li>Självkörande fordon</li>
+									<li>Oftast mindre resurskrävande</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>4   mogren.ml, olof.mogren@ri.se, 2025-12-10</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-5" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
+					<img src="graphics/theatre_dopera_spatial-cropped.jpg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.800 * var(--cqw)); ">Generativ AI</h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;font-size: calc(2.267 * var(--cqw)); ">
+						<ul>
+							<li>Tränas på enorma mängder data
+(läs: hela internet)</li>
+							<li>Kräver stora datacenter</li>
+							<li>Konsumerar stora mängder energi
+vid träning och drift</li>
+							<li>Stora språkmodeller kan vara till stor hjälp
+<ul>
+									<li>Också för miljörelaterade uppgifter</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>5   Théâtre d'Opéra Spatial, bild genererad av Midjourney.</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-6" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
+					<img src="graphics/deepai-chatbots.jpg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.800 * var(--cqw)); ">Chatbottar och Språkmodeller</h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;font-size: calc(2.267 * var(--cqw)); ">
+						<ul>
+							<li>Stora språkmodeller (Large Language Models; LLMs)</li>
+							<li>Varje fråga till en stor modell drar upp till 10x mer energi än en Google-sökning</li>
+							<li>Datacenter står idag för ca 1-2% av global elanvändning (ökar troligen)</li>
+						</ul>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>6   Illustration genererad av Deep AI</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-7" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
+					<img src="graphics/2023-scaling-laws-for-llms.webp" style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 28.148%; object-fit: contain;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.800 * var(--cqw)); ">Skalningslagar 2020</h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 63.704%; width: 87.500%; height: 28.148%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
+						<ul>
+							<li>Större är bättre (men dyrare och mindre hållbart)</li>
+							<li>Det har funnits ett intresse i större modeller</li>
+							<li>Mer beräkningskraft har letttill bättre prestanda</li>
+							<li>Kostnaden för AI</li>
+						</ul>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>7   Kaplan, et.al., 2020</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-8" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
+					<img src="graphics/41467_2025_61040_Fig1_HTML.webp" style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; object-fit: contain;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.800 * var(--cqw)); ">Men det finns ljusningar</h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 63.704%; width: 87.500%; height: 28.148%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
+						<p> </p>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>8   Yao, et al., 2025</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-9" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
+					<img src="graphics/wetlands-elena-elisseeva.jpg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
+					<div style="position: absolute; left: 6.250%; top: 36.667%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.800 * var(--cqw)); ">Del 2: AI som verktyg för klimatet</h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;font-size: calc(2.267 * var(--cqw)); ">
+						<p> </p>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>9   mogren.one, olof.mogren@ri.se --- Foto: Elena Elisseeva</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-10" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
+					<img src="graphics/deepai-chatbots.jpg" style="position: absolute; left: 6.250%; top: 24.444%; width: 37.500%; height: 67.407%; object-fit: cover;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.800 * var(--cqw)); ">Hur kan AI hjälpa?</h1>
+					</div>
+					<div style="position: absolute; left: 51.042%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
+						<ul>
+							<li>Katastrofhantering</li>
+							<li>Förutsäga extrema händelser
+<ul>
+									<li>Översvämning, torka</li>
+									<li>Skogsbränder</li>
+								</ul>
+							</li>
+							<li>Optimering
+<ul>
+									<li>Transportsystem</li>
+									<li>Energisystem, uppvärmning, kylning</li>
+								</ul>
+							</li>
+							<li>Planering av grön infrastruktur</li>
+							<li>Scenarioanalys och visualisering</li>
+							<li>Analys av komplex miljödata</li>
+						</ul>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>10   Illustration generated by Deep AI</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-11" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
+					<img src="graphics/wwf-camera-trap.jpg" style="position: absolute; left: 0.000%; top: 0.000%; width: 50.000%; height: 50.000%; object-fit: cover;">
+					<img src="graphics/rtsys-hydrophone.webp" style="position: absolute; left: 50.000%; top: 0.000%; width: 50.000%; height: 50.000%; object-fit: cover;">
+					<img src="graphics/usgs-pam.jpg" style="position: absolute; left: 0.000%; top: 50.000%; width: 50.000%; height: 50.000%; object-fit: cover;">
+					<img src="graphics/unity-college-environmental-analysis.jpg" style="position: absolute; left: 50.000%; top: 50.000%; width: 50.000%; height: 50.000%; object-fit: cover;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.267 * var(--cqw)); ">Miljödata</h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;font-size: calc(2.267 * var(--cqw)); ">
+						<ul>
+							<li>Fjärranalys
+<ul>
+									<li>Satellitbilder</li>
+									<li>Drönarfilmer</li>
+								</ul>
+							</li>
+							<li>Ljudinspelningar
+<ul>
+									<li>Passiva akustiska sensorer</li>
+								</ul>
+							</li>
+							<li>Videodata
+<ul>
+									<li>Kamerafällor</li>
+								</ul>
+							</li>
+							<li>Andra sensorer
+<ul>
+									<li>Vattenflödesmätare</li>
+									<li>Atmosfäriska mätningar</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>11   mogren.ml, olof.mogren@ri.se, 2025-12-10</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-12" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #440154ff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
+					<img src="graphics/wetlands-merged.webp" style="position: absolute; left: 0.000%; top: 0.000%; width: 50.000%; height: 100.000%; object-fit: cover;">
+					<div style="position: absolute; left: 56.250%; top: 8.148%; width: 37.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.800 * var(--cqw)); ">Jordobservation</h1>
+					</div>
+					<div style="position: absolute; left: 59.583%; top: 15.259%; width: 37.500%; height: 7.778%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;">
+						<h2 style="margin: 0; padding: 0; font-size: calc(2.667 * var(--cqw)); ">för våtmarker och kolsänkor</h2>
+					</div>
+					<div style="position: absolute; left: 51.042%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;font-size: calc(2.267 * var(--cqw)); ">
+						<p> 
+ 
+ </p>
+						<ul>
+							<li>Genererade kartor är avgörande för:
+<ul>
+									<li>Återvätning av våtmarker</li>
+									<li>Biologisk mångfald</li>
+									<li>Klimatanpassning</li>
+									<li>Kolinlagring</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>12   mogren.one, olof.mogren@ri.se --- Pirinen, Mogren, Västerdal, 2023</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-13" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
+					<img src="graphics/cloud-thickness.jpg" style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 28.148%; object-fit: contain;">
+					<img src="graphics/pirinen-104x104.webp" style="position: absolute; left: 48.750%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.800 * var(--cqw)); ">Estimering av molntjocklek</h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 63.704%; width: 87.500%; height: 28.148%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
+						<ul>
+							<li>AI tolkar satellitbilder bättre än traditionella metoder</li>
+							<li>Förändring av landanvändning och biotoper</li>
+							<li>Spårning av social utsatthet, slum.</li>
+							<li>Skogsbränder, avverkning.</li>
+						</ul>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>13   Pirinen et al., 2023</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-14" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
+					<img src="graphics/pirinen-2023-flow-prediction-layers.webp" style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 28.148%; object-fit: contain;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.800 * var(--cqw)); ">Prognoser för vattenflöden</h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 63.704%; width: 87.500%; height: 28.148%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;font-size: calc(2.267 * var(--cqw)); ">
+						<ul>
+							<li>Detaljerade kartor över vattenflöden i Sverige och Brasilien</li>
+							<li>Kombinerar satellitbilder, höjddata, regn och temperaturhistorik</li>
+							<li>Viktigt för att hantera torka och översvämningar</li>
+						</ul>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>14   mogren.one, olof.mogren@ri.se --- Pirinen, Mogren, Västerdal, 2023</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-15" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
+					<div style="position: absolute; left: 6.250%; top: 36.667%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.800 * var(--cqw)); ">Klimatförändringar</h1>
+					</div>
+					<div style="position: absolute; left: 9.583%; top: 43.778%; width: 87.500%; height: 7.778%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;">
+						<h2 style="margin: 0; padding: 0; font-size: calc(2.667 * var(--cqw)); ">driver krisen inom biologisk mångfald</h2>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;font-size: calc(2.267 * var(--cqw)); ">
+						<p> </p>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>15</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-16" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
+					<img src="graphics/coral-01.jpg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.800 * var(--cqw)); "></h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;font-size: calc(2.267 * var(--cqw)); ">
+						<p> </p>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>16                                    --- https://www.un.org/en/climatechange/science/climate-issues/biodiversity</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-17" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
+					<img src="graphics/coral-02.jpg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.800 * var(--cqw)); ">+1.5°</h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;font-size: calc(2.267 * var(--cqw)); ">
+						<p> </p>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>17                                    --- https://www.un.org/en/climatechange/science/climate-issues/biodiversity</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-18" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
+					<img src="graphics/coral-03.jpg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.800 * var(--cqw)); ">+2°</h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;font-size: calc(2.267 * var(--cqw)); ">
+						<p> </p>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>18                                    --- https://www.un.org/en/climatechange/science/climate-issues/biodiversity</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-19" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
+					<img src="graphics/dall-e-2-thick-forrest-photo-fade-from-white.webp" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
+					<img src="graphics/pam.webp" style="position: absolute; left: 56.250%; top: 24.444%; width: 37.500%; height: 67.407%; object-fit: contain;">
+					<img src="graphics/martinsson-104x104.jpg" style="position: absolute; left: 17.708%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+					<img src="graphics/sandsten-79x104.webp" style="position: absolute; left: 20.417%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+					<img src="graphics/mogren-104x103.webp" style="position: absolute; left: 23.125%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+					<img src="graphics/white.webp" style="position: absolute; left: 25.833%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+					<img src="graphics/slu-104x78.webp" style="position: absolute; left: 28.542%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+					<img src="graphics/naturvardsverket-92x104.webp" style="position: absolute; left: 31.250%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+					<img src="graphics/lund-university-82x104.webp" style="position: absolute; left: 33.958%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.800 * var(--cqw)); ">Övervakning av biologisk mångfald</h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
+						<p> 
+ </p>
+						<ul>
+							<li>Passiva akustiska sensorer i skogen</li>
+							<li>Smart AI-analys av ljudlandskap</li>
+							<li>Identifierar arter och mänsklig störning</li>
+						</ul>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>19   mogren.one, olof.mogren@ri.se --- DALL-E 2: thick forrest, photo</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-20" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
+					<img src="graphics/capercaillie.webp" style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 28.148%; object-fit: contain;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.800 * var(--cqw)); ">Tjädrar och vindkraft</h1>
+					</div>
+					<div style="position: absolute; left: 9.583%; top: 15.259%; width: 87.500%; height: 7.778%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h2 style="margin: 0; padding: 0; font-size: calc(2.667 * var(--cqw)); ">Målkonflikter i den gröna omställningen</h2>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 63.704%; width: 87.500%; height: 28.148%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
+						<ul>
+							<li>Vad får vindkraftsbyggen för effekt på hotade arter?</li>
+							<li>Inspelningar av ljud vid vindkraftsverk där tjädrar lever</li>
+							<li>Räkna individer, identifiera olika typer av läten</li>
+							<li>Pågående arbete med Vattenfall, SLU och Naturvårdsverket</li>
+						</ul>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>20   Martinsson and Mogren, 2024</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-21" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
+					<img src="graphics/coffee-berry-disease-0.webp" style="position: absolute; left: 56.250%; top: 24.444%; width: 37.500%; height: 33.704%; object-fit: contain;">
+					<img src="graphics/coffee-berry-disease-2.webp" style="position: absolute; left: 56.250%; top: 58.148%; width: 37.500%; height: 33.704%; object-fit: contain;">
+					<img src="graphics/pirinen-104x104.webp" style="position: absolute; left: 24.792%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+					<img src="graphics/mogren-104x103.webp" style="position: absolute; left: 27.500%; top: 93.333%; width: 2.708%; height: 4.815%; object-fit: cover;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.800 * var(--cqw)); ">Smart jordbruk</h1>
+					</div>
+					<div style="position: absolute; left: 9.583%; top: 15.259%; width: 87.500%; height: 7.778%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h2 style="margin: 0; padding: 0; font-size: calc(2.667 * var(--cqw)); ">Klimatanpassning av grödor</h2>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
+						<ul>
+							<li>Hjälp att upptäcka infekterade växter (t.ex. Kaffebärssjuka)</li>
+							<li>Sjukdomen är starkt kopplad till klimatförändringar (regn, fukt, temp)</li>
+							<li>AI hjälper bönder att agera i tid med mindre kemikalier</li>
+						</ul>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>21   mogren.ml, olof.mogren@ri.se, 2025-12-10</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-22" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.800 * var(--cqw)); ">AI för fysik - snabbare simuleringar</h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
+						<ul>
+							<li>Ersätta tunga beräkningar (väder, vind, flöden) med snabba AI-modeller</li>
+							<li>Sparar energi och möjliggör bättre prognoser</li>
+						</ul>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>22   mogren.one, olof.mogren@ri.se --- Bånkestad, Pirinen, Mogren, 2024</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-23" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
+					<img src="graphics/scatter-scalar.webp" style="position: absolute; left: 0.000%; top: 0.000%; width: 50.000%; height: 100.000%; object-fit: cover;">
+					<img src="graphics/scatter-velocity.webp" style="position: absolute; left: 50.000%; top: 0.000%; width: 50.000%; height: 100.000%; object-fit: cover;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.800 * var(--cqw)); "></h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
+						<p> </p>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>23   mogren.ml, olof.mogren@ri.se, 2025-12-10</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-24" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
+					<img src="graphics/dall-e-3-grey-to-green.webp" style="position: absolute; left: 56.250%; top: 24.444%; width: 37.500%; height: 67.407%; object-fit: cover;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.800 * var(--cqw)); ">Från grått till grönt</h1>
+					</div>
+					<div style="position: absolute; left: 9.583%; top: 15.259%; width: 87.500%; height: 7.778%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h2 style="margin: 0; padding: 0; font-size: calc(2.667 * var(--cqw)); ">AI för stadsplanering</h2>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
+						<ul>
+							<li>Optimera omvandling av hårdgjorda ytor till grönska</li>
+							<li>Minska värmeöar, hantera skyfall, öka trivsel</li>
+							<li>Samarbete med SLU, Malmö Stad, Uppsala Kommun</li>
+						</ul>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>24   mogren.one, olof.mogren@ri.se --- illustration från dall-e 3</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-25" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
+					<div style="position: absolute; left: 6.250%; top: 36.667%; width: 87.500%; height: 11.481%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.800 * var(--cqw)); ">AI är ingen snabb, enkel lösning</h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;font-size: calc(2.267 * var(--cqw)); ">
+						<p> </p>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>25   mogren.ml, olof.mogren@ri.se, 2025-12-10</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-26" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
+					<img src="graphics/dall-e-3-computer-lab.jpg" style="position: absolute; left: 50.000%; top: 0.000%; width: 50.000%; height: 100.000%; object-fit: cover;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 37.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.800 * var(--cqw)); ">Tech-lösningar för naturen</h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
+						<ul>
+							<li>
+								<strong>Gör data tillgänglig</strong> för beslutsfattare</li>
+							<li>
+								<strong>Prognoser:</strong> Energi, transport, extremhändelser</li>
+							<li>
+								<strong>Optimering:</strong> Cirkulär ekonomi, grön infrastruktur</li>
+							<li>
+								<p>
+									<strong>Ersätt tunga beräkningar:</strong> Spara energi</p>
+							</li>
+							<li>
+								<p>
+									<strong>Utmaning:</strong> Balansera AI:s energikonsumtion mot klimatnyttan av applikationerna.</p>
+							</li>
+						</ul>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>26   Dall-E 3: A computer lab with many big computer screens, showing charts, tables, and images of forests and wetlands</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-27" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.800 * var(--cqw)); ">Sammanfattning</h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
+						<ul>
+							<li>
+								<strong>AI har en miljöpåverkan:</strong> Träning och drift av stora modeller kräver mycket energi. Vi måste vara medvetna.</li>
+							<li>
+								<strong>AI är ett kraftfullt verktyg:</strong>
+								<ul>
+									<li>Övervaka planeten (Satellit, Ljud)</li>
+									<li>Optimera system (Energi, Transport)</li>
+									<li>Utveckla nya lösningar (Material, Jordbruk)</li>
+								</ul>
+							</li>
+							<li>
+								<strong>Framtiden:</strong> Smarta, energieffektiva AI-modeller som löser specifika problem.</li>
+						</ul>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>27   mogren.ml, olof.mogren@ri.se, 2025-12-10</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-28" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
+					<img src="graphics/pirinen.webp" style="position: absolute; left: 6.250%; top: 24.444%; width: 17.500%; height: 28.148%; object-fit: cover;">
+					<img src="graphics/bankestad.webp" style="position: absolute; left: 23.750%; top: 24.444%; width: 17.500%; height: 28.148%; object-fit: cover;">
+					<img src="graphics/martinsson.jpg" style="position: absolute; left: 41.250%; top: 24.444%; width: 17.500%; height: 28.148%; object-fit: cover;">
+					<img src="graphics/wang.jpg" style="position: absolute; left: 58.750%; top: 24.444%; width: 17.500%; height: 28.148%; object-fit: cover;">
+					<img src="graphics/mogren.webp" style="position: absolute; left: 76.250%; top: 24.444%; width: 17.500%; height: 28.148%; object-fit: cover;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.800 * var(--cqw)); ">Tack!</h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 63.704%; width: 87.500%; height: 28.148%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
+						<p> </p>
+						<p>
+							<strong>Frågor?</strong>
+						</p>
+						<p>olof.mogren@ri.se</p>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>28   Allt nämnt arbete är teamarbete</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-29" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
+					<img src="graphics/solcement-1440x766.webp" style="position: absolute; left: 56.250%; top: 24.444%; width: 37.500%; height: 67.407%; object-fit: contain;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0; font-size: calc(4.800 * var(--cqw)); ">Smarta material</h1>
+					</div>
+					<div style="position: absolute; left: 9.583%; top: 15.259%; width: 87.500%; height: 7.778%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h2 style="margin: 0; padding: 0; font-size: calc(2.667 * var(--cqw)); ">Grön betong och cement</h2>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
+						<ul>
+							<li>Cement står för ca 8% av globala utsläpp</li>
+							<li>AI kan optimera blandningen för lägre klimatavtryck</li>
+							<li>AI kan styra ugnarna för att minska bränsleåtgången</li>
+						</ul>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>29   Acharyya, et al., 2019</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-30" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
+					<img src="graphics/district-heating-diagram-1068x608.webp" style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 28.148%; object-fit: contain;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0;font-size: calc(4.800 * var(--cqw)); ">Optimering av energisystem</h1>
+					</div>
+					<div style="position: absolute; left: 9.583%; top: 15.259%; width: 87.500%; height: 7.778%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h2 style="margin: 0; padding: 0;font-size: calc(2.667 * var(--cqw)); ">Prediktivt underhåll för fjärrvärme</h2>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 63.704%; width: 87.500%; height: 28.148%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
+						<ul>
+							<li>Hitta komponenter som snart kommer behöva service</li>
+							<li>Minskar svinn och energiförluster</li>
+							<li>Samarbete mellan RISE, Energiforsk och operatörer</li>
+						</ul>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>30   Martin Willbo, Olof Mogren, 2023</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="black_div" id="black_div"> </div>
+		<div id="help_btn" class="hidden">?</div>
+		<div class="loading_div">
+			<div>
+				<p class="splash-only">Loading.</p>
+				<p class="splash-only">PYMD slides requires a javascript-enabled browser.</p>
+				<p>Usage: Arrow buttons, page up/down, or space to navigate.</p>
+				<p>F for fullscreen.</p>
+				<p>B for blank.</p>
+				<p>O for overview grid. Click a slide to jump.</p>
+				<p>Click on leftmost quarter for previous slide, the rest for next.</p>
+				<p>More info: see https://github.com/olofmogren/pymdslides/ .</p>
+			</div>
+		</div>
+		<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z/C/HgAGgwJ/lK3Q6wAAAABJRU5ErkJggg==" style="visibility: hidden;" onload="onloadHandler()">
+	</body>
+</html>
