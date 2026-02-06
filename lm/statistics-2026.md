@@ -10,11 +10,11 @@ title: Learning Machines Statistics 2026
 
 
 
-## 4 speakers
+## 5 speakers
 
-Nita Mulliqi, Pablo Villanueva Perez, Purnendu Sardar, Sanja Karilanova
+Isabelle Tingzon, Nita Mulliqi, Pablo Villanueva Perez, Purnendu Sardar, Sanja Karilanova
 
-## 3 affiliations
+## 4 affiliations
 
-Karolinska Institute, Lund University, Uppsala University
+Karolinska Institute, Lund University, RISE Research Institutes of Sweden, Uppsala University
 
