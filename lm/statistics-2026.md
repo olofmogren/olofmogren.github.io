@@ -10,11 +10,11 @@ title: Learning Machines Statistics 2026
 
 
 
-## 7 speakers
+## 8 speakers
 
-Isabelle Tingzon, Jeppe Rasmussen, Kelsey Doerksen, Nita Mulliqi, Pablo Villanueva Perez, Purnendu Sardar, Sanja Karilanova
+Isabelle Tingzon, Jeppe Rasmussen, Kelsey Doerksen, Markus Reichstein, Nita Mulliqi, Pablo Villanueva Perez, Purnendu Sardar, Sanja Karilanova
 
-## 6 affiliations
+## 7 affiliations
 
-Karolinska Institute, Lund University, Oxford Applied and Theoretical Machine Learninch Group (OATML), RISE Research Institutes of Sweden, University of Copenhagen, Uppsala University
+Karolinska Institute, Lund University, Max-Planck-Institute for Biogeochemistry and ELLIS Unit Jena, Oxford Applied and Theoretical Machine Learninch Group (OATML), RISE Research Institutes of Sweden, University of Copenhagen, Uppsala University
 

@@ -27,7 +27,7 @@ table {border-collapse: collapse;}
 | <span style="color:purple"> 2026-06-04 </span> | <span style="color:purple"> *Up for grabs!!!* </span> | <span style="color:purple">  </span> | <span style="color:purple">  ---  ---  </span> | <span style="color:purple">  </span> | <span style="color:purple">  </span> | <span style="color:purple"> ~~STABP~~ </span> |
 | <span style="color:grey"> 2026-06-11 </span> | <span style="color:grey"> ELLIS J. ? </span> | <span style="color:grey">  </span> | <span style="color:grey">  ---  ---  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey"> ?~~TABP~~ </span> |
 | <span style="color:red"> 2026-06-18 </span> | <span style="color:red"> PAUSE </span> | <span style="color:red">  </span> | <span style="color:red">  ---  ---  </span> | <span style="color:red">  </span> | <span style="color:red">  </span> | <span style="color:red"> CANCELLED </span> |
-| <span style="color:grey"> 2026-06-25 </span> | <span style="color:grey"> ELLIS J. ? </span> | <span style="color:grey">  </span> | <span style="color:grey">  ---  ---  </span> | <span style="color:grey">  </span> | <span style="color:grey">  </span> | <span style="color:grey"> ?~~TABP~~ </span> |
+|  2026-06-25  |  [Markus Reichstein, Max-Planck-Institute for Biogeochemistry and ELLIS Unit Jena](2026-06-25.md)  |    |  [social media bg ](2026-06-25-social-media-bg-markus-reichstein.jpg) --- [social media photo ](2026-06-25-social-media-photo-markus-reichstein.jpg) --- [social media 169 ](2026-06-25-social-media-169-markus-reichstein.jpg)  |  [meeting backdrop ](2026-06-25-meeting-backdrop-markus-reichstein.jpg)  |  [youtube thumbnail ](2026-06-25-youtube-thumbnail-markus-reichstein.jpg)  |  S~~TABP~~  |
 
 ## History 
 
