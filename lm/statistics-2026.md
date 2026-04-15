@@ -16,5 +16,5 @@ Ariel Flint Ashery, Gustau Camps-Valls, Isabelle Tingzon, Jeppe Rasmussen, Kelse
 
 ## 9 affiliations
 
-City St George’s, Karolinska Institute, Lund University, Max-Planck-Institute for Biogeochemistry and ELLIS Unit Jena, Oxford Applied and Theoretical Machine Learninch Group (OATML), RISE Research Institutes of Sweden, University of Copenhagen, University of Valencia, Uppsala University
+City St George’s, University of London, Karolinska Institute, Lund University, Max-Planck-Institute for Biogeochemistry and ELLIS Unit Jena, Oxford Applied and Theoretical Machine Learninch Group (OATML), RISE Research Institutes of Sweden, University of Copenhagen, University of Valencia, Uppsala University
 
