@@ -10,9 +10,9 @@ title: Learning Machines Statistics 2026
 
 
 
-## 11 speakers
+## 12 speakers
 
-Ariel Flint Ashery, Gustau Camps-Valls, Isabelle Tingzon, Jeppe Rasmussen, Kelsey Doerksen, Luca Ciampi, Markus Reichstein, Nita Mulliqi, Pablo Villanueva Perez, Sanja Karilanova, Solmaz Khazaei
+Ariel Flint Ashery, Gustau Camps-Valls, Isabelle Tingzon, Jeppe Rasmussen, Kelsey Doerksen, Luca Ciampi, Markus Reichstein, Nicola Messina, Nita Mulliqi, Pablo Villanueva Perez, Sanja Karilanova, Solmaz Khazaei
 
 ## 11 affiliations
 
