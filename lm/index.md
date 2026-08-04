@@ -1,5 +1,6 @@
 ---
 layout: default
+title: mogren.ml learning machines schedule
 metatags: "<meta name=\"robots\" content=\"noindex,nofollow\" />"
 ---
 <style type="text/css" scoped>
