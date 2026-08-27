@@ -14,7 +14,7 @@ title: Learning Machines Statistics 2026
 
 Anastasia Kakouri, Ariel Flint Ashery, Gustau Camps-Valls, Isabelle Tingzon, Jeppe Rasmussen, Kelsey Doerksen, Luca Ciampi, Markus Reichstein, Nicola Messina, Nita Mulliqi, Pablo Villanueva Perez, Sanja Karilanova, Solmaz Khazaei
 
-## 11 affiliations
+## 12 affiliations
 
-City St George’s, University of London, ISTI-CNR, KTH Royal Institute of Technology, Karolinska Institute, Lund University, Max-Planck-Institute for Biogeochemistry and ELLIS Unit Jena, RISE Research Institutes of Sweden, University of Cape Town and Arizona State University, University of Copenhagen, University of Valencia, Uppsala University
+City St George’s, University of London, ISTI-CNR, KTH Royal Institute of Technology, Karolinska Institute, Lund University, Max-Planck-Institute for Biogeochemistry and ELLIS Unit Jena, RISE Research Institutes of Sweden, University of Aegean, University of Cape Town and Arizona State University, University of Copenhagen, University of Valencia, Uppsala University
 
