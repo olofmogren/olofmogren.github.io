@@ -10,11 +10,11 @@ title: Learning Machines Statistics 2027
 
 
 
-## 0 speakers
+## 1 speakers
 
+Hao Wei
 
+## 1 affiliations
 
-## 0 affiliations
-
-
+Technical University of Munich (TUM)
 
