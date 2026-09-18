@@ -144,18 +144,3 @@ Read more <a href="/about/">about me</a>, or <a href="https://ridr.se/">about my
 {% endif %}
 
 
-      <section>
-        <div class="inner">
-          <div class="block block-copy">
-            <a href="/talks/"><h3>Recent talks in selection</h3></a>
-
-{% for p in site.categories.talks limit:3 %}
-
-              <p>
-              <a href="{{ p.url }}">{{ p.title }}</a>, {{ p.venue }}, {{ p.venueshort }}</p>
-
-{% endfor %}
-          </div>
-        </div>
-      </section>
-
