@@ -10,11 +10,11 @@ title: Learning Machines Statistics 2027
 
 
 
-## 1 speakers
+## 2 speakers
 
-Hao Wei
+Hao Wei, Nicola Messina
 
-## 1 affiliations
+## 2 affiliations
 
-Technical University of Munich (TUM)
+ISTI-CNR, Technical University of Munich (TUM)
 
