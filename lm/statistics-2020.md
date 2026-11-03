@@ -12,7 +12,7 @@ title: Learning Machines Statistics 2020
 
 ## 7 speakers
 
-Edvin Listo Zec, Erik Ylipää, Flash Talks: Edvin Listo Zec, Maria Bånkestad?, Sepideh Pashami?, Olof G?, Fredrik Carlsson, Olof Mogren, Rickard Brännvall, Zekarias Tilahun Kefato, KTH
+Edvin Listo Zec, Edvin Listo Zec, Maria Bånkestad, Sepideh Pashami, Olof G, Erik Ylipää, Fredrik Carlsson, Olof Mogren, Rickard Brännvall, Zekarias Tilahun Kefato, KTH
 
 ## 0 affiliations
 
