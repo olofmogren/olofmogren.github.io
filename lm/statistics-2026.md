@@ -12,7 +12,7 @@ title: Learning Machines Statistics 2026
 
 ## 17 speakers
 
-Ana Lucic, Anastasia Kakouri, Ariel Flint Ashery, Gustau Camps-Valls, Isabelle Tingzon, Jaime Caballer Revenga, Jeppe Rasmussen, Kelsey Doerksen, Lester Jame Miranda, Luca Ciampi, Markus Reichstein, Miguel Costa, Nita Mulliqi, Pablo Villanueva Perez, Rangel Daroya, Sanja Karilanova, Solmaz Khazaei
+Ana Lucic, Anastasia Kakouri, Ariel Flint Ashery, Gustau Camps-Valls, Isabelle Tingzon, Jaime Caballer Revenga, Jeppe Rasmussen, Kelsey Doerksen, Lester James Miranda, Luca Ciampi, Markus Reichstein, Miguel Costa, Nita Mulliqi, Pablo Villanueva Perez, Rangel Daroya, Sanja Karilanova, Solmaz Khazaei
 
 ## 16 affiliations
 
