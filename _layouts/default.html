@@ -7,7 +7,7 @@
       <meta charset="utf-8">
       <title>{{ page.title }}</title>
       <meta name="description" content="">
-      <meta name="viewport" content="width=device-width">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
       {{ page.metatags }}
       <link rel="stylesheet" href="/style.css">
       <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -19,7 +19,7 @@
           if (window.event) {
             x = window.event.clientX + document.documentElement.scrollLeft
                 + document.body.scrollLeft;
-                y = window.event.clientY + document.documentElement.scrollTop +
+            y = window.event.clientY + document.documentElement.scrollTop
                 + document.body.scrollTop;
           }
           else {
@@ -27,7 +27,7 @@
             y = event.clientY + window.scrollY;
           }
           x -= 2; y -= 2;
-          y = y+15
+          y = y+15;
           el.style.left = x + "px";
           el.style.top = y + "px";
           el.style.display = "block";
@@ -35,9 +35,9 @@
        }
     </script>
     <link rel="alternate" type="application/atom+xml" title="Olof Mogren, PhD" href="/feed.xml">
-
   </head>
   <body>
+
   <!-- Static EUMETSAT Hero & Mathematically True Orthographic Graticule (0°N, 0°E) -->
   <div class="eumetsat-hero-stage" aria-hidden="true">
     <svg class="hero-orbital-svg" viewBox="0 0 1440 460" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
@@ -64,9 +64,9 @@
       <g clip-path="url(#earth-sphere-clip)">
         <circle cx="860" cy="290" r="260" fill="#040b16" />
 
-        <!-- Point href to your local EUMETSAT image path -->
+        <!-- Leading slash ensures image loads on subpages like /publications/ too -->
         <image
-          href="graphics/eumetsat-earth-mtg-i2-2026-10-25-10-45.webp"
+          href="/graphics/eumetsat-earth-mtg-i2-2026-10-25-10-45.webp"
           x="600" y="30" width="520" height="520"
           preserveAspectRatio="xMidYMid slice"
           style="filter: brightness(0.84) contrast(1.08) saturate(1.04);"
@@ -117,7 +117,22 @@
     <div class="hero-horizon-edge"></div>
   </div>
 
-      <div id="PopUp" style="display: none; position: absolute; left: 100px; top: 50px; border: solid black 1px; padding: 10px; background-color: rgb(200,200,200); text-align: justify; font-size: 12px; min-width: 400px;">
+  <!-- Restored Site Header & Navigation over the Orbital Hero -->
+  <header id="header" class="site-header">
+    <h1><a href="/">Olof Mogren</a></h1>
+    <p class="subtitle">Deep learning researcher, PhD.</p>
+    <nav id="navigation">
+      <ul>
+        <li><a href="/publications/">Publications</a></li>
+        <li><a href="/talks/">Talks</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="https://ridr.se/">Research Group</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="page-wrapper">
+      <div id="PopUp" style="display: none; position: absolute; left: 100px; top: 50px; border: solid black 1px; padding: 10px; background-color: rgb(200,200,200); text-align: justify; font-size: 12px; min-width: 400px; z-index: 100;">
         <pre id="PopUpText">TEXT</pre>
         <input name="close" type="button" value="Close" onclick="document.getElementById('PopUp').style.display = 'none';" />
       </div>
@@ -152,3 +167,4 @@ web stats"></a></div></noscript>
 <!-- End of StatCounter Code for Default Guide -->
   </body>
 </html>
+
