@@ -3,7 +3,7 @@
 :root {
   --space-bg-top: #02050a;
   --space-bg-bottom: #081220;
-  --page-bg: #dbe2ea;
+  --page-bg: #d5dde6;
   --card-bg: #f1f5f9;
   --pub-bg: #f8fafc;
   --pub-border: #cbd5e1;
@@ -14,7 +14,9 @@
   --link-hover: #0c4a6e;
 }
 
-*, *::before, *::after { box-sizing: border-box; }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -27,11 +29,13 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* EUMETSAT Hero Stage */
+/* 1. Static EUMETSAT Hero Stage */
 .eumetsat-hero-stage {
   position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 450px;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 460px;
   background:
     radial-gradient(circle at 60% 62%, rgba(14, 42, 74, 0.45) 0%, rgba(5, 13, 26, 0.92) 56%, #02050a 100%),
     linear-gradient(180deg, var(--space-bg-top) 0%, var(--space-bg-bottom) 100%);
@@ -48,50 +52,61 @@ body {
 
 .hero-horizon-edge {
   position: absolute;
-  bottom: 0; left: 0; right: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   height: 2px;
   background: linear-gradient(90deg, rgba(56,189,248,0.05) 0%, rgba(56,189,248,0.35) 55%, rgba(56,189,248,0.08) 100%);
 }
 
-/* Glassmorphic Header over Space */
-#header {
+/* 2. Frosted Glass Header Over Space */
+#header, .site-header {
   position: relative;
   z-index: 2;
-  max-width: 500px;
-  margin: 56px auto 0 calc(50% - 460px);
-  padding: 24px 28px;
-  background: rgba(10, 22, 38, 0.68);
+  max-width: 520px;
+  margin: 48px auto 32px calc(50% - 460px);
+  padding: 24px 30px;
+  background: rgba(8, 18, 34, 0.72);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border: 1px solid rgba(148, 163, 184, 0.24);
-  border-radius: 10px;
-  box-shadow: 0 20px 44px -12px rgba(0, 0, 0, 0.65);
+  border-radius: 12px;
+  box-shadow: 0 22px 48px -12px rgba(0, 0, 0, 0.7);
 }
 
 #header h1 {
   margin: 0;
   font-family: 'Newsreader', Georgia, serif;
-  font-size: 2.35rem;
+  font-size: 2.4rem;
   font-weight: 500;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #f8fafc;
-  line-height: 1.1;
+  line-height: 1.08;
 }
 
-#header h1 a { color: inherit; text-decoration: none; }
+#header h1 a {
+  color: inherit;
+  text-decoration: none;
+}
 
-/* Navigation inside #header */
-#navigation, #header ul, .nav {
-  margin: 14px 0 0 0;
+#header .subtitle {
+  margin: 6px 0 0 0;
+  font-size: 0.92rem;
+  color: #94a3b8;
+  font-weight: 400;
+}
+
+#header ul {
+  margin: 18px 0 0 0;
   padding: 0;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 18px;
+  gap: 20px;
 }
 
-#header a {
+#header nav a {
   color: #e2e8f0;
   text-decoration: none;
   font-size: 0.78rem;
@@ -100,46 +115,74 @@ body {
   text-transform: uppercase;
 }
 
-#header a:hover { color: #38bdf8; }
+#header nav a:hover {
+  color: #38bdf8;
+}
 
-/* Main Content Container */
-#main, #content, .container {
+/* 3. Main Page Wrapper & Content Sections (Matches your Jekyll <section><div class="inner">) */
+.page-wrapper {
   position: relative;
   z-index: 2;
   max-width: 920px;
-  margin: 34px auto 64px auto;
-  padding: 34px 40px 44px 40px;
-  background: var(--card-bg);
-  border: 1px solid rgba(148, 163, 184, 0.35);
-  border-radius: 12px;
-  box-shadow: 0 18px 40px -15px rgba(15, 23, 42, 0.18);
+  margin: 0 auto 64px auto;
 }
 
-/* Right-floated Portrait */
-#main img.right, #main img[align="right"], .portrait {
-  float: right;
-  width: 215px;
+.page-wrapper > section:not(.foot) {
+  background: var(--card-bg);
+  border: 1px solid rgba(148, 163, 184, 0.38);
+  border-radius: 12px;
+  padding: 32px 40px;
+  margin-bottom: 28px;
+  box-shadow: 0 18px 40px -15px rgba(15, 23, 42, 0.22);
+}
+
+/* Clear floats inside sections so your floated portrait stays inside the card */
+.page-wrapper > section .inner::after,
+.page-wrapper > section .inner > div::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Remove extra top margin on first bio paragraph */
+.page-wrapper > section:first-of-type p:first-of-type {
+  margin-top: 0 !important;
+}
+
+/* Style your inline-floated portrait in index.html */
+.page-wrapper > section:first-of-type img {
+  width: 210px !important;
+  max-width: 32% !important;
   height: auto;
-  margin: 4px 0 20px 32px;
+  margin: 4px 0 18px 28px !important;
   border-radius: 8px;
   border: 3px solid #ffffff;
-  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.22);
+  box-shadow: 0 12px 28px -6px rgba(15, 23, 42, 0.24);
 }
 
-/* Section Headings */
-#main h2 {
-  clear: both;
-  margin: 42px 0 18px 0;
-  padding-top: 28px;
-  border-top: 1px solid var(--pub-border);
+/* 4. Typography & Links inside Sections */
+.page-wrapper h1,
+.page-wrapper h2 {
   font-family: 'Newsreader', Georgia, serif;
-  font-size: 1.85rem;
-  font-weight: 600;
   color: var(--text-main);
+  font-weight: 600;
+  line-height: 1.25;
+  margin-top: 0;
 }
 
-/* Links */
-#main a {
+.page-wrapper h1 {
+  font-size: 1.95rem;
+  margin-bottom: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--pub-border);
+}
+
+.page-wrapper h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.page-wrapper a {
   color: var(--link-color);
   text-decoration: underline;
   text-decoration-color: rgba(3, 105, 161, 0.35);
@@ -147,13 +190,13 @@ body {
   font-weight: 500;
 }
 
-#main a:hover {
+.page-wrapper a:hover {
   color: var(--link-hover);
   text-decoration-color: var(--link-hover);
 }
 
-/* BibTeX Flat <p> Publication Entries */
-#main h2 ~ p {
+/* 5. Recent Publications Cards (Targets .block-copy p in your index.html) */
+.block-copy p {
   background: var(--pub-bg);
   border: 1px solid var(--pub-border);
   border-left: 3.5px solid #0284c7;
@@ -165,30 +208,56 @@ body {
   box-shadow: 0 1px 2px rgba(15, 23, 42, 0.03);
 }
 
-/* First paragraph after h2 ("Also, visit my Scholar page.") stays unboxed */
-#main h2 + p,
-#main p:last-of-type {
+.block-copy p:nth-of-type(3n+2) {
+  border-left-color: #0d9488; /* Boreal Teal */
+}
+
+.block-copy p:nth-of-type(3n+3) {
+  border-left-color: #15803d; /* Biosphere Green */
+}
+
+/* Keep "Also, visit my Scholar page." and "View list of publications." unboxed */
+.block-copy h1 + p,
+.block-copy p:last-of-type {
   background: transparent;
   border: none;
-  padding: 2px 0;
+  padding: 4px 0 12px 0;
   box-shadow: none;
 }
 
-/* Responsive adjustments */
-@media (max-width: 960px) {
-  #header { margin: 32px 20px 0 20px; max-width: none; }
-  #main, #content, .container { margin: 24px 16px 48px 16px; padding: 24px 22px; }
-  #main img.right, #main img[align="right"] {
-    float: none;
-    display: block;
-    margin: 0 auto 20px auto;
-  }
+/* 6. Footer (Targets <section class="foot">) */
+section.foot {
+  text-align: center;
+  padding: 28px 20px 44px 20px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
 }
 
-#footer::after {
+section.foot::after {
   content: "Header Earth imagery © EUMETSAT";
   display: block;
   margin-top: 4px;
-  font-size: 0.75rem;
+  font-size: 0.76rem;
   color: #64748b;
 }
+
+/* 7. Responsive Mobile & Tablet Layout */
+@media (max-width: 960px) {
+  #header, .site-header {
+    margin: 28px 16px 24px 16px;
+    max-width: none;
+  }
+  .page-wrapper {
+    margin: 0 16px 48px 16px;
+  }
+  .page-wrapper > section:not(.foot) {
+    padding: 24px 22px;
+  }
+  .page-wrapper > section:first-of-type img {
+    float: none !important;
+    display: block;
+    max-width: 200px !important;
+    margin: 0 auto 20px auto !important;
+  }
+}
+
