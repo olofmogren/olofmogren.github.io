@@ -401,3 +401,10 @@ a.media-card:hover .media-card-title {
     grid-template-columns: 1fr;
   }
 }
+/* Fallback 16:9 header when a talk or post has no image */
+.media-card-thumb-placeholder {
+  background:
+    radial-gradient(circle at 80% 25%, rgba(56, 189, 248, 0.22), transparent 55%),
+    linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  position: relative;
+}

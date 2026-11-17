@@ -20,29 +20,32 @@
 
 <div class="feature">
   <a class="media-card" href="{{ linkhref }}">
-    {% if thumbsrc %}
+    {% if thumbsrc and thumbsrc != "" %}
     <div class="media-card-thumb">
-      <img src="{{ thumbsrc }}" alt="{{ include.p.title | escape }}" loading="lazy" />
+      <img src="{{ thumbsrc }}" alt="{{ include.p.title | strip_html | escape }}" loading="lazy" />
     </div>
+    {% else %}
+    <div class="media-card-thumb media-card-thumb-placeholder"></div>
     {% endif %}
+
     <div class="media-card-body">
       {% if badge %}
       <div class="media-card-meta">
         <span class="media-card-badge">{{ badge }}</span>
         {% if include.p.venue and include.category == 'talks' %}
-          <span class="media-card-venue">{{ include.p.venue }}</span>
+          <span class="media-card-venue">{{ include.p.venue | strip_html }}</span>
         {% endif %}
       </div>
       {% endif %}
 
-      <h3 class="media-card-title">{{ include.p.title }}</h3>
+      <h3 class="media-card-title">{{ include.p.title | strip_html }}</h3>
 
       {% if include.category == 'masterthesis' and include.p.authors %}
-      <p class="media-card-authors">{{ include.p.authors }}</p>
+      <p class="media-card-authors">{{ include.p.authors | strip_html }}</p>
       {% endif %}
 
       {% if include.p.shortversion %}
-      <p class="media-card-excerpt">{{ include.p.shortversion }}</p>
+      <p class="media-card-excerpt">{{ include.p.shortversion | strip_html | truncatewords: 36 }}</p>
       {% endif %}
     </div>
   </a>
