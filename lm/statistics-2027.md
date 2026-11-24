@@ -10,11 +10,11 @@ title: Learning Machines Statistics 2027
 
 
 
-## 4 speakers
+## 5 speakers
 
-Emanuele Rossi, Hao Wei, Maria Perez Ortiz, Nicola Messina
+Emanuele Rossi, Hao Wei, Maria Perez Ortiz, Nicola Messina, Yuki Miura
 
-## 4 affiliations
+## 5 affiliations
 
-ISTI-CNR, Sapienza University, Rome, Technical University of Munich (TUM), University College London
+ISTI-CNR, New York University, Sapienza University, Rome, Technical University of Munich (TUM), University College London
 
