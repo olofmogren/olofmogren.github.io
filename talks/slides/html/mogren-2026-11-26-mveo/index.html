@@ -306,6 +306,7 @@ body.overview .page_div .subcontainer {
 var currentPageId = "page-1";
 var blackPageVar = false;
 var lastPage = 47;
+var downloadableOdp = "mogren-mveo.odp";
 
 var overviewMode = false; // if you already declared this earlier, keep only one
 var helpBtnTimer = null;
@@ -602,6 +603,17 @@ document.onkeydown = function(event) {
       // b - blank/black
       blackPage();
     break;
+    case 68:
+      // d - download odp
+      if (downloadableOdp) {
+        var a = document.createElement('a');
+        a.href = downloadableOdp;
+        a.download = downloadableOdp;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+      }
+    break;
     case 70:
       // f - fulscreen
       if (window.fullScreen) {
@@ -639,7 +651,7 @@ MathJax = {
 </script>
 		<script id="MathJax-script" async="true" src="resources/tex-mml-svg.js"> </script>
 		<meta generator='pymdslides, git commit: "964e01bed6478a31087d5494c3d502e407149d62" https://github.com/olofmogren/pymdslides/'>
-		<meta generation-date="2026-11-24 15:59:43.512302+01:00">
+		<meta generation-date="2026-11-24 16:24:32.109702+01:00">
 	</head>
 	<body onload="onloadHandler();">
 		<div id="slides">
@@ -1515,6 +1527,7 @@ at ICLR 2024</li>
 				<p>F for fullscreen.</p>
 				<p>B for blank.</p>
 				<p>O for overview grid. Click a slide to jump.</p>
+				<p>D to download slides as ODP.</p>
 				<p>Click on leftmost quarter for previous slide, the rest for next.</p>
 				<p>More info: see https://github.com/olofmogren/pymdslides/ .</p>
 			</div>
