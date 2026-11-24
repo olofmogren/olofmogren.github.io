@@ -35,6 +35,7 @@ h1 {
   /*font-size: 4cqw;*/
   font-size: "calc(4.000 * var(--cqw))";
   font-weight: normal;
+  white-space: nowrap;
 }
 h2 {
   font-family: "Code Pro Bold", Arial, Sans-Serif;
@@ -203,6 +204,10 @@ border: 1px #ccc solid;
 }
 body.overview {
   overflow: auto; /* allow scroll if >25 slides */
+  --slide-w: calc((100vw / 5 - 1.2vw) / var(--thumb-scale));
+  --slide-h: calc(var(--slide-w) * 0.5625);
+  --cqw: calc(var(--slide-w) / 100);
+  --cqh: calc(var(--slide-h) / 100);
 }
 body.overview #slides {
   display: grid;
@@ -634,7 +639,7 @@ MathJax = {
 </script>
 		<script id="MathJax-script" async="true" src="resources/tex-mml-svg.js"> </script>
 		<meta generator='pymdslides, git commit: "964e01bed6478a31087d5494c3d502e407149d62" https://github.com/olofmogren/pymdslides/'>
-		<meta generation-date="2026-11-24 15:54:59.538150+01:00">
+		<meta generation-date="2026-11-24 15:59:43.512302+01:00">
 	</head>
 	<body onload="onloadHandler();">
 		<div id="slides">
