@@ -305,7 +305,7 @@ body.overview .page_div .subcontainer {
 		<script>
 var currentPageId = "page-1";
 var blackPageVar = false;
-var lastPage = 47;
+var lastPage = 49;
 var downloadableOdp = "mogren-mveo.odp";
 
 var overviewMode = false; // if you already declared this earlier, keep only one
@@ -471,6 +471,12 @@ function blackPage() {
   }
   blackPageVar = !blackPageVar;
 }
+
+function togglePlayAnimation(el, event) {
+  event.stopPropagation();
+  el.classList.toggle('playing');
+}
+
 function mouseuphandler(e) {
   var selection = window.getSelection();
   if(selection.toString().length > 0) {
@@ -650,8 +656,8 @@ MathJax = {
 };
 </script>
 		<script id="MathJax-script" async="true" src="resources/tex-mml-svg.js"> </script>
-		<meta generator='pymdslides, git commit: "964e01bed6478a31087d5494c3d502e407149d62" https://github.com/olofmogren/pymdslides/'>
-		<meta generation-date="2026-11-24 16:24:32.109702+01:00">
+		<meta generator='pymdslides, git commit: "8d9229c0fcf6501b00e284ad4b48792432c35fbe" https://github.com/olofmogren/pymdslides/'>
+		<meta generation-date="2026-11-25 10:18:19.720930+01:00">
 	</head>
 	<body onload="onloadHandler();">
 		<div id="slides">
@@ -659,7 +665,6 @@ MathJax = {
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
 					<img src="graphics/20230713_152426-environment.jpg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
-					<img src="graphics/mogren-136x135.jpg" style="position: absolute; left: 91.042%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
 					<div style="position: absolute; left: 6.250%; top: 36.667%; width: 87.500%; height: 11.481%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0;font-size: calc(3.267 * var(--cqw)); ">Scaling machine vision for environmental monitoring</h1>
 					</div>
@@ -733,7 +738,7 @@ MathJax = {
 						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>4   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Carl Klang, Marcus Blixt, Olof Mogren, Terrabytes II (2026)</p>
+						<p>4   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Carl Klang, Marcus Blixt, Olof Mogren, AI for Climate and Conservation 2 (2026)</p>
 					</div>
 				</div>
 			</div>
@@ -762,8 +767,7 @@ MathJax = {
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
 					<img src="graphics/eelgrass-bg-darker.webp" style="position: absolute; left: 56.250%; top: 24.444%; width: 37.500%; height: 67.407%; object-fit: cover;">
-					<img src="graphics/wang-136x136.jpg" style="position: absolute; left: 87.292%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
-					<img src="graphics/mogren-136x135.jpg" style="position: absolute; left: 90.833%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
+					<img src="graphics/eelgrass-bg-darker-136x84.webp" style="position: absolute; left: 87.292%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
 					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); ">From 10m to 6cm resolution</h1>
 					</div>
@@ -796,8 +800,8 @@ MathJax = {
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
 					<img src="graphics/computer-vision-problems.webp" style="position: absolute; left: 6.250%; top: 20.741%; width: 43.750%; height: 33.704%; object-fit: contain;">
 					<img src="graphics/unetplusplus.webp" style="position: absolute; left: 50.000%; top: 20.741%; width: 43.750%; height: 33.704%; object-fit: contain;">
-					<img src="graphics/wang-136x136.jpg" style="position: absolute; left: 87.292%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
-					<img src="graphics/mogren-136x135.jpg" style="position: absolute; left: 90.833%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
+					<img src="graphics/computer-vision-problems-136x65.webp" style="position: absolute; left: 87.292%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: contain;">
+					<img src="graphics/unetplusplus-136x81.webp" style="position: absolute; left: 90.833%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: contain;">
 					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); ">Semantic segmentation without masks</h1>
 					</div>
@@ -822,8 +826,7 @@ MathJax = {
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
 					<img src="graphics/eelgrass-data-pseudoannotation.jpg" style="position: absolute; left: 6.250%; top: 20.741%; width: 87.500%; height: 71.111%; object-fit: contain;">
-					<img src="graphics/wang-136x136.jpg" style="position: absolute; left: 87.292%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
-					<img src="graphics/mogren-136x135.jpg" style="position: absolute; left: 90.833%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
+					<img src="graphics/eelgrass-data-pseudoannotation-136x46.jpg" style="position: absolute; left: 87.292%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: contain;">
 					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); ">Data</h1>
 					</div>
@@ -838,8 +841,6 @@ MathJax = {
 			<div id="page-9" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
-					<img src="graphics/wang-136x136.jpg" style="position: absolute; left: 87.292%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
-					<img src="graphics/mogren-136x135.jpg" style="position: absolute; left: 90.833%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
 					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); ">Learning using privileged information</h1>
 					</div>
@@ -873,8 +874,7 @@ MathJax = {
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
 					<img src="graphics/drone-seagrass-bg.webp" style="position: absolute; left: 56.250%; top: 24.444%; width: 37.500%; height: 67.407%; object-fit: cover;">
-					<img src="graphics/wang-136x136.jpg" style="position: absolute; left: 87.292%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
-					<img src="graphics/mogren-136x135.jpg" style="position: absolute; left: 90.833%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
+					<img src="graphics/drone-seagrass-bg-136x76.webp" style="position: absolute; left: 87.292%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
 					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); ">Drone data for seafloor analysis</h1>
 					</div>
@@ -901,8 +901,8 @@ MathJax = {
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
 					<img src="graphics/sparse-annotations-patch-size.webp" style="position: absolute; left: 6.250%; top: 20.741%; width: 43.750%; height: 71.111%; object-fit: contain;">
 					<img src="graphics/sparse-annotations-models.webp" style="position: absolute; left: 50.000%; top: 20.741%; width: 43.750%; height: 71.111%; object-fit: contain;">
-					<img src="graphics/wang-136x136.jpg" style="position: absolute; left: 87.292%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
-					<img src="graphics/mogren-136x135.jpg" style="position: absolute; left: 90.833%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
+					<img src="graphics/sparse-annotations-patch-size-136x94.webp" style="position: absolute; left: 87.292%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: contain;">
+					<img src="graphics/sparse-annotations-models-136x94.webp" style="position: absolute; left: 90.833%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: contain;">
 					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); ">Results</h1>
 					</div>
@@ -918,8 +918,7 @@ MathJax = {
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
 					<img src="graphics/eelgrass.webp" style="position: absolute; left: 6.250%; top: 20.741%; width: 87.500%; height: 71.111%; object-fit: cover;">
-					<img src="graphics/wang-136x136.jpg" style="position: absolute; left: 87.292%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
-					<img src="graphics/mogren-136x135.jpg" style="position: absolute; left: 90.833%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
+					<img src="graphics/eelgrass-136x81.webp" style="position: absolute; left: 87.292%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
 					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); ">Example maps</h1>
 					</div>
@@ -935,8 +934,7 @@ MathJax = {
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
 					<img src="graphics/fans-slides-31.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
-					<img src="graphics/wang-136x136.jpg" style="position: absolute; left: 87.292%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
-					<img src="graphics/mogren-136x135.jpg" style="position: absolute; left: 90.833%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
+					<img src="graphics/fans-slides-31.svg" style="position: absolute; left: 87.292%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
 					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); ">Example maps</h1>
 					</div>
@@ -952,8 +950,7 @@ MathJax = {
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
 					<img src="graphics/2026-martinsson-accuracy-cost-weakly-annotated-audio.webp" style="position: absolute; left: 6.250%; top: 20.741%; width: 87.500%; height: 71.111%; object-fit: contain;">
-					<img src="graphics/martinsson-136x136.jpg" style="position: absolute; left: 87.292%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
-					<img src="graphics/mogren-136x135.jpg" style="position: absolute; left: 90.833%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
+					<img src="graphics/2026-martinsson-accuracy-cost-weakly-annotated-audio-136x66.webp" style="position: absolute; left: 87.292%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: contain;">
 					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); ">Active annotation, audio and video.</h1>
 					</div>
@@ -961,16 +958,15 @@ MathJax = {
 						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>15   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Work by John Martinsson (RIDR).</p>
+						<p>15   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Martinsson, Virtanen, Sandsten, <strong>Mogren</strong>. The Accuracy Cost of Weakness  TMLR / <a href="https://arxiv.org/abs/2502.09363" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">arXiv:2502.09363</a> (2025)</p>
 					</div>
 				</div>
 			</div>
 			<div id="page-16" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
-					<img src="graphics/2026-martinsson-accuracy-cost-sliding-window.webp" style="position: absolute; left: 6.250%; top: 20.741%; width: 87.500%; height: 71.111%; object-fit: contain;">
-					<img src="graphics/martinsson-136x136.jpg" style="position: absolute; left: 87.292%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
-					<img src="graphics/mogren-136x135.jpg" style="position: absolute; left: 90.833%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
+					<img src="graphics/2024-accuracy-cost-of-weakness-animation-frame1.webp" style="position: absolute; left: 6.250%; top: 20.741%; width: 87.500%; height: 71.111%; object-fit: contain;">
+					<img src="graphics/2024-accuracy-cost-of-weakness-animation-frame1.webp" style="position: absolute; left: 87.292%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: contain;">
 					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); ">Accuracy of a one-dimensional annotation</h1>
 					</div>
@@ -978,16 +974,47 @@ MathJax = {
 						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>16   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Work by John Martinsson (RIDR).</p>
+						<p>16   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Martinsson, Virtanen, Sandsten, <strong>Mogren</strong>. The Accuracy Cost of Weakness  TMLR / <a href="https://arxiv.org/abs/2502.09363" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">arXiv:2502.09363</a> (2025)</p>
 					</div>
 				</div>
 			</div>
 			<div id="page-17" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
+					<img src="graphics/2024-accuracy-cost-of-weakness-animation.webp" style="position: absolute; left: 6.250%; top: 20.741%; width: 87.500%; height: 71.111%; object-fit: contain;">
+					<img src="graphics/2024-accuracy-cost-of-weakness-animation.webp" style="position: absolute; left: 87.292%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: contain;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); ">Accuracy of a one-dimensional annotation</h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 58.148%; width: 87.500%; height: 33.704%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
+						<p> </p>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>17   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Martinsson, Virtanen, Sandsten, <strong>Mogren</strong>. The Accuracy Cost of Weakness  TMLR / <a href="https://arxiv.org/abs/2502.09363" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">arXiv:2502.09363</a> (2025)</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-18" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
+					<img src="graphics/2026-martinsson-accuracy-cost-sliding-window.webp" style="position: absolute; left: 6.250%; top: 20.741%; width: 87.500%; height: 71.111%; object-fit: contain;">
+					<img src="graphics/2026-martinsson-accuracy-cost-sliding-window-136x49.webp" style="position: absolute; left: 87.292%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: contain;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); ">Accuracy of a one-dimensional annotation</h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 58.148%; width: 87.500%; height: 33.704%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
+						<p> </p>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>18   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Martinsson, Virtanen, Sandsten, <strong>Mogren</strong>. The Accuracy Cost of Weakness  TMLR / <a href="https://arxiv.org/abs/2502.09363" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">arXiv:2502.09363</a> (2025)</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-19" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
 					<img src="graphics/2024-from-weak-to-strong-data-overview-2352x1536.webp" style="position: absolute; left: 6.250%; top: 20.741%; width: 87.500%; height: 71.111%; object-fit: contain;">
-					<img src="graphics/martinsson-136x136.jpg" style="position: absolute; left: 87.292%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
-					<img src="graphics/mogren-136x135.jpg" style="position: absolute; left: 90.833%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
+					<img src="graphics/2024-from-weak-to-strong-data-overview-136x89.webp" style="position: absolute; left: 87.292%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: contain;">
 					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); ">From weak to strong annotations</h1>
 					</div>
@@ -995,11 +1022,12 @@ MathJax = {
 						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>17   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Work by John Martinsson (RIDR).</p>
+						<p>19   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Martinsson, <strong>Mogren</strong>, Sandsten, Virtanen. From weak to strong sound event labels using adaptive change-point detection and active learning. EUSIPCO (2024). <a href="https://arxiv.org/abs/2403.08525" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">arxiv:2403.08525</a>
+						</p>
 					</div>
 				</div>
 			</div>
-			<div id="page-18" class="page_div page_hidden" style="background-color: white; ">
+			<div id="page-20" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
 					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
@@ -1011,11 +1039,11 @@ MathJax = {
 						</ul>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>18   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se</p>
+						<p>20   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se</p>
 					</div>
 				</div>
 			</div>
-			<div id="page-19" class="page_div page_hidden" style="background-color: white; ">
+			<div id="page-21" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
 					<div style="position: absolute; left: 6.250%; top: 36.667%; width: 87.500%; height: 11.481%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
@@ -1025,11 +1053,11 @@ MathJax = {
 						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>19   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se</p>
+						<p>21   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se</p>
 					</div>
 				</div>
 			</div>
-			<div id="page-20" class="page_div page_hidden" style="background-color: white; ">
+			<div id="page-22" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
 					<img src="graphics/issas-slides-1.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: contain;">
@@ -1040,38 +1068,6 @@ MathJax = {
 						<!-- This work benchmarks SAM3 for zero-shot building delineation across image resolutions, inference windows, and text prompts to establish baselines for future work on parameter-efficient fine-tuning as well as data-efficient sampling strategies, with the goal of reducing the cost of annotation for model adaptation. I started this work at the World Bank as part of the Smart Parcels for Resilient Cities (SPARC) initiative and happy to be working on it now as part of my PhD! //-->
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>20   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Work by Issa Tingzon and Aleksis Pirinen (RIDR).</p>
-					</div>
-				</div>
-			</div>
-			<div id="page-21" class="page_div page_hidden" style="background-color: white; ">
-				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
-					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
-					<img src="graphics/issas-slides-3.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: contain;">
-					<img src="graphics/pirinen-136x136.jpg" style="position: absolute; left: 87.292%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
-					<img src="graphics/tingzon-136x131.jpg" style="position: absolute; left: 90.833%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
-						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); "></h1>
-					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
-						<p> </p>
-					</div>
-					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>21   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Work by Issa Tingzon and Aleksis Pirinen (RIDR).</p>
-					</div>
-				</div>
-			</div>
-			<div id="page-22" class="page_div page_hidden" style="background-color: white; ">
-				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
-					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
-					<img src="graphics/issas-slides-4.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: contain;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
-						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); "></h1>
-					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
-						<p> </p>
-					</div>
-					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
 						<p>22   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Work by Issa Tingzon and Aleksis Pirinen (RIDR).</p>
 					</div>
 				</div>
@@ -1079,7 +1075,8 @@ MathJax = {
 			<div id="page-23" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
-					<img src="graphics/issas-slides-5.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: contain;">
+					<img src="graphics/issas-slides-3.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: contain;">
+					<img src="graphics/issas-slides-3.svg" style="position: absolute; left: 87.292%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: contain;">
 					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); "></h1>
 					</div>
@@ -1094,7 +1091,7 @@ MathJax = {
 			<div id="page-24" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
-					<img src="graphics/issas-slides-6.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: contain;">
+					<img src="graphics/issas-slides-4.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: contain;">
 					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); "></h1>
 					</div>
@@ -1109,7 +1106,7 @@ MathJax = {
 			<div id="page-25" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
-					<img src="graphics/issas-slides-9.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: contain;">
+					<img src="graphics/issas-slides-5.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: contain;">
 					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); "></h1>
 					</div>
@@ -1122,6 +1119,36 @@ MathJax = {
 				</div>
 			</div>
 			<div id="page-26" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
+					<img src="graphics/issas-slides-6.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: contain;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); "></h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
+						<p> </p>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>26   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Work by Issa Tingzon and Aleksis Pirinen (RIDR).</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-27" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
+					<img src="graphics/issas-slides-9.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: contain;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); "></h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
+						<p> </p>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>27   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Work by Issa Tingzon and Aleksis Pirinen (RIDR).</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-28" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
 					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
@@ -1143,11 +1170,11 @@ MathJax = {
 						</ul>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>26   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se</p>
+						<p>28   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se</p>
 					</div>
 				</div>
 			</div>
-			<div id="page-27" class="page_div page_hidden" style="background-color: white; ">
+			<div id="page-29" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
 					<img src="graphics/mogren.jpg" style="position: absolute; left: 6.250%; top: 20.741%; width: 9.583%; height: 33.704%; object-fit: cover;">
@@ -1169,46 +1196,17 @@ John Martinsson, Issabelle Tingzon, Fan Wang, Goegrios Filippis, Lilian Yang</p>
 						<p>olof.mogren@ri.se</p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>27   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se --- All work was a team effort</p>
-					</div>
-				</div>
-			</div>
-			<div id="page-28" class="page_div page_hidden" style="background-color: white; ">
-				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
-					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
-						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); ">Appendix</h1>
-					</div>
-					<div style="position: absolute; left: 6.250%; top: 20.741%; width: 87.500%; height: 71.111%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
-						<p> </p>
-					</div>
-					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>28   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se</p>
-					</div>
-				</div>
-			</div>
-			<div id="page-29" class="page_div page_hidden" style="background-color: white; ">
-				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
-					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
-						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); ">Additional eelgrass information</h1>
-					</div>
-					<div style="position: absolute; left: 6.250%; top: 20.741%; width: 87.500%; height: 71.111%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
-						<p> </p>
-					</div>
-					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>29   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se</p>
+						<p>29   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se --- All work was a team effort</p>
 					</div>
 				</div>
 			</div>
 			<div id="page-30" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
-					<img src="graphics/fans-slides-27.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
 					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
-						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); "></h1>
+						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); ">Appendix</h1>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 20.741%; width: 87.500%; height: 71.111%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
 						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
@@ -1219,11 +1217,10 @@ John Martinsson, Issabelle Tingzon, Fan Wang, Goegrios Filippis, Lilian Yang</p>
 			<div id="page-31" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
-					<img src="graphics/fans-slides-23.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
 					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
-						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); "></h1>
+						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); ">Additional eelgrass information</h1>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 20.741%; width: 87.500%; height: 71.111%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
 						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
@@ -1234,7 +1231,7 @@ John Martinsson, Issabelle Tingzon, Fan Wang, Goegrios Filippis, Lilian Yang</p>
 			<div id="page-32" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
-					<img src="graphics/fans-slides-16.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
+					<img src="graphics/fans-slides-27.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
 					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); "></h1>
 					</div>
@@ -1249,7 +1246,7 @@ John Martinsson, Issabelle Tingzon, Fan Wang, Goegrios Filippis, Lilian Yang</p>
 			<div id="page-33" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
-					<img src="graphics/fans-slides-14.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
+					<img src="graphics/fans-slides-23.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
 					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); "></h1>
 					</div>
@@ -1264,9 +1261,7 @@ John Martinsson, Issabelle Tingzon, Fan Wang, Goegrios Filippis, Lilian Yang</p>
 			<div id="page-34" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
-					<img src="graphics/filippis-weight-explorer-1.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
-					<img src="graphics/filippis-136x136.jpg" style="position: absolute; left: 87.292%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
-					<img src="graphics/mogren-136x135.jpg" style="position: absolute; left: 90.833%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
+					<img src="graphics/fans-slides-16.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
 					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); "></h1>
 					</div>
@@ -1281,9 +1276,7 @@ John Martinsson, Issabelle Tingzon, Fan Wang, Goegrios Filippis, Lilian Yang</p>
 			<div id="page-35" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
-					<img src="graphics/filippis-weight-explorer-3.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
-					<img src="graphics/filippis-136x136.jpg" style="position: absolute; left: 87.292%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
-					<img src="graphics/mogren-136x135.jpg" style="position: absolute; left: 90.833%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
+					<img src="graphics/fans-slides-14.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
 					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); "></h1>
 					</div>
@@ -1298,9 +1291,8 @@ John Martinsson, Issabelle Tingzon, Fan Wang, Goegrios Filippis, Lilian Yang</p>
 			<div id="page-36" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
-					<img src="graphics/filippis-weight-explorer-4.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
-					<img src="graphics/filippis-136x136.jpg" style="position: absolute; left: 87.292%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
-					<img src="graphics/mogren-136x135.jpg" style="position: absolute; left: 90.833%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
+					<img src="graphics/filippis-weight-explorer-1.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
+					<img src="graphics/filippis-weight-explorer-1.svg" style="position: absolute; left: 87.292%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
 					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); "></h1>
 					</div>
@@ -1315,9 +1307,7 @@ John Martinsson, Issabelle Tingzon, Fan Wang, Goegrios Filippis, Lilian Yang</p>
 			<div id="page-37" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
-					<img src="graphics/filippis-weight-explorer-6.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
-					<img src="graphics/filippis-136x136.jpg" style="position: absolute; left: 87.292%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
-					<img src="graphics/mogren-136x135.jpg" style="position: absolute; left: 90.833%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
+					<img src="graphics/filippis-weight-explorer-3.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
 					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); "></h1>
 					</div>
@@ -1332,9 +1322,7 @@ John Martinsson, Issabelle Tingzon, Fan Wang, Goegrios Filippis, Lilian Yang</p>
 			<div id="page-38" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
-					<img src="graphics/filippis-weight-explorer-7.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
-					<img src="graphics/filippis-136x136.jpg" style="position: absolute; left: 87.292%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
-					<img src="graphics/mogren-136x135.jpg" style="position: absolute; left: 90.833%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
+					<img src="graphics/filippis-weight-explorer-4.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
 					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); "></h1>
 					</div>
@@ -1349,6 +1337,36 @@ John Martinsson, Issabelle Tingzon, Fan Wang, Goegrios Filippis, Lilian Yang</p>
 			<div id="page-39" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
+					<img src="graphics/filippis-weight-explorer-6.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); "></h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
+						<p> </p>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>39   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-40" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
+					<img src="graphics/filippis-weight-explorer-7.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); "></h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
+						<p> </p>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>40   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-41" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
 					<img src="graphics/filippis-weight-explorer-screenshot.webp" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
 					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); "></h1>
@@ -1357,12 +1375,12 @@ John Martinsson, Issabelle Tingzon, Fan Wang, Goegrios Filippis, Lilian Yang</p>
 						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>39   <a href="malmo-weights-explorer.html" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">Live demo</a>
+						<p>41   <a href="malmo-weights-explorer.html" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">Live demo</a>
 						</p>
 					</div>
 				</div>
 			</div>
-			<div id="page-40" class="page_div page_hidden" style="background-color: white; ">
+			<div id="page-42" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
 					<img src="graphics/above-ground-biomass-estimation.webp" style="position: absolute; left: 6.250%; top: 20.741%; width: 87.500%; height: 71.111%; object-fit: contain;">
@@ -1373,11 +1391,11 @@ John Martinsson, Issabelle Tingzon, Fan Wang, Goegrios Filippis, Lilian Yang</p>
 						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>40   Ghjulia Sialelli, ETH Zürich</p>
+						<p>42   Ghjulia Sialelli, ETH Zürich</p>
 					</div>
 				</div>
 			</div>
-			<div id="page-41" class="page_div page_hidden" style="background-color: white; ">
+			<div id="page-43" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
 					<img src="graphics/dang-wetland-2020-1800x1536.webp" style="position: absolute; left: 6.250%; top: 20.741%; width: 87.500%; height: 71.111%; object-fit: contain;">
@@ -1388,11 +1406,11 @@ John Martinsson, Issabelle Tingzon, Fan Wang, Goegrios Filippis, Lilian Yang</p>
 						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>41   Dang et al., Coastal wetland classification with deep u-net convolutional networks and sentinel-2 imagery, Remote Sensing, 2020.</p>
+						<p>43   Dang et al., Coastal wetland classification with deep u-net convolutional networks and sentinel-2 imagery, Remote Sensing, 2020.</p>
 					</div>
 				</div>
 			</div>
-			<div id="page-42" class="page_div page_hidden" style="background-color: white; ">
+			<div id="page-44" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
 					<img src="graphics/wetlands-merged-blackonwhite-border.webp" style="position: absolute; left: 50.000%; top: 0.000%; width: 50.000%; height: 100.000%; object-fit: contain;">
@@ -1416,20 +1434,16 @@ John Martinsson, Issabelle Tingzon, Fan Wang, Goegrios Filippis, Lilian Yang</p>
 						</ul>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>42   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se --- Pirinen. (2023)</p>
+						<p>44   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se --- Pirinen. (2023)</p>
 					</div>
 				</div>
 			</div>
-			<div id="page-43" class="page_div page_hidden" style="background-color: white; ">
+			<div id="page-45" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
 					<img src="graphics/chatgpt-eo-01.webp" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
 					<img src="graphics/texture-distortions.webp" style="position: absolute; left: 56.250%; top: 24.444%; width: 37.500%; height: 67.407%; object-fit: contain;">
-					<img src="graphics/willbo-136x118.webp" style="position: absolute; left: 76.042%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
-					<img src="graphics/listozec-136x136.jpg" style="position: absolute; left: 79.583%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
-					<img src="graphics/martinsson-136x136.jpg" style="position: absolute; left: 83.125%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
-					<img src="graphics/pirinen-136x136.webp" style="position: absolute; left: 86.667%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
-					<img src="graphics/mogren-136x135.webp" style="position: absolute; left: 90.208%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
+					<img src="graphics/texture-distortions-136x102.webp" style="position: absolute; left: 76.042%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: contain;">
 					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #ffffffff;">
 						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); ">Robustness in ML for remote sensing</h1>
 					</div>
@@ -1444,11 +1458,11 @@ at ICLR 2024</li>
 						</ul>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #ffffffff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>43   Willbo, Listo Zec, Martinsson, Pirinen, <strong>Mogren</strong>, Impacts of color and texture distortions on earth observation data in deep learning, ML4RS at ICLR (2024) </p>
+						<p>45   Willbo, Listo Zec, Martinsson, Pirinen, <strong>Mogren</strong>, Impacts of color and texture distortions on earth observation data in deep learning, ML4RS at ICLR (2024) </p>
 					</div>
 				</div>
 			</div>
-			<div id="page-44" class="page_div page_hidden" style="background-color: white; ">
+			<div id="page-46" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
 					<img src="graphics/eo-models-grayscale-and-pixelswap.webp" style="position: absolute; left: 6.250%; top: 20.741%; width: 87.500%; height: 71.111%; object-fit: contain;">
@@ -1462,11 +1476,11 @@ at ICLR 2024</li>
 						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>44   Willbo, Listo Zec, Martinsson, Pirinen, <strong>Mogren</strong>, Impacts of color and texture distortions on earth observation data in deep learning, ML4RS at ICLR (2024) </p>
+						<p>46   Willbo, Listo Zec, Martinsson, Pirinen, <strong>Mogren</strong>, Impacts of color and texture distortions on earth observation data in deep learning, ML4RS at ICLR (2024) </p>
 					</div>
 				</div>
 			</div>
-			<div id="page-45" class="page_div page_hidden" style="background-color: white; ">
+			<div id="page-47" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
 					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
@@ -1478,11 +1492,11 @@ at ICLR 2024</li>
 						</ul>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>45   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se</p>
+						<p>47   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se</p>
 					</div>
 				</div>
 			</div>
-			<div id="page-46" class="page_div page_hidden" style="background-color: white; ">
+			<div id="page-48" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
 					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
@@ -1492,15 +1506,13 @@ at ICLR 2024</li>
 						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>46   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se</p>
+						<p>48   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se</p>
 					</div>
 				</div>
 			</div>
-			<div id="page-47" class="page_div page_hidden" style="background-color: white; ">
+			<div id="page-49" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
-					<img src="graphics/pirinen-136x136.jpg" style="position: absolute; left: 87.292%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
-					<img src="graphics/tingzon-136x131.jpg" style="position: absolute; left: 90.833%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
 					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0;font-size: calc(1.867 * var(--cqw)); ">Learning from privileged modalities for high-resolution mapping using low-resolution inputs</h1>
 					</div>
@@ -1512,7 +1524,7 @@ at ICLR 2024</li>
 						<p>Maybe keep this. Unsure.</p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>47   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Work by Issa Tingzon and Aleksis Pirinen (RIDR).</p>
+						<p>49   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Work by Issa Tingzon and Aleksis Pirinen (RIDR).</p>
 					</div>
 				</div>
 			</div>
