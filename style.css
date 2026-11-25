@@ -235,10 +235,10 @@ section.foot {
 }
 
 section.foot::after {
-  content: "Header Earth imagery © EUMETSAT";
+  content: "Header art includes imagery from EUMETSAT.";
   display: block;
   margin-top: 4px;
-  font-size: 0.76rem;
+  font-size: 0.60rem;
   color: #64748b;
 }
 
