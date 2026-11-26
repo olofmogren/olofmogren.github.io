@@ -336,7 +336,7 @@ body.overview .page_div .subcontainer {
 		<script>
 var currentPageId = "page-1";
 var blackPageVar = false;
-var lastPage = 55;
+var lastPage = 56;
 var downloadableOdp = null;
 
 var overviewMode = false; // if you already declared this earlier, keep only one
@@ -1076,11 +1076,13 @@ async function exportSlidesToODP() {
           var align = alignMap[el.style.textAlign || cs.textAlign] || 'start';
 
           var isL4 = el.classList.contains('l4_box');
+          var isShaded = el.classList.contains('shaded_text_box');
           var grName = nextId('gr');
           var grProps = isL4
             ? 'draw:fill="solid" draw:fill-color="#e6f0ff" draw:opacity="75%" draw:stroke="solid" svg:stroke-color="#c8c8c8" svg:stroke-width="0.3mm" draw:corner-radius="2mm" fo:padding="2.5mm"'
-            : 'draw:fill="none" draw:stroke="none"';
-          autoStyles.push('<style:style style:name="' + grName + '" style:family="graphic"><style:graphic-properties ' + grProps + '/></style:style>');
+            : (isShaded
+                ? 'draw:fill="solid" draw:fill-color="#000000" draw:opacity="50%" draw:stroke="none" draw:corner-radius="2mm" fo:padding="2.5mm"'
+                : 'draw:fill="none" draw:stroke="none"');
 
           var pName = nextId('P');
           autoStyles.push(
@@ -1186,7 +1188,7 @@ async function exportSlidesToODP() {
 }
 </script>
 		<meta generator='pymdslides, git commit: "9f28318fa7eca65f80fbd752c69bcda2545a5952" https://github.com/olofmogren/pymdslides/'>
-		<meta generation-date="2026-11-26 14:06:48.301805+01:00">
+		<meta generation-date="2026-11-26 15:12:03.263068+01:00">
 	</head>
 	<body onload="onloadHandler();">
 		<div id="slides">
@@ -1229,7 +1231,7 @@ async function exportSlidesToODP() {
 						</ul>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>2   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Hentati-Sundberg, Österblom, <strong>Mogren</strong>, Dietze, From Adaptive to Automated Ecosystem Management, BioScience (2026)</p>
+						<p>2   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Hentati-Sundberg, Österblom, <strong>Mogren</strong>, Dietze. From Adaptive to Automated Ecosystem Management. BioScience (2026)</p>
 					</div>
 				</div>
 			</div>
@@ -1253,54 +1255,18 @@ async function exportSlidesToODP() {
 						</ul>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>3   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Hentati-Sundberg, Österblom, <strong>Mogren</strong>, Dietze, From Adaptive to Automated Ecosystem Management, BioScience (2026)</p>
+						<p>3   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Hentati-Sundberg, Österblom, <strong>Mogren</strong>, Dietze. From Adaptive to Automated Ecosystem Management. BioScience (2026)</p>
 					</div>
 				</div>
 			</div>
 			<div id="page-4" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
-					<img src="graphics/sdm-alphaearth.webp" style="position: absolute; left: 6.250%; top: 20.741%; width: 87.500%; height: 71.111%; object-fit: contain;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
-						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); ">Foundation models for species distribution</h1>
-					</div>
-					<div style="position: absolute; left: 6.250%; top: 58.148%; width: 87.500%; height: 33.704%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
-						<p> </p>
-					</div>
-					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>4   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Klang, Blixt, <strong>Mogren</strong>, AI for Climate and Conservation 2 (2026)</p>
-					</div>
-				</div>
-			</div>
-			<div id="page-5" class="page_div page_hidden" style="background-color: white; ">
-				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
-					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
-					<img src="graphics/van-merrienboer-2026-ocelot.webp" data-animated="true" style="position: absolute; left: 56.250%; top: 24.444%; width: 37.500%; height: 67.407%; object-fit: contain;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
-						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); ">Planetary SDMs with satellite embeddings</h1>
-					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;display: flex; flex-direction: column; justify-content: center;font-size: calc(2.267 * var(--cqw)); ">
-						<ul>
-							<li>OCELOT</li>
-							<li>From regional to global</li>
-							<li>Training on ~2 billion GBIF records across 100,000 taxa</li>
-							<li>High-resolution global maps (10 m habitat suitability from satellite embedding)</li>
-							<li>Downstream priors for camera traps and acoustic sensors</li>
-						</ul>
-					</div>
-					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>5   van Merriënboer et al., OCELOT: Planetary-Scale Species Distribution Modeling with Satellite Foundation Embeddings, <a href="https://arxiv.org/abs/2611.00284" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">arXiv:2611.00284</a> (2026)</p>
-					</div>
-				</div>
-			</div>
-			<div id="page-6" class="page_div page_hidden" style="background-color: white; ">
-				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
-					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
 					<img src="graphics/eelgrass-bg-darker.webp" style="position: absolute; left: 56.250%; top: 24.444%; width: 37.500%; height: 67.407%; object-fit: cover;">
 					<img src="graphics/wang-136x136.jpg" style="position: absolute; left: 87.292%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
 					<img src="graphics/mogren-136x135.jpg" style="position: absolute; left: 90.833%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
 					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
-						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); ">From 10m to 6cm resolution</h1>
+						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); ">Coastal ecosystem monitoring</h1>
 					</div>
 					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
 						<ul>
@@ -1322,11 +1288,11 @@ async function exportSlidesToODP() {
 						</ul>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>6   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Photo by Colin Faulkingham. Work by Fan Wang and Olof Mogren (RIDR).</p>
+						<p>4   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Photo by Colin Faulkingham. Work by Fan Wang and Olof Mogren (RIDR).</p>
 					</div>
 				</div>
 			</div>
-			<div id="page-7" class="page_div page_hidden" style="background-color: white; ">
+			<div id="page-5" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
 					<img src="graphics/drone-seagrass-bg.webp" style="position: absolute; left: 56.250%; top: 24.444%; width: 37.500%; height: 67.407%; object-fit: cover;">
@@ -1349,11 +1315,11 @@ async function exportSlidesToODP() {
 						</ul>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>7   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Work by Fan Wang and Olof Mogren. (RIDR)</p>
+						<p>5   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Work by Fan Wang and Olof Mogren. (RIDR)</p>
 					</div>
 				</div>
 			</div>
-			<div id="page-8" class="page_div page_hidden" style="background-color: white; ">
+			<div id="page-6" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
 					<img src="graphics/computer-vision-problems.webp" style="position: absolute; left: 6.250%; top: 20.741%; width: 43.750%; height: 33.704%; object-fit: contain;">
@@ -1366,7 +1332,7 @@ async function exportSlidesToODP() {
 					<div style="position: absolute; left: 6.250%; top: 58.148%; width: 87.500%; height: 33.704%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
 						<ul>
 							<li>Semantic segmentation</li>
-							<li>U-net architecture</li>
+							<li>U-net/U-net++ architecture</li>
 							<li>Supervision
 <ul>
 									<li>Point-based high-quality annotations</li>
@@ -1376,18 +1342,18 @@ async function exportSlidesToODP() {
 						</ul>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>8   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Image credit: <a href="https://cocodataset.org/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">MS Coco — Creative Commons Attribution license</a>. Work by Fan Wang and Olof Mogren. (RIDR)</p>
+						<p>6   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Image credit: <a href="https://cocodataset.org/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">MS Coco — Creative Commons Attribution license</a>. Work by Fan Wang and Olof Mogren. (RIDR)</p>
 					</div>
 				</div>
 			</div>
-			<div id="page-9" class="page_div page_hidden" style="background-color: white; ">
+			<div id="page-7" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
 					<img src="graphics/2023-drones-thomasberger.webp" style="position: absolute; left: 50.000%; top: 0.000%; width: 50.000%; height: 100.000%; object-fit: contain;">
 					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); ">Color depends on depth</h1>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;display: flex; flex-direction: column; justify-content: center;font-size: calc(2.267 * var(--cqw)); ">
 						<ul>
 							<li>Drone orthomosaic, $\approx$ 3cm resolution</li>
 							<li>Stratified by depth</li>
@@ -1395,11 +1361,11 @@ async function exportSlidesToODP() {
 						</ul>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>9   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Thomasberger, Nielsen. Drones (2023)</p>
+						<p>7   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Thomasberger, Nielsen. Drones (2023)</p>
 					</div>
 				</div>
 			</div>
-			<div id="page-10" class="page_div page_hidden" style="background-color: white; ">
+			<div id="page-8" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
 					<img src="graphics/2023-vapnik-lupi.webp" style="position: absolute; left: 56.250%; top: 24.444%; width: 37.500%; height: 67.407%; object-fit: contain; filter: drop-shadow(0 calc(0.4 * var(--cqw)) calc(0.9 * var(--cqw)) rgba(0, 0, 0, 0.35));">
@@ -1414,11 +1380,11 @@ async function exportSlidesToODP() {
 						</ul>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>10   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Vapnik, Izmailov. JMLR (2023).</p>
+						<p>8   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Vapnik, Izmailov. JMLR (2023).</p>
 					</div>
 				</div>
 			</div>
-			<div id="page-11" class="page_div page_hidden" style="background-color: white; ">
+			<div id="page-9" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
 					<img src="graphics/locations.webp" style="position: absolute; left: 50.000%; top: 0.000%; width: 50.000%; height: 100.000%; object-fit: contain;">
@@ -1434,11 +1400,11 @@ async function exportSlidesToODP() {
 						</ul>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>11   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Work by Fan Wang and Olof Mogren. (RIDR)</p>
+						<p>9   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Work by Fan Wang and Olof Mogren. (RIDR)</p>
 					</div>
 				</div>
 			</div>
-			<div id="page-12" class="page_div page_hidden" style="background-color: white; ">
+			<div id="page-10" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
 					<img src="graphics/eelgrass-data-pseudoannotation.jpg" style="position: absolute; left: 6.250%; top: 20.741%; width: 87.500%; height: 71.111%; object-fit: contain;">
@@ -1451,11 +1417,11 @@ async function exportSlidesToODP() {
 						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>12   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Work by Fan Wang and Olof Mogren. (RIDR)</p>
+						<p>10   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Work by Fan Wang and Olof Mogren. (RIDR)</p>
 					</div>
 				</div>
 			</div>
-			<div id="page-13" class="page_div page_hidden" style="background-color: white; ">
+			<div id="page-11" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
 					<img src="graphics/sparse-annotations-patch-size.webp" style="position: absolute; left: 6.250%; top: 20.741%; width: 43.750%; height: 71.111%; object-fit: contain;">
@@ -1469,11 +1435,11 @@ async function exportSlidesToODP() {
 						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>13   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Work by Fan Wang and Olof Mogren. (RIDR)</p>
+						<p>11   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Work by Fan Wang and Olof Mogren. (RIDR)</p>
 					</div>
 				</div>
 			</div>
-			<div id="page-14" class="page_div page_hidden" style="background-color: white; ">
+			<div id="page-12" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
 					<img src="graphics/example-maps-2025-trimmed-1.webp" style="position: absolute; left: 6.250%; top: 20.741%; width: 43.750%; height: 71.111%; object-fit: contain;">
@@ -1487,7 +1453,46 @@ async function exportSlidesToODP() {
 						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>14   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Work by Fan Wang and Olof Mogren. (RIDR)</p>
+						<p>12   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Work by Fan Wang and Olof Mogren. (RIDR)</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-13" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
+					<img src="graphics/sdm-alphaearth.webp" style="position: absolute; left: 6.250%; top: 20.741%; width: 87.500%; height: 71.111%; object-fit: contain;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); ">From 6cm to 5km resolution</h1>
+					</div>
+					<div style="position: absolute; left: 9.583%; top: 15.259%; width: 87.500%; height: 7.778%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h2 style="margin: 0; padding: 0;font-size: calc(2.667 * var(--cqw)); ">Foundation models for species distribution</h2>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 58.148%; width: 87.500%; height: 33.704%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
+						<p> </p>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>13   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Klang, Blixt, <strong>Mogren</strong>, AI for Climate and Conservation 2 (2026)</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-14" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
+					<img src="graphics/van-merrienboer-2026-ocelot.webp" data-animated="true" style="position: absolute; left: 56.250%; top: 24.444%; width: 37.500%; height: 67.407%; object-fit: contain;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); ">Planetary SDMs with satellite embeddings</h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 42.708%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;display: flex; flex-direction: column; justify-content: center;font-size: calc(2.267 * var(--cqw)); ">
+						<ul>
+							<li>OCELOT</li>
+							<li>From regional to global</li>
+							<li>Training on ~2 billion GBIF records across 100,000 taxa</li>
+							<li>High-resolution global maps (10 m habitat suitability from satellite embedding)</li>
+							<li>Downstream priors for camera traps and acoustic sensors</li>
+						</ul>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>14   van Merriënboer et al., OCELOT: Planetary-Scale Species Distribution Modeling with Satellite Foundation Embeddings, <a href="https://arxiv.org/abs/2611.00284" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">arXiv:2611.00284</a> (2026)</p>
 					</div>
 				</div>
 			</div>
@@ -1498,7 +1503,7 @@ async function exportSlidesToODP() {
 					<img src="graphics/martinsson-136x112.jpg" style="position: absolute; left: 87.292%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
 					<img src="graphics/mogren-136x135.jpg" style="position: absolute; left: 90.833%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
 					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
-						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); ">Active annotation, audio and video</h1>
+						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); ">Active event annotation</h1>
 					</div>
 					<div style="position: absolute; left: 6.250%; top: 58.148%; width: 87.500%; height: 33.704%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
 						<p> </p>
@@ -1631,6 +1636,21 @@ async function exportSlidesToODP() {
 			<div id="page-23" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
+					<img src="graphics/auklab.webp" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); ">Seabird monitoring</h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
+						<p> </p>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>18   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-24" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
 					<img src="graphics/lea-gummi-pipeline.webp" style="position: absolute; left: 50.000%; top: 0.000%; width: 50.000%; height: 100.000%; object-fit: contain;">
 					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0;font-size: calc(3.000 * var(--cqw)); ">Cross-modal supervision: video-guided machine listening</h1>
@@ -1654,24 +1674,6 @@ async function exportSlidesToODP() {
 						</ul>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>18   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Le Gallo, Guttormsson, Martinsson, <strong>Mogren</strong>
-						</p>
-					</div>
-				</div>
-			</div>
-			<div id="page-24" class="page_div page_hidden" style="background-color: white; ">
-				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
-					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
-					<img src="graphics/lea-gummi-embeddings-birdnet-1120x840.webp" style="position: absolute; left: 6.250%; top: 20.741%; width: 29.167%; height: 71.111%; object-fit: contain;">
-					<img src="graphics/lea-gummi-embeddings-pann-1120x840.webp" style="position: absolute; left: 35.417%; top: 20.741%; width: 29.167%; height: 71.111%; object-fit: contain;">
-					<img src="graphics/lea-gummi-embeddings-perch-1120x840.webp" style="position: absolute; left: 64.583%; top: 20.741%; width: 29.167%; height: 71.111%; object-fit: contain;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
-						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); ">Embedding multi-modal events</h1>
-					</div>
-					<div style="position: absolute; left: 6.250%; top: 58.148%; width: 87.500%; height: 33.704%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
-						<p> </p>
-					</div>
-					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
 						<p>19   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Le Gallo, Guttormsson, Martinsson, <strong>Mogren</strong>
 						</p>
 					</div>
@@ -1680,9 +1682,11 @@ async function exportSlidesToODP() {
 			<div id="page-25" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
-					<img src="graphics/lea-gummi-curated_vs_cross_modal_prf1_exact.webp" style="position: absolute; left: 6.250%; top: 20.741%; width: 87.500%; height: 71.111%; object-fit: contain;">
+					<img src="graphics/lea-gummi-embeddings-birdnet-1120x840.webp" style="position: absolute; left: 6.250%; top: 20.741%; width: 29.167%; height: 71.111%; object-fit: contain;">
+					<img src="graphics/lea-gummi-embeddings-pann-1120x840.webp" style="position: absolute; left: 35.417%; top: 20.741%; width: 29.167%; height: 71.111%; object-fit: contain;">
+					<img src="graphics/lea-gummi-embeddings-perch-1120x840.webp" style="position: absolute; left: 64.583%; top: 20.741%; width: 29.167%; height: 71.111%; object-fit: contain;">
 					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
-						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); ">Results, cross-modal supervision</h1>
+						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); ">Embedding multi-modal events</h1>
 					</div>
 					<div style="position: absolute; left: 6.250%; top: 58.148%; width: 87.500%; height: 33.704%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
 						<p> </p>
@@ -1696,9 +1700,9 @@ async function exportSlidesToODP() {
 			<div id="page-26" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
-					<img src="graphics/lea-gummi-confusion-matrices.webp" style="position: absolute; left: 6.250%; top: 20.741%; width: 87.500%; height: 71.111%; object-fit: contain;">
+					<img src="graphics/lea-gummi-curated_vs_cross_modal_prf1_exact.webp" style="position: absolute; left: 6.250%; top: 20.741%; width: 87.500%; height: 71.111%; object-fit: contain;">
 					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
-						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); ">Acoustic embedding analysis</h1>
+						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); ">Results, cross-modal supervision</h1>
 					</div>
 					<div style="position: absolute; left: 6.250%; top: 58.148%; width: 87.500%; height: 33.704%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
 						<p> </p>
@@ -1712,6 +1716,22 @@ async function exportSlidesToODP() {
 			<div id="page-27" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
+					<img src="graphics/lea-gummi-confusion-matrices.webp" style="position: absolute; left: 6.250%; top: 20.741%; width: 87.500%; height: 71.111%; object-fit: contain;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); ">Acoustic embedding analysis</h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 58.148%; width: 87.500%; height: 33.704%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
+						<p> </p>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>22   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Le Gallo, Guttormsson, Martinsson, <strong>Mogren</strong>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-28" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
 					<div style="position: absolute; left: 6.250%; top: 36.667%; width: 87.500%; height: 11.481%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); ">Zero-shot building footprint delineation</h1>
 					</div>
@@ -1719,11 +1739,11 @@ async function exportSlidesToODP() {
 						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>22   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se</p>
+						<p>23   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se</p>
 					</div>
 				</div>
 			</div>
-			<div id="page-28" class="page_div page_hidden" style="background-color: white; ">
+			<div id="page-29" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
 					<img src="graphics/issas-slides-1.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
@@ -1736,23 +1756,6 @@ async function exportSlidesToODP() {
 						<!-- This work benchmarks SAM3 for zero-shot building delineation across image resolutions, inference windows, and text prompts to establish baselines for future work on parameter-efficient fine-tuning as well as data-efficient sampling strategies, with the goal of reducing the cost of annotation for model adaptation. I started this work at the World Bank as part of the Smart Parcels for Resilient Cities (SPARC) initiative and happy to be working on it now as part of my PhD! //-->
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>23   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Work by Issa Tingzon and Aleksis Pirinen (RIDR).</p>
-					</div>
-				</div>
-			</div>
-			<div id="page-29" class="page_div page_hidden" style="background-color: white; ">
-				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
-					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
-					<img src="graphics/issas-slides-3.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: contain;">
-					<img src="graphics/tingzon-136x131.jpg" style="position: absolute; left: 87.292%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
-					<img src="graphics/pirinen-136x136.jpg" style="position: absolute; left: 90.833%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
-						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); "></h1>
-					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
-						<p> </p>
-					</div>
-					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
 						<p>24   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Work by Issa Tingzon and Aleksis Pirinen (RIDR).</p>
 					</div>
 				</div>
@@ -1760,7 +1763,7 @@ async function exportSlidesToODP() {
 			<div id="page-30" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
-					<img src="graphics/issas-slides-4.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: contain;">
+					<img src="graphics/issas-slides-3.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: contain;">
 					<img src="graphics/tingzon-136x131.jpg" style="position: absolute; left: 87.292%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
 					<img src="graphics/pirinen-136x136.jpg" style="position: absolute; left: 90.833%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
 					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
@@ -1777,7 +1780,7 @@ async function exportSlidesToODP() {
 			<div id="page-31" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
-					<img src="graphics/issas-slides-5.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: contain;">
+					<img src="graphics/issas-slides-4.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: contain;">
 					<img src="graphics/tingzon-136x131.jpg" style="position: absolute; left: 87.292%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
 					<img src="graphics/pirinen-136x136.jpg" style="position: absolute; left: 90.833%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
 					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
@@ -1794,6 +1797,23 @@ async function exportSlidesToODP() {
 			<div id="page-32" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
+					<img src="graphics/issas-slides-5.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: contain;">
+					<img src="graphics/tingzon-136x131.jpg" style="position: absolute; left: 87.292%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
+					<img src="graphics/pirinen-136x136.jpg" style="position: absolute; left: 90.833%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); "></h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
+						<p> </p>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>27   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Work by Issa Tingzon and Aleksis Pirinen (RIDR).</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-33" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
 					<img src="graphics/issas-slides-6.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: contain;">
 					<img src="graphics/tingzon-136x131.jpg" style="position: absolute; left: 87.292%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
 					<img src="graphics/pirinen-136x136.jpg" style="position: absolute; left: 90.833%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
@@ -1804,11 +1824,11 @@ async function exportSlidesToODP() {
 						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>27   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Work by Issa Tingzon and Aleksis Pirinen (RIDR). (3. <a href="https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.components.connected_components.html" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">Connected components in NetworkX</a>, 4: <a href="https://pypi.org/project/buildingregulariser/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">buildingregularizer</a> in Python)</p>
+						<p>28   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Work by Issa Tingzon and Aleksis Pirinen (RIDR). (3. <a href="https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.components.connected_components.html" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">Connected components in NetworkX</a>, 4: <a href="https://pypi.org/project/buildingregulariser/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">buildingregularizer</a> in Python)</p>
 					</div>
 				</div>
 			</div>
-			<div id="page-33" class="page_div page_hidden" style="background-color: white; ">
+			<div id="page-34" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
 					<img src="graphics/2026-tingzon-zeroshot-results.jpg" style="position: absolute; left: 6.250%; top: 20.741%; width: 87.500%; height: 71.111%; object-fit: contain;">
@@ -1821,11 +1841,11 @@ async function exportSlidesToODP() {
 						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>28   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Work by Issa Tingzon and Aleksis Pirinen (RIDR).</p>
+						<p>29   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Work by Issa Tingzon and Aleksis Pirinen (RIDR).</p>
 					</div>
 				</div>
 			</div>
-			<div id="page-34" class="page_div page_hidden" style="background-color: white; ">
+			<div id="page-35" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
 					<img src="graphics/2026-tingzon-zeroshot-maps.jpg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: contain;">
@@ -1838,11 +1858,11 @@ async function exportSlidesToODP() {
 						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>29   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Work by Issa Tingzon and Aleksis Pirinen (RIDR).</p>
+						<p>30   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Work by Issa Tingzon and Aleksis Pirinen (RIDR).</p>
 					</div>
 				</div>
 			</div>
-			<div id="page-35" class="page_div page_hidden" style="background-color: white; ">
+			<div id="page-36" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(1.533 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
 					<img src="graphics/tingzon-480x462.jpg" style="position: absolute; left: 56.250%; top: 24.444%; width: 12.500%; height: 22.222%; object-fit: cover;">
@@ -1884,21 +1904,7 @@ Maria Bånkestad, Frida Heskebeck, Lilian Yang, Aleksis Pirinen</p>
 							<a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a> // olof.mogren@ri.se</p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>30   All work was a team effort</p>
-					</div>
-				</div>
-			</div>
-			<div id="page-36" class="page_div page_hidden" style="background-color: white; ">
-				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
-					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
-					<div style="position: absolute; left: 6.250%; top: 36.667%; width: 87.500%; height: 11.481%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
-						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); ">Appendix</h1>
-					</div>
-					<div style="position: absolute; left: 6.250%; top: 20.741%; width: 87.500%; height: 71.111%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
-						<p> </p>
-					</div>
-					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>31   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se</p>
+						<p>31   All work was a team effort</p>
 					</div>
 				</div>
 			</div>
@@ -1906,7 +1912,7 @@ Maria Bånkestad, Frida Heskebeck, Lilian Yang, Aleksis Pirinen</p>
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
 					<div style="position: absolute; left: 6.250%; top: 36.667%; width: 87.500%; height: 11.481%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
-						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); ">Additional eelgrass information</h1>
+						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); ">Appendix</h1>
 					</div>
 					<div style="position: absolute; left: 6.250%; top: 20.741%; width: 87.500%; height: 71.111%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
 						<p> </p>
@@ -1919,11 +1925,10 @@ Maria Bånkestad, Frida Heskebeck, Lilian Yang, Aleksis Pirinen</p>
 			<div id="page-38" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
-					<img src="graphics/fans-slides-27.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
-						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); "></h1>
+					<div style="position: absolute; left: 6.250%; top: 36.667%; width: 87.500%; height: 11.481%; text-align: center; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); ">Additional eelgrass information</h1>
 					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
+					<div style="position: absolute; left: 6.250%; top: 20.741%; width: 87.500%; height: 71.111%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
 						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
@@ -1934,7 +1939,7 @@ Maria Bånkestad, Frida Heskebeck, Lilian Yang, Aleksis Pirinen</p>
 			<div id="page-39" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
-					<img src="graphics/fans-slides-23.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
+					<img src="graphics/fans-slides-27.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
 					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); "></h1>
 					</div>
@@ -1949,7 +1954,7 @@ Maria Bånkestad, Frida Heskebeck, Lilian Yang, Aleksis Pirinen</p>
 			<div id="page-40" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
-					<img src="graphics/fans-slides-16.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
+					<img src="graphics/fans-slides-23.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
 					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); "></h1>
 					</div>
@@ -1964,7 +1969,7 @@ Maria Bånkestad, Frida Heskebeck, Lilian Yang, Aleksis Pirinen</p>
 			<div id="page-41" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
-					<img src="graphics/fans-slides-14.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
+					<img src="graphics/fans-slides-16.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
 					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); "></h1>
 					</div>
@@ -1979,6 +1984,21 @@ Maria Bånkestad, Frida Heskebeck, Lilian Yang, Aleksis Pirinen</p>
 			<div id="page-42" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
+					<img src="graphics/fans-slides-14.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); "></h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
+						<p> </p>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>37   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-43" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
 					<img src="graphics/eelgrass.webp" style="position: absolute; left: 6.250%; top: 20.741%; width: 87.500%; height: 71.111%; object-fit: cover;">
 					<img src="graphics/wang-136x136.jpg" style="position: absolute; left: 87.292%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
 					<img src="graphics/mogren-136x135.jpg" style="position: absolute; left: 90.833%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
@@ -1989,11 +2009,11 @@ Maria Bånkestad, Frida Heskebeck, Lilian Yang, Aleksis Pirinen</p>
 						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>37   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Work by Fan Wang and Olof Mogren. (RIDR)</p>
+						<p>38   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Work by Fan Wang and Olof Mogren. (RIDR)</p>
 					</div>
 				</div>
 			</div>
-			<div id="page-43" class="page_div page_hidden" style="background-color: white; ">
+			<div id="page-44" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
 					<img src="graphics/2026-martinsson-accuracy-cost-sliding-window.webp" style="position: absolute; left: 6.250%; top: 20.741%; width: 87.500%; height: 71.111%; object-fit: contain;">
@@ -2006,11 +2026,11 @@ Maria Bånkestad, Frida Heskebeck, Lilian Yang, Aleksis Pirinen</p>
 						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>38   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Martinsson, Virtanen, Sandsten, <strong>Mogren</strong>. The Accuracy Cost of Weakness  TMLR / <a href="https://arxiv.org/abs/2502.09363" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">arXiv:2502.09363</a> (2025)</p>
+						<p>39   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Martinsson, Virtanen, Sandsten, <strong>Mogren</strong>. The Accuracy Cost of Weakness  TMLR / <a href="https://arxiv.org/abs/2502.09363" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">arXiv:2502.09363</a> (2025)</p>
 					</div>
 				</div>
 			</div>
-			<div id="page-44" class="page_div page_hidden" style="background-color: white; ">
+			<div id="page-45" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
 					<img src="graphics/issas-slides-9.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: contain;">
@@ -2023,11 +2043,11 @@ Maria Bånkestad, Frida Heskebeck, Lilian Yang, Aleksis Pirinen</p>
 						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>39   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Work by Issa Tingzon and Aleksis Pirinen (RIDR).</p>
+						<p>40   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se // Work by Issa Tingzon and Aleksis Pirinen (RIDR).</p>
 					</div>
 				</div>
 			</div>
-			<div id="page-45" class="page_div page_hidden" style="background-color: white; ">
+			<div id="page-46" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
 					<img src="graphics/above-ground-biomass-estimation.webp" style="position: absolute; left: 6.250%; top: 20.741%; width: 87.500%; height: 71.111%; object-fit: contain;">
@@ -2038,11 +2058,11 @@ Maria Bånkestad, Frida Heskebeck, Lilian Yang, Aleksis Pirinen</p>
 						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>40   Ghjulia Sialelli, ETH Zürich</p>
+						<p>41   Ghjulia Sialelli, ETH Zürich</p>
 					</div>
 				</div>
 			</div>
-			<div id="page-46" class="page_div page_hidden" style="background-color: white; ">
+			<div id="page-47" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
 					<img src="graphics/dang-wetland-2020-1800x1536.webp" style="position: absolute; left: 6.250%; top: 20.741%; width: 87.500%; height: 71.111%; object-fit: contain;">
@@ -2053,11 +2073,11 @@ Maria Bånkestad, Frida Heskebeck, Lilian Yang, Aleksis Pirinen</p>
 						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>41   Dang et al., Coastal wetland classification with deep u-net convolutional networks and sentinel-2 imagery, Remote Sensing, 2020.</p>
+						<p>42   Dang et al., Coastal wetland classification with deep u-net convolutional networks and sentinel-2 imagery, Remote Sensing, 2020.</p>
 					</div>
 				</div>
 			</div>
-			<div id="page-47" class="page_div page_hidden" style="background-color: white; ">
+			<div id="page-48" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
 					<img src="graphics/wetlands-merged-blackonwhite-border.webp" style="position: absolute; left: 50.000%; top: 0.000%; width: 50.000%; height: 100.000%; object-fit: contain;">
@@ -2081,11 +2101,11 @@ Maria Bånkestad, Frida Heskebeck, Lilian Yang, Aleksis Pirinen</p>
 						</ul>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>42   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se --- Pirinen. (2023)</p>
+						<p>43   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se --- Pirinen. (2023)</p>
 					</div>
 				</div>
 			</div>
-			<div id="page-48" class="page_div page_hidden" style="background-color: white; ">
+			<div id="page-49" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #000000ff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
 					<img src="graphics/chatgpt-eo-01.webp" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
@@ -2109,11 +2129,11 @@ at ICLR 2024</li>
 						</ul>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #ffffffff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>43   Willbo, Listo Zec, Martinsson, Pirinen, <strong>Mogren</strong>, Impacts of color and texture distortions on earth observation data in deep learning, ML4RS at ICLR (2024) </p>
+						<p>44   Willbo, Listo Zec, Martinsson, Pirinen, <strong>Mogren</strong>, Impacts of color and texture distortions on earth observation data in deep learning, ML4RS at ICLR (2024) </p>
 					</div>
 				</div>
 			</div>
-			<div id="page-49" class="page_div page_hidden" style="background-color: white; ">
+			<div id="page-50" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
 					<img src="graphics/eo-models-grayscale-and-pixelswap.webp" style="position: absolute; left: 6.250%; top: 20.741%; width: 87.500%; height: 71.111%; object-fit: contain;">
@@ -2127,31 +2147,14 @@ at ICLR 2024</li>
 						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>44   Willbo, Listo Zec, Martinsson, Pirinen, <strong>Mogren</strong>, Impacts of color and texture distortions on earth observation data in deep learning, ML4RS at ICLR (2024) </p>
-					</div>
-				</div>
-			</div>
-			<div id="page-50" class="page_div page_hidden" style="background-color: white; ">
-				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
-					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
-					<img src="graphics/filippis-weight-explorer-1.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
-					<img src="graphics/filippis-136x136.jpg" style="position: absolute; left: 87.292%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
-					<img src="graphics/mogren-136x135.jpg" style="position: absolute; left: 90.833%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
-					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
-						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); "></h1>
-					</div>
-					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
-						<p> </p>
-					</div>
-					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>45   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se</p>
+						<p>45   Willbo, Listo Zec, Martinsson, Pirinen, <strong>Mogren</strong>, Impacts of color and texture distortions on earth observation data in deep learning, ML4RS at ICLR (2024) </p>
 					</div>
 				</div>
 			</div>
 			<div id="page-51" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
-					<img src="graphics/filippis-weight-explorer-3.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
+					<img src="graphics/filippis-weight-explorer-1.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
 					<img src="graphics/filippis-136x136.jpg" style="position: absolute; left: 87.292%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
 					<img src="graphics/mogren-136x135.jpg" style="position: absolute; left: 90.833%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
 					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
@@ -2168,7 +2171,7 @@ at ICLR 2024</li>
 			<div id="page-52" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
-					<img src="graphics/filippis-weight-explorer-4.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
+					<img src="graphics/filippis-weight-explorer-3.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
 					<img src="graphics/filippis-136x136.jpg" style="position: absolute; left: 87.292%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
 					<img src="graphics/mogren-136x135.jpg" style="position: absolute; left: 90.833%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
 					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
@@ -2185,7 +2188,7 @@ at ICLR 2024</li>
 			<div id="page-53" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
-					<img src="graphics/filippis-weight-explorer-6.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
+					<img src="graphics/filippis-weight-explorer-4.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
 					<img src="graphics/filippis-136x136.jpg" style="position: absolute; left: 87.292%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
 					<img src="graphics/mogren-136x135.jpg" style="position: absolute; left: 90.833%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
 					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
@@ -2202,7 +2205,7 @@ at ICLR 2024</li>
 			<div id="page-54" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
-					<img src="graphics/filippis-weight-explorer-7.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
+					<img src="graphics/filippis-weight-explorer-6.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
 					<img src="graphics/filippis-136x136.jpg" style="position: absolute; left: 87.292%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
 					<img src="graphics/mogren-136x135.jpg" style="position: absolute; left: 90.833%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
 					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
@@ -2219,6 +2222,23 @@ at ICLR 2024</li>
 			<div id="page-55" class="page_div page_hidden" style="background-color: white; ">
 				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
 					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
+					<img src="graphics/filippis-weight-explorer-7.svg" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
+					<img src="graphics/filippis-136x136.jpg" style="position: absolute; left: 87.292%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
+					<img src="graphics/mogren-136x135.jpg" style="position: absolute; left: 90.833%; top: 92.593%; width: 3.542%; height: 6.296%; object-fit: cover;">
+					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
+						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); "></h1>
+					</div>
+					<div style="position: absolute; left: 6.250%; top: 24.444%; width: 87.500%; height: 67.407%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;font-size: calc(2.267 * var(--cqw)); ">
+						<p> </p>
+					</div>
+					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
+						<p>50   <a href="https://omog.se/" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">omog.se</a>, olof.mogren@ri.se</p>
+					</div>
+				</div>
+			</div>
+			<div id="page-56" class="page_div page_hidden" style="background-color: white; ">
+				<div class="subcontainer" onmouseup="mouseuphandler(event);" style=" background-color: #ffffffff; font-size: calc(2.267 * var(--cqw)); ">
+					<img src="graphics/rise.png" style="position: absolute; left: 95.417%; top: 90.000%; width: 3.750%; height: 8.519%; z-index: 5;">
 					<img src="graphics/filippis-weight-explorer-screenshot.webp" style="position: absolute; left: 0.000%; top: 0.000%; width: 100.000%; height: 100.000%; object-fit: cover;">
 					<div style="position: absolute; left: 6.250%; top: 8.148%; width: 87.500%; height: 11.481%; text-align: start; overflow: hidden; padding-top: 0; /* text-wrap: nowrap; */ color: #000000ff;">
 						<h1 style="margin: 0; padding: 0;font-size: calc(4.000 * var(--cqw)); "></h1>
@@ -2227,7 +2247,7 @@ at ICLR 2024</li>
 						<p> </p>
 					</div>
 					<div class="footer" id="footer" style="position: absolute; left: 0.833%; top: 96.296%; color: #000000ff;font-size: calc(0.933 * var(--cqw)); ">
-						<p>50   <a href="malmo-weights-explorer.html" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">Live demo</a>
+						<p>51   <a href="malmo-weights-explorer.html" onmouseup="stopProp(event);" target="_blank" rel="noopener noreferrer" style="color: #000000ff; ">Live demo</a>
 						</p>
 					</div>
 				</div>
